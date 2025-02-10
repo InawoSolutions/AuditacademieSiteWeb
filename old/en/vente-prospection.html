@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inawo : Easy Customer Relationship Management software to manage your business</title>
+        <meta name="title" content="Inawo : Easy Customer Relationship Management software to manage your business">
+        <meta name="description" content="Enjoy an exceptional customer experience and effortless financial management with our state-of-the-art software, the ideal solution for growing businesses.">
+         <meta name="theme-color" content="#15171A">
+        <link rel="icon" type="image/ico" href="favicon-bleu.ico">
+
+        <!--social media preview-->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Inawo : Easy Customer Relationship Management software to manage your business" />
+        <meta property="og:description" content="Enjoy an exceptional customer experience and effortless financial management with our state-of-the-art software, the ideal solution for growing businesses.">
+        <meta property="og:url" content="https://inawo.pro/en/">
+        <meta property="og:site_name" content="Inawo : Easy Customer Relationship Management software to manage your business">
+        <meta property="og:image" content="https://inawo.pro/en/assets/images/preview/IMG02Ventefr.jpg">
+        <meta property="og:image:width" content="1180">
+        <meta property="og:image:height" content="600">
+        <meta property="og:image:type" content="image/png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Inawo : Easy Customer Relationship Management software to manage your business">
+        <meta name="twitter:description" content="Enjoy an exceptional customer experience and effortless financial management with our state-of-the-art software, the ideal solution for growing businesses.">
+        <meta name="twitter:image" content="https://inawo.pro/en/assets/images/preview/IMG02Ventefr.jpg">
+        <link rel="canonical" href="https://inawo.pro/en/">
+
+       <!-- preload head styles -->
+        <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+        <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+        <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+
+        <!-- preload footer scripts -->
+        <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/split-type.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/splitype-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper-defined-timelines.js" as="script">
+        <link rel="preload" href="../assets/js/core/preloader.js" as="script">
+        <link rel="preload" href="../assets/js/core/dynamic-background.js" as="script">
+        <link rel="preload" href="../assets/js/core/marquee.js" as="script">
+        <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+        <link rel="preload" href="../assets/js/app.js" as="script">
+
+        <!-- app head for bootstrap core -->
+        <script src="../assets/js/app-head-bs.js"></script>
+
+        <!-- include uni-core components -->
+        <link rel="stylesheet" href="../assets/js/uni-core/css/components/base.min.css">
+
+        <!-- include styles -->
+        <link rel="stylesheet" href="../assets/css/unicons.min.css">
+        <link rel="stylesheet" href="../assets/css/prettify.min.css">
+        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+
+        <!-- include main style -->
+        <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+
+        <!-- include scripts -->
+        <script src="../assets/js/uni-core/js/uni-core.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2MW7TVQEX"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q2MW7TVQEX');
+        </script>
+        <script>
+            localStorage.setItem("langue", "Eng")
+            document.addEventListener("DOMContentLoaded", ()=>{
+                const insc = document.querySelectorAll("#insc")
+                insc.forEach(el => {
+                    el.addEventListener("click", (e)=>{
+                        localStorage.setItem("subscription__designation", "Billing and management")
+                        localStorage.setItem("subscription_type__designation", "Essential")
+                        localStorage.setItem("period", "Mensuel")
+                        localStorage.setItem("montant", "0")
+                    })
+                })
+            })
+        </script>                      
+  </head>
+    <body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden">
+
+        <!--  Search modal -->
+        <div id="uc-search-modal" class="uc-modal-full uc-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog d-flex justify-center bg-white text-dark dark:bg-gray-900 dark:text-white" data-uc-height-viewport="">
+                <div class="uc-modal-close-full m-1 p-0 vstack gap-narrow text-center">
+                    <button class="icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark w-24px sm:w-32px h-24px sm:h-32px rounded-circle flex-1" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+                    <span class="ft-tertiary fs-7">ESC</span>
+                </div>
+
+                <div class="panel w-100 sm:w-500px px-2 py-10">
+                    <h3 class="h4 sm:h2 text-center">What are you looking for?</h3>
+                    <form class="hstack gap-1 mt-4 border-bottom p-narrow dark:border-gray-700" action="?">
+                        <span class="d-inline-flex justify-center items-center w-24px sm:w-40 h-24px sm:h-40px opacity-50"><i class="unicon-search icon-3"></i></span>
+                        <input type="search" name="q" class="form-control-plaintext ms-1 fs-6 sm:fs-5 w-full dark:text-white" placeholder="Type your keyword.." aria-label="Search" autofocus>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--  Newsletter modal -->
+        <div id="uc-newsletter-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog w-md bg-white text-dark dark:bg-gray-900 dark:text-white rounded">
+                <button class="uc-modal-close-default p-0 icon-2 btn btn-md btn-dark dark:bg-white dark:text-dark rounded-circle" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="row sm:child-cols-6 col-match g-0">
+                    <div>
+                        <div class="position-relative w-100 ratio-1x1">
+                            <img class="media-cover" src="assets/images/common/newsletter.jpg" alt="Newsletter image">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="panel vstack self-center gap-2 md:gap-4 py-4 md:py-8 px-3 md:px-6 text-center">
+                            <h5 class="h6 m-0 text-primary ft-tertiary fw-normal">Weekly updates</h5>
+                            <h3 class="h4 sm:h3 md:h2 xl:h1 m-0">Let's join our newsletter!</h3>
+                            <div class="panel">
+                                <form class="vstack gap-1">
+                                    <input type="email" class="form-control h-48px w-full bg-white dark:border-white dark:border-gray-700" placeholder="Your email address..">
+                                    <button type="submit" class="btn btn-primary btn-md text-white">Sign up</button>
+                                </form>
+                            </div>
+                            <p class="fs-7 md:fs-6 m-0">Do not worry we don't spam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Acccount modal -->
+        <div id="uc-account-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog lg:max-w-500px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded">
+                <button class="uc-modal-close-default p-0 icon-2 btn btn-md btn-dark dark:bg-white dark:text-dark rounded-circle" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="panel vstack gap-2 md:gap-4 text-center">
+                    <ul class="account-tabs-nav nav-x justify-center h6 py-2 border-bottom d-none" data-uc-switcher="animation: uc-animation-slide-bottom-small, uc-animation-slide-top-small">
+                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Reset password</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                    </ul>
+                    <div class="account-tabs-content uc-switcher px-3 lg:px-4 py-4 lg:py-8 m-0 lg:mx-auto vstack justify-center items-center">
+                        <div class="w-100">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                                <h4 class="h5 lg:h4 m-0">Log in</h4>
+                                <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                    <form class="vstack gap-2">
+                                        <input class="form-control h-48px w-full bg-white dark:border-white" type="email" placeholder="Your email" required>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white" type="password" placeholder="Password" required>
+                                        <div class="hstack justify-between items-start text-start">
+                                            <div class="form-check text-start">
+                                                <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" id="inputCheckRemember">
+                                                <label class="hstack justify-between form-check-label fs-7 sm:fs-6" for="inputCheckRemember">Remember me?</label>
+                                            </div>
+                                            <a href="#" class="uc-link" data-uc-switcher-item="2">Forgot password</a>
+                                        </div>
+                                        <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Log in</button>
+                                    </form>
+                                    <div class="panel">
+                                        <hr class="m-0">
+                                        <span class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Or</span>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="#google" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-google"></i>
+                                        </a>
+                                        <a href="#facebook" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-facebook"></i>
+                                        </a>
+                                        <a href="#x" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="fs-7 sm:fs-6">Have no account yet? <a class="uc-link" href="#" data-uc-switcher-item="1">Sign up</a></p>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                                <h4 class="h5 lg:h4 m-0">Create an account</h4>
+                                <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                    <form class="vstack gap-2">
+                                        <input class="form-control h-48px w-full bg-white dark:border-white" type="text" placeholder="Full name" required>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white" type="email" placeholder="Your email" required>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white" type="password" placeholder="Password" required>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white" type="password" placeholder="Re-enter Password" required>
+                                        <div class="hstack text-start">
+                                            <div class="form-check text-start">
+                                                <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" required>
+                                                <label class="hstack justify-between form-check-label fs-7 sm:fs-6">I read and accept the <a href="#" class="uc-link ms-narrow" data-uc-switcher-item="3">terms of use</a>. </label>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Sign up</button>
+                                    </form>
+                                    <div class="panel">
+                                        <hr class="m-0">
+                                        <span class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Or</span>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="#google" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-google"></i>
+                                        </a>
+                                        <a href="#facebook" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-facebook"></i>
+                                        </a>
+                                        <a href="#x" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="fs-7 sm:fs-6">Already have an account? <a class="uc-link" href="#" data-uc-switcher-item="0">Log in</a></p>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                                <h4 class="h5 lg:h4 m-0">Reset password</h4>
+                                <div class="panel w-100 sm:w-350px">
+                                    <form class="vstack gap-2">
+                                        <input class="form-control h-48px w-full bg-white dark:border-white" type="email" placeholder="Your email" required>
+                                        <div class="form-check text-start">
+                                            <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" id="inputCheckVerify" required>
+                                            <label class="form-check-label fs-7 sm:fs-6" for="inputCheckVerify"> <span>I'm not a robot</span>. </label>
+                                        </div>
+                                        <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Reset a password</button>
+                                    </form>
+                                </div>
+                                <p class="fs-7 sm:fs-6 mt-2 sm:m-0">Remember your password? <a class="uc-link" href="#" data-uc-switcher-item="0">Log in</a></p>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4">
+                                <h4 class="h5 lg:h4 m-0">Terms of use</h4>
+                                <div class="page-content panel fs-6 text-start max-h-400px overflow-scroll">
+                                    <p>Terms of use dolor sit amet consectetur, adipisicing elit. Recusandae provident ullam aperiam quo ad non corrupti sit vel quam repellat ipsa quod sed, repellendus adipisci, ducimus ea modi odio assumenda.</p>
+                                    <h5 class="h6 md:h5 mt-3 mb-1">Disclaimers</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                    <h5 class="h6 md:h5 mt-3 mb-1">Limitation on Liability</h5>
+                                    <p>Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                    <h5 class="h6 md:h5 mt-3 mb-1">Copyright Policy</h5>
+                                    <p>Dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                    <h5 class="h6 md:h5 mt-3 mb-1">General</h5>
+                                    <p>Sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                </div>
+                                <p class="fs-7 sm:fs-6">Do you agree to our terms? <a class="uc-link" href="#" data-uc-switcher-item="1">Sign up</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Menu panel -->
+       <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
+            <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+                <header class="uc-offcanvas-header hstack justify-between items-center pb-4 bg-white dark:bg-gray-900">
+                    <div class="uc-logo">
+                        <a href="../en/">
+                            <img class="w-40px text-primary d-block dark:d-none" src="assets/images/favicon-bleu.png" alt="Inawo light" data-uc-svg>
+                            <img class="w-40px text-primary d-none dark:d-block " src="assets/images/favicon-blanc.png" alt="Inawo dark" >
+                        </a>
+                    </div>
+                    <button class="uc-offcanvas-close position-relative top-0 end-0 m-0 p-0 icon-3 btn btn-md btn-alt-dark dark:bg-white dark:text-dark rounded-circle" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+                </header>
+
+                <div class="panel ">
+                    <ul class="nav-y gap-narrow fw-medium " data-uc-nav>
+                        <li class="uc-parent ">
+                            <a href="#" class="dark:text-white">Solutions</a>
+                            <ul class="uc-nav-sub" data-uc-nav="">
+                                <li>
+                                    <a href="vente-prospection.html" class="dark:text-white">Sales and Prospect Management Software</a>    
+                                </li>
+                                 <li>
+                                    <a href="facturation-gestion.html" class="dark:text-white">Billing and Management Software</a>    
+                                </li>
+                                <li>
+                                    <a href="inawo-global-solution.html" class="dark:text-white">Inawo global</a>    
+                                </li>
+                                <li>
+                                    <a href="fonctionnalite.html" class="dark:text-white">All Features</a>    
+                                </li>
+                                <li>
+                                    <a href="app-mobile.html" class="dark:text-white">Mobile application</a>    
+                                </li>
+                            </ul> 
+                        </li>
+                        <li><a href="tarifs.html" class="dark:text-white">Pricing</a></li>
+                        <li class="uc-parent dark:text-white">
+                            <a href="#" class="dark:text-white">Resources</a>
+                            <ul class="uc-nav-sub" data-uc-nav="">
+                                <li>
+                                    <a href="main/blog.html" class="dark:text-white">Blog</a>    
+                                </li>
+                                 <li>
+                                    <a href="ressources-telechargeables.html" class="dark:text-white">Downloadable Resources</a>    
+                                </li>
+                                <li>
+                                    <a href="evernements.html" class="dark:text-white">Events</a>    
+                                </li>
+                                <li>
+                                    <a href="communaute.html" class="dark:text-white">Community</a>    
+                                </li> <li>
+                                    <a href="support-client.html" class="dark:text-white">Support Center</a>    
+                                </li>
+                                <li>
+                                    <a href="temoignage-etude.html" class="dark:text-white">Customer Stories and Case Studies</a>    
+                                </li>
+                            </ul>
+                        </li>
+                         <li class="uc-parent">
+                            <a href="#" class="dark:text-white">About us</a>
+                            <ul class="uc-nav-sub" data-uc-nav="">
+                                <li>
+                                    <a href="a-propos-nous.html" class="dark:text-white">About inawo.</a>    
+                                </li>
+                                 <li>
+                                    <a href="job.html" class="dark:text-white">We are hiring</a>    
+                                </li>
+                                <li>
+                                    <a href="patenaires.html" class="dark:text-white">Our partners</a>    
+                                </li>
+                                <li>
+                                    <a href="contactez-nous.html" class="dark:text-white">Contact us</a>    
+                                </li>  <li>
+                                    <a href="offres-services.html" class="dark:text-white">Our service offerings</a>    
+                                </li></ul> 
+                        </li>                   
+                       <li class="hr opacity-10 my-1"></li>
+                        <li><a href="inscription.html" class="dark:text-white" id="insc">Create a free account</a></li>
+                        <li><a href="https://app.inawo.pro/fr/connexion" class="dark:text-white">Sign in</a></li>
+                        <!-- <li><a class="btn btn-sm btn-primary text-white text-none d-none lg:d-inline-flex" href="inscription.html" id="insc">Essai Gratuit</a></li> -->
+                    </ul>
+                    <ul class="social-icons nav-x mt-4">
+                        <li>
+                            <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--  Cart panel -->
+        <div id="uc-cart-panel" data-uc-offcanvas="overlay: true; flip: true;">
+            <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+                <button class="uc-offcanvas-close m-1 p-0 icon-2 md:icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark rounded-circle" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="mini-cart-content vstack justify-between panel h-100">
+                    <div class="mini-cart-header">
+                        <h3 class="title h5 m-0">Shopping cart</h3>
+                    </div>
+                    <div class="mini-cart-listing panel flex-1 my-4 overflow-scroll">
+                        <p class="alert alert-warning" hidden>Your cart empty!</p>
+                        <div class="panel vstack gap-3">
+                            <div>
+                                <article class="product type-product panel">
+                                    <div class="hstack gap-2">
+                                        <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="assets/images/common/products/img-07.jpg" alt="Laptop Cover">
+                                            <a href="main/shop-product-detail.html" class="position-cover" data-caption="Laptop Cover"></a>
+                                        </figure>
+                                        <div class="content vstack gap-narrow fs-6">
+                                            <h5 class="h6 m-0"><a class="text-none" href="main/shop-product-detail.html">Laptop Cover</a></h5>
+                                            <div class="hstack gap-narrow fs-7 opacity-50"><span class="qty">1</span> x <span class="price">$24.00</span></div>
+                                            <a href="#remove_from_cart" class="remove fs-7">Remove</a>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                            <i class="unicon-close icon-1"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="product type-product panel">
+                                    <div class="hstack gap-2">
+                                        <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="assets/images/common/products/img-08.jpg" alt="Disney Toys">
+                                            <a href="main/shop-product-detail.html" class="position-cover" data-caption="Disney Toys"></a>
+                                        </figure>
+                                        <div class="content vstack gap-narrow fs-6">
+                                            <h5 class="h6 m-0"><a class="text-none" href="main/shop-product-detail.html">Disney Toys</a></h5>
+                                            <div class="hstack gap-narrow fs-7 opacity-50"><span class="qty">1</span> x <span class="price">$5.00</span></div>
+                                            <a href="#remove_from_cart" class="remove fs-7">Remove</a>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                            <i class="unicon-close icon-1"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="product type-product panel">
+                                    <div class="hstack gap-2">
+                                        <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="assets/images/common/products/img-09.jpg" alt="Screen Axe">
+                                            <a href="main/shop-product-detail.html" class="position-cover" data-caption="Screen Axe"></a>
+                                        </figure>
+                                        <div class="content vstack gap-narrow fs-6">
+                                            <h5 class="h6 m-0"><a class="text-none" href="main/shop-product-detail.html">Screen Axe</a></h5>
+                                            <div class="hstack gap-narrow fs-7 opacity-50"><span class="qty">1</span> x <span class="price">$19.00</span></div>
+                                            <a href="#remove_from_cart" class="remove fs-7">Remove</a>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                            <i class="unicon-close icon-1"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="product type-product panel">
+                                    <div class="hstack gap-2">
+                                        <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="assets/images/common/products/img-10.jpg" alt="Airpods Pro">
+                                            <a href="main/shop-product-detail.html" class="position-cover" data-caption="Airpods Pro"></a>
+                                        </figure>
+                                        <div class="content vstack gap-narrow fs-6">
+                                            <h5 class="h6 m-0"><a class="text-none" href="main/shop-product-detail.html">Airpods Pro</a></h5>
+                                            <div class="hstack gap-narrow fs-7 opacity-50"><span class="qty">1</span> x <span class="price">$49.00</span></div>
+                                            <a href="#remove_from_cart" class="remove fs-7">Remove</a>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                            <i class="unicon-close icon-1"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mini-cart-footer panel pt-3 border-top">
+                        <div class="panel vstack gap-3 justify-between">
+                            <div class="mini-cart-total hstack justify-between">
+                                <h5 class="h5 m-0">Subtotal</h5>
+                                <span class="fs-5">$97.00</span>
+                            </div>
+                            <div class="mini-cart-actions vstack gap-1">
+                                <a href="main/shop-cart.html" class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700">View cart</a>
+                                <a href="main/shop-checkout.html" class="btn btn-md btn-primary text-white">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Favorites modal -->
+        <div id="uc-favorites-panel" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog lg:max-w-500px bg-white text-dark dark:bg-gray-800 dark:text-white rounded">
+                <button class="uc-modal-close-default p-0 icon-2 btn btn-md btn-dark dark:bg-white dark:text-dark rounded-circle" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="panel vstack justify-center items-center gap-2 text-center py-8">
+                    <i class="icon icon-4 unicon-bookmark mb-2 text-primary dark:text-white"></i>
+                    <h2 class="h4 md:h3 m-0">Your favorites</h2>
+                    <p class="fs-5 opacity-60">You have not yet added any recipe to your favorites list.</p>
+                    <a href="#" class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 mt-2 uc-modal-close">Browse recipes</a>
+                </div>
+            </div>
+        </div>
+
+        <!--  Contact modal -->
+        <div id="uc-contact-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded">
+                <button class="uc-modal-close-default p-0 icon-2 btn btn-md btn-dark dark:bg-white dark:text-dark rounded-circle" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="panel vstack gap-2 md:gap-4 text-center">
+                    <div class="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Schedule your 15-minute demo now</h4>
+                            <div class="panel w-100 sm:w-350px md:w-500px mx-auto">
+                                <form class="vstack gap-2">
+                                    <div class="vstack lg:hstack gap-2">
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white" type="text" placeholder="Full name*" required>
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white" type="text" placeholder="Last name*" required>
+                                    </div>
+                                    <div class="vstack lg:hstack gap-2">
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white" type="email" placeholder="Your email*" required>
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white" type="tel" placeholder="Phone number*" required>
+                                    </div>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white" type="text" placeholder="Company name*" required>
+                                    <textarea class="form-control min-h-150px w-full bg-white dark:border-white" placeholder="Your message.."></textarea>
+                                    <button class="btn btn-primary btn-md text-white mt-2" type="submit">Schedule my demo</button>
+                                    <p class="fs-7 opacity-70 mt-2 text-center">We’ll tailor your demo to your immediate needs and answer all your questions. Get ready to see how it works!</p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  To Top Sticky -->
+        <a class="to-top position-fixed bottom-0 end-0 m-3 w-40px h-40px d-none xl:d-inline-flex items-center justify-center rounded-circle text-none z-99 bg-primary text-white" href="#to_top" data-uc-scroll>
+            <i class="icon icon-2 unicon-chevron-up"></i>
+        </a>
+
+        <!--  Darkmode Switcher Sticky -->
+        <div class="darkmode-trigger position-fixed bottom-0 end-0 m-2 my-1 lg:m-3 xl:mb-8 -translate-y-1 d-inline-flex items-center justify-center w-40px h-40px rounded-circle text-none z-99 bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox">
+                <span class="slider fs-5"></span>
+            </label>
+        </div>
+
+       <!-- Header start -->
+       <header class="uc-header header-five uc-navbar-sticky-wrap z-999" data-uc-sticky="start: 100vh; show-on-up: true; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;">
+        <nav class="uc-navbar-container ft-tertiary z-1">
+            <div class="uc-navbar-top bg-primary-700 text-white uc-dark d-none lg:d-block" style="--uc-nav-height: 32px">
+                <div class="hide-on-sticky">
+                    <div class="container container-expand max-w-1440px" style="background: linear-gradient(to right, #014b93, #014a92);">
+                        <div class="uc-navbar min-h-32px fs-8">
+                            <!-- <div class="uc-navbar-left">
+                                <ul class="uc-navbar-nav gap-2 fw-medium">
+                                    <li>
+                                        <a href="#">Customer stories</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-terms.html">Terms and conditions</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-contact.html">
+                                            <span>Hire an Expert</span>
+                                            <i class="fs-8 unicon-arrow-up-right fw-bold ms-narrow rtl:-rotate-90"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="uc-navbar-right">
+                                <div class="uc-navbar-item">
+                                    <a class="btn btn-xs p-0 fs-8 text-white" href="contactez-nous.html">
+                                        <i class="icon-narrow unicon-phone"></i>
+                                        <span>Contact us</span>
+                                    </a>
+                                </div>
+                                <div class="uc-navbar-item">
+                                    <a class="btn btn-xs p-0 fs-8 text-white" href="support-client.html">
+                                        <i class="icon-narrow unicon-chat-bot"></i>
+                                        <span>Customers care</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uc-navbar-main" style="--uc-nav-height: 80px">
+                <div class="container container-expand max-w-1440px">
+                    <div class="uc-navbar min-h-64px lg:min-h-80px text-gray-900 dark:text-white" data-uc-navbar="mode: click; animation: uc-animation-slide-top-small; duration: 150;">
+                        <div class="uc-navbar-left">
+                            <div class="uc-logo text-dark dark:text-white">
+                                <a class="hstack gap-1" href="../en/" style="width: 140px ">
+                                    <img class="text-gray-900 dark:text-white w-4/5 d-block dark:d-none" src="assets/images/common/logo-text-bleu.png" alt="Inawo">
+                                    <img class="text-gray-900 dark:text-white w-4/5 d-none dark:d-block" src="assets/images/common/logo-text-dark.png" alt="inawo-dark">
+                                </a>
+                            </div>
+                            <ul class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ltr:ms-2 ltr:xl:ms-4 rtl:me-2 rtl:xl:me-4">
+                                <li>
+                                    <a href="#">Solutions <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-dropbar uc-dropbar-top p-0 ft-primary text-unset fs-6 fw-normal hide-scrollbar border-top border-dark dark:border-white border-opacity-5 rounded-0 overflow-hidden shadow-xl bg-white dark:bg-gray-900" data-uc-drop="mode: click; offset: 0; boundary: true; stretch: x; animation: uc-animation-slide-top-small; animate-out: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="container max-w-xl">
+                                            <div class="uc-dropbar-inner after-bg">
+                                                <div class="row gx-5 col-match justify-between">
+                                                    <div class="col-8">
+                                                        <div class="panel vstack gap-4 py-4">
+                                                            <div class="panel vstack gap-4">
+                                                                <div class="hstack gap-4 justify-between">
+                                                                    <h5 class="h5 fw-medium m-0">Discover our solutions</h5>
+                                                                    <!-- <a href="#" class="btn btn-sm dark:text-white">
+                                                                        <span>See what's new</span>
+                                                                        <span class="cstack w-32px h-32px rounded-circle bg-primary-100 dark:bg-primary">
+                                                                            <i class="icon-narrow unicon-arrow-right fw-bold rtl:rotate-180"></i>
+                                                                        </span>
+                                                                    </a> -->
+                                                                </div>
+                                                                <div class="row child-cols-4 g-3">
+                                                                    <div>
+                                                                        <a href="vente-prospection.html" class="hstack items-start gap-2 p-2 text-none rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                            <span class="icon">
+                                                                                <i class="icon-2 unicon-store text-gray-900 dark:text-white"></i>
+                                                                            </span>
+                                                                            <div class="panel">
+                                                                                <h6 class="h6 fs-7 fw-medium mb-narrow">Sales and prospecting software</h6>
+                                                                                <p class="fs-8 text-muted">Accelerate your sales and automate your prospecting with our software</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="facturation-gestion.html" class="hstack items-start gap-2 p-2 text-none rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                            <span class="icon">
+                                                                                <i class="icon-2 unicon-blog text-gray-900 dark:text-white"></i>
+                                                                            </span>
+                                                                            <div class="panel">
+                                                                                <h6 class="h6 fs-7 fw-medium mb-narrow">Management and billing software</h6>
+                                                                                <p class="fs-8 text-muted">Manage your finances and bill easily with our software</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="inawo-global-solution.html" class="hstack items-start gap-2 p-2 text-none rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                            <span class="icon">
+                                                                                <i class="icon-2 unicon-increase-level text-gray-900 dark:text-white"></i>
+                                                                            </span>
+                                                                            <div class="panel">
+                                                                                <h6 class="h6 fs-7 fw-medium mb-narrow">Inawo global</h6>
+                                                                                <p class="fs-8 text-muted">Easily manage your sales and finances with our all-in-one software</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="panel vstack gap-4 p-5 bg-gray-25 dark:bg-gray-800">
+                                                            <div class="panel category-section">
+                                                                <h6 class="h6 fs-8 text-uppercase">Services</h6>
+                                                                <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
+                                                                    <li>
+                                                                        <a href="fonctionnalite.html">All features</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="offres-services.html">Our service offers</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="app-mobile.html">Mobile application</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="panel category-section">
+                                                                <h6 class="h6 fs-8 text-uppercase">Partners</h6>
+                                                                <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
+                                                                    <!-- <li>
+                                                                        <a href="page-contant.html">Customer support</a>
+                                                                    </li> -->
+                                                                    <li>
+                                                                        <a href="patenaires.html">Become a commercial partner</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Customer stories</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Resources <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar overflow-hidden w-2/4 lg:w-3/5" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="main/blog.html">
+                                                            <i class="icon-1 unicon-course fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Blog</b>
+                                                                <p class="fw-normal dark:text-white">Discover all the news related to marketing, sales, and management</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="ressources-telechargeables.html">
+                                                            <i class="icon-1 unicon-star fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Downloadable resources</b>
+                                                                <p class="fw-normal dark:text-white">Download our ebooks, white papers, templates, or professional documents</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="evernements.html">
+                                                            <i class="icon-1 unicon-play fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Events</b>
+                                                                <p class="fw-normal dark:text-white">Follow our webinars, events, or meetings</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="temoignage-etude.html">
+                                                            <i class="icon-1 unicon-headset fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Testimonials and case studies</b>
+                                                                <p class="fw-normal dark:text-white">Discover the use cases of our software and user testimonials.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div class="vstack gap-2 p-3 h-100 bg-orangelight-100 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <div class="featured-image panel" data-uc-lightbox="video-autoplay: true;">
+                                                        <figure class="featured-image m-0 rounded ratio ratio-3x2 rounded-1-5 uc-transition-toggle overflow-hidden">
+                                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="assets/images/common/login.jpg" alt="Image">
+                                                        </figure>
+                                                        <button class="btn btn-md btn-alt-orangedark p-0 w-32px h-32px position-absolute bottom-0 ltr:start-0 rtl:end-0 m-2"><i class="icon-1 unicon-play-filled-alt"></i></button>
+                                                        <a href="assets/images/media/installation.mp4" data-caption="Easy project management of any complexity." data-attrs="width: 640; height: 480;" class="position-cover"></a>
+                                                    </div>
+                                                    <div class="vstack justify-between gap-2">
+                                                        <div class="vstack gap-1">
+                                                            <h5 class="h6 m-0">Everything you need to manage your business</h5>
+                                                            <p class="fs-7 opacity-70">For simplified management and maximum performance, move forward with the right management tools</p>
+                                                        </div>
+                                                        <a href="inscription.html" class="btn btn-sm btn-primary" id="insc">Try for free</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                
+                                <li><a href="tarifs.html">Pricing</a></li>
+                                <li>
+                                    <a href="#">About <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar overflow-hidden w-2/4 lg:w-3/5" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="a-propos-nous.html">
+                                                            <i class="icon-1 unicon-course fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">About inawo.</b>
+                                                                <p class="fw-normal dark:text-white">Who we are and what we want to offer</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="job.html" data-uc-toggle="">
+                                                            <i class="icon-1 unicon-star fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">We are hiring</b>
+                                                                <p class="fw-normal dark:text-white">Discover job opportunities within our company</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="patenaires.html">
+                                                            <i class="icon-1 unicon-play fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Partnerships</b>
+                                                                <p class="fw-normal dark:text-white">Join the inawo partnership program, our distributor network</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2 h-100 bg-orangelight-100 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="contactez-nous.html">
+                                                             <i class="icon-1 unicon-email fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Contact us</b>
+                                                                <p class="fw-normal dark:text-white">Leave us a message for any information request</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-orangelight hover:bg-opacity-10 hover:rounded-1 dark:hover:bg-white duration-150 rounded-1-5" href="offres-services.html">
+                                                            <i class="icon-1 unicon-headset fw-bold text-orangedark dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Our service offerings</b>
+                                                                <p class="fw-normal dark:text-white">We support businesses and institutions.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uc-navbar-right">
+                            <ul class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ltr:ms-2 ltr:xl:ms-4 rtl:me-2 rtl:xl:me-4">
+                               
+                                <li class="d-inline-block">
+                                    <a href="#" class="hstack gap-1 text-none fw-medium">
+                                        <i class="icon icon-1 unicon-wikis"></i>
+                                        <span>En</span>
+                                    </a>
+                                    <div class="py-1 bg-white dark:bg-gray-800 shadow-xs w-200px" data-uc-drop="mode: click; offset: 0; pos: top-right; boundary: !.uc-navbar-container; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <ul class="nav-y gap-0 fs-7">
+                                            <li>
+                                                <a href="#" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="assets/images/common/en.svg" alt="English">English</a>
+                                            </li>
+                                            <li>
+                                                <a href="../fr/vente-prospection.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="assets/images/common/fr.svg" alt="French">Français</a>
+                                            </li>
+                                            <!-- <li>
+                                                <a href="#ge" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="assets/images/common/ge.svg" alt="Germany">Germany</a>
+                                            </li>
+                                            <li>
+                                                <a href="#sp" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="assets/images/common/sp.svg" alt="Spain">Spain</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ar" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="assets/images/common/ar.svg" alt="العربية">Arabic (العربية المغربية)</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ch" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="assets/images/common/ch.svg" alt="中文">Chinese (中文)</a>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <a class="" href="https://app.inawo.pro/fr/connexion">Log in</a>
+                                </li>
+                            </ul>
+                            <a class="btn btn-md btn-primary rounded-default lg:px-3 text-none shadow-xs d-none lg:d-inline-flex" href="inscription.html" id="insc">Create a free account</a>
+                            <a class="d-block lg:d-none" href="#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+       <!-- Header end -->
+
+
+        <!-- Wrapper start -->
+       <!-- Wrapper start -->
+       <div id="wrapper" class="wrap">
+
+        <!-- Section start -->
+        <div id="hero_header" class="overview section panel overflow-hidden pt-8">
+            <div class="lg:d-none md:d-block" style="position: absolute; top: 0px; z-index: 1; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+            <div class="position-cover opacity-90 bg-cover  " style="background-position: 100% 100%" data-src="assets/images/IMG (01) Landing PAGE 2024-05.jpg" data-uc-img></div>
+            <div class="section-outer panel pb-6 sm:pb-8 xl:pb-9" style="z-index: 2;">                  
+                <div class="container max-w-xl">
+                    <div class="section-inner panel">
+                        <div class="row child-cols-12 justify-center lg:justify-between items-center g-6 lg:g-0">
+                            <div class="sm:col-8 lg:col-5">
+                                <div class="panel vstack gap-2 text-center lg:text-start rtl:lg:text-end xl:me-4" data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                    <h1 class="lg:h2 sm:h4 fw-bold mb-0 xl:mb-0 lg:d-block d-none">
+                                        Optimize your business potential with our customer relationship management software.
+                                    </h1>
+                                    <h1 class="lg:h2 sm:h4 fw-bold mb-0 xl:mb-0 lg:d-none md:d-block" style="color: snow;">
+                                        Optimize your business potential with our customer relationship management software.
+                                    </h1>
+                                    <p class="fs-6 xl:fs-4 lg:d-block d-none">
+                                        With our software, you can stay competitive in a constantly changing market.
+                                    </p>
+                                    <p class="fs-6 xl:fs-4 lg:d-none md:d-block" style="color: snow;">
+                                        With our software, you can stay competitive in a constantly changing market.
+                                    </p>
+                                    <div class="vstack gap-1 mt-1 xl:mt-1">
+                                        <div class="row justify-center child-cols g-1 mt-0 sm:mt-1">
+                                            <div class="col-12 sm:col-auto">
+                                                <a href="inscription.html" id="insc" class="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white">
+                                                    <span class="d-none md:d-block">Try for Free</span>
+                                                    <span class="d-block md:d-none">Try for Free</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 sm:col-auto">
+                                                <a href="https://calendly.com/inawosocial" class="btn btn-md btn-green rounded-default h-48px w-100 lg:min-w-150px text-white hover:bg-dark hover:text-white dark:text-white">
+                                                    <span class="d-none md:d-block">Book a Demo</span>
+                                                    <span class="d-block md:d-none">Book a Demo</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- <p class="fs-7 text-dark dark:text-white text-opacity-70">Accès complet. Aucune carte de crédit requise. Utilisé par plus des milliers d'entreprises.</p>  -->
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- <div class="sm:col-auto pt-8">
+                                <div class="hero-scroll-scene panel sm:w-550px sm:h-600px lg:w-450px lg:h-500px xl:w-600px xl:h-650px" data-anime="translateX: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-3 h-100 overflow-hidden">
+                                        <img class="media-cover image" src="fr/assets/images/IMG (01) Landing PAGE 2024-01.jpg" alt="image">
+                                    </figure>
+                                    <div class="hero-five-contries position-absolute sm:w-300px lg:w-250px xl:w-350px d-none sm:d-block" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 750; delay: 750;" style="top: 20%">
+                                        <img src="fr/assets/images/home02.png" alt="Countries" data-anime="onscroll: .hero-scroll-scene; onscroll-offset: -200; onscroll-trigger: 0; onscroll-duration: 400%; translateY: [-100, 0];">
+                                    </div>
+                                    <div class="hero-five-account position-absolute sm:w-250px lg:w-200px xl:w-300px d-none sm:d-block" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 750; delay: 750;" style="bottom: 20%">
+                                        <img src="fr/assets/images/home03.png" alt="Account" data-anime="onscroll: .hero-scroll-scene; onscroll-offset: -200; onscroll-trigger: 0; onscroll-duration: 400%; translateY: [100, 0];">
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!-- Section end -->
+ 
+
+
+<!-- Section start -->
+    <div id="main_features" class="key-features section panel overflow-hidden">
+            <div class="section-outer panel py-6 xl:py-9 ">
+                <div class="container sm:max-w-lg xl:max-w-xl">
+                    <div class="section-inner panel">
+                        <div class="panel vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-8 xl:mb-9 text-center" data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                            <span class="fs-6 fw-bold m-0 text-primary">A tool to accelerate your business and profitability</span>
+                            <h2 class="h4 lg:h3 xl:h2 m-0">Our platform is adapted for multiple business sectors</h2>
+                            <!-- <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">We focus on helping you to make useful content more accessible with an ultimate goal for a good sharing profit as a content creator.</p> -->
+                        </div>
+                        <div class="row child-cols-12 sm:child-cols-6 xl:child-cols-4 col-match justify-center g-2 lg:g-4">
+                            <div>
+                                <div class="feature-item shadow panel px-3 lg:px-4 py-4 rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">
+                                        <div class="vstack gap-4 h-100">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <h3 class="h4 m-0">Increased Efficiency</h3>
+                                                            <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80 ">Our software allows your team to focus on prospecting and closing sales, significantly increasing their productivity.</p>
+                                                            <!-- <a href="vente-prospection.html" class="uc-link fw-bold hstack gap-narrow">
+                                                                <span>Discover this package</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                                                            </a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="feature-item shadow panel px-3 lg:px-4 py-4 rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">
+                                    <div class="vstack gap-4 h-100">
+                                        <div class="panel">
+                                            <div class="panel vstack justify-center gap-4 h-100">
+                                                <div>
+                                                    <div class="panel vstack gap-2">
+                                                        <h3 class="h4 m-0">Performance Analysis</h3>
+                                                        <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">With advanced analytics tools, identify the most promising sales opportunities and adjust your strategies accordingly.</p>
+                                                        <!-- <a href="facturation-gestion.html" class="uc-link fw-bold hstack gap-narrow">
+                                                            <span>Discover this package</span>
+                                                            <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                                                        </a>  -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="feature-item shadow panel px-3 lg:px-4 py-4 rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">
+                                    <div class="vstack gap-4 h-100">
+                                        <div class="panel">
+                                            <div class="panel vstack justify-center gap-4 h-100">
+                                                <div>
+                                                    <div class="panel vstack gap-2">
+                                                        <h3 class="h4 m-0">Centralized Contact Management</h3>
+                                                        <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">By centralizing all information on your prospects and customers, your software solution facilitates relationship management, improves personalization of interactions, and increases conversion chances.</p>
+                                                        <!-- <a href="inawo-global-solution.html" class="uc-link fw-bold hstack gap-narrow">
+                                                            <span>Discover this package</span>
+                                                            <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                                                        </a> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Section end -->
+
+ <!-- Section start -->
+ <div  class="main-features section panel">
+     <div class="section-outer panel py-6 xl:py-9">
+         <div class="container sm:max-w-md lg:max-w-lg xl:max-w-xl">
+             <div class="section-inner panel">
+                 <div class="panel vstack gap-4 sm:gap-6 lg:gap-8">
+                     <div class="feature-item panel" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">
+                         <div class="row child-cols col-match justify-between g-4 lg:g-8 xl:g-10">
+                             <div class="col-12 sm:col-6 order-0 lg:order-1">
+                                 <div class="panel w-100">
+                                     <img src="assets/images/template/feature-03-01.jpg" alt="Notre logiciel vous facilite l’accès à l’information sur les besoins de vos clients" class="rounded-2">
+                                 </div>
+                             </div>
+                             <div class="col-12 sm:col-6 order-1 lg:order-0">
+                                 <div class="panel vstack justify-between gap-4 sm:gap-6 h-100">
+                                     <div>
+                                         <div class="panel vstack gap-2">
+                                             <span class="fs-6 fw-bold m-0 text-primary">Customer-focused technology</span>
+                                             <h3 class="h4 lg:h3 xl:h2 m-0">Our software gives you easy access to information on your customers' needs</h3>
+                                             <p class="fs-6 xl:fs-5 opacity-70 dark:opacity-80">To grow your business in today's increasingly dynamic markets, you need an edge. Thanks to our always-on technology, you can more easily manage all your business activities, seize more growth opportunities and compete at the highest level 24/7. </p>
+                                         </div>
+                                     </div>
+                                     <hr class="border-gray-100 dark:border-opacity-15 m-0 opacity-100" data-anime="onview: -200; width: [0, '100%']; easing: easeInOutExpo; duration: 750; delay: 100;">
+                                     <div>
+                                         <div class="p-0 panel vstack gap-1 border-none">
+                                            <ul style="list-style-type: none;">
+                                             <li><i class="unicon-checkmark fw-bold"></i>Improve your customer's experience</li>
+                                             <li><i class="unicon-checkmark fw-bold"></i>Increase customer loyalty and satisfaction</li>
+                                             <li><i class="unicon-checkmark fw-bold"></i>Track your results in real time</li>
+                                            </ul>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <hr class="border-gray-100 dark:border-opacity-15 m-0 opacity-100" data-anime="onview: -200; width: [0, '100%']; easing: easeInOutExpo; duration: 750; delay: 100;">
+
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+ <!-- Section end -->
+
+ <!-- Section start -->
+<div id="helpful-links" class="section panel overflow-hidden">
+    <div class="section-outer panel pb-6 sm:pb-8 lg:pb-9">
+    <div class="container max-w-lg ">
+     <div class="section-inner panel">
+         <div class="panel vstack gap-2 sm:gap-5 xl:gap-5">
+             <div class="panel vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-8 xl:mb-9 text-center">
+                <span class="fs-6 fw-bold m-0 text-primary">A tool to accelerate your business and profitability</span>
+             <h2 class="h4 lg:h3 xl:h2 m-0"> Our platform is suitable for several business sectors</h2>
+             <!-- <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">We focus on helping you to make useful content more accessible with an utlimate goal for a good sharing profit as a content creator.</p> -->
+             </div>
+             <div class="row child-cols-12 sm:child-cols-6 g-6 lg:g-6 col-match" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                 <div>
+                     <div class="row child-cols-4 hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-64px h-64px lg:w-80px lg:h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-32px lg:w-48px d-block dark:d-none" src="assets/images/template/icon-location.svg" alt="location-icon">
+                             <img class="w-32px lg:w-48px d-none dark:d-block" src="assets/images/template/icon-location-dark.svg" alt="location-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Dashboard</h5>
+                              <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Visualize the evolution of your business in real time to facilitate decision-making.</p> 
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Visit us</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4  hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-80px h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-48px d-block dark:d-none" src="assets/images/template/icon-chat.svg" alt="chat-icon">
+                             <img class="w-48px d-none dark:d-block" src="assets/images/template/icon-chat-dark.svg" alt="chat-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Products catalog</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Easily create a product and/or service by category, with prices to match.</p> 
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Let's chat</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-80px h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-48px d-block dark:d-none" src="assets/images/template/icon-internet.svg" alt="internet-icon">
+                             <img class="w-48px d-none dark:d-block" src="assets/images/template/icon-internet-dark.svg" alt="internet-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Customer insights</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Increase your knowledge of your customers and anticipate their needs.</p> 
+                         </div>
+                        <!--  <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Send report</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-80px h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-48px d-block dark:d-none" src="assets/images/template/icon-community.svg" alt="community-icon">
+                             <img class="w-48px d-none dark:d-block" src="assets/images/template/icon-community-dark.svg" alt="community-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Billing management</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Easily create and print invoices, quotes and purchase orders.</p> 
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Join us now</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-64px h-64px lg:w-80px lg:h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-32px lg:w-48px d-block dark:d-none" src="assets/images/template/icon-location.svg" alt="location-icon">
+                             <img class="w-32px lg:w-48px d-none dark:d-block" src="assets/images/template/icon-location-dark.svg" alt="location-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Shared calendar</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Manage your sales meetings more effectively with your entire team.</p> 
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Visit us</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-80px h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-48px d-block dark:d-none" src="assets/images/template/icon-chat.svg" alt="chat-icon">
+                             <img class="w-48px d-none dark:d-block" src="assets/images/template/icon-chat-dark.svg" alt="chat-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Activity tracking</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Record your sales, track your best customers and define the best times to call them back.</p>
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Let's chat</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-80px h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-48px d-block dark:d-none" src="assets/images/template/icon-internet.svg" alt="internet-icon">
+                             <img class="w-48px d-none dark:d-block" src="assets/images/template/icon-internet-dark.svg" alt="internet-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Dunning management</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Receive alerts when you need them to remind your customers.</p> 
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Send report</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-80px h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-48px d-block dark:d-none" src="assets/images/template/icon-community.svg" alt="community-icon">
+                             <img class="w-48px d-none dark:d-block" src="assets/images/template/icon-community-dark.svg" alt="community-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Opportunities management</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Manage your sales prospecting process in just a few clicks.</p> 
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Join us now</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-64px h-64px lg:w-80px lg:h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-32px lg:w-48px d-block dark:d-none" src="assets/images/template/icon-location.svg" alt="location-icon">
+                             <img class="w-32px lg:w-48px d-none dark:d-block" src="assets/images/template/icon-location-dark.svg" alt="location-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Task management</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Schedule your tasks faster and track their progress with your team.</p>
+                         </div>
+                        <!--  <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Visit us</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-80px h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-48px d-block dark:d-none" src="assets/images/template/icon-chat.svg" alt="chat-icon">
+                             <img class="w-48px d-none dark:d-block" src="assets/images/template/icon-chat-dark.svg" alt="chat-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Privileges management</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Accurately control access for your employees or groups of employees.</p>
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Let's chat</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+                 <div>
+                     <div class="row child-cols-4 panel hstack gap-2 lg:gap-3 items-center justify-between px-3 py-4 lg:p-4 rounded-2 bg-secondaire dark:bg-gray-300 dark:bg-opacity-10 lg:hover:scale-105 duration-150 transition-all">
+                         <div class="cstack w-80px h-80px rounded lg:rounded-2 bg-white dark:bg-gray-300 dark:bg-opacity-10">
+                             <img class="w-48px d-block dark:d-none" src="assets/images/template/icon-internet.svg" alt="internet-icon">
+                             <img class="w-48px d-none dark:d-block" src="assets/images/template/icon-internet-dark.svg" alt="internet-icon-dark">
+                         </div>
+                         <div class="vstack justify-center">
+                             <h5 class="h6 lg:h5 m-0">Your Data availability</h5>
+                             <p class="fs-7 lg:fs-6 opacity-70 dark:opacity-80">Access your data from anywhere in the world.</p> 
+                         </div>
+                         <!-- <a href="#" class="uc-link fw-bold hstack gap-narrow">
+                             <span>Send report</span>
+                             <i class="position-relative icon icon-1 unicon-arrow-right translate-y-px"></i>
+                         </a> -->
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+    </div>
+    </div>
+    </div>
+    
+    <!-- Section end -->
+         
+          <!-- Section start -->
+        <div id="cta" class="cta section panel overflow-hidden">
+                <div class="section-outer panel py-4 sm:py-6 xl:py-9 ">
+                    <div class="container max-w-xl">
+                        <div class="section-inner panel">
+                            <div class="vstack items-center gap-2 sm:max-w-600px lg:max-w-650px mx-auto text-center" data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                                <h2 class="h3 sm:h3 m-0">Get Started with Inawo.</h2>
+                                <p class="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70 mt-1 lg:mt-2">Because you and your business are worth more, help your salespeople sell more and your customers be even more satisfied. For simplified management and accelerated growth, use the right tools - use our free solution.</p>
+                                <div class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-1 lg:mt-2">
+                                    <a href="inscription.html" class="btn btn-md lg:btn-lg btn-primary text-white border-none" id="insc"  >Get Started Now</a>
+                                
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         <!-- Section end -->
+
+     </div>
+
+     <!-- Wrapper end -->
+        
+                <!-- Wrapper end -->
+        
+                <!-- Footer start -->
+                 <footer id="uc-footer" class="uc-footer panel overflow-hidden " >
+            <div class="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white bg-primary uc-dark" style="background: linear-gradient(to right, #014b93, #014a92);">
+                        <div class="container max-w-xl">
+                            <div class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
+                                <div class="uc-footer-widgets panel">
+                                    <div class="row child-cols-6 md:child-cols col-match g-4">
+                                        <div class="col-12 lg:col-4 dark:text-white">
+                                            <div class="panel vstack items-start gap-4 md:pe-8">
+                                                <div class="vstack gap-2">
+                                                    <a href="../en/">
+                                                        <!-- <img class="w-40px text-primary logo-light" src="assets/images/favicon-blanc.png" alt="Inawo light" data-uc-svg> -->
+                                                        <img class="w-40px text-primary d-none dark:d-block " src="assets/images/favicon-blanc.png" alt="Inawo Dark" data-uc-svg>
+                                                </a>
+                                                    <p>Every company needs the right management tools to generate and sustain growth. With inawo, simplify your management to boost your business performance.</p>
+                                                </div>
+                                                <div class="hstack items-start gap-1">
+                                                    <a href="#">
+                                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="assets/images/common/playstore.svg" alt="Google Play Store" data-uc-svg>
+                                                    </a>
+                                                    <a href="#">
+                                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <ul class="nav-y gap-1 dark:text-white">
+                                                 <li class="uc-nav-footer">Company</li>
+                                                <li style="font-size: 12px;"><a href="a-propos-nous.html">About us</a></li>
+                                                <li style="font-size: 12px;"><a href="job.html">Career</a></li>
+                                                <li style="font-size: 12px;"><a href="patenaires.html">Partners</a></li>
+                                                <li style="font-size: 12px;"><a href="offres-services.html">Our services</a></li>
+                                                <li style="font-size: 12px;"><a href="contactez-nous.html">Contact us</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul class="nav-y gap-1 dark:text-white">
+                                                 <li class="uc-nav-footer">Our solutions</li>
+                                                <li style="font-size: 12px;"><a href="vente-prospection.html">Inawo for sales</a></li>
+                                                <li style="font-size: 12px;"><a href="facturation-gestion.html">Inawo for Management</a></li>
+                                                <li style="font-size: 12px;"><a href="inawo-global-solution.html">Inawo Global</a></li>
+                                                <li style="font-size: 12px;"><a href="fonctionnalite.html">All features</a></li>
+                                                <li style="font-size: 12px;"><a href="tarifs.html">Pricing</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul class="nav-y gap-1 dark:text-white">
+                                                 <li class="uc-nav-footer">Resources</li>
+                                                <li style="font-size: 12px;"><a href="page-faq.html">Watch our presentation</a></li>
+                                                <li style="font-size: 12px;"><a href="support-client.html">Support center</a></li>
+                                                <li style="font-size: 12px;"><a href="main/blog.html">Blog</a></li>
+                                                <li style="font-size: 12px;"><a href="ressources-telechargeables.html">Downloadable resources</a></li>
+                                                <li style="font-size: 12px;"><a href="evernements.html">Events</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                          <ul class="nav-y gap-1 dark:text-white" >
+                                     <li class="uc-nav-footer">Bookmarks</li>
+                                    <li style="font-size: 12px;"><a href="crm-pme.html">CRM for SME</a></li>
+                                    <li style="font-size: 12px;"><a href="secteur-activite.html">Activity sector</a></li>
+                                    <li style="font-size: 12px;"><a href="glossaire.html">Glossary and Definiton</a></li>
+                                    <li style="font-size: 12px;"><a href="documents-professionels.html">Professional documents</a></li>
+                                   
+                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
+                                    <div class="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
+                                        
+                                        <ul class="nav-x gap-2 " style="font-size: 12px;">
+                                            <li><p class="opacity-60">Inawo @2024.All rights reserved.</p></li>
+                                             <li><a href="conditons-generales.html">Terms and conditions</a></li>
+                                    <li><a href="mentions-legales.html">Terms of use</a></li>
+                                    <li><a href="confidentialite-securite.html">Privacy/Data security</a></li>
+                                    <!-- <li><a href="accords-affiliation.html">Affiliation agreement</a></li> -->
+                                    <li><a href="politique.html">Cookies policy</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hstack justify-center lg:justify-end gap-2 lg:gap-3">
+                                        <ul class="nav-x gap-2">
+                                            <li>
+                                                <a href="https://www.linkedin.com/company/inawo-pro/"><i class="icon icon-2 unicon-logo-linkedin"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.facebook.com/inawo.io"><i class="icon icon-2 unicon-logo-facebook"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://x.com/inawo_pro"><i class="icon icon-2 unicon-logo-x-filled"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/inawo_pro/"><i class="icon icon-2 unicon-logo-instagram"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/@inawo"><i class="icon icon-2 unicon-logo-youtube"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="vr"></div>
+                                        <div class="d-inline-block">
+                                            <a href="#" class="hstack gap-1 text-none">
+                                                <i class="icon icon-1 unicon-earth-filled"></i>
+                                                <span>English</span>
+                                                <span data-uc-drop-parent-icon=""></span>
+                                            </a>
+                                            <div class="p-2 bg-white dark:bg-gray-800 shadow-xs rounded w-150px" data-uc-drop="mode: click; offset: 28; pos: top-right; boundary: !.uc-footer-bottom; animation: uc-animation-slide-top-small; duration: 150;">
+                                                <ul class="nav-y gap-1  items-end">
+                                                    <li class="row child-cols-4  ">
+                                                        <img src="assets/flags/france.png"   alt=""> 
+                                                        <a href="../fr/vente-prospection.html">Français</a>
+                                                    </li>
+                                                    <li class="row child-cols-4 ">
+                                                        <img src="assets/flags/united-states.png" alt="">
+                                                        <a href="">English</a>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer end -->
+
+       <!-- include jquery & bootstrap js -->
+        <script defer src="../assets/js/libs/jquery.min.js"></script>
+        <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+
+        <!-- include uni-core components -->
+        <script defer src="../assets/js/uni-core/js/components/notification.min.js"></script>
+        <script defer src="../assets/js/uni-core/js/components/parallax.min.js"></script>
+        <script defer src="../assets/js/uni-core/js/components/lightbox.min.js"></script>
+        <script defer src="../assets/js/uni-core/js/components/countdown.min.js"></script>
+        <script defer src="../assets/js/uni-core/js/components/tooltip.min.js"></script>
+        <script defer src="../assets/js/uni-core/js/components/slider.min.js"></script>
+        <script defer src="../assets/js/uni-core/js/components/slider-parallax.min.js"></script>
+        <script defer src="../assets/js/uni-core/js/components/slideshow.min.js"></script>
+        <script defer src="../assets/js/uni-core/js/components/slideshow-parallax.min.js"></script>
+
+        <!-- include scripts -->
+        <script defer src="../assets/js/libs/anime.min.js"></script>
+        <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+        <script defer src="../assets/js/libs/split-type.min.js"></script>
+        <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+        <script defer src="../assets/js/libs/gsap.min.js"></script>
+        <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+        <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+        <script defer src="../assets/js/helpers/splitype-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper-defined-timelines.js"></script>
+        <script defer src="../assets/js/core/preloader.js"></script>
+        <script defer src="../assets/js/core/marquee.js"></script>
+        <script defer src="../assets/js/uikit-components-bs.js"></script>
+
+        <!-- include app script -->
+        <script defer src="../assets/js/app.js"></script>
+
+        <script>
+            // Schema toggle via URL
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const getSchema = urlParams.get("schema");
+            if (getSchema === "dark") {
+                setDarkMode(1);
+            } else if (getSchema === "light") {
+                setDarkMode(0);
+            }
+        </script>                             
+                             
+    </body>
+</html>
