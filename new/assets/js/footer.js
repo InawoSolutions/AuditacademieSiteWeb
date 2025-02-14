@@ -1,80 +1,87 @@
 const footerHTML = `
-<footer id="uc-footer" class="uc-footer panel overflow-hidden uc-dark" >
-    <div class="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white bg-primary uc-dark" style="background: linear-gradient(to right, #014b93, #014a92);">
-        <div class="container max-w-xl ">
-            <div class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
-                <div class="uc-footer-widgets panel">
-                    <div class="row child-cols-6 md:child-cols col-match g-4">
-                        <div class="col-12 lg:col-4 dark:text-white">
-                            <div class="panel vstack items-start gap-4 md:pe-8">
-                                <div class="vstack gap-2">
-                                    <a href="../fr/">
-                                        <img class="w-40px text-primary d-block dark:d-none" src="../assets/images/favicon-blanc.png" alt="Inawo light" data-uc-svg>
-                                        <img class="w-40px text-primary d-none dark:d-block" src="../assets/images/favicon-blanc.png" alt="Inawo light" data-uc-svg>
-                                    </a>
-                                    <p>Toutes les entreprises ont besoin de bons outils de gestion pour générer et soutenir leur croissance. Avec inawo, simplifier votre gestion afin d’accroitre vos performances commerciales.</p>
+<footer id="uc-footer" class="uc-footer panel overflow-hidden">
+            <div class="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white">
+                <div class="container max-w-xl">
+                    <div class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
+                        <div class="uc-footer-widgets panel">
+                            <div class="row child-cols-6 md:child-cols col-match g-4">
+                                <div class="col-12 lg:col-4">
+                                    <div class="panel vstack items-start gap-4 ltr:md:pe-8 rtl:md:ps-8">
+                                        <div class="vstack gap-2">
+                                            <a href="../fr/">
+                                                <img class=" dark:d-none" src="../assets/images/logo-InawoCRM-Blanc-2.30b79eb395e41ca6c93a.png" alt="Inawo light" data-uc-svg style="width: 90px">
+                                                <img class="text-primary d-none dark:d-block "  style="width: 90px" src="../assets/images/pstore/logo-Inawo-Blanc.png" alt="Inawo dark" >
+                                                
+                                            </a>
+                                            <p style="font-size: 15px;">Toutes les entreprises ont besoin de bons outils de gestion pour générer et soutenir leur croissance. Avec inawo, simplifier votre gestion afin d’accroitre vos performances commerciales.</p>
+                                            <div class="hstack items-start gap-1">
+                                                <div class="hstack items-start gap-1">
+                                                    <a href="#">
+                                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/playstore.svg" alt="Google Play Store" data-uc-svg>
+                                                    </a>
+                                                    <a href="#">
+                                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
-                                <div class="hstack items-start gap-1">
-                                    <a href="#">
-                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/playstore.svg" alt="Google Play Store" data-uc-svg>
-                                    </a>
-                                    <a href="#">
-                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
-                                    </a>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium" style="font-size: 15px;">
+                                        <li class="uc-nav-footer">Nos solutions</li>
+                                        <li><a href="vente-prospection.html">Inawo pour la vente</a></li>
+                                        <li><a href="facturation-gestion.html">Inawo pour la facturation</a></li>
+                                        <li><a href="tarifs.html">Inawo pour la trésorerie</a></li>
+                                        <li><a href="ressources-humaines.html">Inawo pour la gestion des ressources humaines</a></li>
+                                        <li><a href="comptabilité.html">Inawo pour la comptabilité</a></li>
+                                        <li><a href="inawo-globale.html">Inawo Global</a></li>
+                                        <li><a href="fonctionalite.html">Toutes les fonctionnalitées</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium" style="font-size: 15px;">
+                                        <li class="uc-nav-footer">Entreprise</li>
+                                        <li><a href="a-propos-nous.html">A propos de nous</a></li>
+                                        <li><a href="job.html">Carrière</a></li>
+                                        <li><a href="partenaire.html">Partenariats</a></li>
+                                        <li><a href="offre-service.html">Offre de services </a></li>
+                                        <li><a href="contactez-nous.html">Contactez-nous</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium" style="font-size: 15px;">
+                                        <li class="uc-nav-footer">Ressources</li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="ressources-t.html">Ressources téléchargeables</a></li>
+                                        <li><a href="evenements.html">Evénements</a></li>
+                                        <li><a href="tuto.html">Tutoriels</a></li>
+                                        <li><a href="support-client.html">Support client </a></li>
+                                        
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium" style="font-size: 15px;">
+                                        <li class="uc-nav-footer">Favoris</li>
+                                        <li><a href="#">CRM pour les PME</a></li>
+                                        <li><a href="#">Etude de cas</a></li>
+                                        <li><a href="#">Glossaire et Definiton</a></li>
+                                        <li><a href="#">Documents professionels</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <ul class="nav-y gap-1 dark:text-white">
-                                <li class="uc-nav-footer">Entreprise</li>
-                                <li style="font-size: 12px;"><a href="a-propos-nous.html">A propos de nous</a></li>
-                                <li style="font-size: 12px;"><a href="job.html">Carrière</a></li>
-                                <li style="font-size: 12px;"><a href="patenaire.html">Partenariats</a></li>
-                                <li style="font-size: 12px;"><a href="offre-service.html">Offre de services </a></li>
-                                <li style="font-size: 12px;"><a href="contactez-nous.html">Contactez-nous</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="nav-y gap-1 dark:text-white">
-                                <li class="uc-nav-footer">Nos solutions</li>
-                                <li style="font-size: 12px;"><a href="vente-inawo.html">Inawo pour la vente</a></li>
-                                <li style="font-size: 12px;"><a href="gestion-inawo.html">Inawo pour la Gestion</a></li>
-                                <li style="font-size: 12px;"><a href="inawo-globale.html">Inawo Global</a></li>
-                                <li style="font-size: 12px;"><a href="fonctionnalite.html">Toutes les fonctionnalitées</a></li>
-                                <li style="font-size: 12px;"><a href="tarifs.html">Tarification</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="nav-y gap-1 dark:text-white">
-                                <li class="uc-nav-footer">Ressources</li>
-                                <li style="font-size: 12px;"><a href="presentation.html">Regardez notre présentation</a></li>
-                                <li style="font-size: 12px;"><a href="support-client.html">Support client </a></li>
-                                <li style="font-size: 12px;"><a href="blog.html">Blog</a></li>
-                                <li style="font-size: 12px;"><a href="ressources-t.html">Ressources téléchargeables</a></li>
-                                <li style="font-size: 12px;"><a href="evenement.html">Evénements</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="nav-y gap-1 dark:text-white" >
-                                <li class="uc-nav-footer">Favoris</li>
-                                <li style="font-size: 12px;"><a href="crm-pme.html">CRM pour les PME</a></li>
-                                <li style="font-size: 12px;"><a href="secteur-activite.html">Secteur d'activité</a></li>
-                                <li style="font-size: 12px;"><a href="glossaire-definition.html">Glossaire et Definiton</a></li>
-                                <li style="font-size: 12px;"><a href="document-pro.html">Documents professionels</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
+                        <div class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
                     <div class="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
                         
                         <ul class="nav-x gap-2 " style="font-size: 12px;">
                             <li><p class="opacity-60">Inawo @2024.Tous droits réservés.</p></li>
                             <li><a href="conditons-generales.html">Conditions générales</a></li>
-                            <li><a href="mentions-legales.html">Mentions légales</a></li>
-                            <li><a href="confidentialite-securite.html">Confidentialité/Sécurité des données</a></li>
-                            <!-- <li> <a href="accords-affiliation.html">Accords d'affiliation </a></li> -->
-                            <li><a href="politique.html">Politique des Cookies</a></li>
+                                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                                    <li><a href="confidentialite-securite.html">Confidentialité/Sécurité des données</a></li>
+                                    <!-- <li> <a href="accords-affiliation.html">Accords d'affiliation </a></li> -->
+                                    <li><a href="politique.html">Politique des Cookies</a></li>
                         </ul>
                     </div>
                     <div class="hstack justify-center lg:justify-end gap-2 lg:gap-3">
@@ -103,24 +110,23 @@ const footerHTML = `
                                 <span data-uc-drop-parent-icon=""></span>
                             </a>
                             <div class="p-2 bg-white dark:bg-gray-800 shadow-xs rounded w-150px" data-uc-drop="mode: click; offset: 28; pos: top-right; boundary: !.uc-footer-bottom; animation: uc-animation-slide-top-small; duration: 150;">
-                                <ul class="nav-y gap-1  items-end">
-                                    <li class="row child-cols-4  ">
-                                        <img src="assets/flags/france.png"   alt=""> 
-                                        <a href="">Français</a>
-                                    </li>
-                                    <li class="row child-cols-4 ">
-                                        <img src="assets/flags/united-states.png" alt="">
-                                        <a href="../en/index.html">English</a>
-                                    </li>
-                                </ul>
+                                <!-- <div class="py-1 bg-white dark:bg-gray-800 shadow-xs w-200px" data-uc-drop="mode: click; offset: 0; pos: top-right; boundary: !.uc-navbar-container; animation: uc-animation-slide-top-small; duration: 150;"> -->
+                                    <ul class="nav-y gap-0 fs-7">
+                                        <li>
+                                            <a href="./newcode/../en/index.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/en.svg" alt="English">English</a>
+                                        </li>
+                                        <li>
+                                            <a href="./newcode/../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/fr.svg" alt="French">Français</a>
+                                        </li> 
+
                             </div>
                         </div>
                     </div>
                 </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</footer>
+        </footer>
 `
 
 document.addEventListener("DOMContentLoaded", ()=>{
