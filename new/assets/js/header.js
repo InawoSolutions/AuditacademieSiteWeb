@@ -390,7 +390,7 @@ const headerHTML = `
                                                                                     </a>
                                                                                 </div>
                                                                                 <div>
-                                                                                    <a href="recompenses.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="carrieres.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-chat fw-bold text-white"></i></div>
                                                                                         <div class="panel">
@@ -400,7 +400,7 @@ const headerHTML = `
                                                                                     </a>
                                                                                 </div>
                                                                                 <div>
-                                                                                    <a href="./partenariat.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="recompenses.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
                                                                                         <div class="panel">
@@ -481,7 +481,7 @@ const headerHTML = `
                                                                         <h5 class="h6">Contactez-nous</h5>
                                                                         <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
                                                                             <li>
-                                                                                <a href="./contact.html">Laissez nous un message pour toute demande d'informations</a>
+                                                                                <a href=".html">Laissez nous un message pour toute demande d'informations</a>
                                                                             </li>
                                                                             <!-- <li>
                                                                                 <a href="#">Customer stories</a>
@@ -490,7 +490,7 @@ const headerHTML = `
                                                                                 <a href="#">Resources</a>
                                                                             </li> -->
                                                                             <li>
-                                                                                <a href="./blog-sidebar.html">Nous recrutons</a>
+                                                                                <a href="Recrutement.html">Nous recrutons</a>
                                                                             </li>
                                                                             <!-- <li>
                                                                                 <a href="./newcode/career.html">Career</a>
@@ -554,7 +554,7 @@ const headerHTML = `
     
                                 </li>
                                 
-                                    <a href="./newcode/sign-in.html" style="text-decoration: none;">Connexion</a>
+                                    <a href="https://app.inawo.pro/fr/connexion" style="text-decoration: none;">Connexion</a>
                                 
                                 <a class="btn btn-sm  text-white dark:bg-white dark:text-primary dark:hover:bg-white fw-bold rounded-pill lg:px-2 text-none hover:contrast-shadow d-none lg:d-inline-flex" style="background-color: #014a92;" href="inscription.html">Créer un compte gratuit</a>
                                 <a class="d-block lg:d-none" href="./newcode/#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>

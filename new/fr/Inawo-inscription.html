@@ -54,6 +54,7 @@
         <link rel="preload" href="../assets/js/core/marquee.js" as="script">
         <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
         <link rel="preload" href="../assets/js/app.js" as="script">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
 
         <!-- app head for bootstrap core -->
         <script src="../assets/js/app-head-bs.js"></script>
@@ -72,6 +73,103 @@
 
         <!-- include scripts -->
         <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+
+        
+        
+        <style>
+        .country-select {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        }
+
+        .flag-dropdown {
+        position: absolute;
+        left: 10px;
+        z-index: 2;
+        }
+
+        .flag-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+        color: #666;
+        }
+
+        .country-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        max-height: 250px;
+        overflow-y: auto;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 280px;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .country-list.show {
+        display: block;
+        }
+
+        .country-option {
+        padding: 10px 15px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #f0f0f0;
+        }
+
+        .country-option:hover {
+        background-color: #f8f9fa;
+        }
+
+        .flag-icon {
+        width: 20px;
+        height: 15px;
+        display: inline-block;
+        margin-right: 5px;
+        }
+
+        .country-option .country-name {
+        flex-grow: 1;
+        color: #333;
+        }
+
+        .country-option .dial-code {
+        color: #666;
+        font-size: 13px;
+        }
+
+        .phone-input-container {
+        width: 100%;
+        }
+
+        .phone-input {
+        padding-left: 90px !important;
+        color: #333;
+        }
+
+        .flag-button::after {
+        content: '';
+        display: inline-block;
+        margin-left: 5px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #666;
+        }
+        </style>
+        
     </head>
     <body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden disable-cursor">
 
@@ -561,52 +659,59 @@
                     <li><a href="inscription.html"><span class="opacity-50">Inscription</span></a></li>
                 </ul>
             </div>
-            <div class="section py-4 lg:py-6 xl:py-6">
-                <div class="container max-w-lg">
-                    <div class="page-wrap panel vstack gap-4 lg:gap-6 xl:gap-6">
-                        <header class="page-header panel vstack justify-center gap-2 lg:gap-4 text-center">
-                            <div class="panel">
-                                <h3>INSCRIPTION</h3>
-                            </div>
-                        </header>
-                    </div>
-                </div>
-            </div>
-            <div class="container d-flex justify-content-center mb-5"> 
+            <div class="container d-flex justify-content-center mb-5 mt-5"> 
                 <div class="col-md-6 col-sm-12 mx-auto"> 
                     <div class="widget social-widget vstack gap-2 text-center p-2 py-3 lg:p-4 lg:py-5 rounded-1-5 lg:rounded-2 bg-gray-25 dark:bg-gray-800 overflow-hidden border dark:bg-gray-900 dark:text-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
                         <div class="widget-title">
                             <h4 class="fs-7 m-0">Créez votre compte gratuitement</h4>
                         </div>
-                        <form class="vstack gap-1" id="insform">
-                            <div class="d-flex gap-1">
-                                <input class="form-control form-control-sm fs-6  pe-5 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text"  placeholder="Nom" id="nom" name="nom" required="">
-                                <input class="form-control form-control-sm fs-6  pe-5  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Prénom" id="prenom" name="prenom" required="">
+                        <form class="vstack gap-1" id="insform">  
+                            <div class="d-flex gap-1">                            
+                                <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Nom et Prénom" id="nom" name="nom" required="">  
+                            </div>  
+                            <div class="d-flex gap-1">  
+                                <input class="form-control form-control-sm fs-6  pe-5  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Fonction" id="fonction" name="fonction" required="">  
+                                <input class="form-control form-control-sm fs-6  pe-5 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text"  placeholder="Société" id="societe" name="societe" required="">  
+                            </div>  
+                            
+                            <div class="country-select">
+                                <div class="flag-dropdown">
+                                    <button type="button" class="flag-button" id="countrySelect">
+                                    <span class="flag-icon flag-icon-us"></span>
+                                    <span class="dialCode">+1</span>
+                                    </button>
+                                    <div class="country-list" id="countryList">
+                                    <!-- Les pays seront ajoutés ici par JavaScript -->
+                                    </div>
+                                </div>
+                                <div class="phone-input-container">
+                                    <input id="phone" class="form-control form-control-sm fs-6 rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15 phone-input" type="tel" placeholder="Téléphone" name="tel">
+                                </div>
                             </div>
-                            <div class="d-flex gap-1">
-                                <input class="form-control form-control-sm fs-6  pe-5  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Fonction" id="fonction" name="fonction" required="">
-                                <input class="form-control form-control-sm fs-6  pe-5 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text"  placeholder="Société" id="societe" name="societe" required="">
-                            </div>
-                            <input id="phone" class="form-control form-control-sm fs-6   rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15 phone-input" type="tel" placeholder="Téléphone" name="tel"> 
-                            <div id="error-message" style="color:red; display:none;">Veuillez entrer un numéro de téléphone valide</div>
-                            <input class="form-control form-control-sm fs-6  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="email" placeholder="Email" id="email" name="email" required="">
-                            <div class="password-container">
-                                <input type="password" id="password" class="form-control form-control-sm fs-6  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" placeholder="Entrez votre mot de passe" name="password" required>
-                                <i id="toggle-password" class="fas fa-eye" style="cursor: pointer;"></i>
-                            </div>
-                            <div class="d-flex justify-content-between gap-1 d-none" id="hints">
-                                <small class="form-text text-muted rounded-pill  p-1 " style="background-color:#ADD8E6 ;  color:white;">Entrez au moins 8 caractères</small>
-                                <small class="form-text text-muted rounded-pill  p-1  " style="background-color: #ADD8E6; color: white; ">1 majuscule et 1 minuscule</small>
-                                <small class="form-text text-muted rounded-pill  p-1  " style="background-color:#ADD8E6 ;  color: white;">1 chiffre</small>
-                            </div>
-                            <div class="form-check d-flex align-items-center"> 
-                                <input class="form-check-input" type="checkbox" name="newsletter" id="no-newsletter" value="no">
-                                <label class="form-check-label ms-2 fs-7" for="no-newsletter"> 
-                                    Je ne souhaite pas recevoir les communications de Inawo
-                                </label>
-                            </div>
-                            <button class="btn btn-sm btn-primary dark:bg-tertiary dark:text-primary" style="background-color: #014a92;" type="submit">Créer un compte gratuitement</button>
-                            <p class="fs-7">En cliquant sur « Créer mon compte », vous acceptez les <a href="conditons-generales.html" class="fs-7">Conditions Générales d'Utilisation</a> et vous pouvez également consulter notre <a href="" class="fs-7" style="color: blue;">Politique de confidentialité</a>.</p>
+                            
+                            <div id="error-message" style="color:red; display:none;">Veuillez entrer un numéro de téléphone valide</div>  
+                            
+                            <input class="form-control form-control-sm fs-6  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="email" placeholder="Email" id="email" name="email" required="">  
+                            <div class="password-container">  
+                                <input type="password" id="password" class="form-control form-control-sm fs-6  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" placeholder="Entrez votre mot de passe" name="password" required>  
+                                <i id="toggle-password" class="fas fa-eye" style="cursor: pointer;"></i>  
+                            </div>  
+                            
+                            <div class="d-flex justify-content-between gap-1 d-none" id="hints">  
+                                <small class="form-text text-muted rounded-pill p-1" style="background-color:#ADD8E6; color:white;">Entrez au moins 8 caractères</small>  
+                                <small class="form-text text-muted rounded-pill p-1" style="background-color: #ADD8E6; color: white;">1 majuscule et 1 minuscule</small>  
+                                <small class="form-text text-muted rounded-pill p-1" style="background-color:#ADD8E6; color: white;">1 chiffre</small>  
+                            </div>  
+                            
+                            <div class="form-check d-flex align-items-center">   
+                                <input class="form-check-input" type="checkbox" name="newsletter" id="no-newsletter" value="no">  
+                                <label class="form-check-label ms-2 fs-7" for="no-newsletter">   
+                                    Je ne souhaite pas recevoir les communications de Inawo  
+                                </label>  
+                            </div>  
+                            
+                            <button class="btn btn-sm btn-primary dark:bg-tertiary dark:text-primary" style="background-color: #014a92;" type="submit">Créer un compte gratuitement</button>  
+                            <p class="fs-7">En cliquant sur « Créer mon compte », vous acceptez les <a href="conditons-generales.html" class="fs-7">Conditions Générales d'Utilisation</a> et vous pouvez également consulter notre <a href="" class="fs-7" style="color: blue;">Politique de confidentialité</a>.</p>  
                         </form>
                     </div>
                 </div>
@@ -678,5 +783,72 @@
                 setDarkMode(0);
             }
         </script>
+        <script>
+            const countries = [
+            { code: 'us', name: 'United States', dialCode: '+1' },
+            { code: 'gb', name: 'United Kingdom', dialCode: '+44' },
+            { code: 'af', name: 'Afghanistan (افغانستان)', dialCode: '+93' },
+            { code: 'al', name: 'Albania (Shqipëri)', dialCode: '+355' },
+            { code: 'dz', name: 'Algeria (الجزائر)', dialCode: '+213' },
+            { code: 'as', name: 'American Samoa', dialCode: '+1684' },
+            { code: 'ad', name: 'Andorra', dialCode: '+376' },
+            // Ajoutez d'autres pays selon vos besoins
+            ];
+    
+            const countrySelect = document.getElementById('countrySelect');
+            const countryList = document.getElementById('countryList');
+            const phoneInput = document.getElementById('phone');
+    
+            // Créer la liste des pays
+            countries.forEach(country => {
+            const option = document.createElement('div');
+            option.className = 'country-option';
+            option.innerHTML = `
+                <span class="flag-icon flag-icon-${country.code}"></span>
+                <span class="country-name">${country.name}</span>
+                <span class="dial-code">${country.dialCode}</span>
+            `;
+            option.addEventListener('click', () => {
+                selectCountry(country);
+                countryList.classList.remove('show');
+            });
+            countryList.appendChild(option);
+            });
+    
+            // Gérer l'affichage de la liste déroulante
+            countrySelect.addEventListener('click', (e) => {
+            e.stopPropagation();
+            countryList.classList.toggle('show');
+            });
+    
+            // Fermer la liste si on clique ailleurs
+            document.addEventListener('click', () => {
+            countryList.classList.remove('show');
+            });
+    
+            // Sélectionner un pays
+            function selectCountry(country) {
+            countrySelect.querySelector('.flag-icon').className = `flag-icon flag-icon-${country.code}`;
+            countrySelect.querySelector('.dialCode').textContent = country.dialCode;
+            phoneInput.value = country.dialCode + ' ';
+            }
+    
+            // Initialiser avec les États-Unis
+            selectCountry(countries[0]);
+    
+            // Formater le numéro de téléphone pendant la saisie
+            phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value;
+            
+            // Garder l'indicatif pays
+            const dialCode = countrySelect.querySelector('.dialCode').textContent;
+            if (!value.startsWith(dialCode)) {
+                value = dialCode + ' ' + value.replace(dialCode, '');
+            }
+            
+            // Mettre à jour la valeur
+            e.target.value = value;
+            });
+            </script>
     </body>
 </html>
