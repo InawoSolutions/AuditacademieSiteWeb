@@ -573,36 +573,47 @@
                     </div>  
                     <form class="vstack gap-1" id="insform" enctype="multipart/form-data">  
                         <div class="d-flex gap-1">                            
-                            <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Nom et Prénom" id="nom" name="nom" required="">  
+                            <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" 
+                                   type="text" placeholder="Nom et Prénom" id="nom" name="nom" required>  
                         </div>                            
-                        <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="email" placeholder="Email" id="Email" name="Email" required="">  
-                        <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Objet" id="Objet" name="Objet" required="">  
-                        
+                    
+                        <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" 
+                               type="email" placeholder="Email" id="Email" name="Email" required>  
+                    
+                        <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" 
+                               type="text" placeholder="Objet" id="Objet" name="Objet" required>  
+                    
                         <!-- Liste déroulante pour le type d'avis -->  
-                        <select class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" id="type" name="type" required="">  
+                        <select class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" 
+                                id="type" name="type" required>  
                             <option value="" disabled selected>Type d'avis</option>  
                             <option value="Avis">Avis</option>  
                             <option value="Témoignage">Témoignage</option>  
                             <option value="Plainte">Plainte</option>  
                         </select>  
-        
+                    
                         <!-- Champ pour le message -->  
-                        <textarea class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" id="Message" name="Message" placeholder="Votre message" required=""></textarea>  
-        
+                        <textarea class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" 
+                                  id="Message" name="Message" placeholder="Votre message" required></textarea>  
+                    
                         <!-- Champ pour le logo si Témoignage sélectionné -->  
                         <div id="logoUploadContainer" style="display: none;">  
-                            <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="file" id="logo" name="logo">  
+                            <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" 
+                                   type="file" id="logo" name="logo">  
                         </div>  
-        
+                    
                         <div class="form-check d-flex align-items-center">   
                             <input class="form-check-input" type="checkbox" name="newsletter" id="no-newsletter" value="no">  
                             <label class="form-check-label ms-2 fs-7" for="no-newsletter">   
                                 Je ne souhaite pas recevoir les communications de Inawo  
                             </label>  
                         </div>  
-                        
-                        <button class="btn btn-sm btn-primary dark:bg-tertiary dark:text-primary" style="background-color: #014a92;" type="submit">Envoyer</button>  
-                    </form>  
+                    
+                        <button class="btn btn-sm btn-primary dark:bg-tertiary dark:text-primary" style="background-color: #014a92;" type="submit">
+                            Envoyer
+                        </button>  
+                    </form>
+                     
                 </div>  
             </div>  
         </div>  

@@ -332,7 +332,7 @@ const headerHTML = `
                                                                                 <a href="./blog-sidebar.html">Secteur d'activité</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a href="./career.html">Témoignages</a>
+                                                                                <a href="Témoignages.html">Témoignages</a>
                                                                             </li>
                                                                             <!-- <li>
                                                                                 <a href="./newcode/contact.html">Help Center</a>

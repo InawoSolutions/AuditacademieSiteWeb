@@ -70,6 +70,13 @@
         <!-- include main style -->
         <link rel="stylesheet" href="../assets/css/theme/theme-three.min.purge.css">
 
+        <!-- CSS de intl-tel-input -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+
+        <!-- JS de intl-tel-input -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
         <!-- include scripts -->
         <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
     </head>
@@ -584,13 +591,13 @@
                             </div>                            
                             <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Poste visé" id="Fonction" name="Fonction" required="">  
                             <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="email" placeholder="Email" id="email" name="email" required="">  
-                            <input id="phone" class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15 phone-input" type="tel" placeholder="Téléphone" name="tel" required="">   
-                        
-                            <!-- Champ pour la lettre de motivation -->  
+                            <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15"
+                                style="width: 100%; height: 45px;" 
+                                type="tel" placeholder="Téléphone" id="tel" name="tel" required>
+
                             <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="file" id="lettreMotivation" name="lettreMotivation" accept=".pdf,.doc,.docx" required="">  
                             <label for="lettreMotivation" class="form-label fs-7">Joindre votre lettre de motivation (PDF, DOC, DOCX)</label>  
                         
-                            <!-- Champ pour le CV -->  
                             <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required="">  
                             <label for="cv" class="form-label fs-7">Joindre votre CV (PDF, DOC, DOCX)</label>  
                         
@@ -662,6 +669,21 @@
                 setDarkMode(0);
             }
         </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var input = document.querySelector("#tel");
+                var iti = window.intlTelInput(input, {
+                    separateDialCode: true, 
+                    initialCountry: "bj", 
+                    preferredCountries: ["bj", "fr", "gb", "us"], 
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // Gère le formatage des numéros
+                });
+                input.addEventListener("countrychange", function() {
+                    var countryData = iti.getSelectedCountryData();
+                    input.value = "+" + countryData.dialCode + " ";
+                });
+            });
+        </script>
         <style>  
     .custom-file-input {  
         height: calc(3rem + 2px);  
@@ -675,6 +697,10 @@
     .form-group {  
         position: relative;  
     }  
+    .iti input {
+    padding-left: 100px !important;
+    }
+
 </style>
     </body>
 </html>

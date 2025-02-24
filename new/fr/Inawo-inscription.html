@@ -74,7 +74,12 @@
         <!-- include scripts -->
         <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
 
-        
+        <!-- CSS de intl-tel-input -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+
+        <!-- JS de intl-tel-input -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
         
         <style>
         .country-select {
@@ -168,6 +173,11 @@
         border-right: 4px solid transparent;
         border-top: 4px solid #666;
         }
+
+        .iti input {
+            padding-left: 100px !important;
+        }
+
         </style>
         
     </head>
@@ -672,23 +682,8 @@
                             <div class="d-flex gap-1">  
                                 <input class="form-control form-control-sm fs-6  pe-5  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Fonction" id="fonction" name="fonction" required="">  
                                 <input class="form-control form-control-sm fs-6  pe-5 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text"  placeholder="Société" id="societe" name="societe" required="">  
-                            </div>  
-                            
-                            <div class="country-select">
-                                <div class="flag-dropdown">
-                                    <button type="button" class="flag-button" id="countrySelect">
-                                    <span class="flag-icon flag-icon-us"></span>
-                                    <span class="dialCode">+1</span>
-                                    </button>
-                                    <div class="country-list" id="countryList">
-                                    <!-- Les pays seront ajoutés ici par JavaScript -->
-                                    </div>
-                                </div>
-                                <div class="phone-input-container">
-                                    <input id="phone" class="form-control form-control-sm fs-6 rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15 phone-input" type="tel" placeholder="Téléphone" name="tel">
-                                </div>
-                            </div>
-                            
+                            </div> 
+                            <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15 w-100" type="tel" placeholder="Téléphone" id="tel" name="tel" required>
                             <div id="error-message" style="color:red; display:none;">Veuillez entrer un numéro de téléphone valide</div>  
                             
                             <input class="form-control form-control-sm fs-6  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="email" placeholder="Email" id="email" name="email" required="">  
@@ -784,71 +779,21 @@
             }
         </script>
         <script>
-            const countries = [
-            { code: 'us', name: 'United States', dialCode: '+1' },
-            { code: 'gb', name: 'United Kingdom', dialCode: '+44' },
-            { code: 'af', name: 'Afghanistan (افغانستان)', dialCode: '+93' },
-            { code: 'al', name: 'Albania (Shqipëri)', dialCode: '+355' },
-            { code: 'dz', name: 'Algeria (الجزائر)', dialCode: '+213' },
-            { code: 'as', name: 'American Samoa', dialCode: '+1684' },
-            { code: 'ad', name: 'Andorra', dialCode: '+376' },
-            // Ajoutez d'autres pays selon vos besoins
-            ];
-    
-            const countrySelect = document.getElementById('countrySelect');
-            const countryList = document.getElementById('countryList');
-            const phoneInput = document.getElementById('phone');
-    
-            // Créer la liste des pays
-            countries.forEach(country => {
-            const option = document.createElement('div');
-            option.className = 'country-option';
-            option.innerHTML = `
-                <span class="flag-icon flag-icon-${country.code}"></span>
-                <span class="country-name">${country.name}</span>
-                <span class="dial-code">${country.dialCode}</span>
-            `;
-            option.addEventListener('click', () => {
-                selectCountry(country);
-                countryList.classList.remove('show');
+            document.addEventListener("DOMContentLoaded", function() {
+                var input = document.querySelector("#tel");
+                var iti = window.intlTelInput(input, {
+                    separateDialCode: true, 
+                    initialCountry: "bj", 
+                    preferredCountries: ["bj", "fr", "gb", "us"], 
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // Gère le formatage des numéros
+                });
+                input.addEventListener("countrychange", function() {
+                    var countryData = iti.getSelectedCountryData();
+                    input.value = "+" + countryData.dialCode + " ";
+                });
             });
-            countryList.appendChild(option);
-            });
-    
-            // Gérer l'affichage de la liste déroulante
-            countrySelect.addEventListener('click', (e) => {
-            e.stopPropagation();
-            countryList.classList.toggle('show');
-            });
-    
-            // Fermer la liste si on clique ailleurs
-            document.addEventListener('click', () => {
-            countryList.classList.remove('show');
-            });
-    
-            // Sélectionner un pays
-            function selectCountry(country) {
-            countrySelect.querySelector('.flag-icon').className = `flag-icon flag-icon-${country.code}`;
-            countrySelect.querySelector('.dialCode').textContent = country.dialCode;
-            phoneInput.value = country.dialCode + ' ';
-            }
-    
-            // Initialiser avec les États-Unis
-            selectCountry(countries[0]);
-    
-            // Formater le numéro de téléphone pendant la saisie
-            phoneInput.addEventListener('input', (e) => {
-            let value = e.target.value;
+        </script>
             
-            // Garder l'indicatif pays
-            const dialCode = countrySelect.querySelector('.dialCode').textContent;
-            if (!value.startsWith(dialCode)) {
-                value = dialCode + ' ' + value.replace(dialCode, '');
-            }
-            
-            // Mettre à jour la valeur
-            e.target.value = value;
-            });
-            </script>
+        
     </body>
 </html>

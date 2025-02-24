@@ -72,6 +72,19 @@
 
         <!-- include scripts -->
         <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+
+        <!-- CSS de intl-tel-input -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+
+        <!-- JS de intl-tel-input -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+        <style>
+            .iti input {
+                padding-left: 100px !important;
+            }
+        </style>
+            
+
     </head>
     <body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden disable-cursor">
 
@@ -586,7 +599,10 @@
                             <div class="d-flex gap-1">                            
                                 <input class="form-control form-control-sm fs-6  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15" type="text" placeholder="Nom de l'entreprise" id="societe" name="societe" required="">
                             </div>
-                            <input id="phone" class="form-control form-control-sm fs-6  fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15 phone-input" type="tel" placeholder="Téléphone" name="tel" required=""> 
+                            <input class="form-control form-control-sm fs-6 fw-medium rounded-pill bg-white dark:bg-gray-800 dark:border-white dark:border-opacity-15"
+                                style="width: 100%; height: 45px;" 
+                                type="tel" placeholder="Téléphone" id="tel" name="tel" required>
+
                             <div class="form-check d-flex align-items-center"> 
                                 <input class="form-check-input" type="checkbox" name="newsletter" id="no-newsletter" value="no">
                                 <label class="form-check-label ms-2 fs-7" for="no-newsletter"> 
@@ -664,6 +680,21 @@
             } else if (getSchema === "light") {
                 setDarkMode(0);
             }
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var input = document.querySelector("#tel");
+                var iti = window.intlTelInput(input, {
+                    separateDialCode: true, 
+                    initialCountry: "bj", 
+                    preferredCountries: ["bj", "fr", "gb", "us"], 
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // Gère le formatage des numéros
+                });
+                input.addEventListener("countrychange", function() {
+                    var countryData = iti.getSelectedCountryData();
+                    input.value = "+" + countryData.dialCode + " ";
+                });
+            });
         </script>
     </body>
 </html>
