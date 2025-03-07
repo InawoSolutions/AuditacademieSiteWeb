@@ -9,18 +9,18 @@ const footerHTML = `
                                     <div class="panel vstack items-start gap-4 ltr:md:pe-8 rtl:md:ps-8">
                                         <div class="vstack gap-2">
                                             <a href="../fr/">
-                                                <img class=" dark:d-none" src="../assets/images/logo-InawoCRM-Blanc-2.30b79eb395e41ca6c93a.png" alt="Inawo light" data-uc-svg style="width: 90px">
-                                                <img class="text-primary d-none dark:d-block "  style="width: 90px" src="../assets/images/pstore/logo-Inawo-Blanc.png" alt="Inawo dark" >
+                                                <img class=" dark:d-none" src="../../assets/images/logo-InawoCRM-Blanc-2.30b79eb395e41ca6c93a.png" alt="Inawo light" data-uc-svg style="width: 90px">
+                                                <img class="text-primary d-none dark:d-block "  style="width: 90px" src="../../assets/images/pstore/logo-Inawo-Blanc.png" alt="Inawo dark" >
                                                 
                                             </a>
                                             <p style="font-size: 15px;">Toutes les entreprises ont besoin de bons outils de gestion pour générer et soutenir leur croissance. Avec inawo, simplifier votre gestion afin d’accroitre vos performances commerciales.</p>
                                             <div class="hstack items-start gap-1">
                                                 <div class="hstack items-start gap-1">
                                                     <a href="#">
-                                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/playstore.svg" alt="Google Play Store" data-uc-svg>
+                                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../../assets/images/playstore.svg" alt="Google Play Store" data-uc-svg>
                                                     </a>
                                                     <a href="#">
-                                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
+                                                        <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../../assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
                                                     </a>
                                                 </div>
                                             </div>
@@ -112,10 +112,10 @@ const footerHTML = `
                                 <!-- <div class="py-1 bg-white dark:bg-gray-800 shadow-xs w-200px" data-uc-drop="mode: click; offset: 0; pos: top-right; boundary: !.uc-navbar-container; animation: uc-animation-slide-top-small; duration: 150;"> -->
                                     <ul class="nav-y gap-0 fs-7">
                                         <li>
-                                            <a href="./newcode/../en/index.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/en.svg" alt="English">English</a>
+                                            <a href="./newcode/../en/index.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../../assets/images/en.svg" alt="English">English</a>
                                         </li>
                                         <li>
-                                            <a href="./newcode/../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/fr.svg" alt="French">Français</a>
+                                            <a href="./newcode/../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../../assets/images/fr.svg" alt="French">Français</a>
                                         </li> 
 
                             </div>

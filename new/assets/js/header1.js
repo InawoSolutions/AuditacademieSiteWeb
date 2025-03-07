@@ -42,7 +42,7 @@ const headerHTML = `
             <div class="row md:child-cols-6 col-match g-0">
                 <div class="d-none md:d-flex">
                     <div class="position-relative w-100 ratio-1x1 rounded-2 overflow-hidden">
-                        <img class="media-cover" src="../assets/images/common/newsletter.jpg" alt="Newsletter image">
+                        <img class="media-cover" src="../../assets/images/common/newsletter.jpg" alt="Newsletter image">
                     </div>
                 </div>
                 <div>
@@ -209,8 +209,8 @@ const headerHTML = `
                             <li class="uc-parent">
                                 <a href="#">Produits</a>
                                 <ul class="uc-nav-sub">
-                                    <li><a href="Solutions/InawoBusiness-Gestion-et-Facturation.html">Innawo Invoice</a></li>
-                                    <li><a href="Solutions/InawoVente-Prospection-et-vente">Innawo CRM</a></li>
+                                    <li><a href="Inawo-invoice.html">Innawo Invoice</a></li>
+                                    <li><a href="Inawo-CRM.html">Innawo CRM</a></li>
                                 </ul>
                             </li>
                             <li class="uc-parent">
@@ -348,7 +348,7 @@ const headerHTML = `
                             <article class="product type-product panel">
                                 <div class="hstack gap-2">
                                     <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
-                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-07.jpg" alt="Laptop Cover">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../../assets/images/common/products/img-07.jpg" alt="Laptop Cover">
                                         <a href="shop-product-detail.html" class="position-cover" data-caption="Laptop Cover"></a>
                                     </figure>
                                     <div class="content vstack gap-narrow fs-6">
@@ -366,7 +366,7 @@ const headerHTML = `
                             <article class="product type-product panel">
                                 <div class="hstack gap-2">
                                     <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
-                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-08.jpg" alt="Disney Toys">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../../assets/images/common/products/img-08.jpg" alt="Disney Toys">
                                         <a href="shop-product-detail.html" class="position-cover" data-caption="Disney Toys"></a>
                                     </figure>
                                     <div class="content vstack gap-narrow fs-6">
@@ -384,7 +384,7 @@ const headerHTML = `
                             <article class="product type-product panel">
                                 <div class="hstack gap-2">
                                     <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
-                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-09.jpg" alt="Screen Axe">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../../assets/images/common/products/img-09.jpg" alt="Screen Axe">
                                         <a href="shop-product-detail.html" class="position-cover" data-caption="Screen Axe"></a>
                                     </figure>
                                     <div class="content vstack gap-narrow fs-6">
@@ -402,7 +402,7 @@ const headerHTML = `
                             <article class="product type-product panel">
                                 <div class="hstack gap-2">
                                     <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
-                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-10.jpg" alt="Airpods Pro">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../../assets/images/common/products/img-10.jpg" alt="Airpods Pro">
                                         <a href="shop-product-detail.html" class="position-cover" data-caption="Airpods Pro"></a>
                                     </figure>
                                     <div class="content vstack gap-narrow fs-6">
@@ -501,10 +501,10 @@ const headerHTML = `
                         <div class="uc-navbar min-h-64px text-gray-900 dark:text-white" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
                             <div class="uc-navbar-left">
                                 <div class="uc-logo">
-                                    <a href="../fr/">
+                                    <a href="../../fr/">
                                         <img class=" dark:d-none" src="
-                                        ../assets/images/logo-InawoCRM-Blanc-2.30b79eb395e41ca6c93a.png" alt="Inawo light" data-uc-svg style="width: 90px">
-                                        <img class="text-primary d-none dark:d-block "  style="width: 140px" src="../assets/images/logo-text-dark.png" alt="Inawo dark" >
+                                        ../../assets/images/logo-InawoCRM-Blanc-2.30b79eb395e41ca6c93a.png" alt="Inawo light" data-uc-svg style="width: 90px">
+                                        <img class="text-primary d-none dark:d-block "  style="width: 140px" src="../../assets/images/logo-text-dark.png" alt="Inawo dark" >
                                     </a>
                                 </div>
                                 <ul class="uc-navbar-nav gap-3 d-none lg:d-flex ltr:ms-2 rtl:me-2">
@@ -527,7 +527,7 @@ const headerHTML = `
                                                                                 <h6 class="h6 m-0"><i class="fs-7 unicon-cube fw-bold ltr:me-narrow rtl:ms-narrow" style="margin-top: 5rem;"></i> Produits</h6>
                                                                                 <div>
                                                                                 
-                                                                                    <a href="Solutions/InawoBusiness-Gestion-et-Facturation.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="Inawo-invoice.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-increase-level fw-bold text-white"></i>
                                                                                         </div>
@@ -540,7 +540,7 @@ const headerHTML = `
                                                                                     </a>
                                                                                 </div>
                                                                                 <div>
-                                                                                    <a href="Solutions/InawoVente-Prospection-et-vente.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="Inawo-CRM.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
                                                                                         <div class="panel">
@@ -550,7 +550,7 @@ const headerHTML = `
                                                                                     </a>
                                                                                 </div>
                                                                                 <div>
-                                                                                    <a href="Solutions/InawoGlobal.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="Inawo-Global.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-chat fw-bold text-white"></i></div>
                                                                                         <div class="panel">
@@ -788,10 +788,10 @@ const headerHTML = `
                                                                         <div class="col-4">
                                                                             <div class="featured-image panel" data-uc-lightbox="video-autoplay: true;">
                                                                                 <figure class="featured-image m-0 rounded ratio ratio-1x1 uc-transition-toggle overflow-hidden">
-                                                                                    <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/login.webp" alt="Image">
+                                                                                    <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../../assets/images/common/login.webp" alt="Image">
                                                                                 </figure>
                                                                                 <button class="btn btn-md btn-alt-primary bg-tertiary p-0 w-32px h-32px position-absolute bottom-0 ltr:start-0 rtl:end-0 m-1"><i class="icon-narrow unicon-play-filled-alt text-primary"></i></button>
-                                                                                <a href="../assets/images/media/lexend_vid.webm" data-caption="Easy project managment of any complexity." data-attrs="width: 640; height: 480;" class="position-cover"></a>
+                                                                                <a href="../../assets/images/media/lexend_vid.webm" data-caption="Easy project managment of any complexity." data-attrs="width: 640; height: 480;" class="position-cover"></a>
                                                                             </div>
                                                                         </div>
                                                                         <div>
@@ -897,7 +897,7 @@ const headerHTML = `
                                                                                 <!-- <div>
                                                                                     <a href="./newcode/features.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <span class="icon rounded dark:bg-white">
-                                                                                            <img class="w-32px" src="assets/images/custom-icons/icon-07.svg" alt="icon">
+                                                                                            <img class="w-32px" src="../../assets/images/custom-icons/icon-07.svg" alt="icon">
                                                                                         </span>
                                                                                         <div class="panel">
                                                                                             <span class="fs-7 fw-medium mb-narrow">Témoignages et étude de cas</span>
@@ -941,7 +941,7 @@ const headerHTML = `
                                                                                 <!-- <div>
                                                                                     <a href="./newcode/features.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <span class="icon rounded dark:bg-white">
-                                                                                            <img class="w-32px" src="assets/images/custom-icons/icon-08.svg" alt="icon">
+                                                                                            <img class="w-32px" src="../../assets/images/custom-icons/icon-08.svg" alt="icon">
                                                                                         </span>
                                                                                         <div class="panel">
                                                                                             <span class="fs-7 fw-medium mb-narrow">AI-Powered Automation</span>
@@ -1028,10 +1028,10 @@ const headerHTML = `
                                     <div class="py-1 bg-white dark:bg-gray-800 shadow-xs w-200px" data-uc-drop="mode: click; offset: 0; pos: top-right; boundary: !.uc-navbar-container; animation: uc-animation-slide-top-small; duration: 150;">
                                         <ul class="nav-y gap-0 fs-7">
                                             <li>
-                                                <a href="../en/index.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/common/en.svg" alt="English">English</a>
+                                                <a href="../../en/index.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../../assets/images/common/en.svg" alt="English">English</a>
                                             </li>
                                             <li>
-                                                <a href="../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/common/fr.svg" alt="French">Français</a>
+                                                <a href="../../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../../assets/images/common/fr.svg" alt="French">Français</a>
                                             </li> 
                                         </ul>
 
