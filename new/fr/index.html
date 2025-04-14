@@ -80,103 +80,638 @@
     <body class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
 
         
-
+         <!--  Bottom Actions Sticky -->
+        <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+            <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
+                <label class="switch">
+                    <span class="sr-only">Dark mode toggle</span>
+                    <input type="checkbox">
+                    <span class="slider fs-5"></span>
+                </label>
+            </div>
+            <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+                <i class="icon-2 unicon-chevron-up"></i>
+            </a>
+        </div>
+        <div class="uc-banner-top py-1 p-2 m-0 hide-on-sticky text-center dark:from-tertiary-200 to-primary-700 dark:to-tertiary text-white dark:text-dark" data-uc-alert data-anime="opacity: [0, 1]; easing: easeInOutcubic; duration: 500; delay: 0;" style="background: linear-gradient(to right, #014b93, #014a92);">
+            <a href="#" class="uc-alert-close top-0 end-0" style="margin: 14px" data-uc-close></a>
+        <p>
+            The Lexend AI automation guide is here. <br class="d-block lg:d-none">
+            <a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504/" class="uc-link text-white dark:text-primary border-bottom" target="_blank" rel="nofollow">Check it out!</a>
+        </p>
+        </div>
 
         <!-- Header start -->
-        <div id="header"></div>
-        <script src="../assets/js/header.js"></script>
+        <header class="uc-header header-five uc-navbar-sticky-wrap z-999" data-uc-sticky="start: 100vh; show-on-up: true; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;" style="margin-bottom: 3%;" >
+            <nav class="uc-navbar-container uc-navbar-float ft-tertiary  z-1" data-anime="translateY: [-40, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 0;" >
+                <div class="uc-navbar-main" style="--uc-nav-height: 64px">
+                    <div class="container">
+                        <div class="uc-navbar min-h-64px text-gray-900 dark:text-white" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
+                            <div class="uc-navbar-left">
+                                <div class="uc-logo">
+                                    <a href="../fr/">
+                                        <img class=" dark:d-none" src="
+                                        ../assets/images/logo-InawoCRM-Blanc-2.30b79eb395e41ca6c93a.png" alt="Inawo light" data-uc-svg style="width: 90px">
+                                        <img class="text-primary d-none dark:d-block "  style="width: 140px" src="../assets/images/logo-text-dark.png" alt="Inawo dark" >
+                                    </a>
+                                </div>
+                                <ul class="uc-navbar-nav gap-3 d-none lg:d-flex ltr:ms-2 rtl:me-2">
+                                    <li>
+                                        <a href="#">Solutions <span data-uc-navbar-parent-icon></span></a>
+                                        <div class="uc-dropbar uc-dropbarr uc-dropbar-top p-0 ft-primary text-unset fs-6 fw-normal hide-scrollbar border-top rounded-0 overflow-hidden shadow-xl bg-white dark:bg-gray-900" data-uc-drop=" offset: 0; boundary: true; stretch: x; animation: uc-animation-slide-top-small;  duration: 150;">
+                                            <div class="uc-dropbar-content">
+                                                <div class="container">
+                                                    <div class="uc-dropbar-inner after-bg">
+                                                        <div class="row gx-5 col-match justify-between">
+                                                            <div class="col-8">
+                                                                <div class="panel vstack gap-4 py-4">
+                                                                    <div class="panel vstack gap-4">
+                                                                        <div class="vstack gap-narrow">
+                                                                            <h5 class="h5 xl:h4 fw-medium m-0">Simplifiez votre gestion avec notre suite logicielle</h5>
+                                                                            <p class="fs-7 text-gray-300"> Ne laissez plus la gestion freiner votre croissance !</p>
+                                                                        </div>
+                                                                        <div class="row child-cols-6 gx-6" >
+                                                                            <div class="vstack gap-3">
+                                                                                <h6 class="h6 m-0"><i class="fs-7 unicon-cube fw-bold ltr:me-narrow rtl:ms-narrow" style="margin-top: 5rem;"></i> Produits</h6>
+                                                                                <div>
+                                                                                
+                                                                                    <a href="Solutions/InawoBusiness-Gestion-et-Facturation.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-increase-level fw-bold text-white"></i>
+                                                                                        </div>
+                                                                                        
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Inawo invoice</span>
+                                                                                            <p class="fs-8 text-muted">Logiciel de gestion et de facturation</p>
+                                                                                        </div>
+                                                                                        
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="Solutions/InawoVente-Prospection-et-vente.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Inawo CRM</span>
+                                                                                            <p class="fs-8 text-muted">Logiciel de vente et de prospection</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="Solutions/InawoGlobal.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chat fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Inawo Global</span>
+                                                                                            <p class="fs-8 text-muted">Logiciel de gestion d'entreprise tout en un pour gérer vos ventes, votre personnel, vos finances et votre comptabilité</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                            <div class="vstack gap-3">
+                                                                                <h6 class="h6 m-0"><i class="fs-7 unicon-gamification fw-bold ltr:me-narrow rtl:ms-narrow"></i>Solutions</h6>
+                                                                                <div>
+                                                                                    <a href="Developper-vos-ventes.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Développer vos ventes</span>
+                                                                                            <p class="fs-8 text-muted">Générez plus de vente développer votre rétension</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="Organiser-les-donnees-clients.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Organiser les données clients</span>
+                                                                                            <p class="fs-8 text-muted">Unifier vos données sur une seule et meme plateforme logicielle</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="petite-entreprise.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Inawo pour petites entreprises</span>
+                                                                                            <p class="fs-8 text-muted">La suite logicielle Inawo permet aux entreprises de croitre plus facilement</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="panel vstack gap-4 p-5 bg-gray-25 dark:bg-gray-800 border-start">
+                                                                    <div class="panel category-section">
+                                                                        <h5 class="h6">Pourquoi choisir Inawo?</h5>
+                                                                        <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
+                                                                            <li>
+                                                                                <a href="a-propos-d-inawo.html">Pourquoi Inawo</a>
+                                                                            </li>
+                                                                             <li>
+                                                                                <a href="etude-de-cas.html">Etude de cas</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="../fr/Blog/actualites-inawo.html">Actualité des produits</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="./career.html">Inawo</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="centre-d-assistance.html">Centre d'assistance</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="panel category-section">
+                                                                        <h5 class="h6">Conditions et confidentialité</h5>
+                                                                        <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
+                                                                            <li>
+                                                                                <a href="conditions-generales-d-utilisation.html">Conditions générales d'utilisation</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="Politique-de-confidentialite.html">Confidentialité</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="Politique-de-cookies.html">Politiques des cookies</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uc-dropbar-footer py-2 xl:py-3 border-top bg-white dark:bg-gray-900 dark:text-white">
+                                                <div class="container">
+                                                    <ul class="nav-x gap-4 fs-8 fw-medium">
+                                                        <li>
+                                                            <a href="./toutes-les-fonctionnalites.html"><i class="fs-8 unicon-api fw-bold"></i><span class="border-bottom hover:border-primary duration-150">Toutes les fonctionnalités</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="Marketplace.html"><i class="fs-8 unicon-airplay fw-bold"></i><span class="border-bottom hover:border-primary duration-150">MarketPlace</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="tarifs.html">Tarifs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ressources<span data-uc-navbar-parent-icon></span></a>
+                                        <div class="uc-dropbar uc-dropbar-top p-0 ft-primary text-unset fs-6 fw-normal hide-scrollbar border-top rounded-0 overflow-hidden shadow-xl bg-white dark:bg-gray-900" data-uc-drop=" offset: 0; boundary: true;  stretch: x; animation: uc-animation-slide-top-small; duration: 150;">
+                                            <div class="uc-dropbar-content">
+                                                <div class="container">
+                                                    <div class="uc-dropbar-inner after-bg">
+                                                        <div class="row gx-5 col-match justify-between">
+                                                            <div class="col-8">
+                                                                <div class="panel vstack gap-4 py-4">
+                                                                    <div class="vstack gap-narrow flex-none">
+                                                                        <h5 class="h5 xl:h4 fw-medium m-0">Tout ce dont vous avez besoin pour la gestion de votre entreprise</h5>
+                                                                        <p class="fs-7 text-gray-300">Pour une gestion simplifiée et des performances maximales</p>
+                                                                    </div>
+                                                                    <div class="row child-cols-4 gx-4 col-match justify-between">
+                                                                        <div>
+                                                                            <h6 class="h6 mb-3"><i class="fs-7 unicon-glyph-square-fill fw-bold ltr:me-narrow rtl:ms-narrow"></i> A la Une</h6>
+                                                                            <ul class="uc-nav uc-navbar-dropdown-nav vstack gap-2">
+                                                                                <li>
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Blog/Ventes.html">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">Vente</b>
+                                                                                            <span class="fs-8 text-muted">Toutes les astuces pour accoitre vos ventes</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Blog/PME-et-StartUp.html">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">PME et StartUp</b>
+                                                                                            <span class="fs-8 text-muted">Passez a un autre niveau avec votre entreprise</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Blog/actualites-inawo.html">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-increase-level fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">Nouveauté chez Inawo</b>
+                                                                                            <span class="fs-8 text-muted">Découvrez notre actualité. Mise a jour sur nos produits</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div>
+                                                                            <h6 class="h6 mb-3"><i class="fs-7 unicon-glyph-circle-fill fw-bold ltr:me-narrow rtl:ms-narrow"></i>Ressouces</h6>
+                                                                            <ul class="uc-nav uc-navbar-dropdown-nav vstack gap-2">
+                                                                                <li>
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Ressources/Ebooks.html">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-increase-level fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">Ebooks</b>
+                                                                                            <span class="fs-8 text-muted">Des livres blancs et des ebooks pour votre entreprise</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Ressources/Outils.html">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chat fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">Outils</b>
+                                                                                            <span class="fs-8 text-muted">Des templates et des ressources téléchargeables</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Ressources/Tutoriel.html">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">Tutoriels</b>
+                                                                                            <span class="fs-8 text-muted">Suivez nos vidéos</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div>
+                                                                            <h6 class="h6 mb-3"><i class="fs-7 unicon-glyph-caution fw-bold ltr:me-narrow rtl:ms-narrow"></i>Communauté</h6>
+                                                                            <ul class="uc-nav uc-navbar-dropdown-nav vstack gap-2">
+                                                                                <li>
+                                                                                    <a class="hstack items-start gap-2" href="evenement.html">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-increase-level fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">Evenements</b>
+                                                                                            <span class="fs-8 text-muted">Des webinaires, Afterworks, conférences business</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="hstack items-start gap-2">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">Inawo Academy</b>
+                                                                                            <span class="fs-8 text-muted">Rejoignez les cours Inawo pour apprendre</span>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                <a class="hstack items-start gap-2" href="t.me/InawoCRM ">
+                                                                                    <div class="hstack items-start gap-2" href="t.me/InawoCRM ">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
+                                                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                                                            <b class="fw-medium dark:text-white">Communauté Inawo</b>
+                                                                                            <span class="fs-8 text-muted">Echangez avec vos partenaires et rejoignez un nouveau réseau d'affaires</span>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="panel vstack gap-4 p-5 bg-gray-25 dark:bg-gray-800 border-start">
+                                                                    <div class="row child-cols gx-2">
+                                                                        <div class="col-4">
+                                                                            <div class="featured-image panel" data-uc-lightbox="video-autoplay: true;">
+                                                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 uc-transition-toggle overflow-hidden">
+                                                                                    <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/login.webp" alt="Image">
+                                                                                </figure>
+                                                                                <button class="btn btn-md btn-alt-primary bg-tertiary p-0 w-32px h-32px position-absolute bottom-0 ltr:start-0 rtl:end-0 m-1"><i class="icon-narrow unicon-play-filled-alt text-primary"></i></button>
+                                                                                <a href="../assets/images/media/lexend_vid.webm" data-caption="Easy project managment of any complexity." data-attrs="width: 640; height: 480;" class="position-cover"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="vstack gap-1">
+                                                                                <span class="fs-6 fw-bold m-0 text-dark dark:text-white">Devenir affiliées avec Inawo</span>
+                                                                                <p class="fs-7">Accroitre vos revenue autrement</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="panel category-section">
+                                                                        <h5 class="h6">Commencez là où vous ètes</h5>
+                                                                        <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
+                                                                            <li>
+                                                                                <a href="../fr/Solutions/etude-de-cas.html">Etude de cas</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="../fr/Blog/actualites-inawo.html">Secteur d'activité</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="Témoignages.html">Témoignages</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uc-dropbar-footer py-2 xl:py-3 border-top bg-white dark:bg-gray-900 dark:text-white">
+                                                <div class="container">
+                                                    <ul class="nav-x gap-4 fs-8 fw-medium">
+                                                        <li>
+                                                            <a href="toutes-les-fontionnalites.html"><i class="fs-8 unicon-api fw-bold"></i><span class="border-bottom hover:border-primary duration-150">Toutes les fonctionnalités</span></a>
+                                                        </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#">A propos<span data-uc-navbar-parent-icon></span></a>
+                                        <div class="uc-dropbar uc-dropbar-top p-0 ft-primary text-unset fs-6 fw-normal hide-scrollbar border-top rounded-0 overflow-hidden shadow-xl bg-white dark:bg-gray-900" data-uc-drop=" offset: 0; boundary: true; stretch: x; animation: uc-animation-slide-top-small; animate-out: uc-animation-slide-top-small; duration: 150;">
+                                            <div class="uc-dropbar-content">
+                                                <div class="container">
+                                                    <div class="uc-dropbar-inner after-bg">
+                                                        <div class="row gx-5 col-match justify-between">
+                                                            <div class="col-8">
+                                                                <div class="panel vstack gap-4 py-4">
+                                                                    <div class="panel vstack gap-4">
+                                                                        <div class="vstack gap-narrow">
+                                                                            <h5 class="h5 xl:h4 fw-medium m-0">Nous sommes engagés pour la croissance des entreprises</h5>
+                                                                        </div>
+                                                                        <div class="row child-cols-6 gx-6">
+                                                                            <div class="vstack gap-3">
+                                                                                <h6 class="h6 m-0"><i class="fs-7 unicon-cube fw-bold ltr:me-narrow rtl:ms-narrow"></i> Qui sommes nous?</h6>
+                                                                                <div>
+                                                                                    <a href="a-propos-d-inawo.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow text-inherit">A propos de nous</span>
+                                                                                            <p class="fs-8 text-muted">Qui sommes nous et ce que nous pouvons vous offrir</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="carrieres.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chat fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Carrière</span>
+                                                                                            <p class="fs-8 text-muted">Rejoigner l'équipe Inawo</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="recompenses.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Récompences</span>
+                                                                                            <p class="fs-8 text-muted">Explorez nos récompences, nos réalisations </p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="vstack gap-3">
+                                                                                <h6 class="h6 m-0"><i class="fs-7 unicon-gamification fw-bold ltr:me-narrow rtl:ms-narrow"></i>Devenez partenaire</h6>
+                                                                                <div>
+                                                                                    <a href="./partenariat.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Partenaire d'affaire</span>
+                                                                                            <p class="fs-8 text-muted">Devenez partenaire d'affaire</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="Developpeurs.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-increase-level fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Développeurs</span>
+                                                                                            <p class="fs-8 text-muted">Crée facilement des intégrations avec notre API</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="Témoignages.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Témoignages</span>
+                                                                                            <p class="fs-8 text-muted">Laissez nous vos avis sur notre plateforme</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="panel vstack gap-4 p-5 bg-gray-25 dark:bg-gray-800 border-start">
+                                                                    <div class="panel category-section">
+                                                                        <h5 class="h6">Contactez-nous</h5>
+                                                                        <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
+                                                                            <li>
+                                                                                <a href="contactez-nous.html">Laissez nous un message pour toute demande d'informations</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="Recrutement.html">Nous recrutons</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="centre-d-assistance.html">Centre d'assistance</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="panel category-section">
+                                                                        <h5 class="h6">Nos offres de services</h5>
+                                                                        <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
+                                                                            <li>
+                                                                                <a href="offre-service.html">Nous accompagnons des entreprises et des institutions</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uc-dropbar-footer py-2 xl:py-3 border-top bg-white dark:bg-gray-900 dark:text-white">
+                                                <div class="container">
+                                                    <ul class="nav-x gap-4 fs-8 fw-medium">
+                                                        <li>
+                                                            <a href="toutes-les-fonctionnalites.html"><i class="fs-8 unicon-api fw-bold"></i><span class="border-bottom hover:border-primary duration-150">Voir tout nos produits</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="uc-navbar-right mt-2">
+                                <div class="d-flex justify-content-between align-items-center w-100 flex-nowrap gap-2">
+                                    <!-- Langue (Fr) -->
+                                    <li class="d-inline-block">
+                                        <a href="#" class="hstack gap-1 text-none fw-medium">
+                                            <i class="icon icon-1 unicon-wikis"></i>
+                                            <span class="fr">Fr</span>
+                                        </a>
+                                        <div class="py-1 bg-white dark:bg-gray-800 shadow-xs w-200px" data-uc-drop="mode: click; offset: 0; pos: top-right; boundary: !.uc-navbar-container; animation: uc-animation-slide-top-small; duration: 150;">
+                                            <ul class="nav-y gap-0 fs-7">
+                                                <li>
+                                                    <a href="../en/index.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/common/en.svg" alt="English">English</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/common/fr.svg" alt="French">Français</a>
+                                                </li> 
+                                            </ul>
+                                        </div> 
+                                    </li>
+                                    
+                                    <!-- Connexion -->
+                                    <a href="https://app.inawo.pro/fr/connexion" class="text-none mx-1">Connexion</a>
+                                    
+                                   <!-- Créer un compte -->
+                                            <a class="btn btn-sm text-white dark:bg-white dark:text-primary dark:hover:bg-white fw-bold rounded-pill lg:px-2 text-none d-none lg:d-inline-flex ms-auto"
+                                            style="background-color: #014a92; position: relative; top: -5px;" id="compteGratos" 
+                                            href="inscription.html">
+                                            Créer un compte gratuit
+                                            </a>
+
+                                            <!-- Conteneur pour les icônes Apple et Play Store -->
+                                            <div class="d-flex align-items-center gap-1 flex-nowrap custom-icons" style="position: relative; top: -5px;">
+                                                <!-- Apple -->
+                                                <a href="" class="d-flex justify-content-center align-items-center rounded-circle position-relative"
+                                                    style="width: 35px; height: 35px; background-color: #014a92; overflow: hidden;">
+                                                    <img src="../assets/images/apple.png" alt="Apple" 
+                                                        style="width: 65%; height: 65%; object-fit: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                                </a>
+                                            
+                                                <!-- Play Store -->
+                                                <a href="https://play.google.com/store/apps/details?id=com.inawo.inawo" 
+                                                    class="d-flex justify-content-center align-items-center rounded-circle position-relative"
+                                                    style="width: 35px; height: 35px; background-color: #014a92; overflow: hidden;">
+                                                    <img src="../assets/images/store.png" alt="Play Store"
+                                                        style="width: 65%; height: 65%; object-fit: contain; position: absolute; top: 50%; left: 55%; transform: translate(-50%, -50%);">
+                                                </a>
+                                            </div>
+                            
+                                    <!-- Menu Button -->
+                                    <a class="d-block lg:d-none" href="./newcode/#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                                </div>
+                            </div>    
+                            
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <!-- Header end -->
 
         <!-- Wrapper start -->
-        <div id="wrapper" class="wrap">
-         
             <!-- Section start -->
-            <div id="hero_header" class="overview section panel overflow-hidden lg:d-block d-none">
+            <div id="hero_header" class="overview section panel overflow-hidden lg:d-block d-none" style="margin-top: 4.5rem;">
                 <div class="lg:d-none md:d-block" style="position: absolute; z-index: 1; width: 100%; height: 100%;"></div>
                 <div class="section-outer panel pb-6 sm:pb-8 xl:pb-9" style="z-index: 2;">
-                    <div class="max-w">
-                        <div class="section-inner panel"
-                            style="background: url('../assets/images/background_acceuil.jpg') no-repeat center center;
-                                background-size: contain;
-                                background-position: center;
-                                min-height: 100vh;
-                                width: 100%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                position: relative;
-                                aspect-ratio: 16/9;
-                                max-height: 100vh;">
-
-                            <div class="row child-cols-12 justify-center lg:justify-between items-center g-6 lg:g-0 " style="position: relative; top: 10px;">
-                                <div class="sm:col-20 lg:col-7" style="margin-left: 2rem;"> 
-                                    <div class="panel vstack gap-2 text-left lg:text-start rtl:lg:text-end xl:me-4" 
-                                        style="margin-left: 2rem; margin-right: 5REM;"
-                                        data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                                        <!--<span class="fs-7 fw-bold px-3 py-1 border rounded-pill text-black"
-                                            style="display: inline-block; margin-top: -10px; padding: 6px 12px; border-width: 2px;">Automatisez votre flux de travail</span>-->
-                                           
-                                        <h1 class="h5 sm:h4 md:h1 lg:display-6 lh-lg mb-0 xl:mb-2 mt-10 ">
-                                            Une suite logicielle qui simplifie la gestion et parle de la croissance pour les  </br>
-                                            <span class="px-1 text-white dark:bg-tertiary dark:text-primary" data-uc-typed="typeSpeed: 80; backSpeed: 50; backDelay: 1500; loop: true;" style="background-color: #014990;">
-                                                <span>TPE/PME</span>
-                                                <span>Commerces</span>
-                                                <span>Autoentrepreneurs</span>
-                                                <span>Autoentrepreneurs</span>
-                                            </span>
-                                        </h1> 
-                                        <p class="fs-6 xl:fs-3 text-black">
-                                            Gérer votre <b>business</b> et maximisez vos ventes avec une solution qui vous facilite chaque aspect de votre <b>activité commerciale</b>.
-                                        </p>
-                                        <div class="vstack md:hstack gap-2 mt-1">  
-                                            <a href="inscription.html" class="btn btn-md text-white dark:bg-white dark:text-primary dark:hover:bg-white xl:btn-lg px-3 lg:px-5 fw-bold rounded-pill hover:contrast-shadow"   
-                                               style="background-color: #014990; ">  
-                                                <span>Commencer l'essai gratuit</span>  
-                                            </a>  
-                                        </div>
+                    <div class="section-inner panel" style="position: relative; min-height: 80vh; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    
+                        <!-- Ajout de la vidéo en arrière-plan -->
+                        <video autoplay loop muted playsinline class="background-video">
+                            <source src="../assets/images/video2.mp4" type="video/mp4">
+                        </video>
+                    
+                        <div class="row child-cols-12 justify-center lg:justify-between items-center g-6 lg:g-0" style="position: relative; top: 10px;">
+                            <div class="sm:col-20 lg:col-7" style="margin-left: 2rem;"> 
+                                <div class="panel vstack gap-2 text-left lg:text-start rtl:lg:text-end xl:me-4" 
+                                    data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                    
+                                    <h1 class="text-white dark:text-black text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight mb-2 break-words">
+                                        Une suite logicielle pour les
+                                        <span class="px-1 text-white dark:bg-tertiary dark:text-primary"
+                                        data-uc-typed="typeSpeed: 80; backSpeed: 50; backDelay: 1500; loop: true;"
+                                        style="background-color: #014990;">
+                                        <span>TPE/PME</span>
+                                        <span>Commerces</span>
+                                        <span>entrepreneurs</span>
+                                    </span> <br>qui vous accompagne dans votre croissance.  
+                                        
+                                       
+                                    </h1>
+                                    
+                    
+                                    <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white" style="margin-top: -3%;">
+                                        Gérer votre <b>business</b> et maximisez vos ventes avec une solution qui vous facilite chaque aspect de votre <b>activité commerciale</b>.
+                                    </p>
+                    
+                                    <div class="vstack md:hstack gap-1 mt-1">  
+                                        <a href="inscription.html" class="btn btn-md text-white dark:bg-white dark:text-primary dark:hover:bg-white xl:btn-lg px-3 lg:px-5 fw-bold rounded-pill"   
+                                           style="background-color: #014990; margin-top: -2%;" id="start">  
+                                            <span>Commencer maintenant</span>  
+                                        </a>  
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
+
             <div id="hero_header" class="overview section panel overflow-hidden pt-8 lg:d-none md:d-block">
                 <div class="lg:d-none md:d-block" style="position: absolute; top: 0%; z-index: 1; width: 100%; height: 100%;"></div>
                 <div class="section-outer panel pb-6 sm:pb-8 xl:pb-9" style="z-index: 2;">
                     <div class="container max-w-xl">
-                        <div class="section-inner panel"
-                            style="background: url('../assets/images/background_acceuil.jpg') no-repeat center center;
-                                background-size: cover;
-                                padding-top: 50;
-                                height: 100vh;
-                                width: 100% 100%;
-                                display: flex;
-                                align-items: center; 
-                                justify-content: center;
-                                position: relative;">
-                            <div class="row child-cols-12 justify-center lg:justify-between items-center g-6 lg:g-0 " ;">
-                                <div class="sm:col-8 lg:col-5"> 
-                                    <div class="panel vstack gap-2 text-center lg:text-start rtl:lg:text-end xl:me-4" 
+                        <div class="section-inner panel" style="position: relative; min-height: 80vh; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    
+                            <!-- Ajout de la vidéo en arrière-plan -->
+                            <video autoplay loop muted playsinline class="background-video">
+                                <source src="../assets/images/video2.mp4" type="video/mp4">
+                            </video>
+                        
+                            <div class="row child-cols-12 justify-center lg:justify-between items-center g-6 lg:g-0" style="position: relative; top: 10px;">
+                                <div class="sm:col-20 lg:col-7" style="margin-left: 2rem;"> 
+                                    <div class="panel vstack gap-2 text-left lg:text-start rtl:lg:text-end xl:me-4" 
                                         style="margin-left: 2rem; margin-right: 5REM;"
                                         data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                                        <!--<span class="fs-7 fw-bold px-3 py-1 border rounded-pill text-black"
-                                            style="display: inline-block; margin-top: -10px; padding: 6px 12px; border-width: 2px;">Automatisez votre flux de travail</span>-->
-                                        <h1 class="lg:h2 sm:h4 fw-bold mb-0 xl:mb-0 lg:d-none md:d-block ">
-                                            Une suite logicielle qui simplifie la gestion et parle de la croissance pour les  </br>
-                                            <span class="px-1 text-white dark:bg-tertiary dark:text-primary" data-uc-typed="typeSpeed: 80; backSpeed: 50; backDelay: 1500; loop: true;" style="background-color: #014990;">
-                                                <span>TPE/PME</span>
-                                                <span>Commerces</span>
-                                                <span>Autoentrepreneurs</span>
-                                                <span>Autoentrepreneurs</span>
-                                            </span>
+                        
+                                        <h1 class="text-white dark:text-black text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight mb-2 break-words">
+                                            Une suite logicielle pour les
+                                            <span class="px-1 text-white dark:bg-tertiary dark:text-primary"
+                                            data-uc-typed="typeSpeed: 80; backSpeed: 50; backDelay: 1500; loop: true;"
+                                            style="background-color: #014990;">
+                                            <span>TPE/PME</span>
+                                            <span>Commerces</span>
+                                            <span>entrepreneurs</span>
+                                        </span> <br>qui vous accompagne dans votre croissance.  
+                                            
+                                           
                                         </h1>
-                                        <p class="fs-6 xl:fs-4 lg:d-none md:d-block">
+                        
+                                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white">
                                             Gérer votre <b>business</b> et maximisez vos ventes avec une solution qui vous facilite chaque aspect de votre <b>activité commerciale</b>.
                                         </p>
-                                        <div class="vstack md:hstack gap-2 mt-1">  
-                                            <a href="inscription.html" class="btn btn-md text-white dark:bg-white dark:text-primary dark:hover:bg-white xl:btn-lg px-3 lg:px-5 fw-bold rounded-pill hover:contrast-shadow"   
-                                               style="background-color: #014990; ">  
+                        
+                                        <div class="vstack md:hstack gap-1 mt-1">  
+                                            <a href="" class="btn-responsive btn-md text-white dark:bg-white dark:text-primary dark:hover:bg-white xl:btn-lg px-3 lg:px-5 fw-bold rounded-pill hover:contrast-shadow"   
+                                               style="background-color: #014990;">  
                                                 <span>Commencer l'essai gratuit</span>  
                                             </a>  
                                         </div>
@@ -195,9 +730,8 @@
                     <div class="container">
                         <div class="section-inner panel">
                             <div class="row child-cols-12 g-4 sm:g-6 xl:g-8" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                                <div class="panel vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-6 lg:mb-8 mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                                    <!-- <span class="fs-7 fw-medium py-narrow px-2 border rounded-pill text-primary dark:text-tertiary">Integrations</span> -->
-                                    <h2 class="h3 lg:h2 m-0">Logiciel de <span class="px-1 bg-tertiary text-primary">gestion finacière </span>et de gestion de la <span class="px-1 bg-tertiary text-primary">relation client</span></h2>
+                                <div style="margin-top: -5%;" class="panel vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-6 lg:mb-8 mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                    <h2 class="h3 lg:h2 m-0">Logiciel de <span class="px-1 bg-tertiary text-primary">gestion financière </span>et de gestion de la <span class="px-1 bg-tertiary text-primary">relation client</span></h2>
                                     <p class="fs-6 xl:fs-3 xl:px-8">Inawo, pour les activités qui visent une croissance accélérée.</p>
                                 </div>
                                 <div>
@@ -320,14 +854,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- <div class="vstack md:hstack gap-2 mt-1" style="margin-left: 500px;">  
-                                    <a href="Solutions/Toutes-les-fonctionalites.html" class="btn btn-md text-white dark:bg-white dark:text-primary dark:hover:bg-white xl:btn-lg px-3 lg:px-5 fw-bold rounded-pill hover:contrast-shadow"   
-                                       style="background-color: #014990; ">  
-                                        <span>Toutes les fonctionnalités</span>  
-                                    </a>  
-                                </div> -->
-                    
                             </div>
                         </div>
                     </div>
@@ -355,7 +881,7 @@
                                 <div class="order-0">
                                     <div class="features-item vstack items-center justify-center text-center gap-4">
                                         <div class="icon-box cstack w-48px h-48px dark:bg-tertiary rounded">
-                                            <img class="w-24px xl:w-32px text-primary-400 dark:text-tertiary";" src="../assets/images/custom-icons/icon-02.svg" alt="feature-icon">
+                                            <img class="w-24px xl:w-32px text-primary-400 dark:text-tertiary"; src="../assets/images/custom-icons/icon-02.svg" alt="feature-icon">
                                         </div>
                                         <div class="panel">
                                             <div class="vstack gap-1">
@@ -437,207 +963,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Section end -->
-
-            <!-- Section start -->
-            <!-- <div id="pricing_tiers" class="pricing-tiers section panel">
-                <div class="section-outer panel py-4 md:py-6 xl:py-10">
-                    <div class="container">
-                        <div class="section-inner panel">
-                            <div class="panel vstack items-center gap-4 sm:gap-6 xl:gap-8">
-                                <div class="heading vstack gap-2 items-center panel text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                                    <span class="fs-7 fw-medium py-narrow px-2 border rounded-pill text-primary dark:text-tertiary">Pricing</span>
-                                    <h2 class="title h3 lg:h2 xl:h1 m-0">Simple, <span class="px-1 bg-tertiary text-primary">scalable pricing</span></h2>
-                                    <p class="fs-6 xl:fs-5">No extra charges. No hidden fees.</p>
-                                </div>
-                                <div class="content panel w-100" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 100;">
-                                    <div class="panel">
-                                        <div class="row child-cols-12 g-0">
-                                            <div class="panel d-none lg:d-block lg:col-3">
-                                                <img class="w-128px position-absolute d-inline-block dark:d-none" src="../assets/images/vectors/man-upside-down.svg" alt="man-upside-down" style="top: -2%; left: 30%" data-anime="onview: -200; scale: [0.8, 1]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 500;">
-                                                <img class="w-128px position-absolute d-none dark:d-inline-block" src="../assets/images/vectors/man-upside-down-dark.svg" alt="man-upside-down" style="top: -2%; left: 30%" data-anime="onview: -200; scale: [0.8, 1]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 500;">
-                                                <div class="vstack border border-end-0 rounded-start-2 overflow-hidden" style="margin-top: 211px">
-                                                    <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800"><span class="text-truncate-1">Real-time tracking and notifications</span></div>
-                                                    <div class="panel p-2 lg:px-3"><span class="text-truncate-1">Real-time analytics</span></div>
-                                                    <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800"><span class="text-truncate-1">CRM and Zapier integrations</span></div>
-                                                    <div class="panel p-2 lg:px-3"><span class="text-truncate-1">Files uploads</span></div>
-                                                    <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800"><span class="text-truncate-1">User performance</span></div>
-                                                    <div class="panel p-2 lg:px-3"><span class="text-truncate-1">Unlimited team workspaces</span></div>
-                                                    <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800"><span class="text-truncate-1">SSO support and custom user roles</span></div>
-                                                    <div class="panel p-2 lg:px-3"><span class="text-truncate-1">Approval workflows</span></div>
-                                                    <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800"><span class="text-truncate-1">Salesforce integration</span></div>
-                                                    <div class="panel p-2 lg:px-3"><span class="text-truncate-1">Bulk send & Forms</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="lg:col">
-                                                <div class="panel border rounded-2 text-center">
-                                                    <div class="row child-cols-12 lg:child-cols-4 col-match g-0">
-                                                        <div>
-                                                            <div class="vstack">
-                                                                <div class="panel vstack items-center gap-narrow p-2 py-4 lg:py-6 border-bottom">
-                                                                    <h3 class="h5 title mb-1">Free</h3>
-                                                                    <h5 class="h1 price m-0"><sup class="h5 m-0 mx-narrow">$</sup>0</h5>
-                                                                    <span class="fs-7 fw-normal m-0">Free forever</span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
-                                                                        <i class="icon-narrow unicon-close fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
-                                                                        <i class="icon-narrow unicon-close fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">1GB</div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">1 user</div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
-                                                                        <i class="icon-narrow unicon-close fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
-                                                                        <i class="icon-narrow unicon-close fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
-                                                                        <i class="icon-narrow unicon-close fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">5 forms</div>
-                                                                <div class="vstack items-center gap-2 p-4 border-top">
-                                                                    <button class="btn btn-md btn-ghost-primary fw-bold border rounded-pill px-3 w-100">Start for free</button>
-                                                                    <p class="fs-7 fw-normal">Free forever!</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="panel vstack border border-2 rounded-1-5 border-primary dark:border-tertiary contrast-shadow-md z-1" style="margin-top: -2px; margin-bottom: -2px">
-                                                                <div class="panel vstack items-center gap-narrow p-2 py-4 lg:py-6 border-bottom">
-                                                                    <h3 class="h5 title mb-1 text-primary dark:text-tertiary">Pro</h3>
-                                                                    <h5 class="h1 price m-0"><sup class="h5 m-0 mx-narrow">$</sup>9</h5>
-                                                                    <span class="fs-7 fw-normal m-0">Per month billing yearly</span>
-                                                                    <span class="position-absolute top-0 end-0 cstack px-1 bg-tertiary text-primary border rounded-default m-1">Best value!</span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">5GB</div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">10 users</div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
-                                                                        <i class="icon-narrow unicon-close fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">50 forms</div>
-                                                                <div class="vstack items-center gap-2 p-4 border-top">
-                                                                    <button class="btn btn-md btn-primary dark:bg-tertiary dark:text-primary fw-bold rounded-pill px-3 w-100">Get started</button>
-                                                                    <p class="fs-7 fw-normal">Billed $108 per year.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="vstack">
-                                                                <div class="panel vstack items-center gap-narrow p-2 py-4 lg:py-6 border-bottom">
-                                                                    <h3 class="h5 title mb-1">Business</h3>
-                                                                    <h5 class="h1 price m-0"><sup class="h5 m-0 mx-narrow">$</sup>29</h5>
-                                                                    <span class="fs-7 fw-normal m-0">Per month billing yearly</span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">Unlimited</div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">Unlimited users</div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3 bg-gray-25 dark:bg-gray-800">
-                                                                    <span class="cstack mx-auto w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
-                                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="panel p-2 lg:px-3">Unlimited forms</div>
-                                                                <div class="vstack items-center gap-2 p-4 border-top">
-                                                                    <button class="btn btn-md btn-ghost-primary fw-bold border rounded-pill px-3 w-100">Get started</button>
-                                                                    <p class="fs-7 fw-normal">Billed $348 per year.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
             <!-- Section end -->
              <div>
                 <div class="container">
@@ -793,107 +1118,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" class="uc-link dark:text-tertiary fw-bold d-inline-flex items-center gap-narrow">
-                                    <span>See all feedbacks</span>
-                                    <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
-                                </a>
-                                <img class="w-500px text-primary dark:text-gray-200" src="../assets/images/vectors/producthunt-badges.svg" alt="producthunt-badges" data-uc-svg="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Section end -->
-
-            <!-- Section start -->
-            <!-- <div id="faq" class="faq section panel">
-                <div class="section-outer panel">
-                    <div class="container lg:max-w-lg">
-                        <div class="section-inner panel" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                            <div class="row child-cols-12 col-match g-4">
-                                <div>
-                                    <div class="vstack items-center text-center gap-2">
-                                        <h2 class="h4 sm:h3 xl:h2 m-0">Frequently asked questions!</h2>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel rounded-2 p-3 lg:p-8 border">
-                                        <ul class="uc-accordion-divider gap-7 max-w-md mx-auto" data-uc-accordion="targets: > li; multiple: true;" style="--divider-gap: 56px">
-                                            <li class="panel uc-open">
-                                                <a class="uc-accordion-title h6 md:h5" href="#">Do I need to know about how to code?</a>
-                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
-                                                    <p>Yes, you need to have a fair amount of knowledge in dealing with HTML/CSS as well as JavaScript in order to be able to use Lexend.</p>
-                                                </div>
-                                            </li>
-                                            <li class="panel">
-                                                <a class="uc-accordion-title h6 md:h5" href="#">Can I use it for commercial projects?</a>
-                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
-                                                    <p>Feel free to do so. Lexend does exist to evolve every commercial project. You can also use it to build stunning websites for your own clients (we won’t breathe a word).</p>
-                                                </div>
-                                            </li>
-                                            <li class="panel">
-                                                <a class="uc-accordion-title h6 md:h5" href="#">Can I use it for multiple projects?</a>
-                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
-                                                    <p>Definitely! Please use it however you like; we don’t limit it.</p>
-                                                </div>
-                                            </li>
-                                            <li class="panel">
-                                                <a class="uc-accordion-title h6 md:h5" href="#">Can I use this to create and sell a product?</a>
-                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
-                                                    <p>Do not ever consider doing it.</p>
-                                                </div>
-                                            </li>
-                                            <li class="panel">
-                                                <a class="uc-accordion-title h6 md:h5" href="#">What is your refund policy?</a>
-                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
-                                                    <p>We understand the importance of customer satisfaction and we strive to provide the best products and services. However, please note that due to the nature of our products and services, we do not offer refunds after a purchase has been made.</p>
-                                                </div>
-                                            </li>
-                                            <li class="panel">
-                                                <a class="uc-accordion-title h6 md:h5" href="#">Do I need to know about how to code?</a>
-                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
-                                                    <p>Yes, you need to have a fair amount of knowledge in dealing with HTML/CSS as well as JavaScript in order to be able to use Lexend.</p>
-                                                </div>
-                                            </li>
-                                            <li class="panel">
-                                                <a class="uc-accordion-title h6 md:h5" href="#">Can I use it for commercial projects?</a>
-                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
-                                                    <p>Feel free to do so. Lexend does exist to evolve every commercial project. You can also use it to build stunning websites for your own clients (we won’t breathe a word).</p>
-                                                </div>
-                                            </li>
-                                            <li class="panel">
-                                                <a class="uc-accordion-title h6 md:h5" href="#">Can I use it for multiple projects?</a>
-                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
-                                                    <p>Definitely! Please use it however you like; we don’t limit it.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel vstack items-center justify-between gap-2 text-center rounded-2 p-3 lg:py-8 bg-primary text-white uc-dark">
-                                        <div class="panel">
-                                            <div class="vstack items-center gap-2">
-                                                <h2 class="h6 lg:h5 m-0">Still have questions?</h2>
-                                                <p class="lg:fs-5 text-dark dark:text-white text-opacity-70">
-                                                    Can’t find the answer you’re looking for? <br>
-                                                    Please chat to our friendly team.
-                                                </p>
-                                                <div class="hstack justify-center gap-0">
-                                                    <img src="../assets/images/avatars/02.jpg" alt="Avatar-image" class="w-48px h-48px rounded-circle border border-2 border-white dark:border-primary">
-                                                    <img src="../assets/images/avatars/01.jpg" alt="Avatar-image" class="w-48px h-48px rounded-circle border border-2 border-white dark:border-primary ms-n2">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="contact.html" class="btn btn-md btn-primary text-tertiary dark:bg-tertiary dark:text-primary fw-bold rounded-pill px-3 lg:px-5 mt-1 lg:mt-2">Get in touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
 
             <!-- Section end -->
 
@@ -1036,10 +1265,12 @@
             </div>
 
             <!-- Section end -->
-        <!-- Footer start -->
-        <div id="footer"></div>
-        <script src="../assets/js/footer.js"></script>
-        <!-- Footer end -->
+            <hr class="footer-separation">
+<!-- Footer start -->
+<div id="footer"></div>
+<script src="../assets/js/footer.js"></script>
+<!-- Footer end -->
+
          
         <!-- include jquery & bootstrap js -->
         <script defer src="../assets/js/libs/jquery.min.js"></script>
@@ -1079,5 +1310,131 @@
             }
         </script>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuItem = document.querySelector('[data-uc-navbar-parent-icon]').closest('li'); 
+                const dropbar = menuItem.querySelector('.uc-dropbarr');
+            
+                menuItem.addEventListener('mouseenter', () => {
+                    dropbar.classList.add('active');
+                });
+            
+                menuItem.addEventListener('mouseleave', () => {
+                    dropbar.classList.remove('active');
+                });
+            });
+            </script>
+
+            
+    
+
     </body>
 </html>
+
+<style>
+    @media (max-width: 640px) {
+    h1 {
+        font-size: 1rem !important; /* Réduction stricte de la taille */
+        line-height: 1.2 !important; /* Évite que les lignes soient trop espacées */
+    }
+
+    p {
+        font-size: 0.85rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .uc-navbar-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .uc-navbar-right a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .uc-navbar-right .btn {
+        width: 90%;
+    }
+    .fr{
+        margin-top: 10%;
+    }
+}
+@media (max-width: 768px) { /* Mobile */
+    .btn-responsive {
+        width: 100%; /* Pleine largeur */
+        padding: 10px 20px; /* Ajustement du padding */
+        font-size: 14px; /* Réduction de la taille du texte */
+        white-space: nowrap; /* Empêche le retour à la ligne */
+    }
+}
+
+@media (min-width: 769px) { /* Desktop */
+    .btn-responsive {
+        width: auto; /* Taille automatique */
+        padding: 12px 30px; /* Ajustement du padding */
+        font-size: 16px; /* Taille normale */
+    }
+}
+.footer-separation {
+        border: none;
+        border-top: 1px solid black;
+        width: 100%;
+        left: 1%;
+        margin: 50px 0; /* Si tu veux un espacement autour du trait */
+        position: relative;
+        top: 80px; /* Déplace le trait vers le haut */
+    }
+
+    .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* pour afficher et masquer les icônes de apple et playstore */
+@media (min-width: 575px) {
+    .custom-icons {
+        display: none !important;
+    }
+}
+
+@media (max-width: 574px) {
+    .custom-icons {
+        display: flex !important;
+    }
+}
+
+/* Media query pour les écrans jusqu'à 514px */
+@media (max-width: 514px) {
+    .panel {
+        margin-top: 20px;  /* Ajoute plus d'espace au-dessus du texte */
+    }
+}
+
+.uc-dropbarr {
+    display: none; /* Cache le menu par défaut */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.uc-dropbarr.active {
+    display: block; /* Affiche le menu */
+    opacity: 1;
+    transform: translateY(0);
+}
+#compteGratos:hover {
+    background-color: #005c10 !important;
+  }
+  #start:hover {
+    background-color: #005c10 !important;
+  }
+</style>

@@ -99,55 +99,100 @@
         <div id="wrapper" class="wrap">
          
             <!-- Section start -->
-            <div id="hero_header" class="hero-header hero-seven-scene section panel overflow-hidden  dark:bg-dark" >
-                <div class="position-absolute top-0 start-0 end-0 h-screen "></div>
-                <div class="position-absolute top-0 start-0 end-0 h-screen bg-gradient-to-b from-transparent via-transparent to-white dark:to-black "></div>
-                <div class="section-outer panel pb-6 sm:pb-8 pt-9 xl:pt-10 xl:pb-9 ">
-                    <!-- <div class="d-none lg:d-block" data-anime="targets: >*; scale: [0, 1]; opacity: [0, 1]; easing: easeOutCubic; duration: 750; delay: anime.stagger(150, {start: 500});">
-                        <img src="../../assets/images/vectors/marketing.svg" alt="Icon" class="d-inline-block position-absolute w-72px dark:d-none" style="top: 15%; left: 10%">
-                        <img src="../../assets/images/vectors/charts-pc.svg" alt="Icon" class="d-inline-block position-absolute w-72px dark:d-none" style="top: 15%; right: 10%">
-                        <img src="../../assets/images/vectors/group.svg" alt="Icon" class="d-inline-block position-absolute w-64px dark:d-none" style="top: 35%; right: -1%; transform: rotate(45deg)">
-                        <img src="../../assets/images/vectors/idea.svg" alt="Icon" class="d-inline-block position-absolute w-48px dark:d-none" style="top: 40%; left: 15%">
-                        <img src="../../assets/images/vectors/group.svg" alt="Icon" class="d-inline-block position-absolute w-64px dark:d-none" style="top: 30%; left: -1%">
-                        <img src="../../assets/images/vectors/marketing-dark.svg" alt="Icon" class="d-inline-block position-absolute w-72px d-none dark:d-block" style="top: 15%; left: 10%">
-                        <img src="../../assets/images/vectors/charts-pc-dark.svg" alt="Icon" class="d-inline-block position-absolute w-72px d-none dark:d-block" style="top: 15%; right: 10%">
-                        <img src="../../assets/images/vectors/group-dark.svg" alt="Icon" class="d-inline-block position-absolute w-64px d-none dark:d-block" style="top: 35%; right: -1%; transform: rotate(45deg)">
-                        <img src="../../assets/images/vectors/idea-dark.svg" alt="Icon" class="d-inline-block position-absolute w-48px d-none dark:d-block" style="top: 40%; left: 15%">
-                        <img src="../../assets/images/vectors/group-dark.svg" alt="Icon" class="d-inline-block position-absolute w-64px d-none dark:d-block" style="top: 30%; left: -1%">
-                    </div> -->
-                    <div class="container max-w-xl ">
-                        <div class="section-inner panel ">
-                            <div class="row child-cols-12 justify-center items-center g-8 dark:bg-dark">
-                                <div class="lg:col-8"> 
-                                    <div class="panel vstack items-center gap-2 px-2 text-center" data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                                        <!-- <span class="fs-7 fw-bold py-narrow px-2 border rounded-pill text-primary dark:text-tertiary">Automate your workflow</span> -->
-                                        <h4 class="h3 sm:h2 md:h1 lg:display-6 lh-lg mb-1 xl:mb-2 mt-2">
-                                            Libérez votre potentiel commercial avec notre logiciel de gestion <br>
-                                            <span class="px-1 text-white dark:bg-tertiary dark:text-primary" data-uc-typed="typeSpeed: 80; backSpeed: 50; backDelay: 1500; loop: true;" style="background-color: #014a92;">
-                                                <span>DE LA RELATION CLIENT</span>
-                                                <span>DES VENTES</span>
-                                                <span>DE LA PROSPECTION</span>
-                                            </span>
-                                        </h4>
-                                        <p class="fs-6 xl:fs-3 xl:px-6">Notre logiciel vous permet de rester compétitif dans un marché en constante évolution.</p>
-                                        <div class="vstack md:hstack justify-center gap-2 mt-3">
-                                            <a href="../inscription.html" class="btn btn-md xl:btn-lg btn-alt-dark border-dark px-3 lg:px-5 fw-bold contrast-shadow-sm hover:contrast-shadow">
-                                                <img src="../../assets/images/template/google-icon.svg" alt="Google Icon">
-                                                <span>Commencer maintenant </span>
-                                            </a>
+            <div id="hero_header" class="overview section panel overflow-hidden lg:d-block d-none" style="margin-top: 4.5rem;">
+                <div class="lg:d-none md:d-block" style="position: absolute; z-index: 1; width: 100%; height: 100%;"></div>
+                <div class="section-outer panel pb-6 sm:pb-8 xl:pb-9" style="z-index: 2;">
+                    <div class="section-inner panel" style="position: relative; min-height: 80vh; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    
+                        <!-- Ajout de la vidéo en arrière-plan -->
+                        <video autoplay loop muted playsinline class="background-video">
+                            <source src="../../assets/images/video2.mp4" type="video/mp4">
+                        </video>
+                    
+                        <div class="row child-cols-12 justify-center lg:justify-between items-center g-6 lg:g-0" style="position: relative; top: 10px;">
+                            <div class="sm:col-20 lg:col-7" style="margin-left: 2rem;"> 
+                                <div class="panel vstack gap-2 text-left lg:text-start rtl:lg:text-end xl:me-4" 
+                                    data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                    
+                                    <h1 class="text-white dark:text-black text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight mb-2 break-words">
+                                        Libérez votre potentiel commercial avec notre logiciel de gestion 
+                                        <span class="px-1 text-white dark:bg-tertiary dark:text-primary"
+                                        data-uc-typed="typeSpeed: 80; backSpeed: 50; backDelay: 1500; loop: true;"
+                                        style="background-color: #014990;">
+                                        <span>de la relation client</span>
+                                        <span>des ventes</span>
+                                        <span>de la prospection</span>
+                                        
+                                       
+                                    </h1>
+                                    
+                    
+                                    <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white" style="margin-top: -3%;">
+                                        Notre logiciel vous permet de rester compétitif dans un marché en constante évolution
+                                    </p>
+                    
+                                    <div class="vstack md:hstack gap-1 mt-1">  
+                                        <a href="inscription.html" class="btn btn-md text-white dark:bg-white dark:text-primary dark:hover:bg-white xl:btn-lg px-3 lg:px-5 fw-bold rounded-pill hover:contrast-shadow"   
+                                           style="background-color: #014990; margin-top: -2%;">  
+                                            <span>Commencer maintenant</span>  
+                                        </a>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="hero_header" class="overview section panel overflow-hidden pt-8 lg:d-none md:d-block">
+                <div class="lg:d-none md:d-block" style="position: absolute; top: 0%; z-index: 1; width: 100%; height: 100%;"></div>
+                <div class="section-outer panel pb-6 sm:pb-8 xl:pb-9" style="z-index: 2;">
+                    <div class="container max-w-xl">
+                        <div class="section-inner panel" style="position: relative; min-height: 80vh; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    
+                            <!-- Ajout de la vidéo en arrière-plan -->
+                            <video autoplay loop muted playsinline class="background-video">
+                                <source src="../../assets/images/video2.mp4" type="video/mp4">
+                            </video>
+                        
+                            <div class="row child-cols-12 justify-center lg:justify-between items-center g-6 lg:g-0" style="position: relative; top: 10px;">
+                                <div class="sm:col-20 lg:col-7" style="margin-left: 2rem;"> 
+                                    <div class="panel vstack gap-2 text-left lg:text-start rtl:lg:text-end xl:me-4" 
+                                        style="margin-left: 2rem; margin-right: 5REM;"
+                                        data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                        
+                                        <h1 class="text-white dark:text-black text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight mb-2 break-words">
+                                            Libérez votre potentiel commercial avec notre logiciel de gestion 
+                                            <span class="px-1 text-white dark:bg-tertiary dark:text-primary"
+                                            data-uc-typed="typeSpeed: 80; backSpeed: 50; backDelay: 1500; loop: true;"
+                                            style="background-color: #014990;">
+                                            <span>de la relation client</span>
+                                            <span>des ventes</span>
+                                            <span>de la prospection</span>
+                                            
+                                           
+                                        </h1>
+                        
+                                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white">
+                                            Gérer votre <b>business</b> et maximisez vos ventes avec une solution qui vous facilite chaque aspect de votre <b>activité commerciale</b>.
+                                        </p>
+                        
+                                        <div class="vstack md:hstack gap-1 mt-1">  
+                                            <a href="" class="btn-responsive btn-md text-white dark:bg-white dark:text-primary dark:hover:bg-white xl:btn-lg px-3 lg:px-5 fw-bold rounded-pill hover:contrast-shadow"   
+                                               style="background-color: #014990;">  
+                                                <span>Commencer l'essai gratuit</span>  
+                                            </a>  
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="uc-video-scene" data-anime="scale: [1.2, 1]; opacity: [0, 1]; easing: easeOutCubic; duration: 750; delay: 500;">
-                                    <div class="panel max-w-1000px mx-auto mt-2 rounded lg:rounded-1-5 xl:rounded-2 border border-dark contrast-shadow-lg overflow-hidden" data-anime="onscroll: .hero-header; onscroll-trigger: 0.5; translateY: [-80, 0]; scale: [0.8, 1]; easing: linear;">
-                                        <video preload="auto" data-uc-video="autoplay: true;" playsinline muted loop poster="../../assets/images/media/lexend-home-7.png" src="../../assets/images/media/lexend-home-7.webm" title="Video title"></video>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Section end -->
+            
 
             <!-- Section end -->
             <!-- Section start -->

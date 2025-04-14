@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our prices - Inawo</title>
+        <meta name="description" content="Des offres pour toutes les catégories d'entreprises. Améliorez votre façon de travailler, découvrez un tout nouvel outil et propulsez votre business plus rapidement.">
+        <meta name="keywords" content="saas, saas template, site template, software, startup, digital product, html5, landing, marketing, bootstrap, uikit3, agency, ai, digital agency, it solutions, nodejs">
+        <link rel="canonical" href="https://unistudio.co/html/Lexend">
+        <meta name="theme-color" content="#178d72">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Lexend">
+        <meta property="og:description" content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+        <meta property="og:url" content="https://unistudio.co/html/lexend/">
+        <meta property="og:site_name" content="Lexend">
+        <meta property="og:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg">
+        <meta property="og:image:width" content="1180">
+        <meta property="og:image:height" content="600">
+        <meta property="og:image:type" content="image/png">
+
+        <!-- Twitter Card Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Lexend">
+        <meta name="twitter:description" content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+        <meta name="twitter:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg">
+
+        <link rel="canonical" href="https://unistudio.co/html/lexend/">
+
+        <!-- preload head styles -->
+        <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+        <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+        <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+
+        <!-- preload footer scripts -->
+        <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/typed.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/tilt.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/split-type.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/prettify.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+        <link rel="preload" href="../assets/js/core/magic-cursor.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/splitype-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/typed-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/tilt-helper.js" as="script">
+        <link rel="preload" href="../assets/js/core/marquee.js" as="script">
+        <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+        <link rel="preload" href="../assets/js/app.js" as="script">
+
+        <!-- app head for bootstrap core -->
+        <script src="../assets/js/app-head-bs.js"></script>
+
+        <!-- include uni-core components -->
+        <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+        <!-- include styles -->
+        <link rel="stylesheet" href="../assets/css/unicons.min.css">
+        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../assets/css/prettify.min.css">
+        <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+
+        <!-- include main style -->
+        <link rel="stylesheet" href="../assets/css/theme/theme-three.min.purge.css">
+
+        <!-- include scripts -->
+        <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+
+
+            <style>
+                /* Espacement entre les éléments de la liste */
+                .main-features-nav > li {
+                    margin: 0 10px; /* Ajoute une marge horizontale de 10px entre les éléments */
+                    position: relative; /* Nécessaire pour l'effet ::before */
+                }
+
+                /* Style de base des liens */
+                .main-features-nav > li > a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    line-height: 40px !important;
+                    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+
+                    border-radius: 30px; /* Bordure arrondie */
+                    color: #000; /* Couleur du texte par défaut */
+                    padding: 0 15px; /* Ajoute du padding pour élargir les zones cliquables */
+                }
+
+                /* Effet au survol */
+                .main-features-nav > li > a:hover {
+                    background-color: #014a92; /* Fond bleu au survol */
+                    color: white; /* Texte blanc au survol */
+                    border-color: #014a92; /* Bordure bleue au survol */
+                }
+
+                /* Effet sur l'élément actif */
+                .main-features-nav > li.uc-active > a {
+                    background-color: #014a92; /* Fond bleu pour l'élément actif */
+                    color: white; /* Texte blanc pour l'élément actif */
+                    border-color: #014a92; /* Bordure bleue pour l'élément actif */
+                }
+
+                /* Ajout de l'effet "before" pour les éléments actifs */
+                .main-features-nav > li::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-bottom: 3px solid transparent;
+                    width: 0%;
+                    transition: 0ms cubic-bezier(1, 0, 0, 1);
+                    background-color: #014a92; /* Fond bleu pour l'effet before */
+                    color: white;
+                    border-radius: 50px;
+                }
+
+                .main-features-nav > li.uc-active::before {
+                    border-bottom: none;
+                    width: 100%;
+                    transition-duration: 500ms;
+                }
+
+                /* Style de la navigation */
+            .uc-switcher-nav {
+                display: flex;
+                justify-content: center;
+                gap: 5px; /* Espacement entre les éléments */
+                padding: 2px; /* Un peu de padding autour des éléments */
+                border: 2px solid #014a92; /* Bordure autour de l'ensemble */
+                border-radius: 25px; /* Bordures arrondies sur toute la navigation */
+                background-color: #f9f9f9; /* Couleur de fond légère */
+            }
+
+            /* Style des éléments de la liste */
+            .uc-switcher-nav > li {
+                border-radius: 25px; /* Bordures arrondies pour les items */
+                overflow: hidden; /* Permet de garder les coins arrondis pour les liens */
+            }
+
+            /* Style des liens */
+            .uc-switcher-nav > li > a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                padding: 10px 20px; /* Espacement à l'intérieur des liens */
+                border-radius: 20px; /* Bordures arrondies pour les liens */
+                color: #000; /* Couleur du texte */
+                transition: background-color 0.3s, color 0.3s, border 0.3s;
+            }
+
+            /* Effet au survol des liens */
+            .uc-switcher-nav > li > a:hover {
+                background-color: #014a92; /* Fond bleu au survol */
+                color: white; /* Texte blanc au survol */
+            }
+
+            /* Effet sur l'élément actif */
+            .uc-switcher-nav > li.uc-active > a {
+                background-color: #014a92; /* Fond bleu pour l'élément actif */
+                color: white; /* Texte blanc pour l'élément actif */
+            }
+            .blog{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between; /* Évite les espaces vides */
+            }
+            .blog {
+                flex: 1 1 calc(25% - 10px); /* 25% moins l'espace du gap */
+                box-sizing: border-box;
+              }
+              
+              @media screen and (max-width: 768px) {
+                .blog {
+                  flex: 1 1 calc(50% - 10px); /* 50% pour deux blocs par ligne */
+                }
+              }
+
+             #id h3,h5,p,span {color:black;} 
+             
+               
+        
+        </style>
+    </head>
+    <body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden disable-cursor">
+
+        <!--  GDPR modal -->
+        <div id="uc-gdpr-notification" class="uc-gdpr-notification uc-notification min-w-1/2 uc-notification-bottom-left lg:m-2">
+            <div class="uc-notification-message vstack lg:hstack items-end gap-2 lg:gap-4 lg:p-3 bg-white text-dark border rounded-1-5 min-w-1/2">
+                <a id="uc-close-gdpr-notification" class="uc-notification-close text-dark" data-uc-close></a>
+                <div class="vstack">
+                    <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">GDPR Compliance</h2>
+                    <p class="fs-6 mt-1">We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our use of cookies, <a href="page-privacy.html" class="uc-link text-underline">privacy policy</a> and <a href="page-terms.html" class="uc-link text-underline">terms of service</a>.</p>
+                </div>
+                <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr">Accept</button>
+            </div>
+        </div>
+
+        <!--  Search modal -->
+        <div id="uc-search-modal" class="uc-modal-full uc-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog d-flex justify-center bg-white text-dark dark:bg-gray-900 dark:text-white" data-uc-height-viewport="">
+                <div class="uc-modal-close-full m-1 p-0 vstack gap-narrow text-center">
+                    <button class="icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark w-24px sm:w-32px h-24px sm:h-32px rounded-circle flex-1" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+                    <span class="ft-tertiary fs-7">ESC</span>
+                </div>
+
+                <div class="panel w-100 sm:w-500px px-2 py-10">
+                    <h3 class="h4 sm:h2 text-center">What are you looking for?</h3>
+                    <form class="hstack gap-1 mt-4 border-bottom p-narrow dark:border-gray-700" action="?">
+                        <span class="d-inline-flex justify-center items-center w-24px sm:w-40 h-24px sm:h-40px opacity-50"><i class="unicon-search icon-3"></i></span>
+                        <input type="search" name="q" class="form-control-plaintext ms-1 fs-6 sm:fs-5 w-full dark:text-white" placeholder="Type your keyword.." aria-label="Search" autofocus>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--  Newsletter modal -->
+        <div id="uc-newsletter-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog w-800px bg-white text-dark dark:bg-gray-900 dark:text-white rounded-3 p-1 overflow-hidden">
+                <button class="uc-modal-close-default p-0 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+                <div class="row md:child-cols-6 col-match g-0">
+                    <div class="d-none md:d-flex">
+                        <div class="position-relative w-100 ratio-1x1 rounded-2 overflow-hidden">
+                            <img class="media-cover" src="../assets/images/common/newsletter.jpg" alt="Newsletter image">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="panel vstack self-center p-4 md:py-8 text-center">
+                            <h3 class="h3 md:h2">Subscribe to our Newsletter</h3>
+                            <p class="ft-tertiary">Join 10k+ people to get notified about new posts, news and updates.</p>
+                            <div class="panel mt-2 lg:mt-4">
+                                <form class="vstack gap-1">
+                                    <input type="email" class="form-control form-control-sm w-full fs-6 bg-white dark:border-white dark:border-gray-700" placeholder="Your email address..">
+                                    <button type="submit" class="btn btn-sm btn-primary">Sign up</button>
+                                </form>
+                                <p class="fs-7 mt-2">Do not worry we don't spam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Acccount modal -->
+        <div id="uc-account-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog lg:max-w-500px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded">
+                <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="panel vstack gap-2 md:gap-4 text-center">
+                    <ul class="account-tabs-nav nav-x justify-center h6 py-2 border-bottom d-none" data-uc-switcher="animation: uc-animation-slide-bottom-small, uc-animation-slide-top-small">
+                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Reset password</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                    </ul>
+                    <div class="account-tabs-content uc-switcher px-3 lg:px-4 py-4 lg:py-8 m-0 lg:mx-auto vstack justify-center items-center">
+                        <div class="w-100">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                                <h4 class="h5 lg:h4 m-0">Log in</h4>
+                                <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                    <form class="vstack gap-2">
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Password" required>
+                                        <div class="hstack justify-between items-start text-start">
+                                            <div class="form-check text-start rtl:text-end">
+                                                <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" id="inputCheckRemember">
+                                                <label class="hstack justify-between form-check-label fs-7 sm:fs-6" for="inputCheckRemember">Remember me?</label>
+                                            </div>
+                                            <a href="#" class="uc-link" data-uc-switcher-item="2">Forgot password</a>
+                                        </div>
+                                        <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Log in</button>
+                                    </form>
+                                    <div class="panel">
+                                        <hr class="m-0">
+                                        <span class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Or</span>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="#google" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-google"></i>
+                                        </a>
+                                        <a href="#facebook" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-facebook"></i>
+                                        </a>
+                                        <a href="#x" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="fs-7 sm:fs-6">Have no account yet? <a class="uc-link" href="#" data-uc-switcher-item="1">Sign up</a></p>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                                <h4 class="h5 lg:h4 m-0">Create an account</h4>
+                                <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                    <form class="vstack gap-2">
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Full name" required>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Password" required>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Re-enter Password" required>
+                                        <div class="hstack text-start">
+                                            <div class="form-check text-start rtl:text-end">
+                                                <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" required>
+                                                <label class="hstack justify-between form-check-label fs-7 sm:fs-6">I read and accept the <a href="#" class="uc-link ltr:ms-narrow rtl:me-narrow" data-uc-switcher-item="3">terms of use</a>. </label>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Sign up</button>
+                                    </form>
+                                    <div class="panel">
+                                        <hr class="m-0">
+                                        <span class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Or</span>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="#google" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-google"></i>
+                                        </a>
+                                        <a href="#facebook" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-facebook"></i>
+                                        </a>
+                                        <a href="#x" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                            <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="fs-7 sm:fs-6">Already have an account? <a class="uc-link" href="#" data-uc-switcher-item="0">Log in</a></p>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                                <h4 class="h5 lg:h4 m-0">Reset password</h4>
+                                <div class="panel w-100 sm:w-350px">
+                                    <form class="vstack gap-2">
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                        <div class="form-check text-start rtl:text-end">
+                                            <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" id="inputCheckVerify" required>
+                                            <label class="form-check-label fs-7 sm:fs-6" for="inputCheckVerify"> <span>I'm not a robot</span>. </label>
+                                        </div>
+                                        <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Reset a password</button>
+                                    </form>
+                                </div>
+                                <p class="fs-7 sm:fs-6 mt-2 sm:m-0">Remember your password? <a class="uc-link" href="#" data-uc-switcher-item="0">Log in</a></p>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4">
+                                <h4 class="h5 lg:h4 m-0">Terms of use</h4>
+                                <div class="page-content panel fs-6 text-start max-h-400px overflow-scroll">
+                                    <p>Terms of use dolor sit amet consectetur, adipisicing elit. Recusandae provident ullam aperiam quo ad non corrupti sit vel quam repellat ipsa quod sed, repellendus adipisci, ducimus ea modi odio assumenda.</p>
+                                    <h5 class="h6 md:h5 mt-3 mb-1">Disclaimers</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                    <h5 class="h6 md:h5 mt-3 mb-1">Limitation on Liability</h5>
+                                    <p>Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                    <h5 class="h6 md:h5 mt-3 mb-1">Copyright Policy</h5>
+                                    <p>Dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                    <h5 class="h6 md:h5 mt-3 mb-1">General</h5>
+                                    <p>Sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                </div>
+                                <p class="fs-7 sm:fs-6">Do you agree to our terms? <a class="uc-link" href="#" data-uc-switcher-item="1">Sign up</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Menu panel -->
+        <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
+            <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+                <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+                    <div class="uc-logo">
+                        <a href="index.html" class="h5 text-none text-gray-900 dark:text-white">
+                            <img class="w-32px" src="../assets/images/common/logo-mark.svg" alt="Lexend">
+                        </a>
+                    </div>
+                    <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+                </header>
+
+                <div class="panel">
+                    <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
+                        <input type="email" class="form-control form-control-sm fs-7 rounded-default" placeholder="Search..">
+                        <span class="form-icon text-gray">
+                            <i class="unicon-search icon-1"></i>
+                        </span>
+                    </form>
+                    <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
+                        <li><a href="page-features.html">Features</a></li>
+                        <li><a href="page-pricing.html">Pricing</a></li>
+                        <li><a href="page-about.html">About</a></li>
+                        <li><a href="page-career.html">Career</a></li>
+                        <li><a href="page-contact.html">Contact</a></li>
+                        <li class="uc-parent">
+                            <a href="#">Inner Pages</a>
+                            <ul class="uc-nav-sub" data-uc-nav="">
+                                <li class="uc-parent">
+                                    <a href="blog.html">Blog</a>
+                                    <ul class="uc-nav-sub">
+                                        <li><a href="blog.html">Full Width</a></li>
+                                        <li><a href="blog-2cols.html">Grid 2 Cols</a></li>
+                                        <li><a href="blog-3cols.html">Grid 3 Cols</a></li>
+                                        <li><a href="blog-4cols.html">Grid 4 Cols</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uc-parent">
+                                    <a href="blog-details.html">Blog - detail</a>
+                                    <ul class="uc-nav-sub">
+                                        <li><a href="blog-details.html">Blog detail</a></li>
+                                        <li><a href="blog-details-2.html">Blog detail - v2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uc-parent">
+                                    <a href="#">Useful pages</a>
+                                    <ul class="uc-nav-sub">
+                                        <li><a href="sign-up.html">Sign up</a></li>
+                                        <li><a href="sign-in.html">Sign in</a></li>
+                                        <li><a href="reset-password.html">Reset password</a></li>
+                                        <li><a href="404.html">404 page</a></li>
+                                        <li><a href="coming-soon.html">Coming soon</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uc-parent">
+                                    <a href="#">Other pages</a>
+                                    <ul class="uc-nav-sub">
+                                        <li><a href="page-faq.html">FAQ</a></li>
+                                        <li><a href="page-terms.html">Terms of use</a></li>
+                                        <li><a href="page-privacy.html">Privacy policy</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="uc-parent">
+                            <a href="shop.html">Shop</a>
+                            <ul class="uc-nav-sub" data-uc-nav="">
+                                <li class="uc-parent">
+                                    <a href="shop.html">Shop layouts</a>
+                                    <ul class="uc-nav-sub">
+                                        <li><a href="shop.html">Shop 4 cols</a></li>
+                                        <li><a href="shop-3.html">Shop 3 cols</a></li>
+                                        <li><a href="shop-2.html">Shop 2 cols</a></li>
+                                        <li><a href="shop-sidebar.html">Shop with sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="shop-category.html">Archive category</a></li>
+                                <li><a href="shop-product-detail.html">Product detail</a></li>
+                                <li><a href="shop-product-detail-2.html">Product detail - v2</a></li>
+                                <li><a href="shop-cart.html">Cart</a></li>
+                                <li><a href="shop-cart-2.html">Cart - v2</a></li>
+                                <li><a href="shop-checkout.html">Checkout</a></li>
+                                <li><a href="shop-checkout-2.html">Checkout - v2</a></li>
+                                <li><a href="shop-order.html">Order confirmation</a></li>
+                            </ul>
+                        </li>
+                        <li class="hr opacity-10 my-1"></li>
+                        <li><a href="sign-up.html">Create an account</a></li>
+                        <li><a href="sign-in.html">Log in</a></li>
+                        <li><a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504">Buy Template</a></li>
+                    </ul>
+                    <ul class="social-icons nav-x mt-4">
+                        <li>
+                            <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
+                        </li>
+                    </ul>
+                    <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
+                        <div class="vstack gap-1">
+                            <span class="fs-7 opacity-60">Select theme:</span>
+                            <div class="darkmode-trigger" data-darkmode-switch="">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider fs-5"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Cart panel -->
+        <div id="uc-cart-panel" data-uc-offcanvas="overlay: true; flip: true;">
+            <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+                <button class="uc-offcanvas-close top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="mini-cart-content vstack justify-between panel h-100">
+                    <div class="mini-cart-header">
+                        <h3 class="title h5 m-0 text-dark dark:bg-gray-900">Shopping cart</h3>
+                    </div>
+                    <div class="mini-cart-listing panel flex-1 my-4 overflow-scroll">
+                        <p class="alert alert-warning" hidden>Your cart empty!</p>
+                        <div class="panel vstack gap-3">
+                            <div>
+                                <article class="product type-product panel">
+                                    <div class="hstack gap-2">
+                                        <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-07.jpg" alt="Laptop Cover">
+                                            <a href="shop-product-detail.html" class="position-cover" data-caption="Laptop Cover"></a>
+                                        </figure>
+                                        <div class="content vstack gap-narrow fs-6">
+                                            <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Laptop Cover</a></h5>
+                                            <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white"><span class="qty">1</span> x <span class="price">$24.00</span></div>
+                                            <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                            <i class="unicon-close icon-1"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="product type-product panel">
+                                    <div class="hstack gap-2">
+                                        <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-08.jpg" alt="Disney Toys">
+                                            <a href="shop-product-detail.html" class="position-cover" data-caption="Disney Toys"></a>
+                                        </figure>
+                                        <div class="content vstack gap-narrow fs-6">
+                                            <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Disney Toys</a></h5>
+                                            <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white"><span class="qty">1</span> x <span class="price">$5.00</span></div>
+                                            <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                            <i class="unicon-close icon-1"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="product type-product panel">
+                                    <div class="hstack gap-2">
+                                        <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-09.jpg" alt="Screen Axe">
+                                            <a href="shop-product-detail.html" class="position-cover" data-caption="Screen Axe"></a>
+                                        </figure>
+                                        <div class="content vstack gap-narrow fs-6">
+                                            <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Screen Axe</a></h5>
+                                            <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white"><span class="qty">1</span> x <span class="price">$19.00</span></div>
+                                            <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                            <i class="unicon-close icon-1"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="product type-product panel">
+                                    <div class="hstack gap-2">
+                                        <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-10.jpg" alt="Airpods Pro">
+                                            <a href="shop-product-detail.html" class="position-cover" data-caption="Airpods Pro"></a>
+                                        </figure>
+                                        <div class="content vstack gap-narrow fs-6">
+                                            <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Airpods Pro</a></h5>
+                                            <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white"><span class="qty">1</span> x <span class="price">$49.00</span></div>
+                                            <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                            <i class="unicon-close icon-1"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mini-cart-footer panel pt-3 border-top">
+                        <div class="panel vstack gap-3 justify-between">
+                            <div class="mini-cart-total hstack justify-between">
+                                <h5 class="h5 m-0 text-dark dark:text-white">Subtotal</h5>
+                                <b class="fs-5">$97.00</b>
+                            </div>
+                            <div class="mini-cart-actions vstack gap-1">
+                                <a href="shop-cart.html" class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700">View cart</a>
+                                <a href="shop-checkout.html" class="btn btn-md btn-primary text-white">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Favorites modal -->
+        <div id="uc-favorites-panel" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog lg:max-w-500px bg-white text-dark dark:bg-gray-800 dark:text-white rounded">
+                <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="panel vstack justify-center items-center gap-2 text-center py-8">
+                    <i class="icon icon-4 unicon-bookmark mb-2 text-primary dark:text-white"></i>
+                    <h2 class="h4 md:h3 m-0">Your favorites</h2>
+                    <p class="fs-5 opacity-60">You have not yet added any recipe to your favorites list.</p>
+                    <a href="#" class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 mt-2 uc-modal-close">Browse recipes</a>
+                </div>
+            </div>
+        </div>
+
+        <!--  Contact modal -->
+        <div id="uc-contact-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5">
+                <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="panel vstack gap-2 md:gap-4 text-center">
+                    <div class="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Schedule your 15-minute demo now</h4>
+                            <div class="panel w-100 sm:w-350px md:w-500px mx-auto">
+                                <form class="vstack gap-2">
+                                    <div class="vstack lg:hstack gap-2">
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Full name*" required>
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Last name*" required>
+                                    </div>
+                                    <div class="vstack lg:hstack gap-2">
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email*" required>
+                                        <input class="form-control h-48px w-100 md:w-1/2 rtl:text-end bg-white dark:border-white dark:text-dark" type="tel" placeholder="Phone number*" required>
+                                    </div>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Company name*" required>
+                                    <textarea class="form-control min-h-150px w-full bg-white dark:border-white dark:text-dark" placeholder="Your message.."></textarea>
+                                    <button class="btn btn-primary btn-md text-white mt-2" type="submit">Schedule my demo</button>
+                                    <p class="fs-7 opacity-70 mt-2 text-center">We’ll tailor your demo to your immediate needs and answer all your questions. Get ready to see how it works!</p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Bottom Actions Sticky -->
+        <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+            <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
+                <label class="switch">
+                    <span class="sr-only">Dark mode toggle</span>
+                    <input type="checkbox">
+                    <span class="slider fs-5"></span>
+                </label>
+            </div>
+            <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+                <i class="icon-2 unicon-chevron-up"></i>
+            </a>
+        </div>
+
+        <!-- Header start -->
+        <div id="header"></div>
+        <script src="../assets/js/header.js"></script>
+
+        <!-- Header end -->
+
+        <!-- Wrapper start -->
+        <div id="wrapper" class="wrap text-black">
+
+            <!-- Section start -->
+            <div id="pricing_tiers" class="pricing-tiers section panel ">
+                <div class="section-outer panel py-9 lg:py-10">
+                    <div class="container lg:max-w-lg">
+                        <div class="section-inner panel">
+                            <div class="panel vstack items-center gap-4 sm:gap-6 xl:gap-8">
+                                <div class="heading vstack gap-2 items-center panel text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                    <!-- <span class="fs-7 fw-medium py-narrow px-2 border rounded-pill text-primary dark:text-tertiary">Pricing</span> -->
+                                    <p class="fs-6 xl:fs-5">Discover our formulas</p>
+                                    <h2 class="title h3 lg:h2 xl:h1 m-0">Choose <span class="px-1 bg-tertiary text-primary">the plan that suits you best</span></h2>
+                                    <p class="fs-6 xl:fs-5">Try it today and transform your management with unparalleled efficiency</p>
+                                    <div id="specific-panel" class="panel px-1 py-1   fw-medium rounded-pill bg-none border">
+                                        <ul class="main-features-nav hstack text-center overflow-auto" data-uc-switcher="connect: .main-features-switcher; active: 0; animation: uc-animation-fade;">
+                                            <li><a class="sales-link  text-nowrap m-0" href="#">Sales and Prospecting </a></li>
+                                            <li><a class="billing-link text-nowrap m-0" href="#">Billing and Management </a></li>
+                                            <li><a class="inawo-link text-nowrap m-0" href="#">Inawo global</a></li>
+                                        </ul>
+                                    </div>
+                                    <p class="fs-6 xl:fs-5">Simple pricing. No hidden fees. Advanced features for your business.</p>
+
+                                    <div id="liens" class="vstack items-center gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-750px mx-auto text-center" data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">  
+                                        <ul class="uc-switcher-nav nav-x gap-px-1 py-1 p-narrow border rounded-pill fs-7 fw-medium" data-uc-switcher="connect: .pricing-switcher;">  
+                                            <li><a href="#" id="monthly" class="text-none w-128px cstack p-1">Monthly</a></li>  
+                                            <li><a href="#" id="yearly" class="text-none w-128px cstack p-1">Yearly</a></li>  
+                                        </ul>  
+                                    </div>
+                                </div>
+                                    
+                                
+                                <div class="content panel w-100 " data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 100;">
+                                    
+                                    
+                                    <div class="content panel w-100" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 100;">  
+                                        <div class="panels border rounded-2 text-center">  
+                                            <div class="blog">  
+                                                <div>  
+                                                    <div class="vstack">  
+                                                        <div class="panel vstack items-center gap-narrow p-2 py-4">  
+                                                            <h3 class="title h5 mb-1">Essentiel</h3>  
+                                                            <h5 class="price h1 lg:display-5 m-0 default-price">0<sup class="h5 m-0 mx-narrow">FCFA</sup></h5>
+                                                            <!--<h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">Gratuit</sup></h5>     -->
+                                                            <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;">0<sup class="h5 m-0 mx-narrow"> FCFA</sup></h5>  
+                                                            <!-- <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;"><sup class="h5 m-0 mx-narrow">Gratuit</sup></h5>   -->
+                                                            <span class="fs-7 fw-normal m-0">Gratuit</span>  
+                                                        </div>  
+                                                        <div class="vstack items-center gap-2 p-4 pt-0">  
+                                                            <button class="btn btn-md btn-ghost-primary fw-bold border rounded-pill px-3 w-100">Commencer gratuitement</button>  
+                                                            <p class="fs-7 fw-normal">No credit card required!</p>  
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="panel vstack border border-2 rounded-1-5 border-primary dark:border-tertiary contrast-shadow-md z-1" style="margin-top: -2px; margin-bottom: -2px">
+                                                    <div class="panel vstack items-center gap-narrow p-2 py-4">
+                                                        <h3 class="title h5 mb-1 text-primary dark:text-tertiary">Professionnal</h3>
+                                                        <h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">$</sup>4</h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 default-price">2500<sup class="h5 m-0 mx-narrow">FCFA</sup></h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;" ><sup class="h5 m-0 mx-narrow">$</sup>41</h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;" >25000<sup class="h5 m-0 mx-narrow">FCFA</sup></h5>
+                                                        <span class="fs-7 fw-normal m-0 default-price">Monthly billing</span>                             
+                                                        <span class="fs-7 fw-normal m-0 hidden-price" style="display: none;">Annual billing</span>
+                                                        <span class="position-absolute top-0 end-0 cstack px-1 bg-tertiary text-primary border rounded-default m-1">Best option!</span>
+                                                    </div>
+                                                    <div class="vstack items-center gap-2 p-4 pt-0">
+                                                        <button class="btn btn-md btn-primary dark:bg-tertiary dark:text-primary fw-bold rounded-pill px-3 w-100">Start</button>
+                                                        <!-- <p class="fs-7 fw-normal">Billed $108 per year.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="vstack">
+                                                    <div class="panel vstack items-center gap-narrow p-2 py-4">
+                                                        <h3 class="title h5 mb-1">Business</h3>
+                                                        <h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">$</sup>12</h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 default-price">7500<sup class="h5 m-0 mx-narrow">FCFA</sup></h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;"><sup class="h5 m-0 mx-narrow">$</sup>123</h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;">75000<sup class="h5 m-0 mx-narrow">FCFA</sup></h5>
+                                                        <span class="fs-7 fw-normal m-0 default-price">Monthly billing</span>
+                                                        <span class="fs-7 fw-normal m-0 hidden-price" style="display: none;">Annual billing</span>
+                                                    </div>
+                                                    <div class="vstack items-center gap-2 p-4 pt-0">
+                                                        <button class="btn btn-md btn-ghost-primary fw-bold border rounded-pill px-3 w-100">Start</button>
+                                                        <!-- <p class="fs-7 fw-normal">Billed $348 per year.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div style="background-color:#003366;">
+                                                <div class="vstack" id="last" >
+                                                    <div class="panel vstack items-center gap-narrow p-2 py-4">
+                                                        <h3 style="color: white;" class="title h5 mb-1">ENTREPRISES</h3>
+                                                        <h5 style="color: white;" class="price h1 lg:display-5 m-0 "><sup style="color: white;" class="h5 m-0 mx-narrow">Pour les grandes <br> entreprises qui ont <br> besoin de fonctionnalités <br>avancées</sup></h5>
+                                                        <h5 class="price h1 lg:display-5 m-0"><sup class=" price h5 m-0 mx-narrow">Write to us</sup></h5>
+                                                        <!-- <span class="fs-7 fw-normal m-0">Per month billing yearly</span> -->
+                                                    </div>
+                                                    <div class="vstack items-center gap-2 p-4 pt-0">
+                                                        <button class="btn btn-md btn-ghost-primary fw-bold border rounded-pill px-3 w-100">Customizable offer</button>
+                                                        <!-- <p class="fs-7 fw-normal">Billed $348 per year.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section end -->
+
+            <!-- Section start -->
+            <div id="pricing_compare" class="pricing-compare section panel text-black " >
+                <div class="section-outer panel pb-4 md:pb-6 xl:pb-10">
+                    <div class="container ">
+                        <div class="section-inner panel vstack gap-4 lg:gap-6 xl:gap-8" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <div class="heading vstack gap-2 items-center panel text-center max-w-600px mx-auto">
+                                <h2 class="title h3 m-0">Let's compare plans and choose the one that suits your needs!</h2>
+                            </div>
+                            <div class="panel p-2 border rounded-1-5 lg:rounded-2 dark:border-gray-600 dark:bg-black">
+                                <table id="dataTable" class="uc-table uc-table-divider">
+                                    <thead class="table-head sticky-top z-1 bg-white text-dark dark:bg-gray-900 dark:text-white">
+                                        <tr class="table-row border-white dark:border-gray-900">
+                                            <th class="table-header-cell" scope="row">
+                                                <div class="text-black"><span></span></div>
+                                            </th>
+                                            <th class="table-header-cell w-1/5" scope="col" id="plan-1">
+                                                <div class="title">
+                                                    <div class="h6 lg:h5 mt-4 mb-2"><span>Essential</span></div>
+                                                </div>
+                                            </th>
+                                            <th class="table-header-cell w-1/5" scope="col" id="plan-2">
+                                                <div class="title">
+                                                    <div class="h6 lg:h5 mt-4 mb-2"><span>Professionnal</span></div>
+                                                </div>
+                                            </th>
+                                            <th class="table-header-cell w-1/5" scope="col" id="plan-3">
+                                                <div class="title">
+                                                    <div class="h6 lg:h5 mt-4 mb-2"><span>Business</span></div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-body">
+                                        <tr class="table-row table-heading bg-primary-25 dark:bg-gray-700 border-white dark:border-gray-900">
+                                            <th colspan="4" scope="colgroup">
+                                                <div class="h6 m-0 text-dark dark:text-white"><span>Main features</span></div>
+                                            </th>
+                                        </tr>
+                                        <tr class="table-row border-white dark:border-gray-900">
+                                            <th scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Number of users</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div class="default " ><span>01 user</span></div>
+                                                <div class="hidden "  style="display:none"><span>05 users</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="default "><span>Up to 10 users</span></div>
+                                                <div class="hidden " style="display:none" ><span>Up to 10 users</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="default "><span>Up to 25 users</span></div>
+                                                <div class="hidden " style="display:none"><span>Up to 25 users</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Real-time analysis</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Dashboard</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Contact management</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div><span>100</span></div>
+                                                <div style="display:none ;"><span>250</span></div>
+                                            </td>
+                                            <td>
+                                                <div><span>500</span></div>
+                                            </td>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Product/Service Management</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Factures</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Quote/Proforma/Purchase order/Delivery note</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                            <td>
+                                                <div><span>Illimité</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Sales management</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Expense management</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Task management</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Inventory management</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Collaboration</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Notification of commercial reminders</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Reports (Export your data to PDF)</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Assistance and Support</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                    <!-- </tbody>
+                                    <tbody class="table-body">
+                                        <tr class="table-row table-heading bg-primary-25 dark:bg-gray-700 border-white dark:border-gray-900">
+                                            <th colspan="4" scope="colgroup">
+                                                <div class="h6 m-0 text-dark dark:text-white"><span>Products</span></div>
+                                            </th>
+                                        </tr>
+                                        <tr class="table-row border-white dark:border-gray-900">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Email Template Builder</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Landing Page Builder</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Reporting & analytics</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">E-commerce and retail</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Large Community</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="table-body">
+                                        <tr class="table-row table-heading bg-primary-25 dark:bg-gray-700 border-white dark:border-gray-900">
+                                            <th colspan="4" scope="colgroup">
+                                                <div class="h6 m-0 text-dark dark:text-white"><span>Chatbots</span></div>
+                                            </th>
+                                        </tr>
+                                        <tr class="table-row border-white dark:border-gray-900">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">To-Do List</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Reports</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Spreadsheets</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Collaboration</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Chatbots</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="table-body">
+                                        <tr class="table-row table-heading bg-primary-25 dark:bg-gray-700 border-white dark:border-gray-900">
+                                            <th colspan="4" scope="colgroup">
+                                                <div class="h6 m-0 text-dark dark:text-white"><span>AI-Powered Solutions</span></div>
+                                            </th>
+                                        </tr>
+                                        <tr class="table-row border-white dark:border-gray-900">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Automation</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-dark dark:bg-white bg-opacity-10">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Teaming</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-row border-gray-100 dark:border-gray-600">
+                                            <th class="" scope="row">
+                                                <div class="hstack gap-1 justify-start">
+                                                    <span class="fs-5 fw-bold text-dark dark:text-white">Use Case</span>
+                                                    <div data-uc-tooltip="The number of users of each plan." tabindex="0" aria-expanded="false">
+                                                        <i class="icon icon-narrow unicon-information-filled mt-px"></i>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span class="cstack w-24px h-24px rounded-circle bg-primary text-white dark:bg-tertiary dark:text-dark">
+                                                        <i class="icon-narrow unicon-checkmark fw-bold"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody> -->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section end -->
+
+            <!-- Section start -->
+            <div id="clients_feedbacks" class="clients-feedbacks section panel overflow-hidden">
+                <div class="section-outer panel pb-6 xl:pb-10">
+                    <div class="container">
+                        <div class="section-inner panel">
+                            <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -200; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 450; delay: anime.stagger(100, {start: 200});">
+                                <h2 class="h4 sm:h3 lg:h2 m-0 text-center max-w-650px mx-auto">See what our <span class="px-1 bg-tertiary text-primary">happy users</span> are sharing about us!</h2>
+                                <div class="panel w-100">
+                                    <!-- <div class="brands panel vstack gap-3 sm:gap-4 xl:gap-5 mb-4 lg:mb-6 xl:mb-8 text-center" data-anime="onview: -200; translateY: [-16, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 350;">
+                                        <p class="h6">Trusted by over 1.7 million companies worldwide</p>
+                                        <div class="panel">
+                                            <div class="element-brands text-gray-900 dark:text-white mask-x">
+                                                <div class="swiper" data-uc-swiper="items: 2.25; center: true; center-bounds: true; autoplay: 7000; loop: true; speed: 7000; autoplay-delay: -1; allowTouchMove: false; disableOnInteraction: true;" data-uc-swiper-s="items: 4; center: false; center-bounds: false;" data-uc-swiper-m="items: 6; gap: 100;">
+                                                    <div class="swiper-wrapper items-center ease-linear">
+                                                        <div class="brand-item swiper-slide text-center">
+                                                            <img class="brand-item-image h-40px xl:h-48px" src="../assets/images/brands/brand-01.svg" alt="Proline" data-uc-svg>
+                                                        </div>
+                                                        <div class="brand-item swiper-slide text-center">
+                                                            <img class="brand-item-image h-40px xl:h-48px" src="../assets/images/brands/brand-02.svg" alt="Iceberg" data-uc-svg>
+                                                        </div>
+                                                        <div class="brand-item swiper-slide text-center">
+                                                            <img class="brand-item-image h-40px xl:h-48px" src="../assets/images/brands/brand-03.svg" alt="PinPoint" data-uc-svg>
+                                                        </div>
+                                                        <div class="brand-item swiper-slide text-center">
+                                                            <img class="brand-item-image h-40px xl:h-48px" src="../assets/images/brands/brand-04.svg" alt="Clues" data-uc-svg>
+                                                        </div>
+                                                        <div class="brand-item swiper-slide text-center">
+                                                            <img class="brand-item-image h-40px xl:h-48px" src="../assets/images/brands/brand-05.svg" alt="Snowflake" data-uc-svg>
+                                                        </div>
+                                                        <div class="brand-item swiper-slide text-center">
+                                                            <img class="brand-item-image h-40px xl:h-48px" src="../assets/images/brands/brand-06.svg" alt="Proline" data-uc-svg>
+                                                        </div>
+                                                        <div class="brand-item swiper-slide text-center">
+                                                            <img class="brand-item-image h-40px xl:h-48px" src="../assets/images/brands/brand-07.svg" alt="Iceberg" data-uc-svg>
+                                                        </div>
+                                                        <div class="brand-item swiper-slide text-center">
+                                                            <img class="brand-item-image h-40px xl:h-48px" src="../assets/images/brands/brand-08.svg" alt="PinPoint" data-uc-svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="swiper overflow-unset" data-uc-swiper="items: 1.25; active: 1; gap: 16; center: true; center-bounds: true;" data-uc-swiper-l="items: 4; gap: 24; center: false; center-bounds: false;">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
+                                                    </div>
+                                                    <div class="panel hstack gap-2 mt-2">
+                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/01.png" alt="Mark Zellers">
+                                                        <div class="panel vstack justify-center gap-narrow">
+                                                            <ul class="nav-x gap-0 text-warning">
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                            </ul>
+                                                            <span class="fw-bold ft-secondary m-0">Mark Zellers</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“This powerfull tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”</p>
+                                                    </div>
+                                                    <div class="panel hstack gap-2 mt-2">
+                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/04.png" alt="Natalia Larsson">
+                                                        <div class="panel vstack justify-center gap-narrow">
+                                                            <ul class="nav-x gap-0 text-warning">
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                            </ul>
+                                                            <span class="fw-bold ft-secondary m-0">Natalia Larsson</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers than comply with this regulation and as we look to create our website and this builder just outstanding!”</p>
+                                                    </div>
+                                                    <div class="panel hstack gap-2 mt-2">
+                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/03.png" alt="Sarah Edrissi">
+                                                        <div class="panel vstack justify-center gap-narrow">
+                                                            <ul class="nav-x gap-0 text-warning">
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                            </ul>
+                                                            <span class="fw-bold ft-secondary m-0">Sarah Edrissi</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
+                                                    </div>
+                                                    <div class="panel hstack gap-2 mt-2">
+                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/08.png" alt="Anna Yon">
+                                                        <div class="panel vstack justify-center gap-narrow">
+                                                            <ul class="nav-x gap-0 text-warning">
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                            </ul>
+                                                            <span class="fw-bold ft-secondary m-0">Anna Yon</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
+                                                    </div>
+                                                    <div class="panel hstack gap-2 mt-2">
+                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/01.png" alt="Mark Zellers">
+                                                        <div class="panel vstack justify-center gap-narrow">
+                                                            <ul class="nav-x gap-0 text-warning">
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                            </ul>
+                                                            <span class="fw-bold ft-secondary m-0">Mark Zellers</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“This powerfull tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”</p>
+                                                    </div>
+                                                    <div class="panel hstack gap-2 mt-2">
+                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/04.png" alt="Natalia Larsson">
+                                                        <div class="panel vstack justify-center gap-narrow">
+                                                            <ul class="nav-x gap-0 text-warning">
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                            </ul>
+                                                            <span class="fw-bold ft-secondary m-0">Natalia Larsson</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers than comply with this regulation and as we look to create our website and this builder just outstanding!”</p>
+                                                    </div>
+                                                    <div class="panel hstack gap-2 mt-2">
+                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/03.png" alt="Sarah Edrissi">
+                                                        <div class="panel vstack justify-center gap-narrow">
+                                                            <ul class="nav-x gap-0 text-warning">
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                            </ul>
+                                                            <span class="fw-bold ft-secondary m-0">Sarah Edrissi</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
+                                                    </div>
+                                                    <div class="panel hstack gap-2 mt-2">
+                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/08.png" alt="Anna Yon">
+                                                        <div class="panel vstack justify-center gap-narrow">
+                                                            <ul class="nav-x gap-0 text-warning">
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
+                                                            </ul>
+                                                            <span class="fw-bold ft-secondary m-0">Anna Yon</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <a href="#" class="uc-link dark:text-tertiary fw-bold d-inline-flex items-center gap-narrow">
+                                    <span>See all feedbacks</span>
+                                    <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
+                                </a> -->
+                                <!-- <img class="w-500px text-primary dark:text-gray-200" src="../assets/images/vectors/producthunt-badges.svg" alt="producthunt-badges" data-uc-svg=""> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section end -->
+
+            <!-- Section start -->
+            <div id="faq" class="faq section panel">
+                <div class="section-outer panel pb-4 lg:pb-6 xl:pb-10">
+                    <div class="container lg:max-w-lg">
+                        <div class="section-inner panel" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <div class="row child-cols-12 col-match g-4">
+                                <div>
+                                    <div class="vstack items-center text-center gap-2">
+                                        <h2 class="h4 sm:h3 xl:h2 m-0">Frequently Asked Questions!</h2>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="panel rounded-2 p-3 lg:p-8 border">
+                                        <ul class="uc-accordion-divider gap-7 max-w-md mx-auto" data-uc-accordion="targets: > li; multiple: true;" style="--divider-gap: 56px">
+                                            <li class="panel uc-open">
+                                                <a class="uc-accordion-title h6 md:h5" href="#">Are there any additional costs or fees after my subscription?</a>
+                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
+                                                    <p>Inawo offers a wide range of modules, applications, and features to help your business stay ahead of the curve in its industry. You won't have to pay any additional fees for your subscription once you sign up.</p>
+                                                </div>
+                                            </li>
+                                            <li class="panel">
+                                                <a class="uc-accordion-title h6 md:h5" href="#">When do I have to pay my subscription?</a>
+                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
+                                                    <p>Inawo offers several payment options: quarterly, semi-annual, annual, or biannual. Choose the plan and package that suits you, create an account, and then you can subscribe to the subscription of your choice using the free trial version.</p>
+                                                </div>
+                                            </li>
+                                            <li class="panel">
+                                                <a class="uc-accordion-title h6 md:h5" href="#">What happens at the end of the trial period?</a>
+                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
+                                                    <p>During your 14-day free trial, you can upgrade to Inawo at any time. After this period, you'll need to upgrade to one of our offers to continue accessing your account.</p>
+                                                </div>
+                                            </li>
+                                            <li class="panel">
+                                                <a class="uc-accordion-title h6 md:h5" href="#">What type of support and assistance is available?</a>
+                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
+                                                    <p>Our after-sales service is available from 9 a.m. to 6 p.m., Monday to Friday, to answer your questions via our chat (accessible in the top right corner of your application). You can also send us an email at hello@inawo.pro</p>                                                </div>
+                                            </li>
+                                            <li class="panel">
+                                                <a class="uc-accordion-title h6 md:h5" href="#">Do I need to enter my bank details to try Inawo?</a>
+                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
+                                                    <p>Absolutely not! Your 14-day trial is completely free. Registration doesn't require a credit card.</p>                                                </div>
+                                            </li>
+                                            <li class="panel">
+                                                <a class="uc-accordion-title h6 md:h5" href="#">Can I upgrade to a higher edition at any time?</a>
+                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
+                                                    <p>You can upgrade at any time, but some products may require a common upgrade. Likewise, during your subscription, you can switch to a higher plan at any time. Please email us at hello@inawo.pro if necessary.</p>                                                </div>
+                                            </li>
+                                            <li class="panel">
+                                                <a class="uc-accordion-title h6 md:h5" href="#">When do I have to pay my subscription?</a>
+                                                <div class="uc-accordion-content lg:fs-4 opacity-70">
+                                                    <p>Inawo offers several payment options: quarterly, semi-annual, annual, or biannual. Choose the plan and package that suits you, create an account, and then you can subscribe to the subscription of your choice using the free trial version.</p>                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div>
+                                    <div class="panel vstack items-center justify-between gap-2 text-center rounded-2 p-3 lg:py-8 bg-primary text-white uc-dark">
+                                        <div class="panel">
+                                            <div class="vstack items-center gap-2">
+                                                <h2 class="h6 lg:h5 m-0">Still have questions?</h2>
+                                                <p class="lg:fs-5 text-dark dark:text-white text-opacity-70">
+                                                    Can’t find the answer you’re looking for? <br>
+                                                    Please chat to our friendly team.
+                                                </p>
+                                                <div class="hstack justify-center gap-0">
+                                                    <img src="../assets/images/avatars/02.jpg" alt="Avatar-image" class="w-48px h-48px rounded-circle border border-2 border-white dark:border-primary">
+                                                    <img src="../assets/images/avatars/01.jpg" alt="Avatar-image" class="w-48px h-48px rounded-circle border border-2 border-white dark:border-primary ms-n2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="page-contact.html" class="btn btn-md btn-primary text-tertiary dark:bg-tertiary dark:text-primary fw-bold rounded-pill px-3 lg:px-5 mt-1 lg:mt-2">Get in touch</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section end -->
+        </div>
+
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <div id="footer"></div>
+        <script src="../assets/js/footer.js"></script>
+        <!-- Footer end -->
+
+        <!-- include jquery & bootstrap js -->
+        <script defer src="../assets/js/libs/jquery.min.js"></script>
+        <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+
+        <!-- include scripts -->
+        <script defer src="../assets/js/libs/anime.min.js"></script>
+        <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+        <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+        <script defer src="../assets/js/libs/typed.min.js"></script>
+        <script defer src="../assets/js/libs/tilt.min.js"></script>
+        <script defer src="../assets/js/libs/split-type.min.js"></script>
+        <script defer src="../assets/js/libs/prettify.min.js"></script>
+        <script defer src="../assets/js/libs/gsap.min.js"></script>
+        <script defer src="../assets/js/core/magic-cursor.js"></script>
+        <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+        <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+        <script defer src="../assets/js/helpers/splitype-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper.js"></script>
+        <script defer src="../assets/js/helpers/typed-helper.js"></script>
+        <script defer src="../assets/js/helpers/tilt-helper.js"></script>
+        <script defer src="../assets/js/core/marquee.js"></script>
+        <script defer src="../assets/js/uikit-components-bs.js"></script>
+
+        <!-- include app script -->
+        <script defer src="../assets/js/app.js"></script>
+
+      
+       
+
+        
+        <script>
+           
+            // Récupérer les liens via leur texte (Sales and prospecting, Billing and management, Inawo global)
+            const links = document.querySelectorAll("#specific-panel a");
+
+            // Récupérer tous les prix visibles par défaut (h5 sans display: none)
+            const defaultPrices = document.querySelectorAll('h5:not([style*="display: none"])');
+
+            // Récupérer tous les prix cachés (h5 avec display: none)
+            const hiddenPrices = document.querySelectorAll('h5[style*="display: none"]');
+
+            // Fonction pour afficher le contenu par défaut
+            function afficherContenuParDefaut() {
+                defaultPrices.forEach(price => price.style.display = "block");
+                hiddenPrices.forEach(price => price.style.display = "none");
+            }
+
+            // Fonction pour afficher les prix cachés
+            function afficherPrixCache() {
+                defaultPrices.forEach(price => price.style.display = "none");
+                hiddenPrices.forEach(price => price.style.display = "block");
+            }
+
+            // Ajouter des gestionnaires d'événements aux liens
+            links.forEach((link, index) => {
+                if (index === 0 || index === 1) {
+                    // Pour les deux premiers liens : afficher le contenu par défaut
+                    link.addEventListener("click", afficherContenuParDefaut);
+                } else if (index === 2) {
+                    // Pour le troisième lien : afficher les prix cachés
+                    link.addEventListener("click", afficherPrixCache);
+                }
+        
+            });
+        </script>
+
+  
+
+        <script>
+
+            const link = document.querySelectorAll("#liens a");
+
+            // Sélectionne les boutons
+           const monthlyButton = document.getElementById('monthly');
+           const yearlyButton = document.getElementById('yearly');
+
+           // Sélectionne toutes les parties à afficher/cacher
+           const defaultElements = document.querySelectorAll('.default-price');
+           const hiddenElements = document.querySelectorAll('.hidden-price');
+
+           // Fonction pour activer l'affichage "Monthly"
+           monthlyButton.addEventListener('click', (e) => {
+               e.preventDefault();
+               monthlyButton.classList.add('active');
+               yearlyButton.classList.remove('active');
+
+               // Afficher les éléments par défaut et cacher les autres
+               defaultElements.forEach(el => el.style.display = 'block');
+               hiddenElements.forEach(el => el.style.display = 'none');
+           });
+
+           // Fonction pour activer l'affichage "Yearly"
+           yearlyButton.addEventListener('click', (e) => {
+               e.preventDefault();
+               yearlyButton.classList.add('active');
+               monthlyButton.classList.remove('active');
+
+               // Afficher les éléments "hidden" et cacher les "default"
+               hiddenElements.forEach(el => el.style.display = 'block');
+               defaultElements.forEach(el => el.style.display = 'none');
+           });
+       </script>
+            
+            
+    </body>                       
+   
+
+</html>

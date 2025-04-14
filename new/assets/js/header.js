@@ -217,21 +217,21 @@ const headerHTML = `
                                 <a href="shop.html">Solutions</a>
                                 <ul class="uc-nav-sub">
                                     <li><a href="Inawo-Global.html">Innawo Global</a></li>
-                                    <li><a href="./ventes.html">Développer vos ventes</a></li>
-                                    <li><a href="clients.html">Organiser les données clientes </a></li>
+                                    <li><a href="../fr/Solutions/Developper-vos-ventes.html">Développer vos ventes</a></li>
+                                    <li><a href="Organiser-les-donnees-clients.html">Organiser les données clientes </a></li>
                                     <li><a href="petite-entreprise.html">Inawo pour petites entreprise</a></li>
                                 </ul>
                             </li>
                             <li class="uc-parent">
-                                <a href="a-propos-inawo.html">Pourquoi choisir Inawo</a>
+                                <a href="a-propos-d-inawo.html">Pourquoi choisir Inawo</a>
                                 <ul class="uc-nav-sub">
-                                    <li><a href="a-propos-inawo.html">Pourquoi Inawo</a></li>
+                                    <li><a href="a-propos-d-inawo.html">Pourquoi Inawo</a></li>
                                     <li><a href="etude-de-cas.html">Etude de cas</a></li>
-                                    <li><a href="activite.html">Actualité de nos produits </a></li>
+                                    <li><a href="../fr/Blog/actualites-inawo.html">Actualité de nos produits </a></li>
                                     <li><a href="contactez-nous.html">Centre d'assistance</a></li>
-                                    <li><a href="conditons-generales.html">Conditions générales d'utilisation</a></li>
-                                    <li><a href="confidentialite-securite.html">Confidentialité</a></li>
-                                    <li><a href="politique.html">Politique de cookies</a></li>
+                                    <li><a href="conditions-generales-d-utilisation.html">Conditions générales d'utilisation</a></li>
+                                    <li><a href="Politique-de-confidentialite.html">Confidentialité</a></li>
+                                    <li><a href="Politique-de-cookies.html">Politique de cookies</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -243,26 +243,26 @@ const headerHTML = `
                             <li class="uc-parent">
                                 <a href="features.html">A la Une</a>
                                 <ul class="uc-nav-sub">
-                                    <li><a href="./ventes.html">Vente</a></li>
-                                    <li><a href="PME et StartUp.html">PME et StartUp</a></li>
-                                    <li><a href="nouveauté chez Inawo.html">Nouveauté chez Inawo</a></li>
+                                    <li><a href="Developper-vos-ventes.html">Vente</a></li>
+                                    <li><a href="../fr/Blog/PME-et-StartUp.html">PME et StartUp</a></li>
+                                    <li><a href="../fr/Blog/actualites-inawo.html">Nouveauté chez Inawo</a></li>
                                 </ul>
                             </li>
                             <li class="uc-parent">
                                 <a href="">Ressources</a>
                                 <ul class="uc-nav-sub">
-                                    <li><a href="ebooks.html">Ebooks</a></li>
-                                    <li><a href="outils.html">Outils</a></li>
-                                    <li><a href="clients.html">Organiser les données clientes </a></li>
-                                    <li><a href="tutoriel.html">Tutoriels</a></li>
+                                    <li><a href="../fr/Ressources/Ebooks.html">Ebooks</a></li>
+                                    <li><a href="../fr/Ressources/Outils.html">Outils</a></li>
+                                    <li><a href="Organiser-les-donnees-clients.html">Organiser les données clientes </a></li>
+                                    <li><a href="../fr/Ressources/Tutoriel.html">Tutoriels</a></li>
                                 </ul>
                             </li>
                             <li class="uc-parent">
-                                <a href="shop.html">Communauté</a>
+                                <a href="t.me/InawoCRM ">Communauté</a>
                                 <ul class="uc-nav-sub">
                                     <li>Inawo academy</li>
                                     <li>Evenementsli>
-                                    <li>Communauté Inawo</li>
+                                    <li><a href="t.me/InawoCRM "> Communauté Inawo <a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -279,9 +279,9 @@ const headerHTML = `
                                 </ul>
                             </li>
                             <li class="uc-parent">
-                                <a href="shop.html">Devenez partenaire</a>
+                                <a href="../fr/partenariat.html.html">Devenez partenaire</a>
                                 <ul class="uc-nav-sub">
-                                    <li><a href="./partenariat.html">Partenaires d'affaires</a></li>
+                                    <li><a href="../fr/partenariat.html.html">Partenaires d'affaires</a></li>
                                     <li><a href="Developpeurs.html">Développeurs</a></li>
                                     <li><a href="Témoignages.html">Témoignages</a></li>
                                 </ul>
@@ -487,13 +487,7 @@ const headerHTML = `
     
     <!-- Modals end -->
 
-    <div class="uc-banner-top py-1 p-2 m-0 hide-on-sticky text-center dark:from-tertiary-200 to-primary-700 dark:to-tertiary text-white dark:text-dark" data-uc-alert data-anime="opacity: [0, 1]; easing: easeInOutcubic; duration: 500; delay: 0;" style="background: linear-gradient(to right, #014b93, #014a92);">
-            <a href="#" class="uc-alert-close top-0 end-0" style="margin: 14px" data-uc-close></a>
-        <p>
-            The Lexend AI automation guide is here. <br class="d-block lg:d-none">
-            <a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504/" class="uc-link text-white dark:text-primary border-bottom" target="_blank" rel="nofollow">Check it out!</a>
-        </p>
-        </div>
+    
         <header class="uc-header header-five uc-navbar-sticky-wrap z-999" data-uc-sticky="start: 100vh; show-on-up: true; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;"  >
             <nav class="uc-navbar-container uc-navbar-float ft-tertiary  z-1" data-anime="translateY: [-40, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 0;" >
                 <div class="uc-navbar-main" style="--uc-nav-height: 64px">
@@ -525,20 +519,8 @@ const headerHTML = `
                                                                         <div class="row child-cols-6 gx-6" >
                                                                             <div class="vstack gap-3">
                                                                                 <h6 class="h6 m-0"><i class="fs-7 unicon-cube fw-bold ltr:me-narrow rtl:ms-narrow" style="margin-top: 5rem;"></i> Produits</h6>
-                                                                                <div>
                                                                                 
-                                                                                    <a href="Solutions/InawoBusiness-Gestion-et-Facturation.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
-                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
-                                                                                            <i class="icon-1 unicon-increase-level fw-bold text-white"></i>
-                                                                                        </div>
-                                                                                        
-                                                                                        <div class="panel">
-                                                                                            <span class="fs-7 fw-medium mb-narrow">Inawo invoice</span>
-                                                                                            <p class="fs-8 text-muted">Logiciel de gestion et de facturation</p>
-                                                                                        </div>
-                                                                                        
-                                                                                    </a>
-                                                                                </div>
+                                                                                
                                                                                 <div>
                                                                                     <a href="Solutions/InawoVente-Prospection-et-vente.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
@@ -547,6 +529,20 @@ const headerHTML = `
                                                                                             <span class="fs-7 fw-medium mb-narrow">Inawo CRM</span>
                                                                                             <p class="fs-8 text-muted">Logiciel de vente et de prospection</p>
                                                                                         </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                
+                                                                                    <a href="Solutions/InawoBusiness-Gestion-et-Facturation.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
+                                                                                            <i class="icon-1 unicon-increase-level fw-bold text-white"></i>
+                                                                                        </div>
+                                                                                        
+                                                                                        <div class="panel">
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Inawo Stock</span>
+                                                                                            <p class="fs-8 text-muted">Logiciel de gestion et de facturation</p>
+                                                                                        </div>
+                                                                                        
                                                                                     </a>
                                                                                 </div>
                                                                                 <div>
@@ -559,12 +555,25 @@ const headerHTML = `
                                                                                         </div>
                                                                                     </a>
                                                                                 </div>
+                                                                                <div style="visibility: hidden;">  
+                                                                                    <a href="Solutions/InawoGlobal.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">  
+                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">  
+                                                                                            <i class="icon-1 unicon-chat fw-bold text-white"></i>  
+                                                                                        </div>  
+                                                                                        <div class="panel">  
+                                                                                            <span class="fs-7 fw-medium mb-narrow">Inawo Global</span>  
+                                                                                            <p class="fs-8 text-muted">Logiciel de gestion d'entreprise tout en un pour gérer vos ventes, votre personnel, vos finances et votre comptabilité</p>  
+                                                                                        </div>  
+                                                                                    </a>  
+                                                                                </div>
+                                                                                
+                                                                                
                                                                                 
                                                                             </div>
                                                                             <div class="vstack gap-3">
                                                                                 <h6 class="h6 m-0"><i class="fs-7 unicon-gamification fw-bold ltr:me-narrow rtl:ms-narrow"></i>Solutions</h6>
                                                                                 <div>
-                                                                                    <a href="./ventes.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="Developper-vos-ventes.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
                                                                                         <div class="panel">
@@ -574,7 +583,7 @@ const headerHTML = `
                                                                                     </a>
                                                                                 </div>
                                                                                 <div>
-                                                                                    <a href="clients.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="Organiser-les-donnees-clients.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
                                                                                         <div class="panel">
@@ -604,19 +613,19 @@ const headerHTML = `
                                                                         <h5 class="h6">Pourquoi choisir Inawo?</h5>
                                                                         <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
                                                                             <li>
-                                                                                <a href="a-propos-inawo.html">Pourquoi Inawo</a>
+                                                                                <a href="a-propos-d-inawo.html">Pourquoi Inawo</a>
                                                                             </li>
                                                                              <li>
                                                                                 <a href="etude-de-cas.html">Etude de cas</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a href="activite.html">Actualité des produits</a>
+                                                                                <a href="../fr/Blog/actualites-inawo.html">Actualité des produits</a>
                                                                             </li>
                                                                             <li>
                                                                                 <a href="./career.html">Inawo</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a href="contactez-nous.html">Centre d'assistance</a>
+                                                                                <a href="centre-d-assistance.html">Centre d'assistance</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -624,13 +633,13 @@ const headerHTML = `
                                                                         <h5 class="h6">Conditions et confidentialité</h5>
                                                                         <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
                                                                             <li>
-                                                                                <a href="conditons-generales.html">Conditions générales d'utilisation</a>
+                                                                                <a href="conditions-generales-d-utilisation.html">Conditions générales d'utilisation</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a href="confidentialite-securite.html">Confidentialité</a>
+                                                                                <a href="Politique-de-confidentialite.html">Confidentialité</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a href="politique.html">Politiques des cookies</a>
+                                                                                <a href="Politique-de-cookies.html">Politiques des cookies</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -647,7 +656,7 @@ const headerHTML = `
                                                             <a href="./toutes-les-fonctionnalites.html"><i class="fs-8 unicon-api fw-bold"></i><span class="border-bottom hover:border-primary duration-150">Toutes les fonctionnalités</span></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><i class="fs-8 unicon-airplay fw-bold"></i><span class="border-bottom hover:border-primary duration-150">MarketPlace</span></a>
+                                                            <a href="Marketplace.html"><i class="fs-8 unicon-airplay fw-bold"></i><span class="border-bottom hover:border-primary duration-150">MarketPlace</span></a>
                                                         </li>
                                                         <!-- <li>
                                                             <a href="#"><i class="fs-8 unicon-cloud-lightning fw-bold"></i><span class="border-bottom hover:border-primary duration-150">Join Lexend Early Access</span></a>
@@ -676,44 +685,51 @@ const headerHTML = `
                                                                     <div class="row child-cols-4 gx-4 col-match justify-between">
                                                                         <div>
                                                                             <h6 class="h6 mb-3"><i class="fs-7 unicon-glyph-square-fill fw-bold ltr:me-narrow rtl:ms-narrow"></i> A la Une</h6>
-                                                                            <ul class="uc-nav uc-navbar-dropdown-nav vstack gap-2">
-                                                                                <li>
-                                                                                    <a class="hstack items-start gap-2" href="ventes.html">
-                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
-                                                                                            <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
-                                                                                        <span class="vstack gap-narrow mt-nnarrow">
-                                                                                            <b class="fw-medium dark:text-white">Vente</b>
-                                                                                            <span class="fs-8 text-muted">Toutes les astuces pour accoitre vos ventes</span>
-                                                                                        </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a class="hstack items-start gap-2" href="PME et StartUp.html">
-                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
-                                                                                            <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
-                                                                                        <span class="vstack gap-narrow mt-nnarrow">
-                                                                                            <b class="fw-medium dark:text-white">PME et StartUp</b>
-                                                                                            <span class="fs-8 text-muted">Passez a un autre niveau avec votre entreprise</span>
-                                                                                        </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a class="hstack items-start gap-2" href="nouveauté chez Inawo.html">
-                                                                                        <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
-                                                                                            <i class="icon-1 unicon-increase-level fw-bold text-white"></i></div>
-                                                                                        <span class="vstack gap-narrow mt-nnarrow">
-                                                                                            <b class="fw-medium dark:text-white">Nouveauté chez Inawo</b>
-                                                                                            <span class="fs-8 text-muted">Découvrez notre actualité. Mise a jour sur nos produits</span>
-                                                                                        </span>
-                                                                                    </a>
-                                                                                </li>
+                                                                            
+                                                                            <ul class="uc-nav uc-navbar-dropdown-nav vstack gap-2">   
+                                                                            <li>  
+                                                                                <a class="hstack items-start gap-2 text-dark text-none dark:text-white hover:text-primary dark:hover:text-tertiary" href="../fr/Blog/Ventes.html">  
+                                                                                <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">  
+                                                                                    <i class="icon-1 unicon-checkmark fw-bold text-white"></i>  
+                                                                                </div>  
+                                                                                <span class="vstack gap-narrow mt-nnarrow">  
+                                                                                    <span class="fs-7 fw-medium dark:text-white">Vente</span>  
+                                                                                    <span class="fs-8 text-muted">Toutes les astuces pour accroitre vos ventes</span>  
+                                                                                </span>  
+                                                                                </a>  
+                                                                            </li>  
+                                                                            <li>  
+                                                                                <a class="hstack items-start gap-2 text-dark text-none dark:text-white hover:text-primary dark:hover:text-tertiary" href="../fr/Blog/PME-et-StartUp.html">  
+                                                                                <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">  
+                                                                                    <i class="icon-1 unicon-chart-pie fw-bold text-white"></i>  
+                                                                                </div>  
+                                                                                <span class="vstack gap-narrow mt-nnarrow">  
+                                                                                    <span class="fs-7 fw-medium dark:text-white">PME et StartUp</span>  
+                                                                                    <span class="fs-8 text-muted">Passez à un autre niveau avec votre entreprise</span>  
+                                                                                </span>  
+                                                                                </a>  
+                                                                            </li>  
+                                                                            <li>  
+                                                                                <a class="hstack items-start gap-2 text-dark text-none dark:text-white hover:text-primary dark:hover:text-tertiary" href="../fr/Blog/actualites-inawo.html">  
+                                                                                <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">  
+                                                                                    <i class="icon-1 unicon-increase-level fw-bold text-white"></i>  
+                                                                                </div>  
+                                                                                <span class="vstack gap-narrow mt-nnarrow">  
+                                                                                    <span class="fs-7 fw-medium dark:text-white">Nouveauté chez Inawo</span>  
+                                                                                    <span class="fs-8 text-muted">Découvrez notre actualité. Mise à jour sur nos produits</span>  
+                                                                                </span>  
+                                                                                </a>  
+                                                                            </li>  
                                                                             </ul>
+
+
+
                                                                         </div>
                                                                         <div>
                                                                             <h6 class="h6 mb-3"><i class="fs-7 unicon-glyph-circle-fill fw-bold ltr:me-narrow rtl:ms-narrow"></i>Ressouces</h6>
                                                                             <ul class="uc-nav uc-navbar-dropdown-nav vstack gap-2">
                                                                                 <li>
-                                                                                    <a class="hstack items-start gap-2" href="ebooks.html">
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Ressources/Ebooks.html">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-increase-level fw-bold text-white"></i></div>
                                                                                         <span class="vstack gap-narrow mt-nnarrow">
@@ -723,7 +739,7 @@ const headerHTML = `
                                                                                     </a>
                                                                                 </li>
                                                                                 <li>
-                                                                                    <a class="hstack items-start gap-2" href="outils.html">
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Ressources/Outils.html">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-chat fw-bold text-white"></i></div>
                                                                                         <span class="vstack gap-narrow mt-nnarrow">
@@ -733,7 +749,7 @@ const headerHTML = `
                                                                                     </a>
                                                                                 </li>
                                                                                 <li>
-                                                                                    <a class="hstack items-start gap-2" href="tutoriel.html">
+                                                                                    <a class="hstack items-start gap-2" href="../fr/Ressources/Tutoriel.html">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-checkmark fw-bold text-white"></i></div>
                                                                                         <span class="vstack gap-narrow mt-nnarrow">
@@ -768,7 +784,8 @@ const headerHTML = `
                                                                                     </div>
                                                                                 </li>
                                                                                 <li>
-                                                                                    <div class="hstack items-start gap-2" href="#">
+                                                                                <a class="hstack items-start gap-2" href="t.me/InawoCRM ">
+                                                                                    <div class="hstack items-start gap-2" href="t.me/InawoCRM ">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
                                                                                         <span class="vstack gap-narrow mt-nnarrow">
@@ -776,6 +793,7 @@ const headerHTML = `
                                                                                             <span class="fs-8 text-muted">Echangez avec vos partenaires et rejoignez un nouveau réseau d'affaires</span>
                                                                                         </span>
                                                                                     </div>
+                                                                                </a>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
@@ -805,7 +823,7 @@ const headerHTML = `
                                                                         <h5 class="h6">Commencez là où vous ètes</h5>
                                                                         <ul class="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
                                                                             <li>
-                                                                                <a href="etude-de-cas.html">Etude de cas</a>
+                                                                                <a href="../fr/Solutions/etude-de-cas.html">Etude de cas</a>
                                                                             </li>
                                                                             <!-- <li>
                                                                                 <a href="#">Customer stories</a>
@@ -814,7 +832,7 @@ const headerHTML = `
                                                                                 <a href="#">Resources</a>
                                                                             </li> -->
                                                                             <li>
-                                                                                <a href="activite.html">Secteur d'activité</a>
+                                                                                <a href="../fr/Blog/actualites-inawo.html">Secteur d'activité</a>
                                                                             </li>
                                                                             <li>
                                                                                 <a href="Témoignages.html">Témoignages</a>
@@ -865,7 +883,7 @@ const headerHTML = `
                                                                             <div class="vstack gap-3">
                                                                                 <h6 class="h6 m-0"><i class="fs-7 unicon-cube fw-bold ltr:me-narrow rtl:ms-narrow"></i> Qui sommes nous?</h6>
                                                                                 <div>
-                                                                                    <a href="a-propos-inawo.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="a-propos-d-inawo.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
                                                                                         <div class="panel">
@@ -981,7 +999,7 @@ const headerHTML = `
                                                                                 <a href="./newcode/career.html">Career</a>
                                                                             </li> -->
                                                                             <li>
-                                                                                <a href="contactez-nous.html">Centre d'assistance</a>
+                                                                                <a href="centre-d-assistance.html">Centre d'assistance</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -992,7 +1010,7 @@ const headerHTML = `
                                                                                 <a href="offre-service.html">Nous accompagnons des entreprises et des institutions</a>
                                                                             </li>
                                                                             <!-- <li>
-                                                                                <a href="politique.html">Privacy Policy</a>
+                                                                                <a href="Politique-de-cookies.html">Privacy Policy</a>
                                                                             </li> -->
                                                                         </ul>
                                                                     </div>
