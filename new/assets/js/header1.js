@@ -575,7 +575,7 @@ const headerHTML = `
                                                                             <div class="vstack gap-3">
                                                                                 <h6 class="h6 m-0"><i class="fs-7 unicon-gamification fw-bold ltr:me-narrow rtl:ms-narrow"></i>Solutions</h6>
                                                                                 <div>
-                                                                                    <a href="../Developper-vos-ventes.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
+                                                                                    <a href="Solutions/Developper-vos-ventes.html" class="hstack items-start gap-2 text-none text-dark dark:text-white hover:text-primary dark:hover:text-tertiary">
                                                                                         <div class="cstack min-w-32px h-32px rounded" style="background-color: #014990;">
                                                                                             <i class="icon-1 unicon-chart-pie fw-bold text-white"></i></div>
                                                                                         <div class="panel">
@@ -1041,10 +1041,10 @@ const headerHTML = `
                                     <div class="py-1 bg-white dark:bg-gray-800 shadow-xs w-200px" data-uc-drop="mode: click; offset: 0; pos: top-right; boundary: !.uc-navbar-container; animation: uc-animation-slide-top-small; duration: 150;">
                                         <ul class="nav-y gap-0 fs-7">
                                             <li>
-                                                <a href="../en/index.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/common/en.svg" alt="English">English</a>
+                                                <a href="../en/index.html" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../../assets/images/common/en.svg" alt="English">English</a>
                                             </li>
                                             <li>
-                                                <a href="../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/common/fr.svg" alt="French">Français</a>
+                                                <a href="../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../../assets/images/common/fr.svg" alt="French">Français</a>
                                             </li> 
                                         </ul>
 
@@ -1053,9 +1053,7 @@ const headerHTML = `
                                 </li>
                                 
                                     <a href="https://app.inawo.pro/fr/connexion" style="text-decoration: none;">Connexion</a>
-                                
-                                <a class="btn btn-sm  text-white dark:bg-white dark:text-primary dark:hover:bg-white fw-bold rounded-pill lg:px-2 text-none hover:contrast-shadow d-none lg:d-inline-flex" style="background-color: #014a92;" href="../inscription.html">Créer un compte gratuit</a>
-                                <a class="d-block lg:d-none" href="../newcode/#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                                    <a class="btn btn-sm text-white dark:bg-white dark:text-primary dark:hover:bg-white fw-bold rounded-pill lg:px-2 text-none hover:contrast-shadow d-none lg:d-inline-flex" style="background-color: #014a92; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#005c10'" onmouseout="this.style.backgroundColor='#014a92'" href="../inscription.html">Créer un compte gratuit</a>                                <a class="d-block lg:d-none" href="../newcode/#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
                             </div>
                         </div>
                     </div>
