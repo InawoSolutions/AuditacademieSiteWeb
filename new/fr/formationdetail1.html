@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Academie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+    
+    <link rel="canonical" href="https://unistudio.co/html/Lexend">
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
+    <link rel="stylesheet" href="../assets/css/theme/main.css">
+<link rel="stylesheet" href="../assets/css/header_style.css">
+
+    <meta name="theme-color" content="#178d72">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lexend">
+    <meta property="og:description"
+        content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+    <meta property="og:url" content="https://unistudio.co/html/lexend/">
+    <meta property="og:site_name" content="Lexend">
+    <meta property="og:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg">
+    <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lexend">
+    <meta name="twitter:description"
+        content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+    <meta name="twitter:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg">
+
+    <link rel="canonical" href="https://unistudio.co/html/lexend/">
+
+    <!-- preload head styles -->
+    <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+    <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+
+    <!-- preload footer scripts -->
+    <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/typed.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/tilt.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/split-type.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/prettify.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+    <link rel="preload" href="../assets/js/core/magic-cursor.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/splitype-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/typed-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/tilt-helper.js" as="script">
+    <link rel="preload" href="../assets/js/core/marquee.js" as="script">
+    <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+    <link rel="preload" href="../assets/js/app.js" as="script">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- app head for bootstrap core -->
+    <script src="../assets/js/app-head-bs.js"></script>
+
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+    <!-- include styles -->
+    <link rel="stylesheet" href="../assets/css/unicons.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/prettify.min.css">
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+
+    <!-- include main style -->
+    <link rel="stylesheet" href="../assets/css/theme/theme-three.min.purge.css">
+
+    <!-- include scripts -->
+    <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <style>
+        :root {
+            --primary-purple: #2a4743;
+            --light-purple: #fff;
+            --text-dark: #2d3748;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* background: linear-gradient(135deg, #f8f9ff 0%, #e8e3ff 100%); */
+            min-height: 100vh;
+        }
+
+        .top-header {
+            background-color: #2a4743;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .header-link {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.2s;
+        }
+
+        .header-link:hover {
+            color: #ffd700;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary-purple) !important;
+            font-size: 1.2rem;
+        }
+
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-purple) !important;
+        }
+
+        .dropdown-toggle::after {
+            margin-left: 0.5rem;
+        }
+
+        .breadcrumb-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb-link:hover {
+            color: var(--primary-purple);
+        }
+
+        .category-badge {
+
+            color: var(--primary-purple);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            margin-left: -15px;
+        }
+
+        .course-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .course-description {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-section {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-text {
+            color: var(--text-dark);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .btn-start {
+            background-color: #2a4743;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-start:hover {
+            background-color: #2a4743;
+            transform: translateY(-1px);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .play-button i {
+            color: var(--primary-purple);
+            font-size: 1.5rem;
+            margin-left: 3px;
+        }
+
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            background: linear-gradient(135deg, rgba(116, 81, 235, 0.1), rgba(66, 133, 244, 0.1));
+            border-radius: 50%;
+        }
+
+        .shape-1 {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            right: 15%;
+        }
+
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            top: 40%;
+            right: 5%;
+        }
+
+        .shape-3 {
+            width: 100px;
+            height: 100px;
+            top: 70%;
+            right: 25%;
+        }
+
+        .search-icon,
+        .user-icon {
+            color: var(--text-dark);
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .search-icon:hover,
+        .user-icon:hover {
+            color: var(--primary-purple);
+        }
+
+        @media (max-width: 768px) {
+            .course-title {
+                font-size: 2rem;
+            }
+
+            .video-thumbnail {
+                width: 250px;
+                height: 250px;
+            }
+
+            .cta-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .nav-tabs .nav-link {
+            color: #6c757d;
+            border: none;
+            border-bottom: 3px solid transparent;
+            background: none;
+            padding: 1rem 0;
+            margin-right: 2rem;
+            font-weight: 500;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #4285f4;
+            border-bottom-color: #4285f4;
+            background: none;
+        }
+
+        .nav-tabs .nav-link:hover {
+            color: #4285f4;
+            border-color: transparent;
+        }
+
+        .nav-tabs {
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .video-container {
+            position: relative;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .progress-container {
+            flex: 1;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: white;
+            border-radius: 2px;
+            width: 15%;
+            transition: width 0.1s;
+        }
+
+        .time-display {
+            color: white;
+            font-size: 0.9rem;
+            min-width: 50px;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+
+        .control-btn:hover {
+            color: #ccc;
+        }
+
+        .video-description {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        .section-tabs {
+            background-color: #fff;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .container-custom {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1.7rem;
+        }
+
+        .course-container {
+
+            margin: 0 auto;
+            padding: 110px;
+            background-color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .info-box {
+            background-color: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .warning-box {
+            background-color: #fff3e0;
+            border: 1px solid #ffcc80;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .info-icon,
+        .warning-icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .info-icon {
+            background-color: #2196f3;
+        }
+
+        .warning-icon {
+            background-color: #ff9800;
+        }
+
+        .info-content,
+        .warning-content {
+            margin-left: 40px;
+        }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .course-list li {
+            margin: 8px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .course-list li::before {
+            content: "•";
+            color: #666;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .intro-text {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            color: #666;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .section-title {
+            color: #333;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .cms-links {
+            text-decoration: underline;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .cms-links:hover {
+            color: #666;
+        }
+
+        .training-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 60px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2a4743 0%, #2a4743 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .lightbulb-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #2a4743 0%, #2a4743 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .main-heading {
+            color: #2d3748;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #2a4743 0%, #2a4743 100%);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(111, 66, 193, 0.3);
+            color: white;
+        }
+
+        .hero-illustration {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .person-working {
+            width: 80%;
+            height: 80%;
+            background: linear-gradient(135deg, #2a4743 0%, #2a4743 100%);
+            border-radius: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .laptop {
+            width: 60px;
+            height: 40px;
+            background: #1f2937;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .laptop::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: #374151;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, #a8b5ff 0%, #c8d0ff 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .course-title {
+            color: #4c5bff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-name {
+            color: #2d3748;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .course-description {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        .section-header {
+            background-color: #e6e9ff;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .section-label {
+            color: #2a4743;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .section-title {
+            color: #2d3748;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .lesson-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .lesson-item:hover {
+            background-color: #f7fafc;
+        }
+
+        .lesson-item:last-child {
+            border-bottom: none;
+        }
+
+        .lesson-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #2a4743;
+            color: #2a4743;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .lesson-number.completed {
+            background-color: #2a4743;
+            color: white;
+        }
+
+        .lesson-number.quiz {
+            background-color: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+
+        .lesson-text {
+            color: #2d3748;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .contributors-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .professor-section {
+            margin-bottom: 40px;
+        }
+
+        .professor-title {
+            color: #495057;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .professor-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .professor-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e9ecef;
+        }
+
+        .professor-details h5 {
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .professor-details p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .created-by-section {
+            margin-top: 40px;
+        }
+
+        .created-by-title {
+            color: #495057;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .creator-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .creator-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #7c4dff, #9c27b0);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .creator-logo svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .creator-details {
+            flex: 1;
+        }
+
+        .creator-name {
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        .update-info {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .license-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .license-text {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .license-icons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .license-icon {
+            width: 20px;
+            height: 20px;
+            background: #6c757d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .license-icon.cc {
+            background: #f39c12;
+        }
+
+        .license-icon.by {
+            background: #e74c3c;
+        }
+
+        .license-icon.sa {
+            background: #3498db;
+        }
+
+        .license-icon.nc {
+            background: #9b59b6;
+        }
+
+        .contributor-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+
+        .contributor-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .contributor-name {
+            color: #2d3748;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contributor-title {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        .course-card {
+            background: #f8f9fa;
+            padding: 55px 55px;
+
+        }
+
+        .course-image {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .course-category {
+            color: #2a4743;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .course-title {
+            color: #1f2937;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .course-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-icon {
+            width: 16px;
+            height: 16px;
+            color: #9ca3af;
+        }
+
+        .access-info {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+        }
+
+        .start-btn {
+            background-color: #2a4743;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .start-btn:hover {
+            background-color: #4338ca;
+        }
+
+        .chart-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(to top, #2a4743 0%, #2a4743 60%, #e5e7eb 60%, #e5e7eb 100%);
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .chart-icon::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 4px;
+            height: 16px;
+            background: linear-gradient(to top, #2a4743 0%, #2a4743 40%, #e5e7eb 40%, #e5e7eb 100%);
+            border-radius: 2px;
+        }
+
+        .chart-icon::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 0;
+            width: 4px;
+            height: 16px;
+            background: linear-gradient(to top, #2a4743 0%, #2a4743 80%, #e5e7eb 80%, #e5e7eb 100%);
+            border-radius: 2px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        .btn-start {
+            background-color: #2a4743;
+            border: none;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-start:hover {
+            background-color: #2a4743;
+            color: white;
+        }
+
+        .table-of-contents {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .toc-title {
+            color: #2d3748;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        
+    </style>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.querySelectorAll('a[href^="#table-des-matieres"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.getElementById('table-des-matieres');
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+</script>
+
+<!-- <script>
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+}
+const token = getCookie('token');
+if (!token) {
+    window.location.href = "connexion.html";
+} else {
+            fetch('https://imaneapi.auditacademie.com/api/une-route-protegee/', {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Traite les données ici
+                console.log(data);
+            });
+        }
+</script> -->
+
+<body class="bg-white">
+
+    
+
+    <!-- Header start -->
+<div id="header"></div>
+<script src="../assets/js/header.js"></script>
+<!-- Header end -->
+    <!-- <div class="top-header">
+        <span>Nos conditions d’utilisation et de service ont évolué. Merci de les consulter avant de continuer ou de
+            poursuivre votre formation.</span>
+        <a class="header-link" href="conditions-generales-d-utilisation.html" target="_blank">Lire les conditions</a>
+    </div>
+
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div> -->
+
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="../fr/">
+                <img src="../assets/images/logo-ic.png" alt="Logo Audit Académie" style="height: 28px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="formation.html">
+                            Formations
+                        </a>
+                    </li>
+
+                </ul> -->
+
+                <!-- <div class="d-flex align-items-center gap-3">
+                    
+                    <div class="dropdown">
+                        <i class="fas fa-user user-icon" data-bs-toggle="dropdown"></i>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Mon profil</a></li>
+                            <li><a class="dropdown-item" href="#">Mes cours</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="inscription.html">Créer mon compte</a></li>
+              <li><a class="dropdown-item" href="connexion.html">Connexion</a></li>
+              <li><a class="dropdown-item" href="#" id="logoutBtn">Déconnexion</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            <!-- </div>
+        </div>
+    </nav> -->
+
+    <!-- Main Content -->
+    <div class="container mt-4 main">
+    <!-- Breadcrumb -->
+    <a href="formation.html" class="breadcrumb-link mt-9">
+        <i class="fas fa-arrow-left"></i>
+        Tous les cours
+    </a>
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <!-- Course Category -->
+                <div class="category-badge" id="formation-categorie">
+    <!-- Catégorie dynamique -->
+</div>
+<h1 class="course-title" id="formation-titre">
+    <!-- Titre dynamique -->
+</h1>
+<p class="course-description" id="formation-description">
+    <!-- Description dynamique -->
+</p>
+
+                <!-- Course Meta -->
+                <div class="course-meta">
+    <div class="meta-item">
+        <i class="fas fa-signal"></i>
+        <span id="formation-niveau"><!-- Niveau dynamique --></span>
+    </div>
+    <div class="meta-item">
+        <i class="fas fa-clock"></i>
+        <span id="formation-duree"><!-- Durée dynamique --></span>
+    </div>
+</div>
+
+                <!-- Call to Action -->
+                <div class="cta-section">
+                    <p class="cta-text">Ce cours en libre accès vous intéresse ?</p>
+                    <a id="start-btn" href="#" class="start-btn" style="text-decoration: none; display: inline-block;">
+    Commencer
+</a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const startBtn = document.getElementById('start-btn');
+    if (id && startBtn) {
+        startBtn.href = `connexion?formation=${id}`;
+    }
+});
+</script>
+                </div>
+            </div>
+
+<div class="col-lg-5 text-center">
+                <!-- Video Thumbnail -->
+    <div class="video-thumbnail mx-auto" onclick="playVideo()">
+        <img id="formation-image" src="" alt="Instructeur du cours">
+        <div class="play-button">
+            <i class="fas fa-play"></i>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Search functionality
+        function toggleSearch() {
+            const searchInput = document.createElement('input');
+            searchInput.type = 'text';
+            searchInput.className = 'form-control';
+            searchInput.placeholder = 'Rechercher un cours...';
+            searchInput.style.width = '200px';
+
+            // Simple search toggle implementation
+            alert('Fonctionnalité de recherche - À implémenter');
+        }
+
+        // Navigation functions
+        function goBack() {
+            // In a real application, this would navigate back
+            console.log('Retour à la liste des cours');
+            alert('Retour à la liste des cours');
+        }
+
+        function startCourse() {
+            // Course start functionality
+            console.log('Démarrage du cours');
+            alert('Démarrage du cours de personal branding !');
+        }
+
+        function playVideo() {
+            // Video play functionality
+            console.log('Lecture de la vidéo de présentation');
+            alert('Lecture de la vidéo de présentation du cours');
+        }
+
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animate elements on load
+            const elements = document.querySelectorAll('.course-title, .course-description, .cta-section, .video-thumbnail');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+
+                setTimeout(() => {
+                    el.style.transition = 'all 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+
+        // Add hover effects for interactive elements
+        document.querySelectorAll('.nav-link, .breadcrumb-link').forEach(link => {
+            link.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-1px)';
+            });
+
+            link.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+
+    <section class="section-tabs">
+        <div class="container-custom">
+            <!-- Navigation Tabs -->
+            <ul class="nav nav-tabs" id="videoTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="apercu-tab" data-bs-toggle="tab" data-bs-target="#apercu"
+            type="button" role="tab">
+            Aperçu
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <!-- Remplacer le bouton par un lien ancre -->
+        <a class="nav-link" href="#table-des-matieres" style="cursor:pointer;">
+            Table des matières
+        </a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <!-- Remplacer le bouton par un lien ancre -->
+        <a class="nav-link" href="#contributeurs-section" style="cursor:pointer;">
+            Contributeurs
+        </a>
+    </li>
+</ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="videoTabsContent">
+                <!-- Aperçu Tab -->
+                <div class="tab-pane fade show active" id="apercu" role="tabpanel">
+                    <!-- Video Container -->
+                    <div class="video-container">
+                        <video class="video-player" id="videoPlayer"
+                            poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Capture%20d%E2%80%99%C3%A9cran%20du%202025-05-25%2016-40-32-ROFgrstzETxkgLbbImDdEOaIXPu0x3.png">
+                            <source src="/placeholder-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <!-- Custom Video Controls -->
+                        <div class="video-controls" id="videoControls">
+                            <button class="play-btn" id="playBtn">
+                                <i class="fas fa-play"></i>
+                            </button>
+
+                            <div class="progress-container" id="progressContainer">
+                                <div class="progress-bar" id="progressBar"></div>
+                            </div>
+
+                            <span class="time-display" id="timeDisplay">00:47</span>
+
+                            <button class="control-btn" id="volumeBtn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+
+                            <button class="control-btn" id="captionsBtn">
+                                <i class="fas fa-closed-captioning"></i>
+                            </button>
+
+                            <button class="control-btn" id="pipBtn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+
+                            <button class="control-btn" id="settingsBtn">
+                                <i class="fas fa-cog"></i>
+                            </button>
+
+                            <button class="control-btn" id="fullscreenBtn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Video Description -->
+                    <div class="video-description">
+                        Lorsque vous faites des courses, vous avez sûrement remarqué que vous reconnaissez certains
+                    </div>
+                </div>
+
+                <!-- Table des matières Tab -->
+                <div class="tab-pane fade" id="table" role="tabpanel">
+                    <div class="mt-4">
+                        <h5>Table des matières</h5>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><a href="#" class="text-decoration-none">1. Introduction</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">2. Concepts de base</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">3. Exemples pratiques</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">4. Conclusion</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contributeurs Tab -->
+                <div class="tab-pane fade" id="contributeurs" role="tabpanel">
+                    <div class="mt-4">
+                        <h5>Contributeurs</h5>
+                        <div class="mt-3">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-secondary rounded-circle" style="width: 40px; height: 40px;"></div>
+                                <div class="ms-3">
+                                    <div class="fw-bold">Instructeur Principal</div>
+                                    <div class="text-muted small">Créateur du contenu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Video player functionality
+        const video = document.getElementById('videoPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const timeDisplay = document.getElementById('timeDisplay');
+        const volumeBtn = document.getElementById('volumeBtn');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const videoControls = document.getElementById('videoControls');
+        const videoContainer = document.querySelector('.video-container');
+
+        let isPlaying = false;
+        let currentTime = 47; // Starting at 47 seconds as shown in the image
+        let duration = 300; // 5 minutes total duration
+
+        // Format time display
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // Update time display
+        function updateTimeDisplay() {
+            timeDisplay.textContent = formatTime(currentTime);
+            const progress = (currentTime / duration) * 100;
+            progressBar.style.width = progress + '%';
+        }
+
+        // Play/Pause functionality
+        playBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            const icon = playBtn.querySelector('i');
+
+            if (isPlaying) {
+                icon.className = 'fas fa-pause';
+                // Simulate video playing
+                const interval = setInterval(() => {
+                    if (isPlaying && currentTime < duration) {
+                        currentTime++;
+                        updateTimeDisplay();
+                    } else {
+                        clearInterval(interval);
+                        if (currentTime >= duration) {
+                            isPlaying = false;
+                            icon.className = 'fas fa-play';
+                            currentTime = 0;
+                            updateTimeDisplay();
+                        }
+                    }
+                }, 1000);
+            } else {
+                icon.className = 'fas fa-play';
+            }
+        });
+
+        // Progress bar click
+        progressContainer.addEventListener('click', (e) => {
+            const rect = progressContainer.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const width = rect.width;
+            const percentage = clickX / width;
+            currentTime = percentage * duration;
+            updateTimeDisplay();
+        });
+
+        // Volume control
+        let isMuted = false;
+        volumeBtn.addEventListener('click', () => {
+            isMuted = !isMuted;
+            const icon = volumeBtn.querySelector('i');
+            icon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+        });
+
+        // Fullscreen toggle
+        fullscreenBtn.addEventListener('click', () => {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            } else {
+                videoContainer.requestFullscreen();
+            }
+        });
+
+        // Show/hide controls on hover
+        let controlsTimeout;
+        videoContainer.addEventListener('mouseenter', () => {
+            clearTimeout(controlsTimeout);
+            videoControls.style.opacity = '1';
+        });
+
+        videoContainer.addEventListener('mouseleave', () => {
+            controlsTimeout = setTimeout(() => {
+                if (isPlaying) {
+                    videoControls.style.opacity = '0';
+                }
+            }, 2000);
+        });
+
+        // Initialize
+        updateTimeDisplay();
+        videoControls.style.transition = 'opacity 0.3s';
+
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('[data-bs-toggle="tab"]');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                // Remove active class from all tabs
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked tab
+                e.target.classList.add('active');
+            });
+        });
+    </script>
+
+    <div class="bg-white">
+        <div class="course-container mx-auto">
+            <!-- Introduction -->
+            <p class="intro-text">
+                Je suis François Decaux, Customer Success Manager chez LinkedIn et je vais vous accompagner
+                dans la construction pas à pas de votre personal branding.
+            </p>
+
+            <!-- Info Box -->
+            <div class="info-box">
+                <div class="info-icon">
+                    <i class="bi bi-info"></i>
+                </div>
+                <div class="info-content">
+                    <p class="mb-3"><strong>Dans ce cours, vous apprendrez à :</strong></p>
+                    <ul class="course-list">
+                        <li>Appliquer une réflexion marketing à vous-même</li>
+                        <li>Élaborer une stratégie marketing pour votre marque</li>
+                        <li>Créer votre plateforme de marque personnelle</li>
+                        <li>Déployer votre présence sur les bons canaux</li>
+                        <li>Créer des opportunités professionnelles</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <p class="cta-text">
+                Vous souhaitez vous créer plus d'opportunités ? Vous êtes au bon endroit. Rejoignez-moi dès
+                maintenant, au premier chapitre.
+            </p>
+
+            <!-- Warning Box -->
+            <div class="warning-box">
+                <div class="warning-icon">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <div class="warning-content">
+                    <span>Outil nécessaire : un CMS comme </span>
+                    <a href="#" class="cms-links">Wordpress</a>,
+                    <a href="#" class="cms-links">Joomla</a> ou
+                    <a href="#" class="cms-links">Drupal</a>
+                </div>
+            </div>
+
+            <!-- Section Title -->
+            <h2 class="section-title">Objectifs pédagogiques</h2>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add interactive functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add hover effects to CMS links
+            const cmsLinks = document.querySelectorAll('.cms-links');
+
+            cmsLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const cmsName = this.textContent;
+                    alert(`Vous avez sélectionné ${cmsName} comme CMS`);
+                });
+
+                link.addEventListener('mouseenter', function () {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+
+                link.addEventListener('mouseleave', function () {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Add fade-in animation
+            const elements = document.querySelectorAll('.info-box, .warning-box');
+            elements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+    <section class="training-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <!-- Top Features -->
+                    <div class="mb-5">
+                        <div class="feature-item">
+                            <div class="lightbulb-icon">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+                            <span>Appliquer une réflexion marketing à soi-même</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="lightbulb-icon">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+                            <span>Déployer sa présence sur les bons canaux</span>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <h1 class="main-heading">Et si vous en faisiez votre métier ?</h1>
+
+                    <p class="subtitle">
+                        Suivez une des formations diplômantes de notre école 100% en ligne, et transformez vos
+                        connaissances en compétences professionnelles.
+                    </p>
+
+                    <!-- Features Grid -->
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="bi bi-wallet2"></i>
+                            </div>
+                            <span>Formations jusqu'à 100 % financées</span>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="bi bi-calendar-check"></i>
+                            </div>
+                            <span>Date de début flexible</span>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="bi bi-briefcase"></i>
+                            </div>
+                            <span>Projets professionnalisants</span>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <span>Mentorat individuel</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <a href="inscription.html" class="cta-button" id="ctaButton">
+                        Démarrer mon inscription
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Hero Illustration -->
+                    <div class="hero-illustration">
+                        <div class="person-working">
+                            <div class="laptop"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add interactive functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animate feature items on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Initially hide feature items for animation
+            const featureItems = document.querySelectorAll('.feature-item');
+            featureItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(item);
+            });
+
+
+
+            // Add hover effects to feature items
+            featureItems.forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    this.style.background = 'linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%)';
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    this.style.background = 'white';
+                });
+            });
+
+            // Animate the illustration
+            const illustration = document.querySelector('.hero-illustration');
+            illustration.style.animation = 'float 3s ease-in-out infinite';
+
+            // Add floating animation keyframes
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0%, 100% { transform: translateY(0px); }
+                    50% { transform: translateY(-10px); }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+    <div class="container py-5">
+        <!-- Course Header -->
+        <div class="course-header">
+            <div class="course-title">Marketing & Communication</div>
+            <h1 class="course-name">Brand Manager</h1>
+            <p class="course-description">
+                Acquérez une expertise en image de marque et renforcez votre visibilité grâce aux canaux de
+                communication !
+            </p>
+            <div class="course-meta">
+                <div class="meta-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Diplôme de niveau 7 (bac +5)</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>À plein temps : 12 mois</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Table of Contents -->
+                <div class="table-of-contents" id="table-des-matieres"></div>
+                <!-- Contributors Section -->
+
+
+                <div class="contributors-container" id="contributeurs-section">
+    <!-- Main Title -->
+    <h1 class="section-title">Contributeurs</h1>
+
+                    <!-- Professor Section -->
+                    <div class="professor-section">
+                        <h2 class="professor-title">Professeur</h2>
+                        <div class="professor-info">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Francois Decaux"
+                                class="professor-avatar">
+                            <div class="professor-details">
+                                <h5>Francois Decaux</h5>
+                                <p>Customer Success Manager chez Linkedin</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Created By Section -->
+                    <div class="created-by-section">
+                        <h2 class="created-by-title">Créé par</h2>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="creator-logo" style="background: none; padding: 0;">
+                                <img src="../assets/images/logo-ic.png" alt="Logo Audit Académie"
+                                    style="width: 80px; height: 80px; border-radius: 12px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04); object-fit: contain;">
+                            </div>
+                            <div class="creator-name" style="margin-bottom: 0;">Audit Académie</div>
+                            <div>
+
+                                <div class="update-info">Mis à jour le 23/01/2025</div>
+                                <div class="license-section">
+                                    <span class="license-text">Licence</span>
+                                    <div class="license-icons">
+                                        <div class="license-icon cc">CC</div>
+                                        <div class="license-icon by">BY</div>
+                                        <div class="license-icon sa">SA</div>
+                                        <div class="license-icon nc">NC</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                    <script>
+                        // Add any interactive functionality here
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Example: Add click handler for creator name
+                            const creatorName = document.querySelector('.creator-name');
+                            if (creatorName) {
+                                creatorName.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    console.log('OpenClassrooms clicked');
+                                    // Add navigation logic here
+                                });
+                            }
+
+                            // Example: Add hover effects for license icons
+                            const licenseIcons = document.querySelectorAll('.license-icon');
+                            licenseIcons.forEach(icon => {
+                                icon.addEventListener('mouseenter', function () {
+                                    this.style.transform = 'scale(1.1)';
+                                    this.style.transition = 'transform 0.2s ease';
+                                });
+
+                                icon.addEventListener('mouseleave', function () {
+                                    this.style.transform = 'scale(1)';
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function toggleLesson(element) {
+                const lessonNumber = element.querySelector('.lesson-number');
+
+                // Toggle completed state for regular lessons
+                if (!lessonNumber.classList.contains('quiz')) {
+                    lessonNumber.classList.toggle('completed');
+                }
+
+                // Add click animation
+                element.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    element.style.transform = 'scale(1)';
+                }, 150);
+
+                // Simulate lesson opening (you can replace this with actual navigation)
+                console.log('Opening lesson:', element.querySelector('.lesson-text').textContent);
+            }
+
+            // Add smooth scrolling for better UX
+            document.querySelectorAll('.lesson-item').forEach(item => {
+                item.addEventListener('click', function () {
+                    // Add ripple effect
+                    const ripple = document.createElement('div');
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.background = 'rgba(76, 91, 255, 0.3)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.left = '0';
+                    ripple.style.top = '0';
+                    ripple.style.width = '100%';
+                    ripple.style.height = '100%';
+
+                    this.style.position = 'relative';
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Add CSS animation for ripple effect
+            const style = document.createElement('style');
+            style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+            document.head.appendChild(style);
+        </script>
+        <br><br>
+        <div>
+
+        </div>
+    </div>
+
+    <div class="" style="background-color: #f8f9fa;">
+        <div class="px-5" style="padding-left: 30px; padding-right: 30px;">
+            <div class="course-card">
+                <div class="row align-items-center">
+                    <!-- Course Image -->
+                    <div class="col-auto">
+                       <img id="formation-image-card" src="" alt="Instructor" class="course-image">
+<div class="course-category" id="formation-categorie-card"></div>
+<h3 class="course-title" id="formation-titre-card"></h3>
+<div class="course-meta">
+    <div class="meta-item">
+        <span class="chart-icon"></span>
+        <span id="formation-niveau-card"></span>
+    </div>
+    <div class="meta-item">
+        <i class="far fa-clock meta-icon"></i>
+        <span id="formation-duree-card"></span>
+    </div>
+</div>
+                    </div>
+
+                    <!-- Action -->
+                    <div class="col-auto text-end">
+                        <div class="access-info">Cours en libre accès</div>
+                        <a id="start-btn" href="#" class="start-btn" style="text-decoration: none; display: inline-block;">
+    Commencer
+</a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const startBtn = document.getElementById('start-btn');
+    if (id && startBtn) {
+        startBtn.href = `connexion?formation=${id}`;
+    }
+});
+</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Supprime le cookie token
+            document.cookie = "token=; path=/; max-age=0";
+            // Redirige vers la page de connexion
+            window.location.href = "connexion.html";
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (!id) {
+        alert("Aucune formation sélectionnée.");
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://imaneapi.auditacademie.com/api/formations/${id}/`);
+        if (!response.ok) throw new Error('Erreur API');
+        
+        const formation = await response.json();
+
+console.log(formation); // Pour débogage, afficher les données de la formation
+        // Catégorie (secteur)
+        document.getElementById('formation-categorie').textContent = formation.secteur && formation.secteur.nom ? formation.secteur.nom : '';
+        document.getElementById('formation-categorie-card').textContent = formation.secteur && formation.secteur.nom ? formation.secteur.nom : '';
+
+        // Titre
+        document.getElementById('formation-titre').textContent = formation.titre || '';
+        document.getElementById('formation-titre-card').textContent = formation.titre || '';
+
+        // Description
+        document.getElementById('formation-description').innerHTML = formation.description_courte || '';
+
+        // Niveau
+        document.getElementById('formation-niveau').textContent = formation.niveau_difficulte || '';
+        document.getElementById('formation-niveau-card').textContent = formation.niveau_difficulte || '';
+
+        // Durée (somme des modules)
+        let totalHeures = 0;
+        if (formation.modules_formation && formation.modules_formation.length) {
+            totalHeures = formation.modules_formation.reduce((acc, mod) => acc + (mod.duree_estimee_heures || 0), 0);
+        }
+        document.getElementById('formation-duree').textContent = totalHeures ? totalHeures + ' h' : '';
+        document.getElementById('formation-duree-card').textContent = totalHeures ? totalHeures + ' h' : '';
+
+        // Image
+        document.getElementById('formation-image').src = formation.image_couverture || './assets/images/blog/default.jpg';
+        document.getElementById('formation-image-card').src = formation.image_couverture || '../assets/images/blog/default.jpg';
+
+        // Objectifs pédagogiques
+        if (formation.objectifs) {
+            const objSection = document.querySelector('.section-title');
+            if (objSection) objSection.textContent = "Objectifs pédagogiques";
+            const objList = document.createElement('ul');
+            objList.className = "course-list";
+            formation.objectifs.split('\n').forEach(line => {
+                if (line.trim()) {
+                    const li = document.createElement('li');
+                    li.textContent = line.trim();
+                    objList.appendChild(li);
+                }
+            });
+            objSection.parentNode.insertBefore(objList, objSection.nextSibling);
+        }
+
+        // Prérequis
+        if (formation.prerequis) {
+            const preSection = document.createElement('div');
+            preSection.className = "info-box";
+            preSection.innerHTML = `
+                <div class="info-icon"><i class="bi bi-info"></i></div>
+                <div class="info-content">
+                    <strong>Prérequis :</strong>
+                    <ul class="course-list">
+                        <li>${formation.prerequis}</li>
+                    </ul>
+                </div>
+            `;
+            document.querySelector('.main').appendChild(preSection);
+        }
+
+        // Modules, leçons, quizzes
+        const tableDesMatieres = document.getElementById('table-des-matieres');
+        if (formation.modules_formation && tableDesMatieres) {
+            tableDesMatieres.innerHTML = '<h2 class="toc-title">Table des matières</h2>';
+            formation.modules_formation.forEach((mod, idx) => {
+                // Module header
+                const sectionHeader = document.createElement('div');
+                sectionHeader.className = "section-header";
+                sectionHeader.innerHTML = `<div class="section-label">Module ${idx + 1}</div>
+                    <h3 class="section-title">${mod.titre}</h3>
+                    <div class="course-meta"><span><i class="fas fa-clock"></i> ${mod.duree_estimee_heures || 0} h</span></div>
+                    <div class="course-meta"><span>Prix particulier : ${mod.prix_module_particulier} € | Prix entreprise : ${mod.prix_module_entreprise} €</span></div>
+                    <div class="course-meta"><span>${mod.description || ''}</span></div>
+                `;
+                tableDesMatieres.appendChild(sectionHeader);
+
+                // Leçons
+                if (mod.lecons_module && mod.lecons_module.length) {
+                    const lessonsList = document.createElement('div');
+                    lessonsList.className = "lessons-list";
+                    mod.lecons_module.forEach((lecon, lidx) => {
+                        const lessonItem = document.createElement('div');
+                        lessonItem.className = "lesson-item";
+                        lessonItem.innerHTML = `
+                            <div class="lesson-number">${lidx + 1}</div>
+                            <div class="lesson-text">${lecon.titre} (${lecon.duree_estimee_minutes || 0} min)</div>
+                        `;
+                        lessonsList.appendChild(lessonItem);
+                    });
+                    tableDesMatieres.appendChild(lessonsList);
+                }
+
+                // Quiz du module
+                if (mod.quizzes && mod.quizzes.length) {
+                    mod.quizzes.forEach(quiz => {
+                        const quizItem = document.createElement('div');
+                        quizItem.className = "lesson-item";
+                        quizItem.innerHTML = `
+                            <div class="lesson-number quiz"><i class="fas fa-check"></i></div>
+                            <div class="lesson-text">${quiz.titre} (${quiz.type_quiz === 'VALIDATION_MODULE' ? 'Quiz de validation' : 'Quiz d\'entraînement'})</div>
+                        `;
+                        tableDesMatieres.appendChild(quizItem);
+                    });
+                }
+            });
+        }
+
+        // Examens finaux
+        if (formation.examens && formation.examens.length) {
+            const examSection = document.createElement('div');
+            examSection.className = "section-header";
+            examSection.innerHTML = `<div class="section-label">Examen final</div>
+                <h3 class="section-title">${formation.examens[0].titre}</h3>
+                <div class="course-meta"><span>${formation.examens[0].description || ''}</span></div>
+            `;
+            tableDesMatieres.appendChild(examSection);
+
+            // Quiz examen
+            const quizItem = document.createElement('div');
+            quizItem.className = "lesson-item";
+            quizItem.innerHTML = `
+                <div class="lesson-number quiz"><i class="fas fa-check"></i></div>
+                <div class="lesson-text">${formation.examens[0].titre} (Examen final)</div>
+            `;
+            tableDesMatieres.appendChild(quizItem);
+        }
+
+        // Contributeur
+        if (formation.nom_contributeur || formation.prenom_contributeur || formation.presentation_contributeur) {
+            const contribSection = document.getElementById('contributeurs-section');
+            if (contribSection) {
+                contribSection.innerHTML = `
+                    <h1 class="section-title">Contributeur</h1>
+                    <div class="professor-section">
+                        <h2 class="professor-title">Formateur</h2>
+                        <div class="professor-info">
+                            <img src="/placeholder.svg?height=60&width=60" alt="${formation.prenom_contributeur || ''} ${formation.nom_contributeur || ''}" class="professor-avatar">
+                            <div class="professor-details">
+                                <h5>${formation.prenom_contributeur || ''} ${formation.nom_contributeur || ''}</h5>
+                                <p>${formation.presentation_contributeur || ''}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+    } catch (e) {
+        alert("Erreur lors du chargement de la formation.");
+        console.error(e);
+    }
+});
+</script>
+<!-- Footer start -->
+<div id="footer"></div>
+<script src="../assets/js/footer.js"></script>
+<!-- Footer end -->
+</body>
+
+</html>

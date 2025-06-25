@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maximiser votre portée grâce à des stratégies d'audit - Audit Académie</title>
+        <meta name="description" content="Full-featured, professional-looking software, saas and startup website template.">
+        <meta name="keywords" content="saas, saas template, site template, software, startup, digital product, html5, landing, marketing, bootstrap, uikit3, agency, ai, digital agency, it solutions, nodejs">
+        <link rel="canonical" href="https://unistudio.co/html/Lexend">
+        <meta name="theme-color" content="#178d72">
+        <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+<body>
+<script>
+// ...dans callback.html...
+document.addEventListener('DOMContentLoaded', async function() {
+    const params = new URLSearchParams(window.location.search);
+    const transactionId = params.get('transaction_id');
+    const articleId = params.get('article') || localStorage.getItem('pending_article');
+    const montant = params.get('montant') || localStorage.getItem('pending_montant');
+    const utilisateurId = params.get('utilisateur') || localStorage.getItem('pending_utilisateur');
+
+    // Vérifie si tout est présent
+    if (transactionId && articleId && montant && utilisateurId) {
+        const userToken = localStorage.getItem('userToken');
+        localStorage.removeItem('pending_article');
+        localStorage.removeItem('pending_utilisateur');
+        localStorage.removeItem('pending_montant');
+        if (!userToken) {
+            alert("Utilisateur non identifié. Veuillez vous connecter.");
+            window.location.href = "connexion.html";
+            return;
+        }
+
+        const data = {
+            utilisateur: parseInt(utilisateurId, 10),
+            article: parseInt(articleId, 10),
+            montant_paye: parseInt(montant, 10),
+            methode_paiement: "Mobile Money",
+            reference_transaction: transactionId
+        };
+
+        try {
+            const response = await fetch('https://imaneapi.auditacademie.com/api/abonnement_articles', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${userToken}`
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                window.location.href = `blog-details.html?id=${articleId}`;
+            } else {
+                const error = await response.json();
+                alert("Erreur lors de la validation de l'abonnement : " + (error.message || JSON.stringify(error)));
+            }
+        } catch (err) {
+            alert("Erreur réseau lors de la validation de l'abonnement.");
+        }
+    } else {
+        alert("Paramètres manquants dans l'URL.");
+        window.location.href = "mesblogs.html";
+    }
+});
+</script>
+</body>
+</html>

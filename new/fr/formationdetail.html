@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Academie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+    
+    <link rel="canonical" href="https://unistudio.co/html/Lexend">
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
+    <link rel="stylesheet" href="../assets/css/theme/main.css">
+<link rel="stylesheet" href="../assets/css/header_style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <meta name="theme-color" content="#178d72">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lexend">
+    <meta property="og:description"
+        content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+    <meta property="og:url" content="https://unistudio.co/html/lexend/">
+    <meta property="og:site_name" content="Lexend">
+    <meta property="og:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg">
+    <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lexend">
+    <meta name="twitter:description"
+        content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+    <meta name="twitter:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg">
+
+    <link rel="canonical" href="https://unistudio.co/html/lexend/">
+
+    <!-- preload head styles -->
+    <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+    <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+
+    <!-- preload footer scripts -->
+    <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/typed.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/tilt.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/split-type.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/prettify.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+    <link rel="preload" href="../assets/js/core/magic-cursor.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/splitype-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/typed-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/tilt-helper.js" as="script">
+    <link rel="preload" href="../assets/js/core/marquee.js" as="script">
+    <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+    <link rel="preload" href="../assets/js/app.js" as="script">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- app head for bootstrap core -->
+    <script src="../assets/js/app-head-bs.js"></script>
+
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+    <!-- include styles -->
+    <link rel="stylesheet" href="../assets/css/unicons.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/prettify.min.css">
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+
+    <!-- include main style -->
+    <link rel="stylesheet" href="../assets/css/theme/theme-three.min.purge.css">
+
+    <!-- include scripts -->
+    <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/custom.css">
+
+    <!-- Course Platform Styles - Scoped to avoid conflicts -->
+    <style>
+        /* ...existing CSS code (identique à la version précédente, inchangé pour la concision)... */
+        .course-platform {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .course-platform {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .course-platform .hero-section {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%);
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-platform .hero-shapes {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .course-platform .shape-1 {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 193, 7, 0.3);
+            border-radius: 50%;
+        }
+        
+        .course-platform .shape-2 {
+            position: absolute;
+            top: 100px;
+            right: 200px;
+            width: 200px;
+            height: 200px;
+            background: rgba(13, 202, 240, 0.2);
+            border-radius: 50%;
+        }
+        
+        .course-platform .instructor-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .course-platform .course-stats {
+            background: white;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 0 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .course-platform .btn-start {
+            background: #2a4743;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 6px;
+            color: white;
+        }
+        
+        .course-platform .btn-start:hover {
+            background: #138496;
+            color: white;
+        }
+        
+        .course-platform .nav-tabs .nav-link {
+            border: none;
+            color: #6c757d;
+            font-weight: 500;
+            padding: 15px 0;
+            margin-right: 30px;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .course-platform .nav-tabs .nav-link.active {
+            color: #2a4743;
+            border-bottom-color: #2a4743;
+            background: none;
+        }
+        
+        .course-platform .video-container {
+            position: relative;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .course-platform .video-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, #ff9a56, #ff6b35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .course-platform .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .course-platform .play-button:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+        
+        .course-platform .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 20px;
+            color: white;
+        }
+        
+        .course-platform .progress-bar-custom {
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            margin: 10px 0;
+        }
+        
+        .course-platform .progress-fill {
+            height: 100%;
+            background: #2a4743;
+            border-radius: 2px;
+            width: 5%;
+        }
+        
+        .course-platform .course-section {
+            background: #e8f4f8;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .course-platform .course-section-header {
+            padding: 15px 20px;
+            font-weight: 600;
+            color: #2a4743;
+            border-bottom: 1px solid rgba(23, 162, 184, 0.2);
+        }
+        
+        .course-platform .course-item {
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .course-platform .course-item:hover {
+            background: rgba(23, 162, 184, 0.05);
+        }
+        
+        .course-platform .course-item:last-child {
+            border-bottom: none;
+        }
+        
+        .course-platform .course-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #17a2b8;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .course-platform .quiz-icon {
+            background: #28a745;
+        }
+        
+        .course-platform .instructor-card {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .course-platform .instructor-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .course-platform .career-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .course-platform .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .course-platform .course-card {
+            background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+            border-radius: 15px;
+            padding: 30px;
+            color: #2c3e50;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-platform .course-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .course-platform .js-badge {
+            background: #f7df1e;
+            color: #000;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .course-platform .question-box {
+            background: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .course-platform .question-icon {
+            width: 30px;
+            height: 30px;
+            background: #6c757d;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .course-platform .back-link {
+            color: #6c757d;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .course-platform .back-link:hover {
+            color: #17a2b8;
+            text-decoration: none;
+        }
+        
+        .course-platform .content-text {
+            line-height: 1.7;
+            color: #495057;
+        }
+        
+        .course-platform .highlight-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .course-platform .code-highlight {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+    </style>
+</head>
+<body class="bg-white">
+  <!-- Header start -->
+  <div id="header"></div>
+  <script src="../assets/js/header.js"></script>
+
+  <!-- Ajoute ce spacer juste ici -->
+  <div style="height: 70px;"></div> 
+  <!-- Header end -->
+
+  <!-- Course Platform Content Start -->
+  <div class="course-platform">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-shapes">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+        </div>
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-8">
+                    <a href="formation.html" class="back-link mb-3" id="back-link">
+                        <i class="fas fa-arrow-left me-2"></i>
+                        Tous les cours
+                    </a>
+                    <div class="mb-2">
+                        <span class="badge" id="formation-categorie" style="background-color: #fff; color: black;">DÉVELOPPEMENT</span>
+                    </div>
+
+                    <style>
+    #formation-categorie,
+    #formation-categorie-bottom {
+        font-size: 1rem;
+        padding: 0.6em 1.2em;
+        letter-spacing: 1px;
+        border-radius: 0
+    }
+</style>
+                    <h1 class="display-5 fw-bold mb-3" id="formation-titre">Titre du cours</h1>
+                    <p class="lead mb-4" id="formation-description">Description du cours</p>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="course-stats d-flex align-items-center">
+                            <i class="fas fa-signal me-2 text-success"></i>
+                            <span class="small" id="formation-niveau">Niveau</span>
+                        </div>
+                        <div class="course-stats d-flex align-items-center">
+                            <i class="fas fa-clock me-2 text-primary"></i>
+                            <span class="small" id="formation-duree">Durée</span>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center">
+    <span class="me-3">Ce cours vous intéresse ?</span>
+    <a class="btn btn-start btn-sm" id="start-btn" href="connexion.html" style="padding: 6px 18px; font-size: 1rem;">Commencer</a>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const startBtn = document.getElementById('start-btn');
+        if (id && startBtn) {
+            startBtn.href = `connexion?formation=${id}`;
+        }
+    });
+    </script>
+</div>
+                </div>
+                <!-- <div class="col-lg-4 text-center">
+                    <img id="formation-image" src="/placeholder.svg?height=120&width=120" alt="Instructeur" class="instructor-photo">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <div class="container my-5">
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs border-0 mb-4" id="courseTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab">Aperçu</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="content-tab" data-bs-toggle="tab" data-bs-target="#content" type="button" role="tab">Table des matières</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contributors-tab" data-bs-toggle="tab" data-bs-target="#contributors" type="button" role="tab">Contributeurs</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="courseTabsContent">
+            <!-- Overview Tab -->
+            <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- Video Section -->
+                        <div class="video-container mb-4">
+                            <div class="video-placeholder">
+                                <img id="formation-image-video" src="/placeholder.svg?height=300&width=600" alt="Instructeur" style="width: 100%; height: 100%; object-fit: cover;">
+                                <div class="play-button position-absolute" onclick="playVideo()">
+                                    <i class="fas fa-play text-primary fs-3"></i>
+                                </div>
+                                <div class="video-controls">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn btn-link text-white p-0 me-3">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                            <span class="small">01:04</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn btn-link text-white p-0 me-2">
+                                                <i class="fas fa-volume-up"></i>
+                                            </button>
+                                            <button class="btn btn-link text-white p-0 me-2">
+                                                <i class="fas fa-closed-captioning"></i>
+                                            </button>
+                                            <button class="btn btn-link text-white p-0 me-2">
+                                                <i class="fas fa-cog"></i>
+                                            </button>
+                                            <button class="btn btn-link text-white p-0">
+                                                <i class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar-custom">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question Box -->
+                        <div class="question-box d-flex" id="overview-question-box" style="display:none;">
+                            <div class="question-icon">
+                                <i class="fas fa-question"></i>
+                            </div>
+                            <div>
+                                <strong id="overview-question"></strong>
+                            </div>
+                        </div>
+
+                        <!-- Course Description -->
+                        <div class="content-text" id="overview-content">
+                            <!-- Description dynamique -->
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <!-- Learning Objectives -->
+                        <div class="card mb-4" id="objectifs-card" style="display:none;">
+                            <div class="card-header">
+                                <h5 class="mb-0">Objectifs pédagogiques</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled" id="objectifs-list"></ul>
+                            </div>
+                        </div>
+
+                        <!-- Prerequisites -->
+                        <div class="card mb-4" id="prerequis-card" style="display:none;">
+                            <div class="card-header">
+                                <h5 class="mb-0">Prérequis</h5>
+                            </div>
+                            <div class="card-body" id="prerequis-content"></div>
+                        </div>
+
+                        <!-- Course Image -->
+                        <div class="text-center">
+                            <img id="formation-image-side" src="https://via.placeholder.com/200x200?text=Image" alt="Illustration du cours" class="img-fluid rounded-circle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table of Contents Tab -->
+            <div class="tab-pane fade" id="content" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-8" id="modules-list">
+                        <!-- Modules dynamiques ici -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contributors Tab -->
+            <div class="tab-pane fade" id="contributors" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-8" id="contributors-section">
+                        <!-- Contributeur dynamique ici -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Career Section -->
+    <!-- <div class="container">
+        <div class="career-section text-center">
+            <h2 class="mb-4">Et si vous en faisiez votre métier ?</h2>
+            <p class="mb-4">Suivez une des formations diplômantes de notre école 100% en ligne, et transformez vos connaissances en compétences professionnelles.</p>
+            
+            <div class="row justify-content-center mb-4 g-2">
+    <div class="col-6 col-md-3 mb-0 d-flex flex-column align-items-center">
+        <div class="feature-icon mx-auto">
+            <i class="fas fa-graduation-cap"></i>
+        </div>
+        <p class="mb-0 text-center small">Formations jusqu'à 100% financées</p>
+    </div>
+    <div class="col-6 col-md-3 mb-0 d-flex flex-column align-items-center">
+        <div class="feature-icon mx-auto">
+            <i class="fas fa-calendar-alt"></i>
+        </div>
+        <p class="mb-0 text-center small">Date de début flexible</p>
+    </div>
+    <div class="col-6 col-md-3 mb-0 d-flex flex-column align-items-center">
+        <div class="feature-icon mx-auto">
+            <i class="fas fa-briefcase"></i>
+        </div>
+        <p class="mb-0 text-center small">Projets professionnalisants</p>
+    </div>
+    <div class="col-6 col-md-3 mb-0 d-flex flex-column align-items-center">
+        <div class="feature-icon mx-auto">
+            <i class="fas fa-user-tie"></i>
+        </div>
+        <p class="mb-0 text-center small">Mentorat individuel</p>
+    </div>
+</div>
+            
+            <button class="btn btn-outline-light btn-lg">Démarrer mon inscription</button>
+        </div>
+    </div> -->
+
+    <!-- Course Recommendation -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="course-card h-100">
+                    <div class="position-relative">
+                        <span class="badge mb-3" style="background-color: #fff; color: black;">DÉVELOPPEMENT</span>
+                        <h4 class="mb-3">Intégrateur Web</h4>
+                        <p class="mb-4">Faites vos premiers pas dans le monde du développement web en apprenant à créer des sites avec React !</p>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-graduation-cap me-2"></i>
+                            <span class="small">Diplôme de niveau 5 (bac +2)</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-clock me-2"></i>
+                            <span class="small">À plein temps : 9 mois</span>
+                        </div>
+                        
+                        <div class="text-end">
+                            <span class="js-badge">JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Bottom Course Info -->
+    <div class="container mb-5">
+        <div class="row align-items-center bg-light rounded p-4">
+            <div class="col-md-3">
+                <img id="formation-image-bottom" src="/placeholder.svg?height=120&width=200" alt="Course thumbnail" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <span class="badge mb-2" id="formation-categorie-bottom" style="background-color: #fff; color: black;">DÉVELOPPEMENT</span>
+                <h5 class="mb-2" id="formation-titre-bottom">Titre du cours</h5>
+                <div class="d-flex align-items-center text-muted">
+                    <i class="fas fa-signal me-2"></i>
+                    <span class="me-3" id="formation-niveau-bottom">Niveau</span>
+                    <i class="fas fa-clock me-2"></i>
+                    <span id="formation-duree-bottom">Durée</span>
+                </div>
+            </div>
+            <div class="col-md-3 text-end">
+    <p class="mb-2">Cours disponible</p>
+    <a class="btn btn-start btn-sm" id="start-btn-bottom" href="connexion.html" style="padding: 6px 18px; font-size: 1rem;">Commencer</a>
+</div>
+        </div>
+    </div>
+  </div>
+  <!-- Course Platform Content End -->
+
+  <!-- Footer start -->
+  <div id="footer"></div>
+  <script src="../assets/js/footer.js"></script>
+  <!-- Footer end -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      function startCourse() {
+          alert('Démarrage du cours ! Redirection vers la première leçon...');
+      }
+
+      function playVideo() {
+          alert('Lecture de la vidéo d\'introduction...');
+      }
+
+      // Add smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+              const target = document.querySelector(this.getAttribute('href'));
+              if (target) {
+                  target.scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
+
+      // Add interactive course items
+      document.querySelectorAll('.course-item').forEach(item => {
+          item.addEventListener('click', function() {
+              const lessonTitle = this.querySelector('span').textContent;
+              alert(`Ouverture de la leçon: ${lessonTitle}`);
+          });
+      });
+
+      // Simulate video progress
+      let progress = 5;
+      setInterval(() => {
+          if (progress < 100) {
+              progress += 0.5;
+              document.querySelector('.progress-fill').style.width = progress + '%';
+          }
+      }, 1000);
+  </script>
+  <script>
+  // Dynamique : récupération des données de l'API et injection dans la page
+  document.addEventListener('DOMContentLoaded', async function() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      if (!id) {
+          alert("Aucune formation sélectionnée.");
+          return;
+      }
+
+      try {
+          const response = await fetch(`https://imaneapi.auditacademie.com/api/formations/${id}/`);
+          if (!response.ok) throw new Error('Erreur API');
+          // ...dans le bloc try du script principal...
+const formation = await response.json();
+
+// Affichage dynamique de la vidéo d'intro si présente
+const videoContainer = document.querySelector('.video-placeholder');
+if (
+    formation.modules_formation &&
+    formation.modules_formation.length > 0 &&
+    formation.modules_formation[0].lecons_module &&
+    formation.modules_formation[0].lecons_module.length > 0
+) {
+    const lecon = formation.modules_formation[0].lecons_module[0];
+    if (lecon.lien_video) {
+        let videoEmbed = '';
+        if (lecon.lien_video.includes('youtube.com') || lecon.lien_video.includes('youtu.be')) {
+            let videoId = '';
+            if (lecon.lien_video.includes('youtube.com')) {
+                const url = new URL(lecon.lien_video);
+                videoId = url.searchParams.get('v');
+            } else if (lecon.lien_video.includes('youtu.be')) {
+                videoId = lecon.lien_video.split('/').pop();
+            }
+            videoEmbed = `<iframe width="100%" height="300" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;
+        } else {
+            videoEmbed = `<video width="100%" height="300" controls src="${lecon.lien_video}"></video>`;
+        }
+        videoContainer.innerHTML = videoEmbed;
+    }
+}
+
+// ...puis le reste de ton code (catégorie, titre, description, etc.)...
+
+          // Catégorie (secteur)
+          const secteurNom = formation.secteur && formation.secteur.nom ? formation.secteur.nom : '';
+          document.getElementById('formation-categorie').textContent = secteurNom;
+          document.getElementById('formation-categorie-bottom').textContent = secteurNom;
+
+          // Titre
+          document.getElementById('formation-titre').textContent = formation.titre || '';
+          document.getElementById('formation-titre-bottom').textContent = formation.titre || '';
+
+          // Description
+          document.getElementById('formation-description').innerHTML = formation.description_courte || '';
+document.getElementById('overview-content').innerHTML = formation.description_courte || '';
+
+          // Niveau
+          document.getElementById('formation-niveau').textContent = formation.niveau_difficulte || '';
+          document.getElementById('formation-niveau-bottom').textContent = formation.niveau_difficulte || '';
+
+          // Durée (somme des modules)
+          let totalHeures = 0;
+          if (formation.modules_formation && formation.modules_formation.length) {
+              totalHeures = formation.modules_formation.reduce((acc, mod) => acc + (mod.duree_estimee_heures || 0), 0);
+          }
+          document.getElementById('formation-duree').textContent = totalHeures ? totalHeures + ' h' : '';
+          document.getElementById('formation-duree-bottom').textContent = totalHeures ? totalHeures + ' h' : '';
+
+          // Images
+          // ...dans le bloc try du script principal, juste avant d'utiliser les variables...
+const imgFormation = document.getElementById('formation-image');
+const imgFormationSide = document.getElementById('formation-image-side');
+const imgFormationVideo = document.getElementById('formation-image-video');
+const imgFormationBottom = document.getElementById('formation-image-bottom');
+
+const baseURL = 'https://imaneapi.auditacademie.com/';
+let imageURL = '/placeholder.svg?height=120&width=120';
+if (formation.image_couverture && formation.image_couverture.startsWith('/photos')) {
+    imageURL = baseURL + formation.image_couverture;
+} else if (formation.image_couverture) {
+    imageURL = formation.image_couverture;
+}
+
+if (imgFormation) {
+    imgFormation.src = imageURL;
+}
+if (imgFormationSide) {
+    imgFormationSide.src = imageURL;
+}
+if (imgFormationVideo) {
+    imgFormationVideo.src = imageURL;
+}
+if (imgFormationBottom) {
+    imgFormationBottom.src = imageURL;
+}
+          const startBtn = document.getElementById('start-btn');
+          const startBtnBottom = document.getElementById('start-btn-bottom');
+          if (startBtn) startBtn.href = `connexion?formation=${id}`;
+          if (startBtnBottom) startBtnBottom.href = `connexion?formation=${id}`;
+
+          // Objectifs pédagogiques
+          if (formation.objectifs) {
+    document.getElementById('objectifs-card').style.display = '';
+    const objList = document.getElementById('objectifs-list');
+    objList.innerHTML = formation.objectifs; 
+              formation.objectifs.split('\n').forEach(line => {
+                  if (line.trim()) {
+                      const li = document.createElement('li');
+                      li.className = "d-flex align-items-start mb-3";
+                      li.innerHTML = `<i class="fas fa-check-circle text-info me-3 mt-1"></i><span>${line.trim()}</span>`;
+                      objList.appendChild(li);
+                  }
+              });
+          }
+
+          // Prérequis
+          if (formation.prerequis) {
+              document.getElementById('prerequis-card').style.display = '';
+              document.getElementById('prerequis-content').innerHTML = `<ul><li>${formation.prerequis}</li></ul>`;
+          }
+
+          // Table des matières (modules, leçons, quiz)
+          const modulesList = document.getElementById('modules-list');
+          modulesList.innerHTML = '';
+          if (formation.modules_formation && formation.modules_formation.length) {
+              formation.modules_formation.forEach((mod, idx) => {
+                  const sectionDiv = document.createElement('div');
+                  sectionDiv.className = "course-section";
+                  let html = `<div class="course-section-header">Module ${idx + 1}: <strong>${mod.titre}</strong></div>`;
+                  // Leçons
+                  if (mod.lecons_module && mod.lecons_module.length) {
+                      mod.lecons_module.forEach((lecon, lidx) => {
+                          html += `<div class="course-item">
+                              <div class="course-number">${lidx + 1}</div>
+                              <span>${lecon.titre} (${lecon.duree_estimee_minutes || 0} min)</span>
+                          </div>`;
+                      });
+                  }
+                  // Quiz
+                  if (mod.quizzes && mod.quizzes.length) {
+                      mod.quizzes.forEach(quiz => {
+                          html += `<div class="course-item">
+                              <div class="course-number quiz-icon"><i class="fas fa-question"></i></div>
+                              <span><strong>Quiz : ${quiz.titre}</strong></span>
+                          </div>`;
+                      });
+                  }
+                  sectionDiv.innerHTML = html;
+                  modulesList.appendChild(sectionDiv);
+              });
+          }
+
+          // Examens finaux
+          if (formation.examens && formation.examens.length) {
+              formation.examens.forEach(exam => {
+                  const examDiv = document.createElement('div');
+                  examDiv.className = "course-section";
+                  examDiv.innerHTML = `
+                      <div class="course-section-header">Examen final<br><strong>${exam.titre}</strong></div>
+                      <div class="course-item">
+                          <div class="course-number quiz-icon"><i class="fas fa-question"></i></div>
+                          <span><strong>${exam.titre} (Examen final)</strong></span>
+                      </div>
+                  `;
+                  modulesList.appendChild(examDiv);
+              });
+          }
+
+          // Contributeur
+          const contribSection = document.getElementById('contributors-section');
+          if (formation.nom_contributeur || formation.prenom_contributeur || formation.presentation_contributeur) {
+              contribSection.innerHTML = `
+                  <h4 class="mb-4">Professeur</h4>
+                  <div class="instructor-card">
+                      <img src="/placeholder.svg?height=60&width=60" alt="${formation.prenom_contributeur || ''} ${formation.nom_contributeur || ''}" class="instructor-avatar">
+                      <div>
+                          <h6 class="mb-1">${formation.prenom_contributeur || ''} ${formation.nom_contributeur || ''}</h6>
+                          <p class="text-muted mb-0">${formation.presentation_contributeur || ''}</p>
+                      </div>
+                  </div>
+                  <h4 class="mt-5 mb-4">Créé par</h4>
+                  <div class="d-flex align-items-center">
+                      <div class="bg-primary rounded p-3 me-3" style="width: 60px; height: 60px;">
+                          <i class="fas fa-graduation-cap text-white fs-4"></i>
+                      </div>
+                      <div>
+                          <h6 class="mb-1">Audit Académie</h6>
+                          <p class="text-muted mb-1">Mis à jour le 23/01/2025</p>
+                          <p class="text-muted mb-0">Licence <i class="fas fa-creative-commons"></i> <i class="fas fa-info-circle"></i> <i class="fas fa-ban"></i></p>
+                      </div>
+                  </div>
+              `;
+          }
+
+      } catch (e) {
+          alert("Erreur lors du chargement de la formation.");
+          console.error(e);
+      }
+  });
+  </script>
+</body>
+</html>

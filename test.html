@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="payer">Payer</button>
+
+    <script>
+        const btn = document.getElementById("payer")
+        
+        btn.addEventListener("click", function () {
+            const prix = 1000;
+            openKkiapayWidget({
+                amount: prix, position: "right", callback: "127.0.0.1/callback",
+                data: "",
+                theme: "green",
+                sandbox: "true",
+                key: "2d60f1304a3711f0b843d576c84457a5"
+            })
+        });
+    </script>
+
+    <script src="https://cdn.kkiapay.me/k.js"></script>
+</body>
+
+</html>

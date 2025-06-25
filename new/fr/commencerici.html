@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commencer ici - Audit Académie</title>
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+    <link rel="stylesheet" href="../assets/css/unicons.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/prettify.min.css">
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+    <link rel="stylesheet" href="../assets/css/theme/theme-three.min.purge.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/theme/main.css">
+<link rel="stylesheet" href="../assets/css/header_style.css">
+    <script src="../assets/js/app-head-bs.js"></script>
+    <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+    <meta name="theme-color" content="#178d72">
+
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/imageacimane.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+             margin-top: 70px;
+        }
+        
+        .hero-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .wavy-line {
+            width: 100px;
+            height: 20px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0 10 Q25 0 50 10 T100 10" stroke="white" stroke-width="3" fill="none"/></svg>') no-repeat center;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .content-image {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-list {
+            padding: 60px 0;
+        }
+        
+        .article-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px 0;
+        }
+        
+        .article-number {
+            background-color: #ff6b35;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .article-text {
+            flex: 1;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+        
+        .btn-custom {
+            background-color: #2a4743;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            background-color: #2a4743;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 110, 245, 0.3);
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 2rem;
+            }
+            
+            .content-section {
+                padding: 40px 0;
+            }
+            
+            .article-list {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
+
+    <!--  Bottom Actions Sticky -->
+    <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+        <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white"
+            data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox">
+                <span class="slider fs-5"></span>
+            </label>
+        </div>
+        <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+            <i class="icon-2 unicon-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Header start -->
+    <div id="header"></div>
+    <script src="../assets/js/header.js"></script>
+    <!-- Header end -->
+
+    <!-- === Ton contenu principal ici === -->
+   <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-text">Débutant, Commencez ici...</h1>
+                <div class="wavy-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-4">Si vous êtes débutant en audit, que vous ayez déjà une formation initiale ou pas, Bienvenue!</h2>
+                    <p class="lead">Pour commencer, je vous invite à lire ces articles qui vous fourniront les notions de base dont vous avez besoin pour progresser pas à pas, sans mettre la charrue avant nos chers amis les bœufs! <span class="emoji">😊</span></p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../assets/images/commencerici.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="article-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="article-item">
+                        <div class="article-number">0</div>
+                        <div class="article-text">
+                            <strong>Article 0:</strong> Je vous y explique ce qu'est l'audit, les différents types d'audit, les intervenants d'une mission, les principales normes applicables, etc.
+                        </div>
+                    </div>
+                    
+                    <div class="article-item">
+                        <div class="article-number">1</div>
+                        <div class="article-text">
+                            <strong>Article 1:</strong> Vous y découvrirez les qualités fondamentales des auditeurs professionnels qui réussissent et s'épanouissent dans leur métier
+                        </div>
+                    </div>
+                    
+                    <div class="article-item">
+                        <div class="article-number">2</div>
+                        <div class="article-text">
+                            <strong>Article 2:</strong> Je partage avec vous dans cet article, les différentes étapes d'une mission d'audit comptable et financier
+                        </div>
+                    </div>
+                    
+                    <div class="article-item">
+                        <div class="article-number">3</div>
+                        <div class="article-text">
+                            <strong>Article 3:</strong> Cet article est le premier d'une série de 3 dans laquelle je partage avec vous, 10 notions clés à comprendre pour débuter en audit
+                        </div>
+                    </div>
+                    
+                    <div class="article-item">
+                        <div class="article-number">4</div>
+                        <div class="article-text">
+                            <strong>Article 4:</strong> Second article de la série sur les 10 notions importantes pour débuter
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-3">Vous pouvez également télécharger gratuitement mon livre "RAI – 5 clés pour construire l'équipe d'audit de vos rêves", qui vous fournira une perspective nouvelle sur votre rôle au sein d'une équipe d'audit <span class="emoji">😉</span> :</p>
+                    
+                    <p class="mb-4">Ensuite, allez voir le plan du site pour dénicher d'autres articles qui vous intéressent, ou consultez simplement les derniers articles publiés sur le blog. Bonne lecture ! <span class="emoji">😊</span></p>
+                    
+                    <button class="btn btn-custom" onclick="handleDownload()">Cliquez ici</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Handle download button click
+        function handleDownload() {
+            // Add your download logic here
+            alert('Téléchargement du livre en cours...');
+            // You can replace this with actual download functionality
+            // window.open('path-to-your-book.pdf', '_blank');
+        }
+
+        // Add fade-in animation on scroll
+        function fadeInOnScroll() {
+            const elements = document.querySelectorAll('.article-item');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial state for animations
+            document.querySelectorAll('.article-item').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            // Trigger initial check
+            fadeInOnScroll();
+        });
+
+        // Listen for scroll events
+        window.addEventListener('scroll', fadeInOnScroll);
+
+        // Add hover effects to article items
+        document.querySelectorAll('.article-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(10px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+    <!-- === Fin contenu principal === -->
+
+    <!-- Footer start -->
+    <div id="footer"></div>
+    <script src="../assets/js/footer.js"></script>
+    <!-- Footer end -->
+
+    <!-- include jquery & bootstrap js -->
+    <script defer src="../assets/js/libs/jquery.min.js"></script>
+    <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+
+    <!-- include scripts -->
+    <script defer src="../assets/js/libs/anime.min.js"></script>
+    <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+    <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+    <script defer src="../assets/js/libs/typed.min.js"></script>
+    <script defer src="../assets/js/libs/tilt.min.js"></script>
+    <script defer src="../assets/js/libs/split-type.min.js"></script>
+    <script defer src="../assets/js/libs/prettify.min.js"></script>
+    <script defer src="../assets/js/libs/gsap.min.js"></script>
+    <script defer src="../assets/js/core/magic-cursor.js"></script>
+    <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+    <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+    <script defer src="../assets/js/helpers/splitype-helper.js"></script>
+    <script defer src="../assets/js/helpers/anime-helper.js"></script>
+    <script defer src="../assets/js/helpers/typed-helper.js"></script>
+    <script defer src="../assets/js/helpers/tilt-helper.js"></script>
+    <script defer src="../assets/js/core/marquee.js"></script>
+    <script defer src="../assets/js/uikit-components-bs.js"></script>
+    <!-- include app script -->
+    <script defer src="../assets/js/app.js"></script>
+
+    <script>
+        // Vérifie si l'utilisateur préfère le mode sombre
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: white;
+            }
+        }
+        .icon-hover {
+            transition: stroke 0.3s ease;
+        }
+        .features-item:hover .icon-hover {
+            stroke: #0460bc;
+        }
+    </style>
+</body>
+</html>

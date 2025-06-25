@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Académie - Connexion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
+    <link rel="stylesheet" href="../assets/css/unicons.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/prettify.min.css">
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+    <link rel="stylesheet" href="../assets/css/theme/theme-three.min.purge.css">
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+    <style>
+        :root {
+            --main-color: #2a4743;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .login-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--main-color) 0%, #667eea 50%, #f093fb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mountain-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Cpath d='M0,600 L0,400 L200,300 L400,350 L600,250 L800,300 L1000,200 L1200,250 L1200,600 Z' fill='%23000000' fill-opacity='0.1'/%3E%3Cpath d='M0,600 L0,450 L150,380 L350,420 L550,320 L750,370 L950,280 L1200,320 L1200,600 Z' fill='%23000000' fill-opacity='0.15'/%3E%3Cpath d='M0,600 L0,500 L100,450 L300,480 L500,400 L700,440 L900,380 L1200,420 L1200,600 Z' fill='%23000000' fill-opacity='0.2'/%3E%3C/svg%3E") no-repeat center bottom;
+            background-size: cover;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        .star:nth-child(1) { top: 20%; left: 15%; }
+        .star:nth-child(2) { top: 30%; left: 80%; }
+        .star:nth-child(3) { top: 60%; left: 25%; }
+        .star:nth-child(4) { top: 15%; left: 70%; }
+        .star:nth-child(5) { top: 45%; left: 90%; }
+
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            letter-spacing: 1px;
+            margin-top: 6rem;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+        }
+
+        .login-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .form-label {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--main-color);
+            box-shadow: 0 0 0 0.2rem rgba(42, 71, 67, 0.25);
+        }
+
+        .is-invalid {
+            border-color: #dc3545 !important;
+        }
+
+        .invalid-feedback {
+            display: none;
+            color: #dc3545;
+            font-size: 0.85em;
+            margin-top: 0.25rem;
+        }
+
+        .form-control.is-invalid ~ .invalid-feedback {
+            display: block;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .forgot-password {
+            color: var(--main-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+            float: right;
+            margin-top: 0.5rem;
+        }
+
+        .forgot-password:hover {
+            color: #5a6fd8;
+            text-decoration: underline;
+        }
+
+        .remember-me {
+            margin: 1.5rem 0;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--main-color);
+            border-color: var(--main-color);
+        }
+
+        .form-check-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .btn-login {
+            background: linear-gradient(135deg, var(--main-color) 0%, #667eea 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 0rem;
+            font-weight: 600;
+            color: white;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(42, 71, 67, 0.3);
+            color: white;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .signup-link a {
+            color: var(--main-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .login-card {
+                margin: 1rem;
+                padding: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Forcer le fond blanc sur la barre de navigation principale */
+.uc-header,
+.uc-navbar-container,
+.uc-navbar-main,
+.uc-navbar {
+    background: #fff !important;
+    background-color: #fff !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03); /* optionnel, pour une légère ombre */
+}
+.uc-navbar-lang .icon,
+.uc-header .uc-navbar-lang .icon {
+    color: #222 !important;
+    fill: #222 !important;
+}
+    </style>
+</head>
+<body>
+
+    <!-- À placer juste après <body> ou en haut de ta page -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../fr/">
+            <img src="../assets/images/logo-ic.png" alt="Logo Audit Académie" style="height: 28px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+    <a class="nav-link" href="mesblogs.html" style="color: #111 !important;">
+        L'Audit
+    </a>
+</li>
+            </ul>
+            <!-- <div class="d-flex align-items-center gap-3">
+                <div class="dropdown">
+                    <i class="fas fa-user user-icon" data-bs-toggle="dropdown"></i>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Mon profil</a></li>
+                        <li><a class="dropdown-item" href="#">Mes cours</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="inscription.html">Créer mon compte</a></li>
+                        <li><a class="dropdown-item" href="connexion.html">Connexion</a></li>
+                        <li><a class="dropdown-item" href="#" id="logoutBtn">Déconnexion</a></li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</nav>
+
+    <!-- <div class="uc-banner-top py-1 p-2 m-0 hide-on-sticky text-center dark:from-tertiary-200 to-primary-700 dark:to-tertiary text-white dark:text-dark"
+     data-uc-alert data-anime="opacity: [0, 1]; easing: easeInOutcubic; duration: 500; delay: 0;"
+     style="background-color: #2a4743;">
+    <a href="#" class="uc-alert-close top-0 end-0" style="margin: 14px" data-uc-close></a> -->
+    <!-- <p class="fs-7">
+        Audit Académie, Cotonou N°RCCM RB/COT/18 B 20854<br class="d-block lg:d-none">
+        <a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504/"
+           class="uc-link text-white dark:text-primary border-bottom fs-7" target="_blank" rel="nofollow">
+           ,Programmeexclusifcia@gmail.com, Imane.consulting@gmail.com
+        </a>
+    </p> -->
+</div>
+<!-- <div id="header"></div>
+<script src="../assets/js/header.js"></script> -->
+<script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+    <div class="login-container">
+        <div class="mountain-bg"></div>
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-12">
+                    <div class="logo fw-bold" >Audit Académie</div>
+                    
+                    <div class="login-card">
+                        <h2 class="login-title">Pour lire des articles </h2>
+                        <p class="login-subtitle">Connectez-vous maintenant ici.</p>
+                        
+                        <form id="loginForm" novalidate>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+                                <div class="invalid-feedback" id="emailError">Veuillez entrer un email valide.</div>
+                            </div>
+                            
+                            <div class="mb-2">
+                                <label for="password" class="form-label">Mot de passe</label>
+                                <div class="password-container">
+                                    <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
+                                    <button type="button" class="password-toggle" id="togglePassword">
+                                        <i class="fas fa-eye" id="eyeIcon"></i>
+                                    </button>
+                                </div>
+                                <div class="invalid-feedback" id="passwordError">Veuillez entrer votre mot de passe.</div>
+                                <a href="motdepasseoubliesite.html" class="forgot-password">Mot de passe oublié ?</a>
+                            </div>
+                            
+                            <div class="form-check remember-me">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Se souvenir de moi
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-login">Se connecter</button>
+                        </form>
+                        
+                        <div class="signup-link">
+                            Vous n'avez pas de compte ? <a href="inscriptionsite.html">S'inscrire maintenant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 Audit Académie. Tous droits réservés.
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Password toggle functionality
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eyeIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        });
+
+        // Form validation and API connexion
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            let valid = true;
+
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+
+            // Reset
+            emailInput.classList.remove('is-invalid');
+            passwordInput.classList.remove('is-invalid');
+            emailError.style.display = 'none';
+            passwordError.style.display = 'none';
+
+            // Email validation
+            const emailValue = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailValue || !emailRegex.test(emailValue)) {
+                emailInput.classList.add('is-invalid');
+                emailError.style.display = 'block';
+                valid = false;
+            }
+
+            // Password validation
+            if (!passwordInput.value.trim()) {
+                passwordInput.classList.add('is-invalid');
+                passwordError.style.display = 'block';
+                valid = false;
+            }
+
+            if (!valid) return;
+
+            // Connexion à l'API
+            const data = {
+                email: emailInput.value.trim(),
+                password: passwordInput.value
+            };
+
+            try {
+                const response = await fetch('https://imaneapi.auditacademie.com/api/connexion/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+               if (response.ok) {
+    // Connexion réussie, tu peux stocker le token ou rediriger
+    // const result = await response.json();
+    window.location.href = "blog-details.html"; // Redirection automatique
+} else {
+                    const error = await response.json();
+                    alert('Erreur : ' + (error.message || 'Identifiants invalides.'));
+                }
+            } catch (err) {
+                alert('Erreur réseau ou serveur.');
+            }
+        });
+
+        // Add floating animation to stars
+        function animateStars() {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach((star, index) => {
+                const delay = index * 0.5;
+                star.style.animation = `float 3s ease-in-out ${delay}s infinite alternate`;
+            });
+        }
+
+        // CSS animation for floating effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% { transform: translateY(0px) scale(1); opacity: 0.8; }
+                100% { transform: translateY(-10px) scale(1.1); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize animations
+        animateStars();
+
+        // Add subtle parallax effect to mountains
+        window.addEventListener('mousemove', function(e) {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            const mountainBg = document.querySelector('.mountain-bg');
+            const translateX = (mouseX - 0.5) * 20;
+            const translateY = (mouseY - 0.5) * 10;
+            
+            mountainBg.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        });
+    </script>
+    
+</body>
+</html>

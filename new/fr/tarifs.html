@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Les Tarifs, Plans et Offres Inawo : Découvrez nos formules tarifaires.</title>
+        <title>Les Tarifs, Audit Académie</title>
         <meta name="description" content="Des offres pour toutes les catégories d'entreprises. Améliorez votre façon de travailler, découvrez un tout nouvel outil et propulsez votre business plus rapidement.">
         <meta name="keywords" content="saas, saas template, site template, software, startup, digital product, html5, landing, marketing, bootstrap, uikit3, agency, ai, digital agency, it solutions, nodejs">
         <link rel="canonical" href="https://unistudio.co/html/Lexend">
         <link rel="stylesheet" href="../assets/css/header_style.css">
         <meta name="theme-color" content="#178d72">
-        
+        <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+
 
         <!-- Open Graph Tags -->
         <meta property="og:locale" content="en_US">
@@ -191,6 +192,15 @@
         
         
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2MW7TVQEX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q2MW7TVQEX');
+    </script>
 
     <body class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
 
@@ -231,17 +241,17 @@
                                     <p class="fs-6 xl:fs-5">Essayez-le dès aujourd'hui et transformez votre gestion avec une efficacité inégalée</p>
                                     <div id="specific-panel" class="panel px-1 py-1   fw-medium rounded-pill bg-none border">
                                         <ul class="main-features-nav hstack text-center overflow-auto" data-uc-switcher="connect: .main-features-switcher; active: 0; animation: uc-animation-fade;">
-                                            <li><a class="sales-link  text-nowrap m-0" href="#">Vente et Prospection </a></li>
-                                            <li><a class="billing-link text-nowrap m-0" href="#">Facturation et Gestion </a></li>
-                                            <li><a class="inawo-link text-nowrap m-0" href="#">Inawo global</a></li>
+                                            <li><a class="sales-link  text-nowrap m-0" href="#">Vente et Facturation </a></li>
+                                            <li><a class="billing-link text-nowrap m-0" href="#">Stock et Approvisionnement  </a></li>
+                                            <li><a class="inawo-link text-nowrap m-0" href="#">Inawo Global</a></li>
                                         </ul>
                                     </div>
                                     <p class="fs-6 xl:fs-5">Tarification simple. Pas de frais cachés. Des fonctionnalités avancées pour votre entreprise</p>
 
                                     <div id="liens" class="vstack items-center gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-750px mx-auto text-center" data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">  
                                         <ul class="uc-switcher-nav nav-x gap-px-1 py-1 p-narrow border rounded-pill fs-7 fw-medium" data-uc-switcher="connect: .pricing-switcher;">  
-                                            <li><a href="#" id="monthly" class="text-none w-128px cstack p-1">Monthly</a></li>  
-                                            <li><a href="#" id="yearly" class="text-none w-128px cstack p-1">Yearly</a></li>  
+                                            <li><a href="#" id="monthly" class="text-none w-128px cstack p-1">Mensuel</a></li>  
+                                            <li><a href="#" id="yearly" class="text-none w-128px cstack p-1">Annuel</a></li>  
                                         </ul>  
                                     </div>
                                 </div>
@@ -258,8 +268,10 @@
                                                         <div class="panel vstack items-center gap-narrow p-2 py-4">  
                                                             <h3 class="title h5 mb-1">Essentiel</h3>  
                                                             <h5 class="price h1 lg:display-5 m-0 default-price">0<sup class="h5 m-0 mx-narrow">FCFA</sup></h5>
-                                                            <h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">Gratuit</sup></h5>    
+                                                            <h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">Gratuit</sup></h5>  
                                                             <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;">0<sup class="h5 m-0 mx-narrow"> FCFA</sup></h5>  
+                                                            <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;"><sup class="h3 m-0 mx-narrow"> Gratuit </sup></h5>  
+                                                            <!-- <h5 class="price h1 lg:display-5 m-0 hidden-price"><sup class="h5 m-0 mx-narrow">Gratuit</sup></h5>     -->
                                                             <!-- <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;"><sup class="h5 m-0 mx-narrow">Gratuit</sup></h5>   -->
                                                             <!-- <span class="fs-7 fw-normal m-0">Gratuit</span>   -->
                                                         </div>  
@@ -273,15 +285,16 @@
                                                 <div class="panel vstack border border-2 rounded-1-5 border-primary dark:border-tertiary contrast-shadow-md z-1" style="margin-top: -2px; margin-bottom: -2px">
                                                     <div class="panel vstack items-center gap-narrow p-2 py-4">
                                                         <h3 class="title h5 mb-1 text-primary dark:text-white">Professionnel</h3>
-                                                        <h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">$</sup>4</h5>
-                                                        <h6 class="price h6 lg:display-5 m-0 default-price">2500<sup class="h5 m-0 mx-narrow">FCFA</sup></h6>
-                                                        <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;" ><sup class="h5 m-0 mx-narrow">$</sup>41</h5>
-                                                        <h5 class="price h6 lg:display-5 m-0 hidden-price" style="display: none;" >25000<sup class="h5 m-0 mx-narrow">FCFA</sup></h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">$</sup>06</h5>
+                                                        <!-- <h5 class="price h1 lg:display-2 m-0 default-price"><sup class="h5 m-0 mx-narrow">$</sup>06</h5> -->
+                                                        <h5 class="price h6 lg:display-5 m-0 default-price"><sup class="h3 m-0 mx-narrow">3 500  FCFA</sup></h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;" ><sup class="h5 m-0 mx-narrow">$</sup>58</h5>
+                                                        <h5 class="price h6 lg:display-5 m-0 hidden-price" style="display: none;" ><sup class="h3 m-0 mx-narrow">35 000 FCFA</sup></h5>
                                                         
                                                         <span class="position-absolute top-0 end-0 cstack px-1 bg-tertiary text-primary border rounded-default m-1">Meilleure option!</span>
                                                     </div>
                                                     <div class="vstack items-center gap-2 p-4 pt-0">
-                                                        <button class="btn btn-md btn-primary dark:bg-tertiary dark:text-primary fw-bold rounded-pill px-3 w-100">Commencer</button>
+                                                        <button class="btn btn-md btn-primary dark:bg-tertiary dark:text-primary fw-bold rounded-pill px-3 w-100" style="background-color: #014a92;">Commencer</button>
                                                         <span class="fs-7 fw-normal m-0 default-price">Facturation mensuelle</span>                             
                                                         <span class="fs-7 fw-normal m-0 hidden-price" style="display: none;">Facturation annuelle</span>
                                                         <!-- <p class="fs-7 fw-normal">Billed $108 per year.</p> -->
@@ -292,12 +305,11 @@
                                                 <div class="vstack">
                                                     <div class="panel vstack items-center gap-narrow p-2 py-4">
                                                         <h3 class="title h5 mb-1">Business</h3>
-                                                        <h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">$</sup>12</h5>
-                                                        <h5 class="price h6 lg:display-5 m-0 default-price">7500<sup class="h3 m-0 mx-narrow">FCFA</sup></h5>
-                                                        <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;"><sup class="h5 m-0 mx-narrow">$</sup>123</h5>
-                                                        <h5 class="price h6 lg:display-5 m-0 hidden-price" style="display: none;">75000<sup class="h5 m-0 mx-narrow">FCFA</sup></h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 default-price"><sup class="h5 m-0 mx-narrow">$</sup>18</h5>
+                                                        <h5 class="price h6 lg:display-5 m-0 default-price"><sup class="h3 m-0 mx-narrow">10 500 FCFA</sup></h5>
+                                                        <h5 class="price h1 lg:display-5 m-0 hidden-price" style="display: none;"><sup class="h5 m-0 mx-narrow">$</sup>175</h5>
+                                                        <h5 class="price h6 lg:display-5 m-0 hidden-price" style="display: none;"><sup class="h3 m-0 mx-narrow">105 000 FCFA</sup></h5>
                                                         <!-- <span class="fs-7 fw-normal m-0 default-price">Facturation mensuelle</span> -->
-                                                        <span class="fs-7 fw-normal m-0 hidden-price" style="display: none;">Facturation annuelle</span>
                                                     </div>
                                                     <div class="vstack items-center gap-2 p-4 pt-0">
                                                         <button class="btn btn-md btn-ghost-primary fw-bold border rounded-pill px-3 w-100">Commencer</button>
@@ -777,191 +789,6 @@
             <!-- Section end -->
 
             <!-- Section start -->
-            <div id="clients_feedbacks" class="clients-feedbacks section panel overflow-hidden">
-                <div class="section-outer panel pb-6 xl:pb-10">
-                    <div class="container">
-                        <div class="section-inner panel">
-                            <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -200; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 450; delay: anime.stagger(100, {start: 200});">
-                                <h2 class="h4 sm:h3 lg:h2 m-0 text-center max-w-650px mx-auto">Découvrez ce que  <span class="px-1 bg-tertiary text-primary">nos utilisateurs </span> disent à propos de nous!</h2>
-                                <div class="panel w-100">
-                                    <div class="swiper overflow-unset" data-uc-swiper="items: 1.25; active: 1; gap: 16; center: true; center-bounds: true;" data-uc-swiper-l="items: 4; gap: 24; center: false; center-bounds: false;">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
-                                                    <div class="panel vstack items-start gap-2">
-                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
-                                                    </div>
-                                                    <div class="panel hstack gap-2 mt-2">
-                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/01.png" alt="Mark Zellers">
-                                                        <div class="panel vstack justify-center gap-narrow">
-                                                            <ul class="nav-x gap-0 text-warning">
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                            </ul>
-                                                            <span class="fw-bold ft-secondary m-0">Mark Zellers</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
-                                                    <div class="panel vstack items-start gap-2">
-                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“This powerfull tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”</p>
-                                                    </div>
-                                                    <div class="panel hstack gap-2 mt-2">
-                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/04.png" alt="Natalia Larsson">
-                                                        <div class="panel vstack justify-center gap-narrow">
-                                                            <ul class="nav-x gap-0 text-warning">
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                            </ul>
-                                                            <span class="fw-bold ft-secondary m-0">Natalia Larsson</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
-                                                    <div class="panel vstack items-start gap-2">
-                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers than comply with this regulation and as we look to create our website and this builder just outstanding!”</p>
-                                                    </div>
-                                                    <div class="panel hstack gap-2 mt-2">
-                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/03.png" alt="Sarah Edrissi">
-                                                        <div class="panel vstack justify-center gap-narrow">
-                                                            <ul class="nav-x gap-0 text-warning">
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                            </ul>
-                                                            <span class="fw-bold ft-secondary m-0">Sarah Edrissi</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
-                                                    <div class="panel vstack items-start gap-2">
-                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
-                                                    </div>
-                                                    <div class="panel hstack gap-2 mt-2">
-                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/08.png" alt="Anna Yon">
-                                                        <div class="panel vstack justify-center gap-narrow">
-                                                            <ul class="nav-x gap-0 text-warning">
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                            </ul>
-                                                            <span class="fw-bold ft-secondary m-0">Anna Yon</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
-                                                    <div class="panel vstack items-start gap-2">
-                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
-                                                    </div>
-                                                    <div class="panel hstack gap-2 mt-2">
-                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/01.png" alt="Mark Zellers">
-                                                        <div class="panel vstack justify-center gap-narrow">
-                                                            <ul class="nav-x gap-0 text-warning">
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                            </ul>
-                                                            <span class="fw-bold ft-secondary m-0">Mark Zellers</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
-                                                    <div class="panel vstack items-start gap-2">
-                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“This powerfull tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”</p>
-                                                    </div>
-                                                    <div class="panel hstack gap-2 mt-2">
-                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/04.png" alt="Natalia Larsson">
-                                                        <div class="panel vstack justify-center gap-narrow">
-                                                            <ul class="nav-x gap-0 text-warning">
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                            </ul>
-                                                            <span class="fw-bold ft-secondary m-0">Natalia Larsson</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
-                                                    <div class="panel vstack items-start gap-2">
-                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers than comply with this regulation and as we look to create our website and this builder just outstanding!”</p>
-                                                    </div>
-                                                    <div class="panel hstack gap-2 mt-2">
-                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/03.png" alt="Sarah Edrissi">
-                                                        <div class="panel vstack justify-center gap-narrow">
-                                                            <ul class="nav-x gap-0 text-warning">
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                            </ul>
-                                                            <span class="fw-bold ft-secondary m-0">Sarah Edrissi</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border hover:contrast-shadow-md hover:border-dark duration-150">
-                                                    <div class="panel vstack items-start gap-2">
-                                                        <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
-                                                    </div>
-                                                    <div class="panel hstack gap-2 mt-2">
-                                                        <img class="w-40px rounded-circle" src="../assets/images/avatars/08.png" alt="Anna Yon">
-                                                        <div class="panel vstack justify-center gap-narrow">
-                                                            <ul class="nav-x gap-0 text-warning">
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                                <li><i class="icon icon-narrow unicon-star-filled"></i></li>
-                                                            </ul>
-                                                            <span class="fw-bold ft-secondary m-0">Anna Yon</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <a href="#" class="uc-link dark:text-tertiary fw-bold d-inline-flex items-center gap-narrow">
-                                    <span>See all feedbacks</span>
-                                    <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
-                                </a> -->
-                                <!-- <img class="w-500px text-primary dark:text-gray-200" src="../assets/images/vectors/producthunt-badges.svg" alt="producthunt-badges" data-uc-svg=""> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Section end -->
-
-            <!-- Section start -->
             <div id="faq" class="faq section panel">
                 <div class="section-outer panel pb-4 lg:pb-6 xl:pb-10">
                     <div class="container lg:max-w-lg">
@@ -1011,12 +838,12 @@
                                                     <p>Vous pouvez bénéficier de mise à niveau à tout moment, mais certains produits peuvent nécessiter une mise à niveau commune. De même, durant votre abonnement, vous pouvez basculer sur une offre supérieure à tout moment. Veuillez nous envoyer un mail à hello@inawo.pro au besoin. </p>
                                                 </div>
                                             </li>
-                                            <li class="panel">
+                                            <!-- <li class="panel">
                                                 <a class="uc-accordion-title h6 md:h5" href="#">A quel moment dois-je régler mon abonnement ?</a>
                                                 <div class="uc-accordion-content lg:fs-4 opacity-70">
                                                     <p>Inawo vous propose plusieurs types de paiement : trimestriel, semestriel, annuel ou biannuel. Choisissez l’offre et la formule qui vous convient, créez un compte et alors vous pourrez souscrire à l’abonnement de votre choix à partir de la version d’essai gratuit.</p>
                                                 </div>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </div>
                                 </div>

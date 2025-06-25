@@ -132,7 +132,7 @@ const footerHTML = `
                                 <!-- <div class="py-1 bg-white dark:bg-gray-800 shadow-xs w-200px" data-uc-drop="mode: click; offset: 0; pos: top-right; boundary: !.uc-navbar-container; animation: uc-animation-slide-top-small; duration: 150;"> -->  
                                 <ul class="nav-y gap-0 fs-7">  
                                     <li>  
-                                        <a href="./newcode/../en/index.html"  
+                                        <a href="./newcode/../en/../fr"  
                                             class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img  
                                                 class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../../assets/images/en.svg"  
                                                 alt="English">English</a>  
