@@ -711,8 +711,10 @@ function getCookie(name) {
     return null;
 }
 const token = getCookie('token');
+const params = new URLSearchParams(location.search);
+const formationId = params.get('id');
 if (!token) {
-    window.location.href = "connexion.html";
+    window.location.href = "connexion?next=formationdetailcnx?id=" + formationId;
 }
  else {
             fetch('https://imaneapi.auditacademie.com/api/une-route-protegee/', {
@@ -1270,7 +1272,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
     const token = getCookie('token');
     if (!token) {
-        window.location.href = "connexion.html";
+        window.location.href = "connexion?next=formationdetailcnx?id=" + id;
         return;
     }
 

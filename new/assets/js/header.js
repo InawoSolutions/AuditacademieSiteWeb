@@ -316,7 +316,8 @@ const headerHTML = `
             <div class="panel" style="margin-top: 5rem;">
                 <!-- Menu mobile identique à desktop -->
 <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-    <li><a href="#">Débutant, Commencer ici...</a></li>
+    <li><a href="#">A propos</a></li>
+    <li><a href="apropos.html">Débutant, Commencer ici...</a></li>
     <li><a href="formation.html">Formations</a></li>
     <li><a href="webinaires.html">Webinaires</a></li>
     
@@ -491,13 +492,15 @@ const headerHTML = `
                     <div class="container">
                         <div class="uc-navbar min-h-64px text-gray-900 dark:text-white" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
                             <div class="uc-navbar-left">
-                                <div class="uc-logo">\n <a href="../fr/">\n <img class="d-block dark:d-none" src="../assets/images/logo-ic.png" alt="Inawo light" data-uc-svg style="width: 90px">\n </a>\n <a href="../fr/">\n <img class="d-none dark:d-block" src="../assets/images/logo-ic.png" alt="Inawo dark" data-uc-svg style="width: 90px">\n </a>\n</div>
+                                <div class="uc-logo">\n <a href="../fr/">\n <img class="d-block dark:d-none" src="../assets/images/logoauditacademie.png" alt="Inawo light" data-uc-svg style="width: 90px">\n </a>\n <a href="../fr/">\n <img class="d-none dark:d-block" src="../assets/images/logoauditacademie1.png" alt="Inawo dark" data-uc-svg style="width: 90px">\n </a>\n</div>
                                 <ul class="uc-navbar-nav gap-3 d-none lg:d-flex ltr:ms-2 rtl:me-2">
+                                    <li><a href="apropos.html">A Propos</a></li>
                                     <li>
+                                        
                                         <a href="commencerici.html">Débutant, Commencer ici...</a>
                             
                                     <li>
-                                        <a href="mesblogs.html">L'Audit</a>
+                                        <a href="mesblogs.html">Blog</a>
                                     </li>
                                     
                                         <li>
@@ -517,22 +520,8 @@ const headerHTML = `
                             <div class="uc-navbar-right">
                                 <!-- DEBUT-->
                                 <li class="d-inline-block">
-                                    <a href="#" class="hstack gap-1 text-none fw-medium">
-                                        <i class="icon icon-1 unicon-wikis"></i>
-                                        
-                                    </a>
-                                    <div class="py-1 bg-white dark:bg-gray-800 shadow-xs w-200px" data-uc-drop="mode: click; offset: 0; pos: top-right; boundary: !.uc-navbar-container; animation: uc-animation-slide-top-small; duration: 150;">
-                                        <ul class="nav-y gap-0 fs-7">
-                                            <li>
-                                                <span class="w-100 p-1 px-2 text-muted" style="cursor: not-allowed; opacity: 0.6;">
-        <img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/common/en.svg" alt="English">English
-    </span>   </li>
-                                            <li>
-                                                <a href="../fr/" class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/common/fr.svg" alt="French">Français</a>
-                                            </li> 
-                                        </ul>
-
-                                    </div> 
+                                    
+                                    
     
                                 </li>
                                 
@@ -554,11 +543,11 @@ const headerHTML = `
                                         <div class="dropdown-divider-custom"></div>
                                         
                                         <a href="formation.html" class="dropdown-item-custom">
-                                            Mes formations
+                                            Formations
                                         </a>
                                         <a href="webinaires.html" class="dropdown-item-custom">
-    Mes webinaires
-</a>
+                                            Webinaires
+                                        </a>
                                         
                                     </div>
                                 </div>
@@ -851,10 +840,10 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="dropdown-divider-custom"></div>
             
-            <a href="formation.html" class="dropdown-item-custom">Mes formations</a>
-            <a href="webinaires.html" class="dropdown-item-custom">Mes webinaires</a>
-            <a href="profil.html" class="dropdown-item-custom">Mon profil</a>
-            <a href="abonnements.html" class="dropdown-item-custom">Mes abonnements</a>
+            <a href="dashboard?page=trainings" class="dropdown-item-custom">Mes formations</a>
+<a href="dashboard?page=webinars" class="dropdown-item-custom">Mes webinaires</a>
+<a href="dashboard?page=profile" class="dropdown-item-custom">Mon profil</a>
+<a href="dashboard?page=subscriptions" class="dropdown-item-custom">Mes abonnements</a>
             <div class="dropdown-divider-custom"></div>
             <a href="index.html" class="dropdown-item-custom" id="logoutBtnHeader">Déconnexion</a>
         `;

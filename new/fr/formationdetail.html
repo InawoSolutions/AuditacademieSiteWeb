@@ -462,14 +462,14 @@
                     
                     <div class="d-flex align-items-center">
     <span class="me-3">Ce cours vous intéresse ?</span>
-    <a class="btn btn-start btn-sm" id="start-btn" href="connexion.html" style="padding: 6px 18px; font-size: 1rem;">Commencer</a>
+    <a class="btn btn-start btn-sm" id="start-btn" href="formationdetailcnx.html" style="padding: 6px 18px; font-size: 1rem;">Commencer</a>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(location.search);
         const id = params.get('id');
         const startBtn = document.getElementById('start-btn');
-        if (id && startBtn) {
-            startBtn.href = `connexion?formation=${id}`;
+        if (id) {
+            startBtn.href = `formationdetailcnx?id=${id}`;
         }
     });
     </script>
@@ -687,7 +687,7 @@
             </div>
             <div class="col-md-3 text-end">
     <p class="mb-2">Cours disponible</p>
-    <a class="btn btn-start btn-sm" id="start-btn-bottom" href="connexion.html" style="padding: 6px 18px; font-size: 1rem;">Commencer</a>
+    <a class="btn btn-start btn-sm" id="start-btn-bottom" href="formationdetailcnx.html" style="padding: 6px 18px; font-size: 1rem;">Commencer</a>
 </div>
         </div>
     </div>
@@ -838,8 +838,8 @@ if (imgFormationBottom) {
 }
           const startBtn = document.getElementById('start-btn');
           const startBtnBottom = document.getElementById('start-btn-bottom');
-          if (startBtn) startBtn.href = `connexion?formation=${id}`;
-          if (startBtnBottom) startBtnBottom.href = `connexion?formation=${id}`;
+          if (startBtn) startBtn.href = `formationdetailcnx?id=${id}`;
+          if (startBtnBottom) startBtnBottom.href = `formationdetailcnx?id=${id}`;
 
           // Objectifs pédagogiques
           if (formation.objectifs) {

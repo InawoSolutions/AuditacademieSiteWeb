@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" >
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Les formations Audit Académie.</title>
-        <meta name="description" content="Des offres pour toutes les catégories d'entreprises. Améliorez votre façon de travailler, découvrez un tout nouvel outil et propulsez votre business plus rapidement.">
-        <meta name="keywords" content="saas, saas template, site template, software, startup, digital product, html5, landing, marketing, bootstrap, uikit3, agency, ai, digital agency, it solutions, nodejs">
-        <link rel="canonical" href="https://unistudio.co/html/Lexend">
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formations Audit Académie.</title>
+    <meta name="description"
+        content="Des offres pour toutes les catégories d'entreprises. Améliorez votre façon de travailler, découvrez un tout nouvel outil et propulsez votre business plus rapidement.">
+    <meta name="keywords"
+        content="saas, saas template, site template, software, startup, digital product, html5, landing, marketing, bootstrap, uikit3, agency, ai, digital agency, it solutions, nodejs">
+    <link rel="canonical" href="https://unistudio.co/html/Lexend">
     <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/header_style.css">
     <link rel="stylesheet" href="../assets/css/theme/main.css">
-<link rel="stylesheet" href="../assets/css/header_style.css">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
 
     <meta name="theme-color" content="#178d72">
 
@@ -83,111 +86,153 @@
 
     <link rel="stylesheet" href="../assets/css/custom.css">
 
-        <style>
-            .main-features-nav > li {
-                margin: 0 10px;
-                position: relative;
-            }
-            .main-features-nav > li > a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                line-height: 40px !important;
-                transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
-                border-radius: 30px;
-                padding: 0 15px;
-            }
-            .main-features-nav > li > a:hover {
-                background-color: #014a92;
-                color: white;
-                border-color: #014a92;
-            }
-            .main-features-nav > li.uc-active > a {
-                background-color: #014a92;
-                color: white;
-                border-color: #014a92;
-            }
-            .main-features-nav > li::before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                border-bottom: 3px solid transparent;
-                width: 0%;
-                transition: 0ms cubic-bezier(1, 0, 0, 1);
-                background-color: #014a92;
-                color: white;
-                border-radius: 50px;
-            }
-            .main-features-nav > li.uc-active::before {
-                border-bottom: none;
-                width: 100%;
-                transition-duration: 500ms;
-            }
-            .uc-switcher-nav {
-                display: flex;
-                justify-content: center;
-                gap: 5px;
-                padding: 2px;
-                border: 2px solid #014a92;
-                border-radius: 25px;
-                background-color: #f9f9f9;
-            }
-            .uc-switcher-nav > li {
-                border-radius: 25px;
-                overflow: hidden;
-            }
-            .uc-switcher-nav > li > a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                padding: 10px 20px;
-                border-radius: 20px;
-                transition: background-color 0.3s, color 0.3s, border 0.3s;
-            }
-            .uc-switcher-nav > li > a:hover {
-                background-color: #014a92;
-                color: white;
-            }
-            .uc-switcher-nav > li.uc-active > a {
-                background-color: #014a92;
-                color: white;
-            }
-            .blog{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+    <style>
+        .truncate-2-lines {
+            display: -webkit-box;
+            
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 2.8em;
+            /* pour garder la hauteur même si une seule ligne */
+            max-height: 3.2em;
+        }
+
+        /* Limite la description à 2 lignes */
+        .truncate-2-desc {
+            display: -webkit-box;
+            
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 2.6em;
+            max-height: 3em;
+        }
+
+        /* Limite le nom du contributeur à 1 ligne */
+        .truncate-1-line {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .main-features-nav>li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .main-features-nav>li>a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            line-height: 40px !important;
+            transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+            border-radius: 30px;
+            padding: 0 15px;
+        }
+
+        .main-features-nav>li>a:hover {
+            background-color: #014a92;
+            color: white;
+            border-color: #014a92;
+        }
+
+        .main-features-nav>li.uc-active>a {
+            background-color: #014a92;
+            color: white;
+            border-color: #014a92;
+        }
+
+        .main-features-nav>li::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 3px solid transparent;
+            width: 0%;
+            transition: 0ms cubic-bezier(1, 0, 0, 1);
+            background-color: #014a92;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .main-features-nav>li.uc-active::before {
+            border-bottom: none;
+            width: 100%;
+            transition-duration: 500ms;
+        }
+
+        .uc-switcher-nav {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            padding: 2px;
+            border: 2px solid #014a92;
+            border-radius: 25px;
+            background-color: #f9f9f9;
+        }
+
+        .uc-switcher-nav>li {
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .uc-switcher-nav>li>a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s, border 0.3s;
+        }
+
+        .uc-switcher-nav>li>a:hover {
+            background-color: #014a92;
+            color: white;
+        }
+
+        .uc-switcher-nav>li.uc-active>a {
+            background-color: #014a92;
+            color: white;
+        }
+
+        .blog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .blog {
+            flex: 1 1 calc(25% - 10px);
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 768px) {
             .blog {
-                flex: 1 1 calc(25% - 10px);
-                box-sizing: border-box;
+                flex: 1 1 calc(50% - 10px);
             }
-            @media screen and (max-width: 768px) {
-                .blog {
-                    flex: 1 1 calc(50% - 10px);
-                }
-            }
-        </style>
-        <style>
-#formation-category-list a.active {
-    background: #2a4743;
-    color: #fff !important;
-}
-</style>
-    </head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2MW7TVQEX"></script>
-    <script>
+        }
+    </style>
+    <style>
+        #formation-category-list a.active {
+            background: #2a4743;
+            color: #fff !important;
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2MW7TVQEX"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-Q2MW7TVQEX');
-    </script>
+</script>
 
-    <!-- <script>
+<!-- <script>
 function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -200,193 +245,203 @@ if (!token) {
 }
 </script> -->
 
-    <body class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
+<body
+    class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
 
-        <!--  Bottom Actions Sticky -->
-        <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
-            <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
-                <label class="switch">
-                    <span class="sr-only">Dark mode toggle</span>
-                    <input type="checkbox">
-                    <span class="slider fs-5"></span>
-                </label>
-            </div>
-            <a  class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
-                <i class="icon-2 unicon-chevron-up"></i>
-            </a>
+    <!--  Bottom Actions Sticky -->
+    <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+        <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white"
+            data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox">
+                <span class="slider fs-5"></span>
+            </label>
         </div>
+        <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+            <i class="icon-2 unicon-chevron-up"></i>
+        </a>
+    </div>
 
-        <div class="uc-banner-top py-1 p-2 m-0 hide-on-sticky text-center dark:from-tertiary-200 to-primary-700 dark:to-tertiary text-white dark:text-dark"
-     data-uc-alert data-anime="opacity: [0, 1]; easing: easeInOutcubic; duration: 500; delay: 0;"
-     style="background-color: #2a4743;">
-    <a href="#" class="uc-alert-close top-0 end-0" style="margin: 14px" data-uc-close></a>
-    <!-- <p class="fs-7">
+    <div class="uc-banner-top py-1 p-2 m-0 hide-on-sticky text-center dark:from-tertiary-200 to-primary-700 dark:to-tertiary text-white dark:text-dark"
+        data-uc-alert data-anime="opacity: [0, 1]; easing: easeInOutcubic; duration: 500; delay: 0;"
+        style="background-color: #2a4743;">
+        <a href="#" class="uc-alert-close top-0 end-0" style="margin: 14px" data-uc-close></a>
+        <!-- <p class="fs-7">
         Audit Académie, Cotonou N°RCCM RB/COT/18 B 20854<br class="d-block lg:d-none">
         <a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504/"
            class="uc-link text-white dark:text-primary border-bottom fs-7" target="_blank" rel="nofollow">
            ,Programmeexclusifcia@gmail.com, Imane.consulting@gmail.com
         </a>
     </p> -->
-</div>
+    </div>
 
-        <!-- Header start -->
-        <div id="header"></div>
-        <script src="../assets/js/header.js"></script>
-        <!-- Header end -->
+    <!-- Header start -->
+    <div id="header"></div>
+    <script src="../assets/js/header.js"></script>
+    <!-- Header end -->
 
-        <!-- Wrapper start -->
-        <div id="wrapper" >
+    <!-- Wrapper start -->
+    <div id="wrapper">
 
-            <!-- Section start -->
-            <div id="blog_posts" class="blog-posts section panel" >
-                <div class="section-outer panel py-4 md:py-6 xl:py-10">
-                    <div class="container">
-                        <div class="section-inner panel">
-                            <div class="row child-cols-12 g-4 sm:g-6 xl:g-8" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                                <div style="margin-bottom: 5rem;">
-                                    <div class="heading vstack gap-2 justify-center items-center text-center panel" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                                        <h2 class="h3 lg:h2 m-0"><span class="px-1 bg-tertiary text-primary"></span> Prêt à donner un nouvel élan à votre carrière ?</h2>
-                                        <p class="fs-6 xl:fs-3 xl:px-8">Mettez à jour vos connaissances, développez de nouvelles compétences, obtenez une certification professionnelle… Quel que soit votre projet de carrière, nous sommes là pour vous conseiller et vous accompagner. Apprenez un métier qui a de l'avenir avec la référence de l'éducation en ligne.</p>
-                                    </div>
+        <!-- Section start -->
+        <div id="blog_posts" class="blog-posts section panel">
+            <div class="section-outer panel py-4 md:py-6 xl:py-10">
+                <div class="container">
+                    <div class="section-inner panel">
+                        <div class="row child-cols-12 g-4 sm:g-6 xl:g-8"
+                            data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <div style="margin-bottom: 5rem;">
+                                <div class="heading vstack gap-2 justify-center items-center text-center panel"
+                                    data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                    <h2 class="h3 lg:h2 m-0"><span class="px-1 bg-tertiary text-primary"></span> Prêt à
+                                        donner un nouvel élan à votre carrière ?</h2>
+                                    <p class="fs-6 xl:fs-3 xl:px-8">Mettez à jour vos connaissances, développez de
+                                        nouvelles compétences, obtenez une certification professionnelle… Quel que soit
+                                        votre projet de carrière, nous sommes là pour vous conseiller et vous
+                                        accompagner. Apprenez un métier qui a de l'avenir avec la référence de
+                                        l'éducation en ligne.</p>
                                 </div>
-                                <!-- Barre de catégories dynamique -->
-<ul class="uc-subnav uc-subnav-outline-pill gap-1 lg:gap-2 fs-5 fw-medium justify-start lg:justify-center mx-auto overflow-scroll hide-scrollbar flex-nowrap max-w-100 mt-4 mb-4" id="formation-category-list">
-    <!-- Les catégories seront injectées ici -->
-</ul>
-                                <!-- Liste dynamique des formations -->
-                                <div id="formations-list" class="row"></div>
-                                <!-- Fin des formations dynamiques -->
                             </div>
+                            <!-- Barre de catégories dynamique -->
+                            <ul class="uc-subnav uc-subnav-outline-pill gap-1 lg:gap-2 fs-5 fw-medium justify-start lg:justify-center mx-auto overflow-scroll hide-scrollbar flex-nowrap max-w-100 mt-4 mb-4"
+                                id="formation-category-list">
+                                <!-- Les catégories seront injectées ici -->
+                            </ul>
+                            <!-- Liste dynamique des formations -->
+                            <div id="formations-list" class="row g-4"></div>
+                            <!-- Fin des formations dynamiques -->
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Wrapper end -->
-            <!-- Section end -->
-            <hr class="footer-separation">
-            <!-- Footer start -->
-            <div id="footer"></div>
-            <script src="../assets/js/footer.js"></script>
-            <!-- Footer end -->
+        </div>
+        <!-- Wrapper end -->
+        <!-- Section end -->
+        <hr class="footer-separation">
+        <!-- Footer start -->
+        <div id="footer"></div>
+        <script src="../assets/js/footer.js"></script>
+        <!-- Footer end -->
 
-            <!-- include jquery & bootstrap js -->
-            <script defer src="../assets/js/libs/jquery.min.js"></script>
-            <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+        <!-- include jquery & bootstrap js -->
+        <script defer src="../assets/js/libs/jquery.min.js"></script>
+        <script defer src="../assets/js/libs/bootstrap.min.js"></script>
 
-            <!-- include scripts -->
-            <script defer src="../assets/js/libs/anime.min.js"></script>
-            <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
-            <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
-            <script defer src="../assets/js/libs/typed.min.js"></script>
-            <script defer src="../assets/js/libs/tilt.min.js"></script>
-            <script defer src="../assets/js/libs/split-type.min.js"></script>
-            <script defer src="../assets/js/libs/prettify.min.js"></script>
-            <script defer src="../assets/js/libs/gsap.min.js"></script>
-            <script defer src="../assets/js/core/magic-cursor.js"></script>
-            <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
-            <script defer src="../assets/js/helpers/swiper-helper.js"></script>
-            <script defer src="../assets/js/helpers/splitype-helper.js"></script>
-            <script defer src="../assets/js/helpers/anime-helper.js"></script>
-            <script defer src="../assets/js/helpers/typed-helper.js"></script>
-            <script defer src="../assets/js/helpers/tilt-helper.js"></script>
-            <script defer src="../assets/js/core/marquee.js"></script>
-            <script defer src="../assets/js/uikit-components-bs.js"></script>
+        <!-- include scripts -->
+        <script defer src="../assets/js/libs/anime.min.js"></script>
+        <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+        <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+        <script defer src="../assets/js/libs/typed.min.js"></script>
+        <script defer src="../assets/js/libs/tilt.min.js"></script>
+        <script defer src="../assets/js/libs/split-type.min.js"></script>
+        <script defer src="../assets/js/libs/prettify.min.js"></script>
+        <script defer src="../assets/js/libs/gsap.min.js"></script>
+        <script defer src="../assets/js/core/magic-cursor.js"></script>
+        <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+        <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+        <script defer src="../assets/js/helpers/splitype-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper.js"></script>
+        <script defer src="../assets/js/helpers/typed-helper.js"></script>
+        <script defer src="../assets/js/helpers/tilt-helper.js"></script>
+        <script defer src="../assets/js/core/marquee.js"></script>
+        <script defer src="../assets/js/uikit-components-bs.js"></script>
 
-            <!-- include app script -->
-            <script defer src="../assets/js/app.js"></script>
+        <!-- include app script -->
+        <script defer src="../assets/js/app.js"></script>
 
-            <script>
-                // Schema toggle via URL
-                const queryString = window.location.search;
-                const urlParams = new URLSearchParams(queryString);
-                const getSchema = urlParams.get("schema");
-                if (getSchema === "dark") {
-                    setDarkMode(1);
-                } else if (getSchema === "light") {
-                    setDarkMode(0);
+        <script>
+            // Schema toggle via URL
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const getSchema = urlParams.get("schema");
+            if (getSchema === "dark") {
+                setDarkMode(1);
+            } else if (getSchema === "light") {
+                setDarkMode(0);
+            }
+        </script>
+        <script>
+            // Récupérer les liens via leur texte (Sales and prospecting, Billing and management, Inawo global)
+            const links = document.querySelectorAll("#specific-panel a");
+            // Récupérer tous les prix visibles par défaut (h5 sans display: none)
+            const defaultPrices = document.querySelectorAll('h5:not([style*="display: none"])');
+            // Récupérer tous les prix cachés (h5 avec display: none)
+            const hiddenPrices = document.querySelectorAll('h5[style*="display: none"]');
+            // Fonction pour afficher le contenu par défaut
+            function afficherContenuParDefaut() {
+                defaultPrices.forEach(price => price.style.display = "block");
+                hiddenPrices.forEach(price => price.style.display = "none");
+            }
+            // Fonction pour afficher les prix cachés
+            function afficherPrixCache() {
+                defaultPrices.forEach(price => price.style.display = "none");
+                hiddenPrices.forEach(price => price.style.display = "block");
+            }
+            // Ajouter des gestionnaires d'événements aux liens
+            links.forEach((link, index) => {
+                if (index === 0 || index === 1) {
+                    // Pour les deux premiers liens : afficher le contenu par défaut
+                    link.addEventListener("click", afficherContenuParDefaut);
+                } else if (index === 2) {
+                    // Pour le troisième lien : afficher les prix cachés
+                    link.addEventListener("click", afficherPrixCache);
                 }
-            </script>
-            <script>
-                // Récupérer les liens via leur texte (Sales and prospecting, Billing and management, Inawo global)
-                const links = document.querySelectorAll("#specific-panel a");
-                // Récupérer tous les prix visibles par défaut (h5 sans display: none)
-                const defaultPrices = document.querySelectorAll('h5:not([style*="display: none"])');
-                // Récupérer tous les prix cachés (h5 avec display: none)
-                const hiddenPrices = document.querySelectorAll('h5[style*="display: none"]');
-                // Fonction pour afficher le contenu par défaut
-                function afficherContenuParDefaut() {
-                    defaultPrices.forEach(price => price.style.display = "block");
-                    hiddenPrices.forEach(price => price.style.display = "none");
-                }
-                // Fonction pour afficher les prix cachés
-                function afficherPrixCache() {
-                    defaultPrices.forEach(price => price.style.display = "none");
-                    hiddenPrices.forEach(price => price.style.display = "block");
-                }
-                // Ajouter des gestionnaires d'événements aux liens
-                links.forEach((link, index) => {
-                    if (index === 0 || index === 1) {
-                        // Pour les deux premiers liens : afficher le contenu par défaut
-                        link.addEventListener("click", afficherContenuParDefaut);
-                    } else if (index === 2) {
-                        // Pour le troisième lien : afficher les prix cachés
-                        link.addEventListener("click", afficherPrixCache);
-                    }
-                });
-            </script>
-            <script>
-                const link = document.querySelectorAll("#liens a");
-                // Sélectionne les boutons
-                const monthlyButton = document.getElementById('monthly');
-                const yearlyButton = document.getElementById('yearly');
-                // Sélectionne toutes les parties à afficher/cacher
-                const defaultElements = document.querySelectorAll('.default-price');
-                const hiddenElements = document.querySelectorAll('.hidden-price');
-                // Fonction pour activer l'affichage "Monthly"
-                monthlyButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    monthlyButton.classList.add('active');
-                    yearlyButton.classList.remove('active');
-                    // Afficher les éléments par défaut et cacher les autres
-                    defaultElements.forEach(el => el.style.display = 'block');
-                    hiddenElements.forEach(el => el.style.display = 'none');
-                });
-                // Fonction pour activer l'affichage "Yearly"
-                yearlyButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    yearlyButton.classList.add('active');
-                    monthlyButton.classList.remove('active');
-                    // Afficher les éléments "hidden" et cacher les "default"
-                    hiddenElements.forEach(el => el.style.display = 'block');
-                    defaultElements.forEach(el => el.style.display = 'none');
-                });
-            </script>
+            });
+        </script>
+        <script>
+            const link = document.querySelectorAll("#liens a");
+            // Sélectionne les boutons
+            const monthlyButton = document.getElementById('monthly');
+            const yearlyButton = document.getElementById('yearly');
+            // Sélectionne toutes les parties à afficher/cacher
+            const defaultElements = document.querySelectorAll('.default-price');
+            const hiddenElements = document.querySelectorAll('.hidden-price');
+            // Fonction pour activer l'affichage "Monthly"
+            monthlyButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                monthlyButton.classList.add('active');
+                yearlyButton.classList.remove('active');
+                // Afficher les éléments par défaut et cacher les autres
+                defaultElements.forEach(el => el.style.display = 'block');
+                hiddenElements.forEach(el => el.style.display = 'none');
+            });
+            // Fonction pour activer l'affichage "Yearly"
+            yearlyButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                yearlyButton.classList.add('active');
+                monthlyButton.classList.remove('active');
+                // Afficher les éléments "hidden" et cacher les "default"
+                hiddenElements.forEach(el => el.style.display = 'block');
+                defaultElements.forEach(el => el.style.display = 'none');
+            });
+        </script>
 
-            <!-- ====== AJOUT API TOKEN ICI ====== -->
-            <script>
-                // Utilisation du token pour requête API protégée
-                function getCookie(name) {
-                    const value = `; ${document.cookie}`;
-                    const parts = value.split(`; ${name}=`);
-                    if (parts.length === 2) return parts.pop().split(';').shift();
-                    return null;
+        <!-- ====== AJOUT API TOKEN ICI ====== -->
+        <script>
+            // Utilisation du token pour requête API protégée
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+                return null;
+            }
+            fetch('https://imaneapi.auditacademie.com/api/une-route-protegee/', {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + token
                 }
-                fetch('https://imaneapi.auditacademie.com/api/une-route-protegee/', {
-                    method: 'GET',
-                    headers: {
-                        'Authorization': 'Bearer ' + token
-                    }
-                })
+            })
                 .then(response => response.json())
                 .then(data => {
                     // Traite les données ici
                     console.log(data);
                 });
-            </script>
-            <!-- ====== FIN AJOUT API TOKEN ====== -->
+        </script>
+        <!-- ====== FIN AJOUT API TOKEN ====== -->
 
-            <!-- ====== SCRIPT POUR AFFICHER LES FORMATIONS DE L'API ====== -->
-            <script>
+        <!-- ====== SCRIPT POUR AFFICHER LES FORMATIONS DE L'API ====== -->
+        <script>
             async function fetchAndDisplayFormations() {
                 const container = document.getElementById('formations-list');
                 container.innerHTML = '<p>Chargement des formations...</p>';
@@ -427,12 +482,12 @@ if (!token) {
                 }
             }
             document.addEventListener('DOMContentLoaded', fetchAndDisplayFormations);
-            </script>
-            <!-- ====== FIN SCRIPT API FORMATIONS ====== -->
+        </script>
+        <!-- ====== FIN SCRIPT API FORMATIONS ====== -->
 
-        </div>
+    </div>
 
-        <script>
+    <script>
 document.addEventListener('DOMContentLoaded', function () {
     const formationsContainer = document.getElementById('formations-list');
     const categoryList = document.getElementById('formation-category-list');
@@ -471,54 +526,54 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     // 2. Fonction pour afficher les formations selon le secteur sélectionné
-    // ...existing code...
-function renderFormations(secteurNom) {
-    let filtered = allFormations;
-    if (secteurNom && secteurNom !== "") {
-        filtered = allFormations.filter(formation => formation.secteur && formation.secteur.nom === secteurNom);
-    }
-    if (!filtered.length) {
-        formationsContainer.innerHTML = "<p>Aucune formation trouvée.</p>";
-        return;
-    }
-    formationsContainer.innerHTML = filtered.map(formation => {
-        let imageURL = '../assets/images/blog/default.jpg';
-if (formation.image_couverture && formation.image_couverture.startsWith('/photos')) {
-    imageURL = baseURL + formation.image_couverture;
-} else if (formation.image_couverture) {
-    imageURL = formation.image_couverture;
-}
-        return `
-            <div class="col-3">
-                <article class="post type-post panel overflow-hidden vstack border bg-white dark:bg-gray-900 dark:text-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
-                    <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
-                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageURL}" alt="${formation.titre || 'Formation'}">
-                        <a href="formationdetail?id=${formation.id}" class="position-cover"></a>
-                    </figure>
-                    <div class="panel vstack gap-1 p-2">
-                        <h3 class="post-title h5 m-0 ltr:pe-4 rtl:ps-4"><span>${formation.titre || ''}</span></h3>
-                        <div class="content vstack justify-between gap-narrow">
-                            <p class="post-excrept fs-6 opacity-70 truncate-3-lines">${formation.description_courte || ''}</p>
-                        </div>
-                        <div class="fs-4 mb-1" style="color:#2a4743; font-weight:900; font-size:2rem;">
-                            ${formation.prix_particulier ? formation.prix_particulier + ' €' : ''}
-                        </div>
-                        <div class="fs-5 mb-1" style="color:#178d72; font-weight:700; font-size:1.2rem;">
-                            <span>
+    function renderFormations(secteurNom) {
+        let filtered = allFormations;
+        if (secteurNom && secteurNom !== "") {
+            filtered = allFormations.filter(formation => formation.secteur && formation.secteur.nom === secteurNom);
+        }
+        if (!filtered.length) {
+            formationsContainer.innerHTML = "<p>Aucune formation trouvée.</p>";
+            return;
+        }
+        formationsContainer.innerHTML = filtered.map(formation => {
+            let imageURL = '../assets/images/blog/default.jpg';
+            if (formation.image_couverture && formation.image_couverture.startsWith('/photos')) {
+                imageURL = baseURL + formation.image_couverture;
+            } else if (formation.image_couverture) {
+                imageURL = formation.image_couverture;
+            }
+            return `
+                <div class="col-3">
+                    <article class="post type-post panel overflow-hidden vstack border bg-white dark:bg-gray-900 dark:text-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
+                        <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
+                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageURL}" alt="${formation.titre || 'Formation'}">
+                            <a href="formationdetail?id=${formation.id}" class="position-cover"></a>
+                        </figure>
+                        <div class="panel vstack gap-1 p-2">
+                            <h3 class="post-title h5 m-0 ltr:pe-4 rtl:ps-4">
+                                <span class="truncate-2-lines" title="${formation.titre || ''}">${formation.titre || ''}</span>
+                            </h3>
+                            <div class="content vstack justify-between gap-narrow">
+                                <p class="post-excrept fs-6 opacity-70 truncate-2-desc" title="${formation.description_courte || ''}">
+                                    ${formation.description_courte || ''}
+                                </p>
+                            </div>
+                            <div class="fs-4 mb-1" style="color:#2a4743; font-weight:900; font-size:2rem;">
+                                ${formation.prix_particulier ? formation.prix_particulier + ' €' : ''}
+                            </div>
+                            <div class="fs-5 mb-1 truncate-1-line" style="color:#178d72; font-weight:700; font-size:1.2rem;" title="${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}">
                                 ${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}
-                            </span>
+                            </div>
+                            <a href="formationdetail?id=${formation.id}" class="uc-link dark:text-tertiary fs-7 xl:fs-6 fw-bold hstack gap-1 sm:mt-1 xl:mt-2">
+                                <span>Découvrir la formation</span>
+                                <i class="position-relative icon unicon-arrow-up-right fw-bold rtl:-rotate-90 translate-y-px"></i>
+                            </a>
                         </div>
-                        <a href="formationdetail?id=${formation.id}" class="uc-link dark:text-tertiary fs-7 xl:fs-6 fw-bold hstack gap-1 sm:mt-1 xl:mt-2">
-                            <span>Découvrir la formation</span>
-                            <i class="position-relative icon unicon-arrow-up-right fw-bold rtl:-rotate-90 translate-y-px"></i>
-                        </a>
-                    </div>
-                </article>
-            </div>
-        `;
-    }).join('');
-}
-
+                    </article>
+                </div>
+            `;
+        }).join('');
+    }
 
     // 3. Gestion du clic sur les secteurs (délégué car la liste est dynamique)
     categoryList.addEventListener('click', function (e) {
@@ -534,7 +589,9 @@ if (formation.image_couverture && formation.image_couverture.startsWith('/photos
     });
 });
 </script>
-    </body>
+
+</body>
+
 </html>
 
 <style>
@@ -543,10 +600,12 @@ if (formation.image_couverture && formation.image_couverture.startsWith('/photos
             font-size: 1rem !important;
             line-height: 1.2 !important;
         }
+
         p {
             font-size: 0.85rem !important;
         }
     }
+
     @media (max-width: 768px) {
         .uc-navbar-right {
             display: flex;
@@ -554,17 +613,21 @@ if (formation.image_couverture && formation.image_couverture.startsWith('/photos
             align-items: center;
             gap: 40px;
         }
+
         .uc-navbar-right a {
             width: 100%;
             text-align: center;
         }
+
         .uc-navbar-right .btn {
             width: 90%;
         }
-        .fr{
+
+        .fr {
             margin-top: 10%;
         }
     }
+
     @media (max-width: 768px) {
         .btn-responsive {
             width: 100%;
@@ -573,6 +636,7 @@ if (formation.image_couverture && formation.image_couverture.startsWith('/photos
             white-space: nowrap;
         }
     }
+
     @media (min-width: 769px) {
         .btn-responsive {
             width: auto;
@@ -580,6 +644,7 @@ if (formation.image_couverture && formation.image_couverture.startsWith('/photos
             font-size: 16px;
         }
     }
+
     .footer-separation {
         border: none;
         border-top: 1px solid black;
@@ -589,6 +654,7 @@ if (formation.image_couverture && formation.image_couverture.startsWith('/photos
         position: relative;
         top: 80px;
     }
+
     .background-video {
         position: absolute;
         top: 0;
@@ -598,20 +664,22 @@ if (formation.image_couverture && formation.image_couverture.startsWith('/photos
         object-fit: cover;
         z-index: -1;
     }
+
     @media (min-width: 575px) {
         .custom-icons {
             display: none !important;
         }
     }
+
     @media (max-width: 574px) {
         .custom-icons {
             display: flex !important;
         }
     }
+
     @media (max-width: 514px) {
         .panel {
             margin-top: 20px;
         }
     }
-
 </style>

@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+
+    <style>
+        .sidebar {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            border-right: 1px solid #dee2e6;
+        }
+
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: #6c757d;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 2px 8px;
+            transition: all 0.2s;
+        }
+
+        .sidebar-item:hover {
+            background-color: #e9ecef;
+            color: #495057;
+            text-decoration: none;
+        }
+
+        .sidebar-item.active {
+            background-color: #2a4743;
+            color: white;
+        }
+
+        .sidebar-item i {
+            width: 20px;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+
+        .profile-banner {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .profile-banner .info-icon {
+            color: #2a4743;
+            margin-right: 8px;
+        }
+
+        .stats-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .stats-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 24px;
+        }
+
+        .stats-icon.courses-followed {
+            background-color: #e3f2fd;
+            color: #2a4743;
+        }
+
+        .stats-icon.courses-active {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .stats-icon.courses-completed {
+            background-color: #e8f5e8;
+            color: #388e3c;
+        }
+
+        .stats-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 8px;
+        }
+
+        .stats-label {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .btn-profile {
+            background-color: transparent;
+            border: 1px solid #2a4743;
+            color: #2a4743;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .btn-profile:hover {
+            background-color: #2a4743;
+            color: white;
+        }
+
+        .page-content {
+            transition: opacity 0.3s ease;
+        }
+
+        .profile-info {
+            background-color: white;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+
+        .profile-value {
+            font-weight: 500;
+            color: #212529;
+        }
+
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .content-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+            background-color: white;
+        }
+
+        .progress-bar-custom {
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        .badge-status {
+            font-size: 12px;
+            padding: 4px 8px;
+        }
+
+        .webinar-time {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .subscription-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .btn-action {
+            padding: 6px 12px;
+            font-size: 14px;
+            border-radius: 6px;
+        }
+
+        .status-active {
+            color: #28a745;
+            background-color: #d4edda;
+        }
+
+        .status-pending {
+            color: #ffc107;
+            background-color: #fff3cd;
+        }
+
+        .status-completed {
+            color: #6c757d;
+            background-color: #e2e3e5;
+        }
+
+        .status-expired {
+            color: #dc3545;
+            background-color: #f8d7da;
+        }
+
+        .user-header {
+            background-color: white;
+            padding: 16px 0;
+        }
+
+        .user-avatar .avatar-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #2a4743;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .user-greeting .greeting-text {
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .user-greeting .user-name {
+            color: #212529;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../fr/" class="btn btn-link d-inline-flex align-items-center mt-3 ms-3 fw-bold"
+        style="position: absolute; top: 0; left: 0; z-index: 1050; color: #2a4743; font-weight: bold;">
+        <i class="bi bi-arrow-left me-2"></i> Retourner à l'accueil
+    </a><br><br>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar p-0">
+                <div class="p-3">
+                    <nav class="nav flex-column">
+                        <a href="#" class="sidebar-item active" data-page="dashboard">
+                            <i class="bi bi-grid-3x3-gap-fill"></i>
+                            Tableau de bord
+                        </a>
+                        <a href="#" class="sidebar-item" data-page="profile">
+                            <i class="bi bi-person-fill"></i>
+                            Mon profil
+                        </a>
+                        <a href="#" class="sidebar-item" data-page="trainings">
+                            <i class="bi bi-book-fill"></i>
+                            Mes formations
+                        </a>
+                        <a href="#" class="sidebar-item" data-page="webinars">
+                            <i class="bi bi-camera-video-fill"></i>
+                            Mes webinaires
+                        </a>
+                        <a href="#" class="sidebar-item" data-page="subscriptions">
+                            <i class="bi bi-credit-card-fill"></i>
+                            Mes abonnements
+                        </a>
+                        <a href="#" class="sidebar-item" data-page="logout">
+                            <i class="bi bi-box-arrow-right"></i>
+                            Déconnexion
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10">
+                <div class="p-4">
+                    <!-- User Welcome Header -->
+                    <div class="user-header d-flex align-items-center mb-4 pb-3"
+                        style="border-bottom: 1px solid #dee2e6;">
+                        <div class="user-avatar me-3">
+                            <div class="avatar-circle" id="profile-avatar">EI</div>
+                        </div>
+                        <div class="user-greeting">
+                            <div class="greeting-text">Bonjour,</div>
+                            <div class="user-name">Essai Ia</div>
+                        </div>
+                    </div>
+                    <!-- Dashboard Page -->
+                    <div id="dashboard-page" class="page-content">
+                        <!-- Profile Banner -->
+                        <div class="profile-banner d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-info-circle info-icon"></i>
+                                <span>Définissez votre photo de profil</span>
+                            </div>
+                            <button class="btn btn-profile" id="btn-upload-photo">Cliquez ici</button>
+                            <input type="file" id="profile-photo-input" accept="image/*" style="display:none;">
+                            <div>
+       
+        <button class="btn btn-outline-danger ms-2 d-none" id="btn-delete-photo" type="button">
+            Supprimer la photo de profil
+        </button>
+        <input type="file" id="profile-photo-input" accept="image/*" style="display:none;">
+    </div>
+                        </div>
+                        
+
+                        <!-- Page Title -->
+                        <h2 class="mb-4">Tableau De Bord</h2>
+
+                        <!-- Stats Cards -->
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="stats-card">
+                                    <div class="stats-icon courses-followed">
+                                        <i class="bi bi-book"></i>
+                                    </div>
+                                    <div class="stats-number" id="trainings-count">3</div>
+                                    <div class="stats-label">Formations suivies</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stats-card">
+                                    <div class="stats-icon courses-active">
+                                        <i class="bi bi-camera-video"></i>
+                                    </div>
+                                    <div class="stats-number" id="webinars-count">2</div>
+                                    <div class="stats-label">Webinaires participés</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stats-card">
+                                    <div class="stats-icon courses-completed">
+                                        <i class="bi bi-credit-card"></i>
+                                    </div>
+                                    <div class="stats-number" id="subscriptions-count">1</div>
+                                    <div class="stats-label">Abonnements actifs</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Page -->
+                    <div id="profile-page" class="page-content" style="display: none;">
+                        <h2 class="mb-4">Mon profil</h2>
+
+                        <div class="profile-info">
+                            <!-- <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted">Date d'enregistrement</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <span class="profile-value">25/06/2025 23h07</span>
+                                </div>
+                            </div> -->
+
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted">Prénoms</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <span class="profile-value" id="profile-firstname">essai</span>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted">Nom</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <span class="profile-value" id="profile-lastname">ia</span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted">Nom d'utilisateur</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <span class="profile-value">essaiia</span>
+                                </div>
+                            </div> -->
+
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted">E-mail</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <span class="profile-value" id="profile-email">essaiia759@gmail.com</span>
+                                </div>
+                            </div>
+
+
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted">Numéro de téléphone</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <span class="profile-value text-muted" id="profile-phone">-</span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted">Compétence/profession</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <span class="profile-value text-muted">-</span>
+                                </div>
+                            </div> -->
+
+                            <!-- <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted">Biographie</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <span class="profile-value text-muted">-</span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- Trainings Page -->
+                    <div id="trainings-page" class="page-content" style="display: none;">
+                        <h2 class="mb-4">Mes formations</h2>
+
+                        <!-- Training 1 -->
+                        <div class="content-card">
+                            <div class="row">
+                                <!-- <div class="col-md-8">
+                                    <h5 class="mb-2">Formation JavaScript Avancé</h5>
+                                    <p class="text-muted mb-2">Maîtrisez les concepts avancés de JavaScript et les
+                                        frameworks modernes</p>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge badge-status status-active me-2">En cours</span>
+                                        <small class="text-muted">Inscrit le 15/06/2025</small>
+                                    </div>
+                                    <div class="progress progress-bar-custom mb-2">
+                                        <div class="progress-bar bg-primary" style="width: 65%"></div>
+                                    </div>
+                                    <small class="text-muted">Progression: 65% (13/20 modules)</small>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <button class="btn btn-primary btn-action mb-2">Continuer</button>
+                                    <br>
+                                    <small class="text-muted">Durée: 40h</small>
+                                </div> -->
+                                <div id="trainings-page" class="page-content" style="display: none;">
+    <h2 class="mb-4">Mes formations</h2>
+    <!-- Les formations seront ajoutées ici dynamiquement par le script -->
+</div>
+                            </div>
+                        </div>
+
+                        <!-- Training 2 -->
+                        <div class="content-card">
+                            <div class="row">
+                                <!-- <div class="col-md-8">
+                                    <h5 class="mb-2">Introduction au Machine Learning</h5>
+                                    <p class="text-muted mb-2">Découvrez les bases de l'intelligence artificielle et du
+                                        machine learning</p>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge badge-status status-completed me-2">Terminé</span>
+                                        <small class="text-muted">Terminé le 10/06/2025</small>
+                                    </div>
+                                    <div class="progress progress-bar-custom mb-2">
+                                        <div class="progress-bar bg-success" style="width: 100%"></div>
+                                    </div>
+                                    <small class="text-muted">Progression: 100% (15/15 modules)</small>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <button class="btn btn-outline-success btn-action mb-2">Certificat</button>
+                                    <br>
+                                    <small class="text-muted">Durée: 25h</small>
+                                </div> -->
+                                <div id="trainings-page" class="page-content" style="display: none;">
+    <h2 class="mb-4">Mes formations</h2>
+    <!-- Les formations seront ajoutées ici dynamiquement par le script -->
+</div>
+                            </div>
+                        </div>
+
+                        <!-- Training 3 -->
+                        <!-- <div class="content-card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5 class="mb-2">Design UX/UI Moderne</h5>
+                                    <p class="text-muted mb-2">Apprenez les principes du design d'interface utilisateur moderne</p>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge badge-status status-pending me-2">À commencer</span>
+                                        <small class="text-muted">Inscrit le 20/06/2025</small>
+                                    </div>
+                                    <div class="progress progress-bar-custom mb-2">
+                                        <div class="progress-bar bg-warning" style="width: 0%"></div>
+                                    </div>
+                                    <small class="text-muted">Progression: 0% (0/18 modules)</small>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <button class="btn btn-warning btn-action mb-2">Commencer</button>
+                                    <br>
+                                    <small class="text-muted">Durée: 35h</small>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- Webinars Page -->
+                    <div id="webinars-page" class="page-content" style="display: none;">
+                        <h2 class="mb-4">Mes webinaires</h2>
+
+                        <!-- Upcoming Webinars -->
+                        <h4 class="mb-3">Webinaires à venir</h4>
+
+                        <!-- Webinar 1 -->
+                        <div class="content-card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5 class="mb-2">Les Tendances du Développement Web 2025</h5>
+                                    <p class="text-muted mb-2">Découvrez les dernières technologies et frameworks qui
+                                        façonnent le web</p>
+                                    <div class="webinar-time mb-2">
+                                        <i class="bi bi-calendar-event me-1"></i>
+                                        <strong>28 Juin 2025 à 14h00</strong>
+                                    </div>
+                                    <div class="webinar-time mb-2">
+                                        <i class="bi bi-clock me-1"></i>
+                                        Durée: 1h30
+                                    </div>
+                                    <span class="badge badge-status status-active">Confirmé</span>
+                                </div>
+                                <!-- <div class="col-md-4 text-end">
+                                    <button class="btn btn-success btn-action mb-2">Rejoindre</button>
+                                    <br>
+                                    <button class="btn btn-outline-secondary btn-action">Ajouter au calendrier</button>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- Webinar 2 -->
+                        <div class="content-card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5 class="mb-2">Optimisation SEO Avancée</h5>
+                                    <p class="text-muted mb-2">Techniques avancées pour améliorer le référencement de
+                                        vos sites web</p>
+                                    <div class="webinar-time mb-2">
+                                        <i class="bi bi-calendar-event me-1"></i>
+                                        <strong>02 Juillet 2025 à 16h00</strong>
+                                    </div>
+                                    <div class="webinar-time mb-2">
+                                        <i class="bi bi-clock me-1"></i>
+                                        Durée: 2h00
+                                    </div>
+                                    <span class="badge badge-status status-active">Confirmé</span>
+                                </div>
+                                <!-- <div class="col-md-4 text-end">
+                                    <button class="btn btn-outline-primary btn-action mb-2">S'inscrire</button>
+                                    <br>
+                                    <small class="text-muted">Places limitées</small>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- Past Webinars -->
+                        <h4 class="mb-3 mt-4">Webinaires passés</h4>
+
+                        <!-- Past Webinar -->
+                        <div class="content-card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5 class="mb-2">Introduction à React.js</h5>
+                                    <p class="text-muted mb-2">Les bases du développement avec React et ses concepts
+                                        fondamentaux</p>
+                                    <div class="webinar-time mb-2">
+                                        <i class="bi bi-calendar-event me-1"></i>
+                                        20 Juin 2025 à 15h00
+                                    </div>
+                                    <span class="badge badge-status status-completed">Terminé</span>
+                                </div>
+                                <!-- <div class="col-md-4 text-end">
+                                    <button class="btn btn-outline-info btn-action mb-2">Revoir</button>
+                                    <br>
+                                    <button class="btn btn-outline-secondary btn-action">Télécharger</button>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5 class="mb-2">Introduction à React.js</h5>
+                                    <p class="text-muted mb-2">Les bases du développement avec React et ses concepts
+                                        fondamentaux</p>
+                                    <div class="webinar-time mb-2">
+                                        <i class="bi bi-calendar-event me-1"></i>
+                                        20 Juin 2025 à 15h00
+                                    </div>
+                                    <span class="badge badge-status status-completed">Terminé</span>
+                                </div>
+                                <!-- <div class="col-md-4 text-end">
+                                    <button class="btn btn-outline-info btn-action mb-2">Revoir</button>
+                                    <br>
+                                    <button class="btn btn-outline-secondary btn-action">Télécharger</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subscriptions Page -->
+                    <div id="subscriptions-page" class="page-content" style="display: none;">
+                        <h2 class="mb-4">Mes abonnements</h2>
+
+                        <!-- Active Subscription -->
+                        <div class="content-card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5 class="mb-2">Plan blog</h5>
+                                    <p class="text-muted mb-3">Accès illimité à tous les articles et webinaires</p>
+                                    <div class="mb-2">
+                                        <strong>Fonctionnalités incluses:</strong>
+                                        <ul class="mt-2">
+                                            <li>Accès à tous les articles</li>
+                                            <li>Participation aux webinaires en direct</li>
+                                            <li>Support prioritaire</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge badge-status status-active me-2">Actif</span>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <div class="subscription-price mb-2">20000 XOF</div>
+                                    <small class="text-muted d-block mb-3">par mois</small>
+                                    <!-- <button class="btn btn-outline-primary btn-action mb-2">Gérer</button>
+                                    <br>
+                                    <button class="btn btn-outline-danger btn-action">Annuler</button> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5 class="mb-2">Plan blog</h5>
+                                    <p class="text-muted mb-3">Accès illimité à tous les articles et webinaires</p>
+                                    <div class="mb-2">
+                                        <strong>Fonctionnalités incluses:</strong>
+                                        <ul class="mt-2">
+                                            <li>Accès à tous les articles</li>
+                                            <li>Participation aux webinaires en direct</li>
+                                            <li>Support prioritaire</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge badge-status status-expired me-2">Expiré</span>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <div class="subscription-price mb-2">20000 XOF</div>
+                                    <small class="text-muted d-block mb-3">par mois</small>
+                                    <!-- <button class="btn btn-outline-primary btn-action mb-2">Gérer</button>
+                                    <br>
+                                    <button class="btn btn-outline-danger btn-action">Annuler</button> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Remove active class from all items
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    // Get the page data attribute
+                    const page = this.getAttribute('data-page');
+                    // Handle different pages
+                    handlePageNavigation(page);
+                });
+            });
+
+            // --- Ajout pour simuler le clic sur le menu latéral si ?page=... ---
+            const params = new URLSearchParams(window.location.search);
+            const page = params.get('page');
+            if (page) {
+                // Trouve l'élément sidebar correspondant et déclenche son clic
+                const targetSidebar = Array.from(sidebarItems).find(item => item.getAttribute('data-page') === page);
+                if (targetSidebar) {
+                    targetSidebar.click();
+                } else {
+                    // Si la page n'existe pas, affiche le dashboard par défaut
+                    handlePageNavigation('dashboard');
+                    sidebarItems.forEach(i => {
+                        if (i.getAttribute('data-page') === 'dashboard') i.classList.add('active');
+                        else i.classList.remove('active');
+                    });
+                }
+            } else {
+                // Par défaut, affiche le dashboard
+                handlePageNavigation('dashboard');
+                sidebarItems.forEach(i => {
+                    if (i.getAttribute('data-page') === 'dashboard') i.classList.add('active');
+                    else i.classList.remove('active');
+                });
+            }
+
+            // ...le reste du code...
+
+
+            addActionButtonHandlers();
+        });
+
+        function handlePageNavigation(page) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(p => p.style.display = 'none');
+
+            // Show the selected page
+            switch (page) {
+                case 'dashboard':
+                    document.getElementById('dashboard-page').style.display = 'block';
+                    break;
+                case 'profile':
+                    document.getElementById('profile-page').style.display = 'block';
+                    break;
+                case 'trainings':
+                    document.getElementById('trainings-page').style.display = 'block';
+                    break;
+                case 'webinars':
+                    document.getElementById('webinars-page').style.display = 'block';
+                    break;
+                case 'subscriptions':
+                    document.getElementById('subscriptions-page').style.display = 'block';
+                    break;
+                case 'logout':
+                    if (confirm('Êtes-vous sûr de vouloir vous déconnecter?')) {
+                        localStorage.removeItem('userToken'); // Simulate logout by clearing token
+                        localStorage.removeItem('user_id');
+                        localStorage.removeItem('last_name');
+                        localStorage.removeItem('first_name');
+
+                        location.href = '../fr/'; // Redirect to home page
+
+                        // Here you would typically redirect to login page
+                        // window.location.href = '/login';
+                    } else {
+                        // Keep current page visible if logout is cancelled
+                        const currentActivePage = document.querySelector('.page-content[style*="block"]') || document.getElementById('dashboard-page');
+                        currentActivePage.style.display = 'block';
+                    }
+                    break;
+                default:
+                    document.getElementById('dashboard-page').style.display = 'block';
+            }
+        }
+
+        function addActionButtonHandlers() {
+            // Training action buttons
+            document.addEventListener('click', function (e) {
+                if (e.target.textContent === 'Continuer') {
+                    alert('Redirection vers le module de formation...');
+                } else if (e.target.textContent === 'Certificat') {
+                    alert('Téléchargement du certificat...');
+                } else if (e.target.textContent === 'Commencer') {
+                    alert('Démarrage de la formation...');
+                } else if (e.target.textContent === 'Rejoindre') {
+                    alert('Connexion au webinaire...');
+                } else if (e.target.textContent === 'S\'inscrire') {
+                    alert('Inscription au webinaire...');
+                } else if (e.target.textContent === 'Revoir') {
+                    alert('Lecture de l\'enregistrement...');
+                } else if (e.target.textContent === 'Télécharger') {
+                    alert('Téléchargement de l\'enregistrement...');
+                } else if (e.target.textContent === 'Ajouter au calendrier') {
+                    alert('Ajout au calendrier...');
+                } else if (e.target.textContent === 'Gérer') {
+                    alert('Gestion de l\'abonnement...');
+                } else if (e.target.textContent === 'Annuler') {
+                    if (confirm('Êtes-vous sûr de vouloir annuler votre abonnement?')) {
+                        alert('Annulation de l\'abonnement...');
+                    }
+                } else if (e.target.textContent === 'Choisir') {
+                    alert('Sélection du plan d\'abonnement...');
+                }
+            });
+        }
+    </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    // --- Gestion de la photo de profil ---
+    const btnUpload = document.getElementById('btn-upload-photo');
+    const btnDelete = document.getElementById('btn-delete-photo');
+    const inputPhoto = document.getElementById('profile-photo-input');
+    const avatar = document.getElementById('profile-avatar');
+
+    // Affiche la photo sauvegardée si elle existe
+    const savedPhoto = localStorage.getItem('profilePhoto');
+    if (savedPhoto) {
+        avatar.style.backgroundImage = `url('${savedPhoto}')`;
+        avatar.style.backgroundSize = 'cover';
+        avatar.style.backgroundPosition = 'center';
+        avatar.textContent = '';
+        btnUpload.textContent = 'Modifier la photo de profil';
+        btnDelete.classList.remove('d-none');
+    }
+
+    btnUpload.addEventListener('click', function () {
+        inputPhoto.click();
+    });
+
+    inputPhoto.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        if (!file.type.startsWith('image/')) {
+            alert('Veuillez sélectionner une image.');
+            return;
+        }
+        const reader = new FileReader();
+        reader.onload = function (evt) {
+            avatar.style.backgroundImage = `url('${evt.target.result}')`;
+            avatar.style.backgroundSize = 'cover';
+            avatar.style.backgroundPosition = 'center';
+            avatar.textContent = '';
+            localStorage.setItem('profilePhoto', evt.target.result);
+            btnUpload.textContent = 'Modifier la photo de profil';
+            btnDelete.classList.remove('d-none');
+        };
+        reader.readAsDataURL(file);
+    });
+
+    btnDelete.addEventListener('click', function () {
+        if (confirm('Voulez-vous vraiment supprimer votre photo de profil ?')) {
+            localStorage.removeItem('profilePhoto');
+            avatar.style.backgroundImage = '';
+            // Recalculer les initiales
+            const firstName = localStorage.getItem('first_name') || '-';
+            const lastName = localStorage.getItem('last_name') || '-';
+            let initials = '';
+            if (firstName && lastName && firstName !== '-' && lastName !== '-') {
+                initials = firstName[0].toUpperCase() + lastName[0].toUpperCase();
+            } else if (firstName && firstName !== '-') {
+                initials = firstName[0].toUpperCase();
+            } else {
+                initials = 'EI';
+            }
+            avatar.textContent = initials;
+            btnUpload.textContent = 'Cliquez ici';
+            btnDelete.classList.add('d-none');
+        }
+    });
+
+    // --- Dynamisation des infos du profil ---
+    const firstName = localStorage.getItem('first_name') || '-';
+    const lastName = localStorage.getItem('last_name') || '-';
+    const email = localStorage.getItem('email') || '-';
+    const phone = localStorage.getItem('phone') || '-';
+
+    document.getElementById('profile-firstname').textContent = firstName;
+    document.getElementById('profile-lastname').textContent = lastName;
+    document.getElementById('profile-email').textContent = email;
+    document.getElementById('profile-phone').textContent = phone;
+
+    const userNameHeader = document.querySelector('.user-greeting .user-name');
+    if (userNameHeader) {
+        userNameHeader.textContent = `${firstName} ${lastName}`.trim();
+    }
+
+    if (!savedPhoto) {
+        let initials = '';
+        if (firstName && lastName && firstName !== '-' && lastName !== '-') {
+            initials = firstName[0].toUpperCase() + lastName[0].toUpperCase();
+        } else if (firstName && firstName !== '-') {
+            initials = firstName[0].toUpperCase();
+        } else {
+            initials = 'EI';
+        }
+        avatar.textContent = initials;
+    }
+
+    // --- Récupération des statistiques utilisateur ---
+    const userToken = localStorage.getItem('userToken');
+    if (userToken) {
+        fetch('https://imaneapi.auditacademie.com/api/formations_utilisateur/', {
+            headers: {
+                'Authorization': `Token ${userToken}`
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const trainingsPage = document.getElementById('trainings-page');
+            // Sélectionne l'endroit où afficher les formations (après le titre)
+            // On retire les anciennes formations dynamiques
+            const oldCards = trainingsPage.querySelectorAll('.content-card[data-dynamic="1"]');
+            oldCards.forEach(card => card.remove());
+
+            if (Array.isArray(data.formations) && data.formations.length > 0) {
+                data.formations.forEach(formation => {
+                    // Création de la carte formation
+                    const card = document.createElement('div');
+                    card.className = 'content-card';
+                    card.setAttribute('data-dynamic', '1');
+                    card.innerHTML = `
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="mb-2">${formation.titre || '-'}</h5>
+                                <p class="text-muted mb-2">${formation.description_courte || ''}</p>
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="badge badge-status ${getFormationStatusClass(formation.statut)} me-2">
+                                        ${getFormationStatusLabel(formation.statut)}
+                                    </span>
+                                </div>
+                                <div class="progress progress-bar-custom mb-2">
+                                    <div class="progress-bar bg-primary" style="width: ${formation.progression || 0}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    // Ajoute la carte après le titre h2
+                    trainingsPage.appendChild(card);
+                });
+            } else {
+                // Affiche un message si aucune formation
+                const msg = document.createElement('div');
+                msg.className = 'content-card text-center';
+                msg.setAttribute('data-dynamic', '1');
+                msg.textContent = "Aucune formation suivie pour le moment.";
+                trainingsPage.appendChild(msg);
+            }
+        })
+        .catch(() => {
+            const trainingsPage = document.getElementById('trainings-page');
+            const msg = document.createElement('div');
+            msg.className = 'content-card text-center';
+            msg.setAttribute('data-dynamic', '1');
+            msg.textContent = "Erreur lors du chargement des formations.";
+            trainingsPage.appendChild(msg);
+        });
+    }
+
+    // Helpers pour le statut de la formation
+    function getFormationStatusClass(statut) {
+        switch ((statut || '').toLowerCase()) {
+            case 'en cours': return 'status-active';
+            case 'terminé': return 'status-completed';
+            case 'à commencer': return 'status-pending';
+            case 'expiré': return 'status-expired';
+            default: return 'status-active';
+        }
+    }
+    function getFormationStatusLabel(statut) {
+        if (!statut) return 'En cours';
+        return statut.charAt(0).toUpperCase() + statut.slice(1);
+    }
+});
+</script>
+
+</body>
+
+</html>

@@ -23,7 +23,7 @@ Avec Audit Académie, simplifiez votre gestion, renforcez votre conformité et a
                         </div>
                         <div>
                              <ul class="nav-y gap-1 fw-medium" style="font-size: 15px;">
-                                <li> <a href="mesblogs.html" class="uc-nav-footer">Blog</a></li>
+                                <li class="uc-bold">Blog</li>
                                 <li><a href="ressources-t.html" class="footer-link">Gestion de risque</a></li>
                                 <li><a href="evenement.html" class="footer-link">Fondamentaux</a></li>
                                 <li><a href="tutoriel.html" class="footer-link">Audit Interne</a></li>
@@ -32,16 +32,18 @@ Avec Audit Académie, simplifiez votre gestion, renforcez votre conformité et a
                         </div>
                         <div>
                             <ul class="nav-y gap-1 fw-medium" style="font-size: 15px;">
-                                <li class="uc-nav-footer">Imane</li>
-                                <li><a href="a-propos-d-inawo.html" class="footer-link">Le Cabinet</a></li>
-                                <li><a href="carrieres.html" class="footer-link">Contact</a></li>
-                                <li><a href="partenariat.html" class="footer-link">Nous rejoindre</a></li>
+                                <li class="uc-nav-footer uc-bold">Imane</li>
+                                <li><a href="apropos.html" class="footer-link">A Propos</a></li>
+                                <li><a href="commencerici.html" class="footer-link">Débutant, Commencer ici... </a></li>
+                                <li><a href="mesblogs.html" class="footer-link">Blog</a></li>
+                                <li><a href="formation.html" class="footer-link">Formations</a></li>
+                                <li><a href="webinaires.html" class="footer-link">Webinaires</a></li>
                             </ul>
                         </div>
                         <div>
                             <ul class="nav-y gap-1 fw-medium" style="font-size: 15px;">
-                                <li class="uc-nav-footer">L'audit</li>
-                                <li><a href="Glossaire-et-definition.html" class="footer-link">Boite à outils</a></li>
+                                <li class="uc-nav-footer uc-bold">L'audit</li>
+                                <li><a href="#" class="footer-link">Boite à outils</a></li>
                                 
                             </ul>
                         </div>
@@ -51,57 +53,34 @@ Avec Audit Académie, simplifiez votre gestion, renforcez votre conformité et a
                     <div class="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
                         <ul class="nav-x gap-2" style="font-size: 12px;">
                             <li>
-                                <p class="opacity-60">AuditAcademy @2025. Tous droits réservés.</p>
+                                <p class="opacity-60">ImaneConsulting @2025. Tous droits réservés.</p>
                             </li>
-                            <li><a href="conditons-generales-d-utilisation.html" class="footer-link">Conditions générales</a></li>
-                            <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
-                            <li><a href="Politique-de-confidentialite.html" class="footer-link">Confidentialité/Sécurité des données</a></li>
-                            <li><a href="Politique-de-cookies.html" class="footer-link">Politique des Cookies</a></li>
+                            <li><a href="#" class="footer-link">Conditions générales</a></li>
+                            <li><a href="#" class="footer-link">Mentions légales</a></li>
+                            <li><a href="#" class="footer-link">Confidentialité/Sécurité des données</a></li>
+                            <li><a href="#" class="footer-link">Politique des Cookies</a></li>
                         </ul>
                     </div>
                     <div class="hstack justify-center lg:justify-end gap-2 lg:gap-3 ">
                         <ul class="nav-x gap-2">
                             <li>
-                                <a href="https://www.linkedin.com/company/inawo/" class="footer-link"><i class="icon icon-2 unicon-logo-linkedin"></i></a>
+                                <a href="#" class="footer-link"><i class="icon icon-2 unicon-logo-linkedin"></i></a>
                             </li>
                             <li>
-                                <a href="https://web.facebook.com/inawo.pro" class="footer-link"><i class="icon icon-2 unicon-logo-facebook"></i></a>
+                                <a href="#" class="footer-link"><i class="icon icon-2 unicon-logo-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://x.com/inawo_io" class="footer-link"><i class="icon icon-2 unicon-logo-x-filled"></i></a>
+                                <a href="#" class="footer-link"><i class="icon icon-2 unicon-logo-x-filled"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/inawo.pro/" class="footer-link"><i class="icon icon-2 unicon-logo-instagram"></i></a>
+                                <a href="#" class="footer-link"><i class="icon icon-2 unicon-logo-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/@inawo" class="footer-link"><i class="icon icon-2 unicon-logo-youtube"></i></a>
+                                <a href="#" class="footer-link"><i class="icon icon-2 unicon-logo-youtube"></i></a>
                             </li>
                         </ul>
-                        <div class="vr"></div>
-                        <div class="d-inline-block">
-                            <a href="#" class="hstack gap-1 text-none">
-                                <i class="icon icon-1 unicon-earth-filled"></i>
-                                <span>Français</span>
-                                <span data-uc-drop-parent-icon=""></span>
-                            </a>
-                            <div class="p-2 bg-white dark:bg-gray-800 shadow-xs rounded w-150px"
-                                data-uc-drop="mode: click; offset: 28; pos: top-right; boundary: !.uc-footer-bottom; animation: uc-animation-slide-top-small; duration: 150;">
-                                <ul class="nav-y gap-0 fs-7">
-                                    <li>
-                                        <a href="./newcode/../en/../fr"
-                                            class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img
-                                                class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/en.svg"
-                                                alt="English">English</a>
-                                    </li>
-                                    <li>
-                                        <a href="./newcode/../fr/"
-                                            class="w-100 p-1 px-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"><img
-                                                class="w-20px me-1 rtl:me-0 rtl:ms-1" src="../assets/images/fr.svg"
-                                                alt="French">Français</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -120,12 +99,16 @@ Avec Audit Académie, simplifiez votre gestion, renforcez votre conformité et a
 .uc-nav-footer {
     color: #fff !important;
 }
+.uc-bold {
+    font-weight: bold;
+    text-decoration: underline;
+}
 </style>
 `;
 
 document.addEventListener("DOMContentLoaded", () => {
-    const footer = document.querySelector("#footer");
-    if (footer) {
-        footer.innerHTML = footerHTML;
-    }
+  const footer = document.querySelector("#footer");
+  if (footer) {
+    footer.innerHTML = footerHTML;
+  }
 });

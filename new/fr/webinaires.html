@@ -1102,9 +1102,9 @@ const html = `
     const webinarId = this.getAttribute('data-id');
     const isLoggedIn = localStorage.getItem('userToken') !== null;
     if (isLoggedIn) {
-      window.location.href = `webinairedetail?id=${webinarId}`;
+      location.href = `webinairedetail?id=${webinarId}`;
     } else {
-      window.location.href = `inscription?id=${webinarId}`;
+      window.location.href = `connexion?next=webinairedetail?id=${webinarId}`;
     }
   });
 });

@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/header_style.css">
     <link rel="stylesheet" href="../assets/css/theme/main.css">
-<link rel="stylesheet" href="../assets/css/header_style.css">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
 
     <meta name="theme-color" content="#178d72">
 
@@ -85,6 +85,37 @@
     <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
 
     <link rel="stylesheet" href="../assets/css/custom.css">
+
+    <style>
+        /* Limite le titre à 2 lignes */
+        .truncate-2-lines {
+            display: -webkit-box;
+
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 2.8em;
+            max-height: 3.2em;
+        }
+
+        /* Limite la description à 2 lignes */
+        .truncate-2-desc {
+            display: -webkit-box;
+
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 2.6em;
+            max-height: 3em;
+        }
+
+        /* Limite le nom du contributeur à 1 ligne */
+        .truncate-1-line {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2MW7TVQEX"></script>
@@ -113,7 +144,7 @@
         </a>
     </div>
 
-    
+
 
     <!-- Header start -->
     <div id="header"></div>
@@ -152,7 +183,7 @@
                                 <b>rentabilité</b>. <br><br>
                             </p>
                             <div class="vstack md:hstack gap-1 mt-1">
-                                <a href="inscription.html"
+                                <a href="formation.html"
                                     class="btn btn-md text-white dark:bg-white dark:text-primary dark:hover:bg-white xl:btn-lg px-3 lg:px-5 fw-bold rounded-pill"
                                     style="background-color: #2a4743; margin-top: -2%;" id="start">
                                     <span>Commencer maintenant</span>
@@ -204,84 +235,90 @@
 
     <!-- NOS FORMATIONS DYNAMIQUES -->
     <div id="formations_posts" class="blog-posts section panel overflow-hidden swiper-parent">
-    <div class="section-outer panel py-4 md:py-5 xl:py-6">
-        <div class="container">
-            <div class="section-inner panel">
-                <div class="heading vstack gap-2 justify-center items-center text-center panel"
-                    data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                    <h2 class="title h3 xl:h2 m-0">
-                        <span class="px-1 bg-tertiary  text-primary d-block lg:d-inline-block">Nos Formations</span>
-                    </h2>
-                    <p class="mb-5 h6">Découvrez notre sélection de formations conçues pour vous accompagner dans le développement de vos compétences professionnelles. Que vous soyez débutant ou expérimenté, nos parcours s’adaptent à votre niveau et à vos objectifs.</p>
-                </div>
-                <!-- Swiper formations -->
-                <div class="content panel">
-                    <div class="swiper p-2 swiper-match" id="formations-swiper"
-                        data-uc-swiper="items: 1.1; gap: 16; loop: true; next: .formations-swiper-next; prev: .formations-swiper-prev;"
-                        data-uc-swiper-s="items: 2.3; gap: 24;"
-                        data-uc-swiper-m="items: 3.22; gap: 24;"
-                        data-uc-swiper-l="items: 4; gap: 24;">
-                        <div class="swiper-wrapper" id="formations-list-index">
-                            <!-- Les formations dynamiques seront injectées ici -->
+        <div class="section-outer panel py-4 md:py-5 xl:py-6">
+            <div class="container">
+                <div class="section-inner panel">
+                    <div class="heading vstack gap-2 justify-center items-center text-center panel"
+                        data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                        <h2 class="title h3 xl:h2 m-0">
+                            <span class="px-1 bg-tertiary  text-primary d-block lg:d-inline-block">Nos Formations</span>
+                        </h2>
+                        <p class="mb-5 h6">Découvrez notre sélection de formations conçues pour vous accompagner dans le
+                            développement de vos compétences professionnelles. Que vous soyez débutant ou expérimenté,
+                            nos parcours s’adaptent à votre niveau et à vos objectifs.</p>
+                    </div>
+                    <!-- Swiper formations -->
+                    <div class="content panel">
+                        <div class="swiper p-2 swiper-match" id="formations-swiper"
+                            data-uc-swiper="items: 1.1; gap: 16; loop: true; next: .formations-swiper-next; prev: .formations-swiper-prev;"
+                            data-uc-swiper-s="items: 2.3; gap: 24;" data-uc-swiper-m="items: 3.22; gap: 24;"
+                            data-uc-swiper-l="items: 4; gap: 24;">
+                            <div class="swiper-wrapper" id="formations-list-index">
+                                <!-- Les formations dynamiques seront injectées ici -->
+                            </div>
+                        </div>
+                        <div class="panel hstack justify-center items-centerborder contrast- gap-2 mt-2">
+                            <div class="panel hstack items-end gap-narrow xl:gap-1 rtl:flex-row-reverse">
+                                <a href="#"
+                                    class="swiper-nav formations-swiper-prev btn w-40px xl:w-48px h-40px xl:h-48px rounded-circle btn btn-md btn-alt-primary border dark:bg-black dark:text-white order-1">
+                                    <span class="icon-1 xl:icon-2 unicon-arrow-left"></span>
+                                </a>
+                                <a href="#"
+                                    class="swiper-nav formations-swiper-next btn w-40px xl:w-48px h-40px xl:h-48px rounded-circle btn btn-md btn-alt-primary border dark:bg-black dark:text-white order-2 rtl:order-0">
+                                    <span class="icon-1 xl:icon-2 unicon-arrow-right"></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="panel hstack justify-center items-centerborder contrast- gap-2 mt-2">
-                        <div class="panel hstack items-end gap-narrow xl:gap-1 rtl:flex-row-reverse">
-                            <a href="#" class="swiper-nav formations-swiper-prev btn w-40px xl:w-48px h-40px xl:h-48px rounded-circle btn btn-md btn-alt-primary border dark:bg-black dark:text-white order-1">
-                                <span class="icon-1 xl:icon-2 unicon-arrow-left"></span>
-                            </a>
-                            <a href="#" class="swiper-nav formations-swiper-next btn w-40px xl:w-48px h-40px xl:h-48px rounded-circle btn btn-md btn-alt-primary border dark:bg-black dark:text-white order-2 rtl:order-0">
-                                <span class="icon-1 xl:icon-2 unicon-arrow-right"></span>
-                            </a>
-                        </div>
-                    </div>
+                    <!-- Fin Swiper formations -->
                 </div>
-                <!-- Fin Swiper formations -->
             </div>
         </div>
     </div>
-</div>
     <!-- FIN NOS FORMATIONS DYNAMIQUES -->
 
     <!-- NOS ARTICLES DYNAMIQUES -->
     <div id="articles_posts" class="blog-posts section panel overflow-hidden swiper-parent">
-    <div class="section-outer panel py-4 md:py-5 xl:py-6">
-        <div class="container">
-            <div class="section-inner panel">
-                <div class="heading vstack gap-2 justify-center items-center text-center panel"
-                    data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
-                    <h2 class="title h3 xl:h2 m-0">
-                        <span class="px-1 bg-tertiary text-primary d-block lg:d-inline-block">Nos articles</span>
-                    </h2>
-                    <p class="mb-5 h6">Restez informé grâce à nos articles d’actualité, analyses et conseils pratiques. Nous partageons avec vous les dernières tendances, idées et bonnes pratiques dans nos domaines d’expertise.</p>
-                </div>
-                <!-- Swiper articles -->
-                <div class="content panel">
-                    <div class="swiper p-2 swiper-match" id="articles-swiper"
-                        data-uc-swiper="items: 1.1; gap: 16; loop: true; next: .articles-swiper-next; prev: .articles-swiper-prev;"
-                        data-uc-swiper-s="items: 2.3; gap: 24;"
-                        data-uc-swiper-m="items: 3.22; gap: 24;"
-                        data-uc-swiper-l="items: 4; gap: 24;">
-                        <div class="swiper-wrapper" id="articles-list-index">
-                            <!-- Les articles dynamiques seront injectés ici -->
+        <div class="section-outer panel py-4 md:py-5 xl:py-6">
+            <div class="container">
+                <div class="section-inner panel">
+                    <div class="heading vstack gap-2 justify-center items-center text-center panel"
+                        data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                        <h2 class="title h3 xl:h2 m-0">
+                            <span class="px-1 bg-tertiary text-primary d-block lg:d-inline-block">Nos articles</span>
+                        </h2>
+                        <p class="mb-5 h6">Restez informé grâce à nos articles d’actualité, analyses et conseils
+                            pratiques. Nous partageons avec vous les dernières tendances, idées et bonnes pratiques dans
+                            nos domaines d’expertise.</p>
+                    </div>
+                    <!-- Swiper articles -->
+                    <div class="content panel">
+                        <div class="swiper p-2 swiper-match" id="articles-swiper"
+                            data-uc-swiper="items: 1.1; gap: 16; loop: true; next: .articles-swiper-next; prev: .articles-swiper-prev;"
+                            data-uc-swiper-s="items: 2.3; gap: 24;" data-uc-swiper-m="items: 3.22; gap: 24;"
+                            data-uc-swiper-l="items: 4; gap: 24;">
+                            <div class="swiper-wrapper" id="articles-list-index">
+                                <!-- Les articles dynamiques seront injectés ici -->
+                            </div>
+                        </div>
+                        <div class="panel hstack justify-center items-centerborder contrast- gap-2 mt-2">
+                            <div class="panel hstack items-end gap-narrow xl:gap-1 rtl:flex-row-reverse">
+                                <a href="#"
+                                    class="swiper-nav articles-swiper-prev btn w-40px xl:w-48px h-40px xl:h-48px rounded-circle btn btn-md btn-alt-primary border dark:bg-black dark:text-white order-1">
+                                    <span class="icon-1 xl:icon-2 unicon-arrow-left"></span>
+                                </a>
+                                <a href="#"
+                                    class="swiper-nav articles-swiper-next btn w-40px xl:w-48px h-40px xl:h-48px rounded-circle btn btn-md btn-alt-primary border dark:bg-black dark:text-white order-2 rtl:order-0">
+                                    <span class="icon-1 xl:icon-2 unicon-arrow-right"></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="panel hstack justify-center items-centerborder contrast- gap-2 mt-2">
-                        <div class="panel hstack items-end gap-narrow xl:gap-1 rtl:flex-row-reverse">
-                            <a href="#" class="swiper-nav articles-swiper-prev btn w-40px xl:w-48px h-40px xl:h-48px rounded-circle btn btn-md btn-alt-primary border dark:bg-black dark:text-white order-1">
-                                <span class="icon-1 xl:icon-2 unicon-arrow-left"></span>
-                            </a>
-                            <a href="#" class="swiper-nav articles-swiper-next btn w-40px xl:w-48px h-40px xl:h-48px rounded-circle btn btn-md btn-alt-primary border dark:bg-black dark:text-white order-2 rtl:order-0">
-                                <span class="icon-1 xl:icon-2 unicon-arrow-right"></span>
-                            </a>
-                        </div>
-                    </div>
+                    <!-- Fin Swiper articles -->
                 </div>
-                <!-- Fin Swiper articles -->
             </div>
         </div>
     </div>
-</div>
     <!-- FIN NOS ARTICLES DYNAMIQUES -->
 
     <!-- Footer start -->
@@ -355,26 +392,29 @@
             background-color: white;
             color: black;
         }
+
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #121212;
                 color: white;
             }
         }
+
         .icon-hover {
             transition: stroke 0.3s ease;
         }
+
         .features-item:hover .icon-hover {
             stroke: #0460bc;
         }
     </style>
 
     <!-- SCRIPT POUR AFFICHER L'INFOLINE DYNAMIQUE -->
-  
+
     <!-- FIN SCRIPT INFOLINE DYNAMIQUE -->
 
     <!-- SCRIPT POUR AFFICHER LES FORMATIONS DYNAMIQUES -->
-<script>
+    <script>
 async function fetchAndDisplayFormationsIndex() {
     const wrapper = document.getElementById('formations-list-index');
     wrapper.innerHTML = '<div>Chargement des formations...</div>';
@@ -387,41 +427,43 @@ async function fetchAndDisplayFormationsIndex() {
         }
         let html = '';
         formations.forEach(formation => {
-    let imageURL = '../assets/images/blog/default.jpg';
-    if (formation.image_couverture && formation.image_couverture.startsWith('/photos')) {
-        imageURL = 'https://imaneapi.auditacademie.com' + formation.image_couverture;
-    } else if (formation.image_couverture) {
-        imageURL = formation.image_couverture;
-    }
-    html += `
-    <div class="swiper-slide">
-        <article class="post type-post panel overflow-hidden vstack border bg-white dark:bg-gray-900 dark:text-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
-            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
-                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageURL}" alt="${formation.titre || 'Formation'}">
-                <a href="formationdetail?id=${formation.id}" class="position-cover"></a>
-            </figure>
-            <div class="panel vstack gap-1 p-2">
-                <h3 class="post-title h5 m-0 ltr:pe-4 rtl:ps-4"><span>${formation.titre || ''}</span></h3>
-                <div class="content vstack justify-between gap-narrow">
-                    <p class="post-excrept text-truncate-3 fs-6 opacity-70">${formation.description_courte && formation.description_courte.length > 50 ? formation.description_courte.substring(0, 80) + '...' : formation.description_courte  || ''}</p>
-                </div>
-                <div class="fs-4 mb-1" style="color:#2a4743; font-weight:900; font-size:2rem;">
-                    ${formation.prix_particulier ? formation.prix_particulier + ' €' : ''}
-                </div>
-                <div class="fs-5 mb-1" style="color:#178d72; font-weight:700; font-size:1.2rem;">
-                    <span>
-                        ${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}
-                    </span>
-                </div>
-                <a href="formationdetail?id=${formation.id}" class="uc-link dark:text-tertiary fs-7 xl:fs-6 fw-bold hstack gap-1 sm:mt-1 xl:mt-2">
-                    <span>Découvrir la formation</span>
-                    <i class="position-relative icon unicon-arrow-up-right fw-bold rtl:-rotate-90 translate-y-px"></i>
-                </a>
+            let imageURL = '../assets/images/blog/default.jpg';
+            if (formation.image_couverture && formation.image_couverture.startsWith('/photos')) {
+                imageURL = 'https://imaneapi.auditacademie.com' + formation.image_couverture;
+            } else if (formation.image_couverture) {
+                imageURL = formation.image_couverture;
+            }
+            html += `
+            <div class="swiper-slide">
+                <article class="post type-post panel overflow-hidden vstack border bg-white dark:bg-gray-900 dark:text-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
+                    <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
+                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageURL}" alt="${formation.titre || 'Formation'}">
+                        <a href="formationdetail?id=${formation.id}" class="position-cover"></a>
+                    </figure>
+                    <div class="panel vstack gap-1 p-2">
+                        <h3 class="post-title h5 m-0 ltr:pe-4 rtl:ps-4">
+                            <span class="truncate-2-lines" title="${formation.titre || ''}">${formation.titre || ''}</span>
+                        </h3>
+                        <div class="content vstack justify-between gap-narrow">
+                            <p class="post-excrept fs-6 opacity-70 truncate-2-desc" title="${formation.description_courte || ''}">
+                                ${formation.description_courte || ''}
+                            </p>
+                        </div>
+                        <div class="fs-4 mb-1" style="color:#2a4743; font-weight:900; font-size:2rem;">
+                            ${formation.prix_particulier ? formation.prix_particulier + ' €' : ''}
+                        </div>
+                        <div class="fs-5 mb-1 truncate-1-line" style="color:#178d72; font-weight:700; font-size:1.2rem;" title="${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}">
+                            ${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}
+                        </div>
+                        <a href="formationdetail?id=${formation.id}" class="uc-link dark:text-tertiary fs-7 xl:fs-6 fw-bold hstack gap-1 sm:mt-1 xl:mt-2">
+                            <span>Découvrir la formation</span>
+                            <i class="position-relative icon unicon-arrow-up-right fw-bold rtl:-rotate-90 translate-y-px"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
-        </article>
-    </div>
-    `;
-});
+            `;
+        });
         wrapper.innerHTML = html;
         // Initialiser Swiper si besoin (si ce n'est pas automatique)
         if (window.Swiper) {
@@ -450,23 +492,23 @@ document.addEventListener('DOMContentLoaded', fetchAndDisplayFormationsIndex);
 
     <!-- SCRIPT POUR AFFICHER LES ARTICLES DYNAMIQUES -->
     <script>
-async function fetchAndDisplayArticlesIndex() {
-    const wrapper = document.getElementById('articles-list-index');
-    wrapper.innerHTML = '<div>Chargement des articles...</div>';
-    try {
-        const response = await fetch('https://imaneapi.auditacademie.com/api/articles/');
-        const articles = await response.json();
-        if (!Array.isArray(articles) || articles.length === 0) {
-            wrapper.innerHTML = "<div>Aucun article trouvé.</div>";
-            return;
-        }
-        let html = '';
-        articles.forEach(article => {
-            let imageURL = '../assets/images/blog/default.jpg';
-            if (article.image && article.image.startsWith('/photos')) {
-                imageURL = 'https://imaneapi.auditacademie.com' + article.image;
-            }
-            html += `
+        async function fetchAndDisplayArticlesIndex() {
+            const wrapper = document.getElementById('articles-list-index');
+            wrapper.innerHTML = '<div>Chargement des articles...</div>';
+            try {
+                const response = await fetch('https://imaneapi.auditacademie.com/api/articles/');
+                const articles = await response.json();
+                if (!Array.isArray(articles) || articles.length === 0) {
+                    wrapper.innerHTML = "<div>Aucun article trouvé.</div>";
+                    return;
+                }
+                let html = '';
+                articles.forEach(article => {
+                    let imageURL = '../assets/images/blog/default.jpg';
+                    if (article.image && article.image.startsWith('/photos')) {
+                        imageURL = 'https://imaneapi.auditacademie.com' + article.image;
+                    }
+                    html += `
             <div class="swiper-slide">
                 <article class="post type-post panel overflow-hidden vstack border bg-white dark:bg-gray-900 dark:text-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
                     <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
@@ -486,33 +528,34 @@ async function fetchAndDisplayArticlesIndex() {
                 </article>
             </div>
             `;
-        });
-        wrapper.innerHTML = html;
-        // Initialiser Swiper si besoin (si ce n'est pas automatique)
-        if (window.Swiper) {
-            new Swiper('#articles-swiper', {
-                slidesPerView: 1.1,
-                spaceBetween: 16,
-                loop: true,
-                navigation: {
-                    nextEl: '.articles-swiper-next',
-                    prevEl: '.articles-swiper-prev'
-                },
-                breakpoints: {
-                    640: { slidesPerView: 2.3, spaceBetween: 24 },
-                    1024: { slidesPerView: 3.22, spaceBetween: 24 },
-                    1280: { slidesPerView: 4, spaceBetween: 24 }
+                });
+                wrapper.innerHTML = html;
+                // Initialiser Swiper si besoin (si ce n'est pas automatique)
+                if (window.Swiper) {
+                    new Swiper('#articles-swiper', {
+                        slidesPerView: 1.1,
+                        spaceBetween: 16,
+                        loop: true,
+                        navigation: {
+                            nextEl: '.articles-swiper-next',
+                            prevEl: '.articles-swiper-prev'
+                        },
+                        breakpoints: {
+                            640: { slidesPerView: 2.3, spaceBetween: 24 },
+                            1024: { slidesPerView: 3.22, spaceBetween: 24 },
+                            1280: { slidesPerView: 4, spaceBetween: 24 }
+                        }
+                    });
                 }
-            });
+            } catch (error) {
+                wrapper.innerHTML = "<div>Erreur lors du chargement des articles.</div>";
+                console.error(error);
+            }
         }
-    } catch (error) {
-        wrapper.innerHTML = "<div>Erreur lors du chargement des articles.</div>";
-        console.error(error);
-    }
-}
-document.addEventListener('DOMContentLoaded', fetchAndDisplayArticlesIndex);
-</script>
+        document.addEventListener('DOMContentLoaded', fetchAndDisplayArticlesIndex);
+    </script>
     <!-- FIN SCRIPT ARTICLES DYNAMIQUES -->
 
 </body>
+
 </html>

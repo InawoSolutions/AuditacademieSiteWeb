@@ -438,6 +438,8 @@
     </style>
 </head>
 <body>
+    
+
 <!-- Header start -->
     <div id="header"></div>
     <script src="../assets/js/header.js"></script>
@@ -1008,6 +1010,19 @@
     </script>
 
     <script>
+        // Redirection si non connecté
+document.addEventListener('DOMContentLoaded', function () {
+    const userToken = localStorage.getItem('userToken');
+    const userId = localStorage.getItem('user_id');
+    if (!userToken || !userId) {
+        // On garde l'id du webinaire pour revenir après connexion
+        const params = new URLSearchParams(location.search);
+        const webinarId = params.get('id');
+        // Redirige vers la page de connexion avec retour prévu
+        location.href = `connexion?next=webinairedetail?id=${webinarId}`;
+        return;
+    }
+});
 document.addEventListener('DOMContentLoaded', function() {
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {

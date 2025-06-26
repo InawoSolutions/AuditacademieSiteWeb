@@ -507,21 +507,7 @@
       <!-- Message d'erreur global -->
 <div id="formError" class="alert alert-danger d-none" role="alert"></div>
 
-      <!-- Formulaire unique -->
       <form id="accountForm" novalidate>
-  <h3 class="section-title">Type de compte</h3>
-  <div class="mb-3">
-    <label for="typeCompte" class="form-label">Type de compte</label>
-    <select class="form-select" id="typeCompte" required>
-      <option value="" disabled selected>Choisissez le type de compte</option>
-      <option value="formation">Formation</option>
-      <option value="blog">Blog</option>
-      <option value="webinaire">Webinaire</option>
-    </select>
-    <div class="invalid-feedback">Veuillez choisir un type de compte.</div>
-  </div>
-
-<!-- formation -->
   <!-- Champs communs à tous les comptes -->
   <div id="form-communs">
     <h3 class="section-title">Vos Identifiants</h3>
@@ -558,38 +544,7 @@
       <input type="text" class="form-control" id="lastName" placeholder="Nom" required>
       <div class="invalid-feedback">Veuillez saisir votre nom.</div>
     </div>
-
-    <div class="mb-3" id="filiere-group" style="display:none;">
-      <label for="filiere" class="form-label">Filière</label>
-      <select class="form-select form-control" id="filiere" required>
-        <option value="" disabled selected>Filière</option>
-      </select>
-      <div class="invalid-feedback">Veuillez choisir une filière.</div>
-    </div>
-    
-    <div class="mb-3">
-      <label for="langue" class="form-label">Langue</label>
-      <select class="form-select form-control" id="langue" required>
-        <option value="" disabled selected>Langue</option>
-        <option value="francais">Français</option>
-        <option value="anglais">Anglais</option>
-      </select>
-      <div class="invalid-feedback">Veuillez choisir une langue.</div>
-    </div>
-
-    <div id="fields-webinaire" style="display:none;">
-  <div class="mb-3">
-    <label for="webinaire" class="form-label">Webinaire</label>
-    <input type="text" class="form-control" id="webinaire" placeholder="Webinaire" readonly required>
-    <input type="hidden" id="webinaireId" name="webinaireId">
-    <div class="invalid-feedback">Aucun webinaire sélectionné.</div>
-    <div class="mt-2" id="webinaire-link-container">
-      <a href="webinaires.html" class="btn btn-link p-0">Voir la liste des webinaires</a>
-    </div>
-  </div>
-</div>
-
-  <div class="mb-4">
+    <div class="mb-4">
       <label for="country" class="form-label">Pays</label>
       <div class="custom-select">
         <select class="form-select" id="country" name="country" required>
@@ -1109,33 +1064,14 @@
     </div>
   </div>
 
+<!-- Champ Type CONTACTE (remplace le choix particulier/entreprise) -->
+<!-- <div class="mb-3">
+  <label class="form-label" for="typeContacte">Type</label>
+  <input type="text" class="form-control" id="typeContacte" value="CONTACTE" readonly>
+</div> -->
+
 <!-- Champs spécifiques Formation -->
-<div id="fields-formation" style="display:none;">
-  <div class="mb-3">
-    <label class="form-label" for="type">Type</label>
-    <div class="radio-group">
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="type" id="particulier" value="Particulier">
-        <label class="form-check-label" for="particulier">Particulier</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="type" id="entreprise" value="Entreprise">
-        <label class="form-check-label" for="entreprise">Entreprise</label>
-      </div>
-    </div>
-    <div class="invalid-feedback">Veuillez sélectionner un type.</div>
-  </div>
-  <div id="fields-entreprise-extra" style="display: none;">
-    <div class="mb-3">
-      <input type="text" class="form-control" id="companyName" placeholder="Nom de l'entreprise">
-      <div class="invalid-feedback">Veuillez saisir le nom de l'entreprise.</div>
-    </div>
-    <div class="mb-3">
-      <input type="text" class="form-control" id="companyAddress" placeholder="Adresse de l'entreprise">
-      <div class="invalid-feedback">Veuillez saisir l'adresse de l'entreprise.</div>
-    </div>
-  </div>
-  </div>
+
   <!-- Subscription Preferences -->
         <div class="subscription-section mb-4">
           <h5>Je souhaite recevoir :</h5>
@@ -1205,6 +1141,7 @@
     const passwordInput = document.getElementById('password');
     const passwordToggle = document.getElementById('passwordToggle');
     const passwordIcon = document.getElementById('passwordIcon');
+
 
     passwordToggle.addEventListener('click', function () {
       const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -1576,17 +1513,6 @@
       alert('Redirection vers la politique de confidentialité...');
       // window.open('/privacy-policy', '_blank');
     });
-
-    
-document.querySelectorAll('input[name="type"]').forEach(input => {
-  input.addEventListener('change', updateFieldsByType);
-});
-window.addEventListener('DOMContentLoaded', updateFieldsByType);
-
-  // Charger dynamiquement les filières depuis l'API
-
-
-
   </script>
 
   <script>
@@ -1610,7 +1536,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="../assets/js/footer.js"></script>
 <!-- Footer end -->
 
-<script>
+<!-- <script>
 // filepath: /home/duran/ImaneConsultingfinal/ImaneConsulting/new/fr/inscription.html
 document.addEventListener('DOMContentLoaded', function () {
   const typeCompte = document.getElementById('typeCompte');
@@ -1663,55 +1589,25 @@ document.addEventListener('DOMContentLoaded', function () {
   typeCompte.addEventListener('change', updateFieldsDisplay);
   updateFieldsDisplay(); // au chargement
 });
-</script>
+</script> -->
 
 <!-- Ajoute ce script à la fin de inscription.html, juste avant </body> -->
-<script>
-// filepath: /home/duran/ImaneConsultingfinal/ImaneConsulting/new/fr/inscription.html
 
-function updateFieldsByType() {
-  // Ne rien faire si le bloc formation n'est pas visible
-  const fieldsFormation = document.getElementById('fields-formation');
-  if (!fieldsFormation || fieldsFormation.style.display === 'none') return;
-
-  const type = document.querySelector('input[name="type"]:checked');
-  const fieldsEntrepriseExtra = document.getElementById('fields-entreprise-extra');
-  // Il n'y a pas de fields-particulier-extra dans ce formulaire, donc on masque juste le bloc entreprise si besoin
-  if (type && type.value === "Entreprise") {
-    fieldsEntrepriseExtra.style.display = '';
-  } else {
-    fieldsEntrepriseExtra.style.display = 'none';
-  }
-}
-
-// Attache le listener UNIQUEMENT quand le bloc formation est affiché
-document.addEventListener('DOMContentLoaded', function () {
-  function attachTypeListeners() {
-    // Détache d'abord tous les anciens listeners pour éviter les doublons
-    document.querySelectorAll('input[name="type"]').forEach(input => {
-      input.removeEventListener('change', updateFieldsByType);
-      input.addEventListener('change', updateFieldsByType);
-    });
-    updateFieldsByType();
-  }
-
-  // Quand on change de type de compte, on attache ou détache les listeners
-  const typeCompte = document.getElementById('typeCompte');
-  typeCompte.addEventListener('change', function () {
-    setTimeout(attachTypeListeners, 100); // attendre que le DOM affiche le bloc
-  });
-
-  // Au chargement, si formation est sélectionné, on attache les listeners
-  attachTypeListeners();
-});
-</script>
 <script>
   const form = document.getElementById('accountForm');
+
+     const urlParams = new URLSearchParams(location.search);
+        const redirect = urlParams.get('next');
+        const connexionLink = document.querySelector('.login-link');
+        if(redirect) {
+            connexionLink.href = `connexion?next=${redirect}`;
+        } else {
+            connexionLink.href = 'connexion.html';
+        }
+
   form.addEventListener('submit', async function (e) {
   e.preventDefault();
   let valid = true;
-
-  const typeCompteValue = document.getElementById('typeCompte').value;
 
   // Email
   const email = document.getElementById('email');
@@ -1724,7 +1620,7 @@ document.addEventListener('DOMContentLoaded', function () {
     email.classList.add('is-valid');
   }
 
-  // Mot de passe sécurisé
+  // Mot de passe
   const password = document.getElementById('password');
   const passwordValue = password.value;
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$/;
@@ -1756,44 +1652,6 @@ document.addEventListener('DOMContentLoaded', function () {
     lastName.classList.add('is-valid');
   }
 
-  // Langue
-  const langue = document.getElementById('langue');
-  if (!langue.value) {
-    langue.classList.add('is-invalid');
-    valid = false;
-  } else {
-    langue.classList.remove('is-invalid');
-    langue.classList.add('is-valid');
-  }
-
-  // Filière (seulement pour formation ou blog)
-  let secteurId = null;
-  if (typeCompteValue === 'formation' || typeCompteValue === 'blog') {
-    const filiere = document.getElementById('filiere');
-    if (!filiere.value) {
-      filiere.classList.add('is-invalid');
-      valid = false;
-    } else {
-      filiere.classList.remove('is-invalid');
-      filiere.classList.add('is-valid');
-      secteurId = parseInt(filiere.value, 10);
-    }
-  }
-
-  // Webinaire (seulement pour webinaire)
-  let webinaireValue = null;
-if (typeCompteValue === 'webinaire') {
-  const webinaireIdInput = document.getElementById('webinaireId');
-  if (!webinaireIdInput.value) {
-    document.getElementById('webinaire').classList.add('is-invalid');
-    valid = false;
-  } else {
-    document.getElementById('webinaire').classList.remove('is-invalid');
-    document.getElementById('webinaire').classList.add('is-valid');
-    webinaireValue = webinaireIdInput.value;
-  }
-}
-
   // Téléphone
   const phone = document.getElementById('phone');
   const phoneRegex = /^[0-9\s]{6,15}$/;
@@ -1808,84 +1666,26 @@ if (typeCompteValue === 'webinaire') {
   // Pays
   const country = document.getElementById('country').options[document.getElementById('country').selectedIndex].text;
 
-  // Champs spécifiques formation (Particulier/Entreprise)
-  let typeChecked = null;
-  let companyName = '', companyAddress = '';
-  if (typeCompteValue === 'formation') {
-    typeChecked = document.querySelector('input[name="type"]:checked');
-    if (!typeChecked) {
-      document.querySelectorAll('input[name="type"]').forEach(input => input.classList.add('is-invalid'));
-      valid = false;
-    } else {
-      document.querySelectorAll('input[name="type"]').forEach(input => input.classList.remove('is-invalid'));
-      if (typeChecked.value === "Entreprise") {
-        companyName = document.getElementById('companyName').value;
-        companyAddress = document.getElementById('companyAddress').value;
-        if (!companyName.trim()) {
-          document.getElementById('companyName').classList.add('is-invalid');
-          valid = false;
-        } else {
-          document.getElementById('companyName').classList.remove('is-invalid');
-          document.getElementById('companyName').classList.add('is-valid');
-        }
-        if (!companyAddress.trim()) {
-          document.getElementById('companyAddress').classList.add('is-invalid');
-          valid = false;
-        } else {
-          document.getElementById('companyAddress').classList.remove('is-invalid');
-          document.getElementById('companyAddress').classList.add('is-valid');
-        }
-      }
-    }
-  }
-
   if (!valid) {
-  const formError = document.getElementById('formError');
-  formError.textContent = 'Merci de corriger les erreurs dans le formulaire.';
-  formError.classList.remove('d-none');
-  formError.scrollIntoView({ behavior: 'smooth' });
-  return;
-} else {
-  document.getElementById('formError').classList.add('d-none');
-}
-
-const countryCode = document.getElementById('countryCode').value;
-const phoneValue = phone.value;
-  // Construction des données à envoyer
-  let data = {
-    email: email.value,
-    password: password.value,
-    langue: langue.value === 'francais' ? 'fr' : 'en',
-    pays: country,
-  };
-
-  if (typeCompteValue === 'formation') {
-  if (typeChecked.value === 'Entreprise') {
-    data.type_user = 'ENTREPRISE';
-    data.nom_entreprise = companyName;
-    data.adresse = companyAddress;
-    data.contact_first_name = firstName.value;
-    data.contact_last_name = lastName.value;
+    const formError = document.getElementById('formError');
+    formError.textContent = 'Merci de corriger les erreurs dans le formulaire.';
+    formError.classList.remove('d-none');
+    formError.scrollIntoView({ behavior: 'smooth' });
+    return;
   } else {
-    data.type_user = 'APPRENANT';
-    data.first_name = firstName.value;
-    data.last_name = lastName.value;
+    document.getElementById('formError').classList.add('d-none');
   }
-  data.tel = countryCode + phoneValue;
-  data.secteur_ids = [secteurId];
-} else if (typeCompteValue === 'blog') {
-  data.type_user = 'PARTICULIER';
-  data.first_name = firstName.value;
-  data.last_name = lastName.value;
-  data.tel = countryCode + phoneValue;
-  data.secteur_ids = [secteurId];
-} else if (typeCompteValue === 'webinaire') {
-  data.type_user = 'WEBINAIRE';
-  data.first_name = firstName.value;
-  data.last_name = lastName.value;
-  data.tel = countryCode + phoneValue;
-  data.webinaire_id = webinaireValue; // <-- utiliser l'ID
-}
+
+  // ...dans la construction de data...
+let data = {
+  email: email.value,
+  password: password.value,
+  first_name: firstName.value,
+  last_name: lastName.value,
+  tel: phone.value,
+  pays: country,
+  type_user: "CONTACTE "// Force la valeur
+};
 
   try {
     const response = await fetch('https://imaneapi.auditacademie.com/api/inscription/', {
@@ -1895,25 +1695,29 @@ const phoneValue = phone.value;
     });
 
     if (response.ok) {
-  alert('Inscription réussie !');
-  window.location.href = "connexion.html";
-} else {
-  const error = await response.json();
-  const formError = document.getElementById('formError');
-  formError.textContent = 'Erreur : ' + (error.message || JSON.stringify(error));
-  formError.classList.remove('d-none');
-  formError.scrollIntoView({ behavior: 'smooth' });
-}
-} catch (err) {
-  const formError = document.getElementById('formError');
-  formError.textContent = 'Erreur réseau ou serveur.';
-  formError.classList.remove('d-none');
-  formError.scrollIntoView({ behavior: 'smooth' });
-}
+      alert('Inscription réussie !');
+      if (redirect) {
+        location.href = `connexion?next=${redirect}`;
+      } else {
+        location.href = 'connexion.html';
+      }
+    } else {
+      const error = await response.json();
+      const formError = document.getElementById('formError');
+      formError.textContent = 'Erreur : ' + (error.message || JSON.stringify(error));
+      formError.classList.remove('d-none');
+      formError.scrollIntoView({ behavior: 'smooth' });
+    }
+  } catch (err) {
+    const formError = document.getElementById('formError');
+    formError.textContent = 'Erreur réseau ou serveur.';
+    formError.classList.remove('d-none');
+    formError.scrollIntoView({ behavior: 'smooth' });
+  }
 });
 </script>
 
-<script>
+<!-- <script>
   document.addEventListener('DOMContentLoaded', async function () {
   const params = new URLSearchParams(window.location.search);
   const webinaireId = params.get('id');
@@ -1950,7 +1754,7 @@ const phoneValue = phone.value;
     document.getElementById('webinaire').value = "Aucun webinaire sélectionné";
   }
 });
-</script>
+</script> -->
 
 
 </body>
