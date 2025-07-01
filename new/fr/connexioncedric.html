@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Académie - Connexion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+    <link rel="canonical" href="https://unistudio.co/html/Lexend">
+    <link rel="shortcut icon" href="../assets/images/faviconeimane.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
+    <link rel="stylesheet" href="../assets/css/theme/main.css">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+
+    <meta name="theme-color" content="#178d72">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lexend">
+    <meta property="og:description"
+        content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+    <meta property="og:url" content="https://unistudio.co/html/lexend/">
+    <meta property="og:site_name" content="Lexend">
+    <meta property="og:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg">
+    <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lexend">
+    <meta name="twitter:description"
+        content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+    <meta name="twitter:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg">
+
+    <link rel="canonical" href="https://unistudio.co/html/lexend/">
+
+    <!-- preload head styles -->
+    <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+    <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+
+    <!-- preload footer scripts -->
+    <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/typed.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/tilt.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/split-type.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/prettify.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+    <link rel="preload" href="../assets/js/core/magic-cursor.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/splitype-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/typed-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/tilt-helper.js" as="script">
+    <link rel="preload" href="../assets/js/core/marquee.js" as="script">
+    <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+    <link rel="preload" href="../assets/js/app.js" as="script">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- app head for bootstrap core -->
+    <script src="../assets/js/app-head-bs.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+    <!-- include styles -->
+    <link rel="stylesheet" href="../assets/css/unicons.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/prettify.min.css">
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+
+    <!-- include main style -->
+    <link rel="stylesheet" href="../assets/css/theme/theme-three.min.purge.css">
+
+    <!-- include scripts -->
+    <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/custom.css">
+
+    <style>
+        :root {
+            --main-color: #2a4743;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .login-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--main-color) 0%, #667eea 50%, #f093fb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mountain-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Cpath d='M0,600 L0,400 L200,300 L400,350 L600,250 L800,300 L1000,200 L1200,250 L1200,600 Z' fill='%23000000' fill-opacity='0.1'/%3E%3Cpath d='M0,600 L0,450 L150,380 L350,420 L550,320 L750,370 L950,280 L1200,320 L1200,600 Z' fill='%23000000' fill-opacity='0.15'/%3E%3Cpath d='M0,600 L0,500 L100,450 L300,480 L500,400 L700,440 L900,380 L1200,420 L1200,600 Z' fill='%23000000' fill-opacity='0.2'/%3E%3C/svg%3E") no-repeat center bottom;
+            background-size: cover;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        .star:nth-child(1) { top: 20%; left: 15%; }
+        .star:nth-child(2) { top: 30%; left: 80%; }
+        .star:nth-child(3) { top: 60%; left: 25%; }
+        .star:nth-child(4) { top: 15%; left: 70%; }
+        .star:nth-child(5) { top: 45%; left: 90%; }
+
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            letter-spacing: 1px;
+            margin-top: 2.5rem;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+        }
+
+        .login-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .form-label {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--main-color);
+            box-shadow: 0 0 0 0.2rem rgba(42, 71, 67, 0.25);
+        }
+
+        .is-invalid {
+            border-color: #dc3545 !important;
+        }
+
+        .invalid-feedback {
+            display: none;
+            color: #dc3545;
+            font-size: 0.85em;
+            margin-top: 0.25rem;
+        }
+
+        .form-control.is-invalid ~ .invalid-feedback {
+            display: block;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .forgot-password {
+            color: var(--main-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+            float: right;
+            margin-top: 0.5rem;
+        }
+
+        .forgot-password:hover {
+            color: #5a6fd8;
+            text-decoration: underline;
+        }
+
+        .remember-me {
+            margin: 1.5rem 0;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--main-color);
+            border-color: var(--main-color);
+        }
+
+        .form-check-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .btn-login {
+            background: linear-gradient(135deg, var(--main-color) 0%, #667eea 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 0.75rem;
+            font-weight: 600;
+            color: white;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(42, 71, 67, 0.3);
+            color: white;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .signup-link a {
+            color: var(--main-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .login-card {
+                margin: 1rem;
+                padding: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+       @media (max-width: 576px) {
+    .login-card {
+        padding: 1.2rem;
+        margin: 0.5rem;
+        font-size: 0.95rem;
+    }
+    .logo {
+        font-size: 1.1rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .btn-login {
+        padding: 0.65rem;
+        font-size: 1rem;
+    }
+    .top-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+} 
+    </style>
+    <style>
+.top-header {
+    background-color: #2a4743;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 0.95rem;
+}
+.header-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+.header-link:hover {
+    color: #ffd700;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #2a4743 !important;
+    font-size: 1.2rem;
+}
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-link {
+    color: #2d3748 !important;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #2a4743 !important;
+}
+.user-icon {
+    color: #2d3748;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.user-icon:hover {
+    color: #2a4743;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+<script src="../assets/js/header.js"></script>
+<!-- Ajoute ce spacer juste ici -->
+<div style="height: 60px;"></div> 
+
+    <div class="login-container">
+        <div class="mountain-bg"></div>
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-12">
+                    <div class="logo fw-bold" style="margin-top: 2.5rem;">Audit Académie</div>
+                    
+                    <div class="login-card">
+                        <h2 class="login-title">Pour continuer </h2>
+                        <p class="login-subtitle">Connectez-vous maintenant ici.</p>
+                        
+                        <form id="loginForm" novalidate>
+                            <div class="mb-3">
+
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+                                <div class="invalid-feedback" id="emailError">Veuillez entrer un email valide.</div>
+                            </div>
+                            
+                            <div class="mb-2">
+                                <label for="password" class="form-label">Mot de passe</label>
+                                <div class="password-container">
+                                    <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
+                                    <button type="button" class="password-toggle" id="togglePassword">
+                                        <i class="fas fa-eye" id="eyeIcon"></i>
+                                    </button>
+                                </div>
+                                <div class="invalid-feedback" id="passwordError">Veuillez entrer votre mot de passe.</div>
+                                <a href="motdepasseoublie.html" class="forgot-password">Mot de passe oublié ?</a>
+                            </div>
+                            
+                            <div class="form-check remember-me">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Se souvenir de moi
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-login">Se connecter</button>
+                        </form>
+                        
+                        <div class="signup-link">
+                            Vous n'avez pas de compte ? <a href="inscription.html">S'inscrire maintenant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 Audit Académie. Tous droits réservés.
+        </div>
+    </div>
+
+
+<!-- Bootstrap & Kkiapay Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.kkiapay.me/k.js"></script>
+
+<!-- Prix Modal -->
+<div class="modal fade" id="prixModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h5 class="modal-title mb-3">Choisissez votre tarif</h5>
+      <button class="btn btn-primary w-100 mb-2" id="prixParticulierBtn" onclick="prixChoisi('particulier')">Prix Particulier</button>
+      <button class="btn btn-secondary w-100" id="prixGroupeBtn" onclick="prixChoisi('groupe')">Prix Groupe</button>
+    </div>
+  </div>
+</div>
+
+<!-- Paiement Modal -->
+<div class="modal fade" id="paiementModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h5 class="modal-title mb-3">Choisissez le mode de paiement</h5>
+      <button class="btn btn-success w-100 mb-2" onclick="choisirPaiement('once')">Paiement en une fois</button>
+      <button class="btn btn-outline-success w-100" onclick="choisirPaiement('tranche')">Paiement en deux tranches</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tranche Modal -->
+<div class="modal fade" id="trancheModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h5 class="modal-title mb-3">Paiement par tranche</h5>
+      <button class="btn btn-warning w-100 mb-2" id="btnTranche1" onclick="payer('tranche1')">1ère Tranche</button>
+      <button class="btn btn-outline-warning w-100" id="btnTranche2" onclick="payer('tranche2')" disabled>2e Tranche</button>
+    </div>
+  </div>
+</div>
+
+<!-- Kkiapay Widget Info (Kkiapay itself will overlay) -->
+<div id="kykapay-widget-info" style="display:none; text-align:center;">
+  <p id="detailsPaiement" class="my-3"></p>
+  <!-- The "Simuler Paiement" button is removed as Kkiapay handles the UI -->
+</div>
+
+
+
+<!-- 
+<script>
+    // Global variables for payment flow
+    
+    let typePrix = ''; // 'particulier' or 'groupe'
+    let lastPaiementOption = null; // 'once', 'tranche1', 'tranche2'
+    let currentFormationData = null; // To store fetched formation details
+    let montantPourApi = 0;
+
+
+    // --- Modal Control Functions ---
+    function afficherModalePrix(formationData) {
+        currentFormationData = formationData; // Store for later use
+
+        prixGlobal = parseInt(currentFormationData.prix_particulier); // Default to particulier
+        const prixParticulier = currentFormationData.prix_particulier;
+        const prixGroupe = currentFormationData.prix_entreprise;
+
+        document.getElementById('prixParticulierBtn').textContent = `Prix Particulier - ${prixParticulier} FCFA`;
+        document.getElementById('prixGroupeBtn').textContent = `Prix Groupe - ${prixGroupe} FCFA`;
+
+        new bootstrap.Modal(document.getElementById('prixModal')).show();
+    }
+
+    function prixChoisi(selectedType) {
+        typePrix = selectedType;
+        const btnId = (typePrix === 'particulier') ? 'prixParticulierBtn' : 'prixGroupeBtn';
+        const priceButton = document.getElementById(btnId);
+        // Extract price from button text (ensure it's robust if text format changes)
+        const match = priceButton.textContent.match(/(\d[\d\s]*\d|\d+)\s*FCFA/);
+        if (match && match[1]) {
+            prixGlobal = parseInt(match[1].replace(/\s/g, ''));
+        } else {
+            console.error("Could not parse price from button:", priceButton.textContent);
+            // Fallback or error handling
+            prixGlobal = (typePrix === 'particulier') ? parseInt(currentFormationData.prix_particulier) : parseInt(currentFormationData.prix_entreprise);
+        }
+
+        console.log(`Prix choisi: ${typePrix}, Montant: ${prixGlobal}`);
+
+        bootstrap.Modal.getInstance(document.getElementById('prixModal')).hide();
+        new bootstrap.Modal(document.getElementById('paiementModal')).show();
+    }
+
+    function choisirPaiement(mode) {
+        const paiementModalInstance = bootstrap.Modal.getInstance(document.getElementById('paiementModal'));
+        if (paiementModalInstance) paiementModalInstance.hide();
+
+        if (mode === 'tranche') {
+            if (!currentFormationData) {
+                console.error("currentFormationData is not set. Cannot proceed with tranche payment.");
+                alert("Erreur : Données de formation non disponibles. Veuillez réessayer.");
+                return;
+            }
+
+            const btn1 = document.getElementById('btnTranche1');
+            const btn2 = document.getElementById('btnTranche2');
+
+            if (!btn1 || !btn2) {
+                console.error("Les boutons de tranche n'existent pas dans le DOM.");
+                return;
+            }
+
+            const t1 = typePrix === 'particulier'
+                ? currentFormationData.prix_tranche_1_particulier
+                : currentFormationData.prix_tranche_1_entreprise;
+
+            const t2 = typePrix === 'particulier'
+                ? currentFormationData.prix_tranche_2_particulier
+                : currentFormationData.prix_tranche_2_entreprise;
+
+            btn1.innerHTML = `1ère Tranche : ${t1} FCFA`;
+            btn2.innerHTML = `2e Tranche : ${t2} FCFA`;
+
+            btn1.disabled = false;
+            btn2.disabled = true; // Always disable 2nd tranche initially
+
+            new bootstrap.Modal(document.getElementById('trancheModal')).show();
+        } else {
+            payer('once');
+        }
+    }
+
+    function payer(option) {
+        lastPaiementOption = option;
+
+        if (!currentFormationData && (option === 'tranche1' || option === 'tranche2')) {
+             console.error("currentFormationData is not set. Cannot proceed with tranche payment details.");
+             alert("Erreur : Données de formation non disponibles pour le paiement par tranche. Veuillez réessayer.");
+             return;
+        }
+
+        let montant = 0;
+        let detail = "";
+
+        if (option === 'tranche1') {
+            montant = typePrix === 'particulier'
+                ? parseFloat(currentFormationData.prix_tranche_1_particulier)
+                : parseFloat(currentFormationData.prix_tranche_1_entreprise);
+            detail = "1ère Tranche";
+        } else if (option === 'tranche2') {
+            montant = typePrix === 'particulier'
+                ? parseFloat(currentFormationData.prix_tranche_2_particulier)
+                : parseFloat(currentFormationData.prix_tranche_2_entreprise);
+            detail = "2e Tranche";
+        } else { // 'once'
+
+
+
+            if (typePrix === 'particulier') {
+            const rawPrixParticulier = currentFormationData.prix_particulier;
+            montant = parseFloat(rawPrixParticulier) || 0;
+            console.log(`[DEBUG] payer (once) - Type Particulier. Raw: ${rawPrixParticulier}, Montant: ${montant}`);
+        } else if (typePrix === 'groupe') { // 'groupe' est la valeur définie dans prixChoisi
+            const rawPrixEntreprise = currentFormationData.prix_entreprise; // Assurez-vous que le champ est bien 'prix_entreprise'
+            montant = parseFloat(rawPrixEntreprise) || 0;
+            console.log(`[DEBUG] payer (once) - Type Groupe. Raw: ${rawPrixEntreprise}, Montant: ${montant}`);
+        } else {
+            // Ce cas ne devrait pas arriver si le flux est correct (typePrix est toujours 'particulier' ou 'groupe')
+            // Mais c'est une sécurité. On pourrait aussi utiliser prixGlobal comme fallback.
+            console.error(`[ERROR] payer (once) - typePrix ('${typePrix}') non reconnu ou non défini! Montant mis à 0.`);
+            montant = 0; // Sécurité : mettre le montant à 0 pour éviter un paiement inattendu
+        }
+
+
+        }
+
+        console.log(`Paiement pour: ${option}, Type: ${typePrix}, Montant: ${montant}`);
+
+
+        ['trancheModal', 'paiementModal'].forEach(id => {
+            const modalInstance = bootstrap.Modal.getInstance(document.getElementById(id));
+            if (modalInstance) modalInstance.hide();
+        });
+
+        const detailElem = document.getElementById('detailsPaiement');
+        if (detailElem) {
+            detailElem.innerText = `Mode : ${detail}, Type prix : ${typePrix}, Montant : ${montant} FCFA`;
+            document.getElementById('kykapay-widget-info').style.display = 'block'; // Show info
+        }
+
+        if (typeof openKkiapayWidget !== 'function') {
+            alert("Le widget Kkiapay ne s'est pas chargé. Vérifiez que le script https://cdn.kkiapay.me/k.js est bien inclus et chargé.");
+            return;
+        }
+        if (montant <= 0 || isNaN(montant)) {
+            alert("Le montant du paiement est invalide. Veuillez vérifier les prix de la formation.");
+            return;
+        }
+        montantPourApi = montant;
+
+        openKkiapayWidget({
+            amount: montant,
+            position: "center",
+            theme: "#007bff", // Example theme color
+            sandbox: true,
+            key: "2d60f1304a3711f0b843d576c84457a5", // Votre clé publique Kkiapay
+            // callback: "URL_DE_REDIRECTION_APRES_PAIEMENT_OU_FONCTION_JS" // Optionnel
+            // Vous pouvez aussi ajouter d'autres données comme:
+            // name: 'John Doe',
+            // phone: '61000000',
+            // email: 'user@example.com',
+            // data: 'Informations supplémentaires pour votre backend'
+        });
+    }
+
+    // --- Kkiapay Payment Listener ---
+
+    window.addEventListener("message", async function (event) {
+    // if (event.origin !== "https://widget.kkiapay.me") return; // Décommenter en production
+
+    const data = event.data;
+    if (!data || !data.name) return; // Ignorer les messages non pertinents
+
+    console.log("[DEBUG] Kkiapay Event Received:", data);
+
+    if (data.name === 'PAYMENT_SUCCESS') {
+        document.getElementById('kykapay-widget-info').style.display = 'none';
+        const transactionId = data.transactionId || (data.data && data.data.transactionId);
+
+        if (!transactionId) {
+            alert("Paiement réussi mais ID de transaction manquant. Veuillez contacter le support.");
+            return;
+        }
+        alert(`Paiement réussi ! Transaction ID: ${transactionId}`);
+
+        if (lastPaiementOption === 'tranche1') {
+            document.getElementById('btnTranche2').disabled = false;
+            alert("1ère tranche payée avec succès ! Vous pouvez maintenant payer la 2e tranche.");
+            // Ici, on ne fait pas l'inscription finale. On pourrait juste informer le backend
+            // mais pour l'instant, on s'arrête là, en attendant le paiement final.
+            return;
+        }
+
+        // --- Début du processus d'inscription finale ('once' ou 'tranche2') ---
+        console.log("[DEBUG] Starting final inscription process...");
+
+        const userToken = localStorage.getItem('userToken');
+        const formationIdParam = new URLSearchParams(window.location.search).get('formation');
+
+        // Validation des données cruciales
+        if (!userToken || !formationIdParam || !currentFormationData || montantPourApi <= 0) {
+            alert("Erreur critique : Données de session, de formation ou montant invalide. Veuillez vous reconnecter et réessayer.");
+            console.error("Missing data for inscription:", {
+                token: userToken ? 'OK' : 'Absent',
+                formationId: formationIdParam,
+                formationData: currentFormationData ? 'OK' : 'Absent',
+                montant: montantPourApi
+            });
+            return;
+        }
+
+        // Création du corps de la requête (payload) qui correspond à l'API corrigée
+        const inscriptionData = {
+            formation_id: parseInt(formationIdParam),
+            montant_paye: montantPourApi, // Le montant que l'on a stocké juste avant le paiement
+            reference_transaction: transactionId,
+            methode_paiement: "Mobile Money",
+            type_inscription: typePrix === 'groupe' ? 'GROUPER' : 'PARTICULIER' 
+        };
+
+        console.log("[DEBUG] Sending this data to API:", JSON.stringify(inscriptionData, null, 2));
+
+        try {
+            const res = await fetch('https://imaneapi.auditacademie.com/api/inscription_formations/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${userToken}` // L'API s'attend maintenant à ce token !
+                },
+                body: JSON.stringify(inscriptionData)
+            });
+
+            if (res.ok) {
+                const responseData = await res.json();
+                console.log("[SUCCESS] API response:", responseData);
+                alert("Félicitations ! Votre inscription à la formation est confirmée !");
+                
+                // REDIRECTION vers la page de la formation pour l'utilisateur connecté
+                // J'utilise formationdetailcnx.html comme dans votre code original, changez si besoin.
+                window.location.href = `formationdetailcnx?id=${formationIdParam}`;
+
+            } else {
+                const errorBody = await res.json(); // L'API Django renvoie du JSON pour les erreurs
+                console.error(`[API ERROR] Status: ${res.status}. Response:`, errorBody);
+                alert(`L'inscription a échoué après le paiement. Erreur : ${errorBody.error || 'Erreur inconnue'}. Contactez le support.`);
+            }
+
+        } catch (err) {
+            console.error("[NETWORK ERROR] during inscription:", err);
+            alert(`Erreur réseau lors de l'inscription. Votre paiement a été reçu. Contactez le support avec votre ID de transaction : ${transactionId}`);
+        }
+
+    } else if (data.name === "KKIAPAY_CLOSE_WIDGET") {
+        console.log("Kkiapay widget closed by user.");
+        document.getElementById('kykapay-widget-info').style.display = 'none';
+    } else if (data.name === "KKIAPAY_FAILED_PAYMENT") {
+        alert("Le paiement a échoué. Veuillez réessayer.");
+        console.error("Kkiapay payment failed:", data);
+        document.getElementById('kykapay-widget-info').style.display = 'none';
+    }
+});
+        
+      // --- Login Form Submission ---
+    document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // ... (votre code de validation du formulaire reste identique)
+            let valid = true;
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            if (!emailInput.value.trim() || !passwordInput.value.trim()) {
+                valid = false;
+                // Ajouter la logique d'affichage d'erreur ici si besoin
+            }
+            if (!valid) return;
+
+            const loginData = {
+                email: emailInput.value.trim(),
+                password: passwordInput.value
+            };
+
+            try {
+                const response = await fetch('https://imaneapi.auditacademie.com/api/connexion/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(loginData)
+                });
+
+                /* if (response.ok) {
+                    const result = await response.json();
+                    console.log("Données brutes reçues de l'API de connexion :", result);
+
+                    // 1. VÉRIFICATION DE LA VALIDITÉ DE LA RÉPONSE API
+                    // On s'assure que toutes les données critiques sont présentes avant de continuer.
+                    if (!result || !result.access_token || !result.user_info || !result.user_info.id) {
+                        console.error("Erreur critique : La réponse de l'API de connexion est incomplète ou mal formée.", result);
+                        alert("La connexion a échoué car la réponse du serveur est invalide. Veuillez contacter le support.");
+                        return; // On arrête l'exécution ici.
+                    }
+
+                    // 2. STOCKAGE SÉCURISÉ ET INCONDITIONNEL DE LA SESSION
+                    // Cette étape est cruciale et doit avoir lieu pour chaque connexion réussie.
+                    try {
+                        console.log("Stockage de la session dans localStorage...");
+                        document.cookie = `token=${result.access_token}; path=/; max-age=${60 * 60 * 24 * 7}; SameSite=Lax; Secure`;
+                        localStorage.setItem('userToken', result.access_token);
+                        localStorage.setItem('user_id', result.user_info.id);
+                        localStorage.setItem('first_name', result.user_info.first_name || '');
+                        localStorage.setItem('last_name', result.user_info.last_name || '');
+                        // On stocke aussi les inscriptions pour une utilisation future potentielle
+                        localStorage.setItem('inscriptions', JSON.stringify(result.inscriptions_formation || []));
+                        console.log("Session stockée avec succès.");
+                    } catch (e) {
+                        console.error("Erreur lors du stockage dans localStorage :", e);
+                        alert("Votre navigateur semble bloquer le stockage local, la session ne peut pas être maintenue.");
+                        return;
+                    }
+                    
+                    // 3. LOGIQUE DE REDIRECTION BASÉE SUR LE CONTEXTE (URL)
+                    const formationIdParam = new URLSearchParams(window.location.search).get('formation');
+
+                    // CAS A : L'utilisateur se connecte pour accéder à une formation spécifique.
+                    if (formationIdParam) {
+                        const inscriptions = result.inscriptions_formation || [];
+                        const formationId = parseInt(formationIdParam, 10);
+
+                        const isAlreadyEnrolled = inscriptions.some(
+                            inscription => inscription && inscription.formation && parseInt(inscription.formation.id, 10) === formationId
+                        );
+
+                        if (isAlreadyEnrolled) {
+                            // L'utilisateur est déjà inscrit -> Redirection automatique.
+                            const messageDiv = document.createElement('div');
+                            messageDiv.className = 'alert alert-info text-center';
+                            messageDiv.textContent = 'Connexion réussie. Vous êtes déjà inscrit a ce coure, redirection en cours...';
+                            loginForm.parentNode.insertBefore(messageDiv, loginForm);
+                            
+                            setTimeout(() => {
+                                // Assurez-vous d'inclure l'extension .html si nécessaire
+                                window.location.href = `formationdetailcnx?id=${formationIdParam}`;
+                            }, 1500);
+
+                        } else {
+                            // L'utilisateur n'est pas inscrit -> Lancement du flux de paiement.
+                            const messageDiv = document.createElement('div');
+                            messageDiv.className = 'alert alert-success text-center';
+                            messageDiv.textContent = 'Connexion réussie ! Préparation au paiement...';
+                            loginForm.parentNode.insertBefore(messageDiv, loginForm);
+
+                            // On récupère les détails de la formation pour les prix.
+                            const formationRes = await fetch(`https://imaneapi.auditacademie.com/api/formations/${formationIdParam}/`, {
+                                headers: { 'Authorization': `Bearer ${result.access_token}` }
+                            });
+
+                            if (!formationRes.ok) {
+                                alert("Erreur: Impossible de charger les détails de la formation pour le paiement.");
+                                return;
+                            }
+
+                            const fetchedFormation = await formationRes.json();
+                            setTimeout(() => {
+                                messageDiv.remove();
+                                afficherModalePrix(fetchedFormation);
+                            }, 2000);
+                        }
+                    } 
+                    // CAS B : L'utilisateur se connecte sans contexte de formation.
+                    else {
+                        // Redirection vers une page générale (tableau de bord, etc.).
+                        alert('Connexion réussie !');
+                        // REMPLACEZ 'dashboard.html' par l'URL de votre page de tableau de bord.
+                        window.location.href = 'dashboard.html';
+                    } */
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log("Données brutes reçues de l'API de connexion :", result);
+
+                    // 1. STOCKAGE SÉCURISÉ DE LA SESSION (inchangé)
+                    if (!result || !result.access_token || !result.user_info) {
+                        alert("La connexion a échoué car la réponse du serveur est invalide.");
+                        return;
+                    }
+                    localStorage.setItem('userToken', result.access_token);
+                    localStorage.setItem('user_id', result.user_info.id);
+                    // ... autres stockages ...
+
+                    // 2. DÉTECTION GÉNÉRIQUE DU PRODUIT DANS L'URL
+                    const params = new URLSearchParams(window.location.search);
+                    let productInfo = null;
+                    if (params.has('formation')) {
+                        productInfo = { type: 'formation', id: params.get('formation') };
+                    } else if (params.has('webinaire')) {
+                        productInfo = { type: 'webinaire', id: params.get('webinaire') };
+                    } else if (params.has('article')) {
+                        // Pour un article, l'ID est moins important que le fait de vouloir y accéder
+                        productInfo = { type: 'article', id: params.get('article') };
+                    }
+
+                    // 3. LOGIQUE DE REDIRECTION ADAPTÉE À VOS APIs
+                    if (productInfo) {
+                        console.log(`Produit détecté : Type=${productInfo.type}, ID=${productInfo.id}`);
+                        const productId = parseInt(productInfo.id, 10);
+                        let hasAccess = false; // Renommé pour plus de clarté
+
+                        // --- Logique de vérification d'accès ---
+                        if (productInfo.type === 'formation') {
+                            const inscriptions = result.inscriptions_formation || [];
+                            hasAccess = inscriptions.some(item => item && item.formation && parseInt(item.formation.id, 10) === productId);
+                        } 
+                        else if (productInfo.type === 'webinaire') {
+                            const webinaires = result.webinaires || [];
+                            hasAccess = webinaires.some(item => item && parseInt(item.id, 10) === productId);
+                        }
+                        else if (productInfo.type === 'article') {
+                            const abonnements = result.abonnement_article || [];
+                            // On vérifie si au moins UN des abonnements dans la liste est 'actif'
+                            hasAccess = abonnements.some(abo => abo && abo.statut_abonnement === 'actif');
+                        }
+
+                        if (hasAccess) {
+                            // L'utilisateur a déjà accès -> Redirection
+                            alert(`Vous avez déjà accès à ce ${productInfo.type}. Redirection...`);
+                            let destinationUrl = '';
+                            switch(productInfo.type) {
+                                case 'formation': destinationUrl = `formationdetailcnx.html?id=${productInfo.id}`; break;
+                                case 'webinaire': destinationUrl = `webinair-detail-connecter.html?id=${productInfo.id}`; break;
+                                case 'article':   destinationUrl = `article-detail-connecter.html?id=${productInfo.id}`; break;
+                            }
+                            window.location.href = destinationUrl;
+
+                        } else {
+                            // L'utilisateur n'a pas accès -> Lancement du flux de paiement
+                            let montant = 0;
+                            const messageDiv = document.createElement('div');
+                            messageDiv.className = 'alert alert-success text-center';
+                            loginForm.parentNode.insertBefore(messageDiv, loginForm);
+
+                            if (productInfo.type === 'article') {
+                                // Cas spécifique de l'abonnement article
+                                montant = 20000; // Prix fixe pour l'abonnement
+                                messageDiv.textContent = 'Connexion réussie ! Pour lire cet article, veuillez souscrire à l\'abonnement.';
+                            } else {
+                                // Cas pour formation et webinaire
+                                messageDiv.textContent = 'Connexion réussie ! Préparation au paiement...';
+                                const productApiUrl = `https://imaneapi.auditacademie.com/api/${productInfo.type}s/${productInfo.id}/`;
+                                const productRes = await fetch(productApiUrl, { headers: { 'Authorization': `Bearer ${result.access_token}` } });
+
+                                if (!productRes.ok) {
+                                    alert(`Erreur: Impossible de charger les détails du ${productInfo.type}.`);
+                                    return;
+                                }
+                                const productData = await productRes.json();
+                                montant = parseFloat(productData.prix) || 0;
+                            }
+
+                            if (montant > 0) {
+                                montantPourApi = montant;
+                                setTimeout(() => { // Petit délai pour que l'utilisateur lise le message
+                                    openKkiapayWidget({
+                                        amount: montant,
+                                        position: "center",
+                                        theme: "#007bff",
+                                        sandbox: true,
+                                        key: "2d60f1304a3711f0b843d576c84457a5",
+                                        // On pourrait ajouter des données pour savoir quel produit est acheté
+                                        data: `Achat de type: ${productInfo.type}, ID: ${productInfo.id}`
+                                    });
+                                }, 1500);
+                            } else {
+                                alert(`Le prix pour ce ${productInfo.type} est invalide ou le produit est gratuit. Contactez le support si vous pensez que c'est une erreur.`);
+                            }
+                        }
+                    } else {
+                        // Aucun produit dans l'URL -> Redirection vers le tableau de bord
+                        alert('Connexion réussie !');
+                        window.location.href = 'dashboard.html';
+                    }
+
+                    
+                }
+            } catch (err) {
+                alert('Erreur réseau ou problème avec le serveur de connexion.');
+                console.error("Login fetch/network error:", err);
+            }
+        });
+    }
+
+    // --- Le reste de votre code (togglePassword, logoutBtn, etc.) reste ici ---
+    // ...
+});
+
+</script>
+ -->
+
+<script>
+
+    // =================================================================
+    // ==         GESTION GÉNÉRIQUE D'ACHAT DE PRODUITS              ==
+    // =================================================================
+
+    // --- Variables Globales ---
+    let typePrix = ''; // 'particulier' ou 'groupe' - Spécifique aux formations
+    let lastPaiementOption = null; // 'once', 'tranche1', 'tranche2' - Spécifique aux formations
+    let currentFormationData = null; // Stocke les détails de la formation pour les modales
+    let montantPourApi = 0; // Montant final envoyé à Kkiapay
+
+    // =================================================================
+    // ==     FONCTIONS SPÉCIFIQUES AU PAIEMENT DES FORMATIONS        ==
+    // =================================================================
+
+    function afficherModalePrix(formationData) {
+        currentFormationData = formationData;
+        const prixParticulier = formationData.prix_particulier || 0;
+        const prixGroupe = formationData.prix_entreprise || 0;
+
+        document.getElementById('prixParticulierBtn').textContent = `Prix Particulier - ${prixParticulier} FCFA`;
+        document.getElementById('prixGroupeBtn').textContent = `Prix Groupe - ${prixGroupe} FCFA`;
+
+        new bootstrap.Modal(document.getElementById('prixModal')).show();
+    }
+
+    function prixChoisi(selectedType) {
+        typePrix = selectedType;
+        bootstrap.Modal.getInstance(document.getElementById('prixModal'))?.hide();
+        new bootstrap.Modal(document.getElementById('paiementModal')).show();
+    }
+
+    function choisirPaiement(mode) {
+        bootstrap.Modal.getInstance(document.getElementById('paiementModal'))?.hide();
+
+        if (mode === 'tranche') {
+            const btn1 = document.getElementById('btnTranche1');
+            const btn2 = document.getElementById('btnTranche2');
+            if (!btn1 || !btn2) { console.error("Boutons de tranche introuvables."); return; }
+            const t1 = typePrix === 'particulier' ? currentFormationData.prix_tranche_1_particulier : currentFormationData.prix_tranche_1_entreprise;
+            const t2 = typePrix === 'particulier' ? currentFormationData.prix_tranche_2_particulier : currentFormationData.prix_tranche_2_entreprise;
+            btn1.innerHTML = `1ère Tranche : ${t1} FCFA`;
+            btn2.innerHTML = `2e Tranche : ${t2} FCFA`;
+            btn1.disabled = false;
+            btn2.disabled = true;
+            new bootstrap.Modal(document.getElementById('trancheModal')).show();
+        } else {
+            payer('once');
+        }
+    }
+
+    function payer(option) {
+        lastPaiementOption = option;
+        let montant = 0;
+
+        if (!currentFormationData) {
+            alert("Erreur: Données de formation non disponibles pour le paiement.");
+            return;
+        }
+
+        switch(option) {
+            case 'tranche1':
+                montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_tranche_1_particulier : currentFormationData.prix_tranche_1_entreprise) || 0;
+                break;
+            case 'tranche2':
+                montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_tranche_2_particulier : currentFormationData.prix_tranche_2_entreprise) || 0;
+                break;
+            case 'once':
+                montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_particulier : currentFormationData.prix_entreprise) || 0;
+                break;
+            default:
+                alert("Option de paiement inconnue.");
+                return;
+        }
+
+        montantPourApi = montant;
+        
+        ['trancheModal', 'paiementModal', 'prixModal'].forEach(id => {
+            const modalInstance = bootstrap.Modal.getInstance(document.getElementById(id));
+            if (modalInstance) modalInstance.hide();
+        });
+
+        if (montant > 0) {
+            if (typeof openKkiapayWidget === 'function') {
+                openKkiapayWidget({
+                    amount: montant, position: "center", theme: "#007bff", sandbox: true,
+                    key: "2d60f1304a3711f0b843d576c84457a5", data: `Achat: formation, Option: ${option}, TypePrix: ${typePrix}`
+                });
+            } else {
+                alert("Widget de paiement indisponible.");
+            }
+        } else {
+            alert("Le montant du paiement pour cette option est invalide.");
+        }
+    }
+
+    // =================================================================
+    // ==     INITIALISATION DE LA PAGE ET GESTION DES ÉVÉNEMENTS     ==
+    // =================================================================
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Mise à jour dynamique du lien d'inscription
+        try {
+            const signupLink = document.querySelector('.signup-link a');
+            if (signupLink) {
+                const currentParams = new URLSearchParams(window.location.search);
+                const paramsString = currentParams.toString();
+                if (paramsString) {
+                    signupLink.href = `inscription?${paramsString}`;
+                }
+            }
+        } catch (error) {
+            console.error("Erreur lors de la mise à jour du lien d'inscription :", error);
+        }
+
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const emailInput = document.getElementById('email');
+                const passwordInput = document.getElementById('password');
+                if (!emailInput.value.trim() || !passwordInput.value.trim()) {
+                    alert("Veuillez remplir l'email et le mot de passe.");
+                    return;
+                }
+
+                const loginData = { email: emailInput.value.trim(), password: passwordInput.value };
+
+                try {
+                    const response = await fetch('https://imaneapi.auditacademie.com/api/connexion/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(loginData)
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        console.log("Données reçues de l'API connexion:", result);
+
+                        // 1. STOCKAGE INCONDITIONNEL ET SÉCURISÉ DE LA SESSION
+                        if (!result || !result.access_token || !result.user_info) {
+                            alert("La connexion a échoué car la réponse du serveur est invalide.");
+                            return;
+                        }
+                        localStorage.setItem('userToken', result.access_token);
+                        localStorage.setItem('user_id', result.user_info.id);
+                        localStorage.setItem('first_name', result.user_info.first_name || '');
+                        localStorage.setItem('last_name', result.user_info.last_name || '');
+                        console.log("Session stockée dans localStorage.");
+                        
+                        // 2. Détection du produit et logique de redirection
+                        const params = new URLSearchParams(window.location.search);
+                        let productInfo = null;
+                        if (params.has('formation')) productInfo = { type: 'formation', id: params.get('formation') };
+                        else if (params.has('webinaire')) productInfo = { type: 'webinaire', id: params.get('webinaire') };
+                        else if (params.has('article')) productInfo = { type: 'article', id: params.get('article') };
+
+                        if (productInfo) {
+                            await handleProductAccess(productInfo, result, loginForm);
+                        } else {
+                            alert('Connexion réussie !');
+                            location.href = 'index'; // Redirection par défaut
+                        }
+                    } else {
+                        const error = await response.json();
+                        alert('Erreur de connexion : ' + (error.detail || 'Identifiants invalides.'));
+                    }
+                } catch (err) {
+                    alert('Erreur réseau ou problème avec le serveur de connexion.');
+                    console.error("Erreur de fetch/connexion:", err);
+                }
+            });
+        }
+        setupOtherEventListeners();
+    });
+    // =================================================================
+    // ==      FONCTIONS LOGIQUES POUR GÉRER L'ACCÈS ET LE PAIEMENT   ==
+    // =================================================================
+
+    async function handleProductAccess(productInfo, apiResult, loginForm) {
+        console.log(`Vérification d'accès pour : Type=${productInfo.type}, ID=${productInfo.id}`);
+        const productId = parseInt(productInfo.id, 10);
+        let hasAccess = false;
+       
+        if (productInfo.type === 'formation') {
+            const inscriptions = apiResult.inscriptions_formation || [];
+            hasAccess = inscriptions.some(item => item && item.formation && parseInt(item.formation.id, 10) === productId);
+        } else if (productInfo.type === 'webinaire') {
+            const webinaires = apiResult.webinaires || [];
+            hasAccess = webinaires.some(item => item && parseInt(item.id, 10) === productId);
+        } else if (productInfo.type === 'article') {
+            const abonnements = apiResult.abonnement_article; // Peut être un objet ou une liste
+            if (Array.isArray(abonnements)) {
+                // Si c'est une liste, on cherche au moins un abonnement actif
+                hasAccess = abonnements.some(abo => abo && abo.statut_abonnement === 'ACTIF');
+            } else if (abonnements && typeof abonnements === 'object') {
+                // Si c'est un objet unique, on vérifie son statut
+                hasAccess = abonnements.statut_abonnement === 'ACTIF';
+            }
+        }
+
+        /* if (hasAccess) {
+            let destinationUrl = '';
+            
+            switch(productInfo.type) {
+                case 'formation': destinationUrl = `formationdetailcnx?id=${productInfo.id}`; break;
+                case 'webinaire': destinationUrl = `webinairedetail?id=${productInfo.id}`; break;
+                case 'article':   destinationUrl = `blog-details?id=${productInfo.id}`; break;
+            }
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'alert alert-info text-center';
+            messageDiv.textContent = `Vous avez déjà accès à ce ${productInfo.type}. Redirection en cours...`;
+            loginForm.parentNode.insertBefore(messageDiv, loginForm);
+            
+            setTimeout(() => window.location.href = destinationUrl, 2000);
+        } else {
+            // Si l'utilisateur n'a pas accès (ou abonnement expiré), on lance le paiement
+            await launchPaymentFlow(productInfo, loginForm);
+        } */
+
+        if (hasAccess) {
+            let destinationUrl = '';
+            
+            // --- CORRECTION : ON PRIORISE L'URL DE RETOUR ---
+            if (redirectUrl) {
+                // Si on vient d'une redirection, on y retourne.
+                destinationUrl = decodeURIComponent(redirectUrl);
+            } else {
+                // Sinon, on construit l'URL comme avant.
+                switch(productInfo.type) {
+                    case 'formation': destinationUrl = `formationcnx.html?id=${productInfo.id}`; break;
+                    case 'webinaire': destinationUrl = `webinairedetail?id=${productInfo.id}`; break;
+                    case 'article':   destinationUrl = `blog-details?id=${productInfo.id}`; break;
+                }
+            }
+            const sessionToken = localStorage.getItem('userToken');
+            // On s'assure d'ajouter le token de session correctement
+            const separator = destinationUrl.includes('?') ? '&' : '?';
+            const finalUrl = `${destinationUrl}${separator}session_token=${sessionToken}`;
+            setTimeout(() => window.location.href = finalUrl, 1500);
+
+        } else {
+            await launchPaymentFlow(productInfo, loginForm);
+        }
+
+    }
+    
+    async function launchPaymentFlow(productInfo, loginForm) {
+        const userToken = localStorage.getItem('userToken');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'alert alert-success text-center';
+        loginForm.parentNode.insertBefore(messageDiv, loginForm);
+
+        try {
+            if (productInfo.type === 'formation') {
+                // Pour une formation, on lance le flux de modales
+                messageDiv.textContent = 'Connexion réussie ! Veuillez choisir vos options de paiement.';
+                const productApiUrl = `https://imaneapi.auditacademie.com/api/formations/${productInfo.id}/`;
+                const productRes = await fetch(productApiUrl, { headers: { 'Authorization': `Bearer ${userToken}` } });
+                if (!productRes.ok) throw new Error('Récupération des détails de la formation échouée.');
+                const formationData = await productRes.json();
+                
+                setTimeout(() => {
+                    messageDiv.remove();
+                    afficherModalePrix(formationData);
+                }, 1500);
+
+            } else {
+                // Pour articles et webinaires, paiement direct
+                let montant = 0;
+                if (productInfo.type === 'article') {
+                    montant = 20000;
+                    messageDiv.textContent = 'Connexion réussie ! Veuillez souscrire à l\'abonnement.';
+                } else { // Webinaire
+                    messageDiv.textContent = 'Connexion réussie ! Préparation au paiement...';
+                    const productApiUrl = `https://imaneapi.auditacademie.com/api/webinaires/${productInfo.id}/`;
+                    const productRes = await fetch(productApiUrl, { headers: { 'Authorization': `Bearer ${userToken}` } });
+                    if (!productRes.ok) throw new Error('Récupération des détails du webinaire échouée.');
+                    const productData = await productRes.json();
+                    montant = parseFloat(productData.prix) || 0;
+                }
+
+                if (montant > 0) {
+                    montantPourApi = montant;
+                    setTimeout(() => {
+                        openKkiapayWidget({
+                            amount: montant, position: "center", theme: "#007bff", sandbox: true,
+                            key: "2d60f1304a3711f0b843d576c84457a5", data: `Achat: ${productInfo.type}`
+                        });
+                    }, 1500);
+                } else {
+                    alert(`Le prix pour ce ${productInfo.type} est invalide ou le produit est gratuit.`);
+                }
+            }
+        } catch (err) {
+            console.error(err);
+            alert(`Erreur lors de la préparation du paiement : ${err.message}`);
+        }
+    }
+
+    // =================================================================
+    // ==             GESTION DES RETOURS DE PAIEMENT KKIAPAY         ==
+    // =================================================================
+    window.addEventListener("message", async function (event) {
+        // if (event.origin !== "https://widget.kkiapay.me") return;
+        const data = event.data;
+        if (!data || !data.name) return;
+
+        switch(data.name) {
+            case 'PAYMENT_SUCCESS':
+                handlePaymentSuccess(data);
+                break;
+            case 'KKIAPAY_CLOSE_WIDGET':
+                console.log("Widget Kkiapay fermé.");
+                break;
+            case 'KKIAPAY_FAILED_PAYMENT':
+                alert("Le paiement a échoué. Veuillez réessayer.");
+                break;
+        }
+    });
+
+    async function handlePaymentSuccess(data) {
+        const transactionId = data.transactionId || (data.data && data.data.transactionId);
+        if (!transactionId) {
+            alert("Paiement réussi mais ID de transaction manquant.");
+            return;
+        }
+        
+        const userToken = localStorage.getItem('userToken');
+        const userId = localStorage.getItem('user_id');
+        const params = new URLSearchParams(window.location.search);
+        
+        let productInfo = null;
+        if (params.has('formation')) productInfo = { type: 'formation', id: params.get('formation') };
+        else if (params.has('webinaire')) productInfo = { type: 'webinaire', id: params.get('webinaire') };
+        else if (params.has('article')) productInfo = { type: 'article', id: params.get('article') };
+
+        if (!userToken || !userId || !productInfo) {
+            alert("Erreur critique : Données de session ou de produit manquantes.");
+            return;
+        }
+        
+        let apiUrl = '', payload = {}, destinationUrl = '';
+
+        switch(productInfo.type) {
+            case 'formation':
+                apiUrl = 'https://imaneapi.auditacademie.com/api/inscription_formations/';
+                payload = { 
+                    formation_id: parseInt(productInfo.id), 
+                    montant_paye: montantPourApi, 
+                    reference_transaction: transactionId,
+                    type_inscription: typePrix === 'groupe' ? 'ENTREPRISE' : 'PARTICULIER'
+                };
+                destinationUrl = `formationdetailcnx?id=${productInfo.id}`;
+                break;
+            case 'webinaire':
+                apiUrl = `https://imaneapi.auditacademie.com/api/webinaires/${productInfo.id}/participer/`;
+                payload = { montant_paye: montantPourApi, reference_transaction: transactionId };
+                destinationUrl = `webinairedetail?id=${productInfo.id}`;
+                break;
+            case 'article':
+                apiUrl = 'https://imaneapi.auditacademie.com/api/abonnement_articles/';
+                payload = { 
+                    utilisateur: parseInt(userId),
+                    article: parseInt(productInfo.id),
+                    montant_paye: montantPourApi,
+                    reference_transaction: transactionId
+                };
+                destinationUrl = `blog-details?id=${productInfo.id}`;
+                break;
+        }
+        
+        try {
+            const res = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${userToken}` },
+                body: JSON.stringify(payload)
+            });
+
+            if (res.ok) {
+                alert(`Félicitations ! Votre accès au ${productInfo.type} est confirmé !`);
+                const sessionToken = localStorage.getItem('userToken');
+                const finalUrl = `${destinationUrl}&session_token=${sessionToken}`;
+            
+                window.location.href = destinationUrl;
+            } else {
+                const errorBody = await res.json();
+                alert(`L'enregistrement a échoué après le paiement. Erreur : ${errorBody.error || errorBody.detail || 'Erreur inconnue'}.`);
+            }
+        } catch (err) {
+            alert(`Erreur réseau lors de l'enregistrement. Contactez le support.`);
+        }
+    }
+
+    // --- Fonctions utilitaires (déconnexion, etc.) ---
+    function setupOtherEventListeners() {
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.clear();
+                alert("Déconnexion réussie.");
+                window.location.href = "connexion.html";
+            });
+        }
+
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        if (togglePasswordBtn) {
+            togglePasswordBtn.addEventListener('click', () => {
+                const passwordInput = document.getElementById('password');
+                const eyeIcon = togglePasswordBtn.querySelector('i');
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    if (eyeIcon) { eyeIcon.classList.remove('fa-eye'); eyeIcon.classList.add('fa-eye-slash'); }
+                } else {
+                    passwordInput.type = 'password';
+                    if (eyeIcon) { eyeIcon.classList.remove('fa-eye-slash'); eyeIcon.classList.add('fa-eye'); }
+                }
+            });
+        }
+    }
+</script>
+ 
+<!-- 
+<script>
+    // =================================================================
+    // ==         GESTION GÉNÉRIQUE D'ACHAT DE PRODUITS              ==
+    // =================================================================
+
+    // --- Variables Globales ---
+    let typePrix = ''; 
+    let lastPaiementOption = null;
+    let currentFormationData = null;
+    let montantPourApi = 0;
+
+    // --- Fonctions des modales pour les formations ---
+    function afficherModalePrix(formationData) {
+        currentFormationData = formationData;
+        const prixParticulier = formationData.prix_particulier || 0;
+        const prixGroupe = formationData.prix_entreprise || 0;
+        document.getElementById('prixParticulierBtn').textContent = `Prix Particulier - ${prixParticulier} FCFA`;
+        document.getElementById('prixGroupeBtn').textContent = `Prix Groupe - ${prixGroupe} FCFA`;
+        new bootstrap.Modal(document.getElementById('prixModal')).show();
+    }
+    function prixChoisi(selectedType) {
+        typePrix = selectedType;
+        bootstrap.Modal.getInstance(document.getElementById('prixModal'))?.hide();
+        new bootstrap.Modal(document.getElementById('paiementModal')).show();
+    }
+    function choisirPaiement(mode) {
+        bootstrap.Modal.getInstance(document.getElementById('paiementModal'))?.hide();
+        if (mode === 'tranche') {
+            const btn1 = document.getElementById('btnTranche1');
+            const btn2 = document.getElementById('btnTranche2');
+            if (!btn1 || !btn2) { console.error("Boutons de tranche introuvables."); return; }
+            const t1 = typePrix === 'particulier' ? currentFormationData.prix_tranche_1_particulier : currentFormationData.prix_tranche_1_entreprise;
+            const t2 = typePrix === 'particulier' ? currentFormationData.prix_tranche_2_particulier : currentFormationData.prix_tranche_2_entreprise;
+            btn1.innerHTML = `1ère Tranche : ${t1} FCFA`;
+            btn2.innerHTML = `2e Tranche : ${t2} FCFA`;
+            btn1.disabled = false;
+            btn2.disabled = true;
+            new bootstrap.Modal(document.getElementById('trancheModal')).show();
+        } else {
+            payer('once');
+        }
+    }
+    function payer(option) {
+        lastPaiementOption = option;
+        let montant = 0;
+        if (!currentFormationData) { alert("Erreur: Données de formation non disponibles."); return; }
+        switch(option) {
+            case 'tranche1': montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_tranche_1_particulier : currentFormationData.prix_tranche_1_entreprise) || 0; break;
+            case 'tranche2': montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_tranche_2_particulier : currentFormationData.prix_tranche_2_entreprise) || 0; break;
+            case 'once': montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_particulier : currentFormationData.prix_entreprise) || 0; break;
+            default: alert("Option de paiement inconnue."); return;
+        }
+        montantPourApi = montant;
+        ['trancheModal', 'paiementModal', 'prixModal'].forEach(id => {
+            const modalInstance = bootstrap.Modal.getInstance(document.getElementById(id));
+            if (modalInstance) modalInstance.hide();
+        });
+        if (montant > 0) {
+            if (typeof openKkiapayWidget === 'function') {
+                openKkiapayWidget({
+                    amount: montant, position: "center", theme: "#007bff", sandbox: true,
+                    key: "2d60f1304a3711f0b843d576c84457a5", data: `Achat: formation, Option: ${option}, TypePrix: ${typePrix}`
+                });
+            } else { alert("Widget de paiement indisponible."); }
+        } else { alert("Le montant du paiement pour cette option est invalide."); }
+    }
+
+    // =================================================================
+    // ==     INITIALISATION DE LA PAGE ET GESTION DES ÉVÉNEMENTS     ==
+    // =================================================================
+    document.addEventListener('DOMContentLoaded', function() {
+        try {
+            const signupLink = document.querySelector('.signup-link a');
+            if (signupLink) {
+                const currentParams = new URLSearchParams(window.location.search);
+                const paramsString = currentParams.toString();
+                if (paramsString) { signupLink.href = `inscription?${paramsString}`; }
+            }
+        } catch (error) { console.error("Erreur lors de la mise à jour du lien d'inscription :", error); }
+
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const emailInput = document.getElementById('email');
+                const passwordInput = document.getElementById('password');
+                if (!emailInput.value.trim() || !passwordInput.value.trim()) { alert("Veuillez remplir l'email et le mot de passe."); return; }
+                const loginData = { email: emailInput.value.trim(), password: passwordInput.value };
+                try {
+                    const response = await fetch('https://imaneapi.auditacademie.com/api/connexion/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(loginData)
+                    });
+                    if (response.ok) {
+                        const result = await response.json();
+                        console.log("Données reçues de l'API connexion:", result);
+                        if (!result || !result.access_token || !result.user_info) { alert("La connexion a échoué car la réponse du serveur est invalide."); return; }
+                        localStorage.setItem('userToken', result.access_token);
+                        localStorage.setItem('user_id', result.user_info.id);
+                        localStorage.setItem('first_name', result.user_info.first_name || '');
+                        localStorage.setItem('last_name', result.user_info.last_name || '');
+                        console.log("Session stockée dans localStorage.");
+                        
+                        const params = new URLSearchParams(window.location.search);
+                        let productInfo = null;
+                        if (params.has('formation')) productInfo = { type: 'formation', id: params.get('formation') };
+                        else if (params.has('webinaire')) productInfo = { type: 'webinaire', id: params.get('webinaire') };
+                        else if (params.has('article')) productInfo = { type: 'article', id: params.get('article') };
+
+                        if (productInfo) {
+                            await handleProductAccess(productInfo, result, loginForm);
+                        } else {
+                            alert('Connexion réussie !');
+                            window.location.href = 'index';
+                        }
+                    } else {
+                        const error = await response.json();
+                        alert('Erreur de connexion : ' + (error.detail || 'Identifiants invalides.'));
+                    }
+                } catch (err) {
+                    alert('Erreur réseau ou problème avec le serveur de connexion.');
+                    console.error("Erreur de fetch/connexion:", err);
+                }
+            });
+        }
+        setupOtherEventListeners();
+    });
+
+    // =================================================================
+    // ==      FONCTIONS LOGIQUES POUR GÉRER L'ACCÈS ET LE PAIEMENT   ==
+    // =================================================================
+    async function handleProductAccess(productInfo, apiResult, loginForm) {
+        const params = new URLSearchParams(window.location.search);
+        const redirectUrl = params.get('redirect_url');
+
+        console.log(`Vérification d'accès pour : Type=${productInfo.type}, ID=${productInfo.id}`);
+        const productId = parseInt(productInfo.id, 10);
+        let hasAccess = false;
+        
+        if (productInfo.type === 'formation') {
+            const inscriptions = apiResult.inscriptions_formation || [];
+            hasAccess = inscriptions.some(item => item && item.formation && parseInt(item.formation.id, 10) === productId);
+        } else if (productInfo.type === 'webinaire') {
+            const webinaires = apiResult.webinaires || [];
+            hasAccess = webinaires.some(item => item && parseInt(item.id, 10) === productId);
+        } else if (productInfo.type === 'article') {
+            const abonnements = apiResult.abonnement_article;
+            if (Array.isArray(abonnements)) {
+                hasAccess = abonnements.some(abo => abo && abo.statut_abonnement === 'ACTIF');
+            } else if (abonnements && typeof abonnements === 'object') {
+                hasAccess = abonnements.statut_abonnement === 'ACTIF';
+            }
+        }
+
+        if (hasAccess) {
+            let destinationUrl = '';
+            if (redirectUrl) {
+                destinationUrl = decodeURIComponent(redirectUrl);
+            } else {
+                switch(productInfo.type) {
+                    case 'formation': destinationUrl = `formationdetailcnx?id=${productInfo.id}`; break;
+                    case 'webinaire': destinationUrl = `webinairedetail?id=${productInfo.id}`; break;
+                    case 'article':   destinationUrl = `blog-details?id=${productInfo.id}`; break;
+                }
+            }
+
+            const sessionToken = localStorage.getItem('userToken');
+            const separator = destinationUrl.includes('?') ? '&' : '?';
+            const finalUrl = `${destinationUrl}${separator}session_token=${sessionToken}`;
+
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'alert alert-info text-center';
+            messageDiv.textContent = `Vous avez déjà accès à ce ${productInfo.type}. Redirection en cours...`;
+            loginForm.parentNode.insertBefore(messageDiv, loginForm);
+            
+            setTimeout(() => window.location.href = finalUrl, 1500);
+        } else {
+            await launchPaymentFlow(productInfo, loginForm);
+        }
+    }
+    
+    async function launchPaymentFlow(productInfo, loginForm) {
+        const userToken = localStorage.getItem('userToken');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'alert alert-success text-center';
+        loginForm.parentNode.insertBefore(messageDiv, loginForm);
+        try {
+            if (productInfo.type === 'formation') {
+                messageDiv.textContent = 'Connexion réussie ! Veuillez choisir vos options de paiement.';
+                const productApiUrl = `https://imaneapi.auditacademie.com/api/formations/${productInfo.id}/`;
+                const productRes = await fetch(productApiUrl, { headers: { 'Authorization': `Bearer ${userToken}` } });
+                if (!productRes.ok) throw new Error('Récupération des détails de la formation échouée.');
+                const formationData = await productRes.json();
+                setTimeout(() => { messageDiv.remove(); afficherModalePrix(formationData); }, 1500);
+            } else {
+                let montant = 0;
+                if (productInfo.type === 'article') {
+                    montant = 20000;
+                    messageDiv.textContent = 'Connexion réussie ! Veuillez souscrire à l\'abonnement.';
+                } else {
+                    messageDiv.textContent = 'Connexion réussie ! Préparation au paiement...';
+                    const productApiUrl = `https://imaneapi.auditacademie.com/api/webinaires/${productInfo.id}/`;
+                    const productRes = await fetch(productApiUrl, { headers: { 'Authorization': `Bearer ${userToken}` } });
+                    if (!productRes.ok) throw new Error('Récupération des détails du webinaire échouée.');
+                    const productData = await productRes.json();
+                    montant = parseFloat(productData.prix) || 0;
+                }
+                if (montant > 0) {
+                    montantPourApi = montant;
+                    setTimeout(() => {
+                        openKkiapayWidget({
+                            amount: montant, position: "center", theme: "#007bff", sandbox: true,
+                            key: "2d60f1304a3711f0b843d576c84457a5", data: `Achat: ${productInfo.type}`
+                        });
+                    }, 1500);
+                } else { alert(`Le prix pour ce ${productInfo.type} est invalide ou le produit est gratuit.`); }
+            }
+        } catch (err) { console.error(err); alert(`Erreur lors de la préparation du paiement : ${err.message}`); }
+    }
+
+    // =================================================================
+    // ==             GESTION DES RETOURS DE PAIEMENT KKIAPAY         ==
+    // =================================================================
+    window.addEventListener("message", async function (event) {
+        // ... (Pas de changement ici, le code est déjà correct) ...
+    });
+    async function handlePaymentSuccess(data) {
+        const transactionId = data.transactionId || (data.data && data.data.transactionId);
+        if (!transactionId) { alert("Paiement réussi mais ID de transaction manquant."); return; }
+        const userToken = localStorage.getItem('userToken');
+        const userId = localStorage.getItem('user_id');
+        const params = new URLSearchParams(window.location.search);
+        let productInfo = null;
+        if (params.has('formation')) productInfo = { type: 'formation', id: params.get('formation') };
+        else if (params.has('webinaire')) productInfo = { type: 'webinaire', id: params.get('webinaire') };
+        else if (params.has('article')) productInfo = { type: 'article', id: params.get('article') };
+        if (!userToken || !userId || !productInfo) { alert("Erreur critique : Données de session ou de produit manquantes."); return; }
+        
+        let apiUrl = '', payload = {}, destinationUrl = '';
+        const redirectUrl = params.get('redirect_url');
+
+        if (redirectUrl) {
+            destinationUrl = decodeURIComponent(redirectUrl);
+        } else {
+             switch(productInfo.type) {
+                case 'formation': destinationUrl = `formationdetailcnx?id=${productInfo.id}`; break;
+                case 'webinaire': destinationUrl = `webinairedetail?id=${productInfo.id}`; break;
+                case 'article':   destinationUrl = `blog-details?id=${productInfo.id}`; break;
+            }
+        }
+        
+        switch(productInfo.type) {
+            case 'formation':
+                apiUrl = 'https://imaneapi.auditacademie.com/api/inscription_formations/';
+                payload = { formation_id: parseInt(productInfo.id), montant_paye: montantPourApi, reference_transaction: transactionId, type_inscription: typePrix === 'groupe' ? 'ENTREPRISE' : 'PARTICULIER' };
+                break;
+            case 'webinaire':
+                apiUrl = `https://imaneapi.auditacademie.com/api/webinaires/${productInfo.id}/participer/`;
+                payload = { montant_paye: montantPourApi, reference_transaction: transactionId };
+                break;
+            case 'article':
+                apiUrl = 'https://imaneapi.auditacademie.com/api/abonnement_articles/';
+                payload = { utilisateur: parseInt(userId), article: parseInt(productInfo.id), montant_paye: montantPourApi, reference_transaction: transactionId };
+                break;
+        }
+        
+        try {
+            const res = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${userToken}` },
+                body: JSON.stringify(payload)
+            });
+            if (res.ok) {
+                alert(`Félicitations ! Votre accès au ${productInfo.type} est confirmé !`);
+                const sessionToken = localStorage.getItem('userToken');
+                const separator = destinationUrl.includes('?') ? '&' : '?';
+                const finalUrl = `${destinationUrl}${separator}session_token=${sessionToken}`;
+                window.location.href = finalUrl;
+            } else {
+                const errorBody = await res.json();
+                alert(`L'enregistrement a échoué. Erreur : ${errorBody.error || errorBody.detail || 'Erreur inconnue'}.`);
+            }
+        } catch (err) {
+            alert(`Erreur réseau lors de l'enregistrement.`);
+        }
+    }
+
+    // --- Fonctions utilitaires ---
+    function setupOtherEventListeners() {
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.clear();
+                alert("Déconnexion réussie.");
+                window.location.href = "connexion.html";
+            });
+        }
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        if (togglePasswordBtn) {
+            togglePasswordBtn.addEventListener('click', () => {
+                const passwordInput = document.getElementById('password');
+                const eyeIcon = togglePasswordBtn.querySelector('i');
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    if (eyeIcon) { eyeIcon.classList.remove('fa-eye'); eyeIcon.classList.add('fa-eye-slash'); }
+                } else {
+                    passwordInput.type = 'password';
+                    if (eyeIcon) { eyeIcon.classList.remove('fa-eye-slash'); eyeIcon.classList.add('fa-eye'); }
+                }
+            });
+        }
+    }
+</script>
+
+
+ -->
+
+<!-- Footer start -->
+<div id="footer"></div>
+<script src="../assets/js/footer.js"></script>
+<!-- Footer end -->
+</body>
+</html>

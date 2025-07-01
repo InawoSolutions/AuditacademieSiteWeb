@@ -1046,75 +1046,151 @@ document.querySelectorAll('.participer-btn').forEach(btn => {
 <script>
 async function chargerWebinaires() {
     const container = document.getElementById('articles-list');
+    const vedetteContainer = document.querySelector('.widget-content .panel.text-center'); // Webinaire en vedette
+    const populaireContainer = document.querySelector('.widget.popular-widget .widget-content .row'); // Populaire en ce moment
+
     container.innerHTML = '<div>Chargement...</div>';
+    if (vedetteContainer) vedetteContainer.innerHTML = '<div>Chargement...</div>';
+    if (populaireContainer) populaireContainer.innerHTML = '';
+
     try {
         const response = await fetch('https://imaneapi.auditacademie.com/api/webinaires/');
         const webinaires = await response.json();
-        container.innerHTML = ''; // On vide le "Chargement..."
+        container.innerHTML = '';
 
-        if (webinaires.length === 0) {
+        if (!Array.isArray(webinaires) || webinaires.length === 0) {
             container.innerHTML = '<div>Aucun webinaire trouvé.</div>';
+            if (vedetteContainer) vedetteContainer.innerHTML = '<div>Aucun webinaire en vedette.</div>';
+            if (populaireContainer) populaireContainer.innerHTML = '<div>Aucun webinaire populaire.</div>';
             return;
         }
 
+        // 1. Webinaire en vedette (exemple : le premier de la liste)
+        const vedette = webinaires[0];
+        if (vedetteContainer && vedette) {
+            let imageURL = vedette.image && vedette.image.startsWith('/photos')
+                ? 'https://imaneapi.auditacademie.com' + vedette.image
+                : (vedette.image || '../assets/images/blog/post-6.jpg');
+            vedetteContainer.innerHTML = `
+                <div class="ratio ratio-16x9 rounded lg:rounded-1-5 uc-transition-toggle overflow-hidden">
+                    <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageURL}" alt="${vedette.titre}">
+                    <a class="position-cover" data-caption="${vedette.titre}" href="blog-details.html"></a>
+                </div>
+                <h4 class="h5 mt-3">
+                    <a class="text-none" href="webinairedetail?id=${vedette.id}">${vedette.titre}</a>
+                </h4>
+                <p class="fs-6">${vedette.description || ''}</p>
+                <a class="btn btn-text text-primary border-bottom d-inline-flex fs-7 md:fs-6 mt-2 md:mt-4 dark:text-tertiary participer-btn" data-id="${vedette.id}" href="#">Participer</a>
+            `;
+        }
+
+        // 2. Webinaires populaires (exemple : les 3 suivants)
+        if (populaireContainer) {
+            populaireContainer.innerHTML = '';
+            webinaires.slice(1, 4).forEach((w, idx) => {
+                let imageURL = w.image && w.image.startsWith('/photos')
+                    ? 'https://imaneapi.auditacademie.com' + w.image
+                    : (w.image || '../assets/images/blog/post-4.jpg');
+                populaireContainer.innerHTML += `
+                    <div>
+                        <article class="post type-post panel">
+                            <div class="row child-cols g-2 lg:g-3">
+                                <div>
+                                    <div class="hstack items-start gap-3">
+                                        <span class="h3 lg:h2 fst-italic text-center text-primary dark:text-tertiary m-0 min-w-24px">${idx + 1}</span>
+                                        <div class="post-header panel vstack justify-between gap-1">
+                                            <h3 class="post-title h6 m-0">
+                                                <a class="text-none" href="webinairedetail?id=${w.id}">${w.titre}</a>
+                                            </h3>
+                                            <div class="post-meta panel hstack justify-between fs-7 text-gray-900 dark:text-white text-opacity-60 d-none md:d-flex">
+                                                <div class="meta">
+                                                    <div class="hstack gap-2">
+                                                        <div>
+                                                            <div class="post-date hstack gap-narrow">
+                                                                <span>${w.date || ''}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <a href="#post_comment" class="post-comments text-none hstack gap-narrow">
+                                                                <i class="icon-narrow unicon-chat"></i>
+                                                                <span>${w.nb_inscrits || 0}</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                `;
+            });
+        }
+
+        // 3. Liste principale (déjà gérée dans ton code existant)
         webinaires.forEach(w => {
-            let imageURL = '../assets/images/blog/post-4.jpg';
-if (w.image && w.image.startsWith('/photos')) {
-    imageURL = 'https://imaneapi.auditacademie.com' + w.image;
-} else if (w.image) {
-    imageURL = w.image;
-}
-const html = `
-    <div class="col-12">
-        <article class="post type-post panel rounded-2 p-2 lg:p-4 bg-gray-25 dark:bg-gray-800">
-            <div class="panel row child-cols-12 lg:child-cols g-2 lg:g-4">
-                <div class="lg:col-6 xl:col-4">
-                    <div class="panel">
-                        <figure class="featured-image m-0 rounded ratio ratio-16x9 lg:ratio-1x1 rounded-1-5 uc-transition-toggle overflow-hidden">
-                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageURL}" alt="${w.titre}">
-                        </figure>
-                    </div>
-                </div>
-                <div>
-                    <div class="vstack items-start gap-2">
-                        <h3 class="h4 sm:h5 md:h4 lh-lg m-0 xl:max-w-3/4 m-0">
-                            ${w.titre}
-                        </h3>
-                        <p class="fs-6 md:fs-5 text-truncate-3">${w.description}</p>
-                        <div class="fs-7 text-muted mb-2">
-                            <span><i class="bi bi-calendar-event"></i> ${w.date}</span> &nbsp; 
-                            <span><i class="bi bi-clock"></i> ${w.heure_debut} - ${w.heure_fin}</span>
+            let imageURL = w.image && w.image.startsWith('/photos')
+                ? 'https://imaneapi.auditacademie.com' + w.image
+                : (w.image || '../assets/images/blog/post-4.jpg');
+            const badgeType = w.type === 'Payant'
+                ? `<span class="badge bg-danger mb-2" style="font-size: 0.95em;">Payant</span>`
+                : `<span class="badge bg-success mb-2" style="font-size: 0.95em;">Gratuit</span>`;
+
+            const html = `
+                <div class="col-12">
+                    <article class="post type-post panel rounded-2 p-2 lg:p-4 bg-gray-25 dark:bg-gray-800">
+                        <div class="panel row child-cols-12 lg:child-cols g-2 lg:g-4">
+                            <div class="lg:col-6 xl:col-4">
+                                <div class="panel">
+                                    <figure class="featured-image m-0 rounded ratio ratio-16x9 lg:ratio-1x1 rounded-1-5 uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageURL}" alt="${w.titre}">
+                                    </figure>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="vstack items-start gap-2">
+                                    <h3 class="h4 sm:h5 md:h4 lh-lg m-0 xl:max-w-3/4 m-0">
+                                        ${w.titre}
+                                    </h3>
+                                    ${badgeType}
+                                    <p class="fs-6 md:fs-5 text-truncate-3">${w.description}</p>
+                                    <div class="fs-7 text-muted mb-2">
+                                        <span><i class="bi bi-calendar-event"></i> ${w.date}</span> &nbsp; 
+                                        <span><i class="bi bi-clock"></i> ${w.heure_debut} - ${w.heure_fin}</span>
+                                    </div>
+                                    <a class="btn btn-text text-primary border-bottom d-inline-flex fs-7 md:fs-6 mt-2 md:mt-4 dark:text-tertiary participer-btn" data-id="${w.id}" href="#">Participer</a>
+                                </div>
+                            </div>
                         </div>
-                        <a class="btn btn-text text-primary border-bottom d-inline-flex fs-7 md:fs-6 mt-2 md:mt-4 dark:text-tertiary participer-btn" data-id="${w.id}" href="#">Participer</a>
-                    </div>
+                    </article>
                 </div>
-            </div>
-        </article>
-    </div>
-`;
+            `;
             container.insertAdjacentHTML('beforeend', html);
         });
 
-        // Réattacher les événements sur les nouveaux boutons "Participer"
+        // Réattacher les événements sur tous les nouveaux boutons "Participer"
         document.querySelectorAll('.participer-btn').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const webinarId = this.getAttribute('data-id');
-    const isLoggedIn = localStorage.getItem('userToken') !== null;
-    if (isLoggedIn) {
-      location.href = `webinairedetail?id=${webinarId}`;
-    } else {
-      window.location.href = `connexion?next=webinairedetail?id=${webinarId}`;
-    }
-  });
-});
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const webinarId = this.getAttribute('data-id');
+                const isLoggedIn = localStorage.getItem('userToken') !== null;
+                if (isLoggedIn) {
+                    window.location.href = `webinairedetail?id=${webinarId}`;
+                } else {
+                    window.location.href = `connexion.html?webinaire=${webinarId}`;
+                }
+            });
+        });
 
     } catch (error) {
         container.innerHTML = '<div>Erreur lors du chargement des webinaires.</div>';
+        if (vedetteContainer) vedetteContainer.innerHTML = '<div>Erreur lors du chargement du webinaire en vedette.</div>';
+        if (populaireContainer) populaireContainer.innerHTML = '<div>Erreur lors du chargement des webinaires populaires.</div>';
     }
 }
 
-// Lancer au chargement de la page
 document.addEventListener('DOMContentLoaded', chargerWebinaires);
 </script>
 

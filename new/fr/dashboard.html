@@ -222,6 +222,26 @@
             font-size: 18px;
             font-weight: 500;
         }
+
+        /* Styles pour le tableau des abonnements */
+        .table th {
+            background-color: #f8f9fa;
+            font-weight: 500;
+            color: #495057;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table td {
+            vertical-align: middle;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: rgba(42, 71, 67, 0.05);
+        }
+
+        .text-muted small {
+            font-size: 0.85em;
+        }
     </style>
 </head>
 
@@ -230,7 +250,6 @@
         style="position: absolute; top: 0; left: 0; z-index: 1050; color: #2a4743; font-weight: bold;">
         <i class="bi bi-arrow-left me-2"></i> Retourner à l'accueil
     </a><br><br>
-
 
     <div class="container-fluid">
         <div class="row">
@@ -280,6 +299,7 @@
                             <div class="user-name">Essai Ia</div>
                         </div>
                     </div>
+
                     <!-- Dashboard Page -->
                     <div id="dashboard-page" class="page-content">
                         <!-- Profile Banner -->
@@ -291,14 +311,12 @@
                             <button class="btn btn-profile" id="btn-upload-photo">Cliquez ici</button>
                             <input type="file" id="profile-photo-input" accept="image/*" style="display:none;">
                             <div>
-       
-        <button class="btn btn-outline-danger ms-2 d-none" id="btn-delete-photo" type="button">
-            Supprimer la photo de profil
-        </button>
-        <input type="file" id="profile-photo-input" accept="image/*" style="display:none;">
-    </div>
+                                <button class="btn btn-outline-danger ms-2 d-none" id="btn-delete-photo" type="button">
+                                    Supprimer la photo de profil
+                                </button>
+                                <input type="file" id="profile-photo-input" accept="image/*" style="display:none;">
+                            </div>
                         </div>
-                        
 
                         <!-- Page Title -->
                         <h2 class="mb-4">Tableau De Bord</h2>
@@ -339,53 +357,31 @@
                     <div id="profile-page" class="page-content" style="display: none;">
                         <h2 class="mb-4">Mon profil</h2>
 
-                        <div class="profile-info">
-                            <!-- <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <label class="form-label text-muted">Date d'enregistrement</label>
-                                </div>
-                                <div class="col-md-9">
-                                    <span class="profile-value">25/06/2025 23h07</span>
-                                </div>
-                            </div> -->
-
+                        <div class="profile-info" id="profile-info-view">
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="form-label text-muted">Prénoms</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <span class="profile-value" id="profile-firstname">essai</span>
+                                    <span class="profile-value" id="profile-firstname">-</span>
                                 </div>
                             </div>
-
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="form-label text-muted">Nom</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <span class="profile-value" id="profile-lastname">ia</span>
+                                    <span class="profile-value" id="profile-lastname">-</span>
                                 </div>
                             </div>
-
-                            <!-- <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <label class="form-label text-muted">Nom d'utilisateur</label>
-                                </div>
-                                <div class="col-md-9">
-                                    <span class="profile-value">essaiia</span>
-                                </div>
-                            </div> -->
-
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="form-label text-muted">E-mail</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <span class="profile-value" id="profile-email">essaiia759@gmail.com</span>
+                                    <span class="profile-value" id="profile-email">-</span>
                                 </div>
                             </div>
-
-
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="form-label text-muted">Numéro de téléphone</label>
@@ -394,275 +390,176 @@
                                     <span class="profile-value text-muted" id="profile-phone">-</span>
                                 </div>
                             </div>
-
-                            <!-- <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <label class="form-label text-muted">Compétence/profession</label>
-                                </div>
-                                <div class="col-md-9">
-                                    <span class="profile-value text-muted">-</span>
-                                </div>
-                            </div> -->
-
-                            <!-- <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <label class="form-label text-muted">Biographie</label>
-                                </div>
-                                <div class="col-md-9">
-                                    <span class="profile-value text-muted">-</span>
-                                </div>
-                            </div> -->
+                            <div class="text-end">
+                                <button class="btn btn-profile mt-2" id="btn-edit-profile">Modifier le profil</button>
+                                <button class="btn btn-outline-secondary mt-2 ms-2" id="btn-edit-password">Modifier mon mot de passe</button>
+                            </div>
                         </div>
+
+                        <!-- Formulaire de modification -->
+                        <form class="profile-info" id="profile-edit-form" style="display:none;">
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted" for="edit-firstname">Prénoms</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="edit-firstname" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted" for="edit-lastname">Nom</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="edit-lastname" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted" for="edit-email">E-mail</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="email" class="form-control" id="edit-email" required disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted" for="edit-phone">Numéro de téléphone</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="edit-phone">
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="button" class="btn btn-secondary me-2" id="btn-cancel-edit">Annuler</button>
+                                <button type="submit" class="btn btn-profile">Sauvegarder</button>
+                            </div>
+                        </form>
+
+                        <!-- Formulaire de changement de mot de passe -->
+                        <form class="profile-info" id="password-edit-form" style="display:none;">
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted" for="current-password">Mot de passe actuel</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" id="current-password" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted" for="new-password">Nouveau mot de passe</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" id="new-password" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label text-muted" for="confirm-password">Confirmer le nouveau mot de passe</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" id="confirm-password" required>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="button" class="btn btn-secondary me-2" id="btn-cancel-password">Annuler</button>
+                                <button type="submit" class="btn btn-profile">Valider</button>
+                            </div>
+                        </form>
                     </div>
 
                     <!-- Trainings Page -->
                     <div id="trainings-page" class="page-content" style="display: none;">
-                        <h2 class="mb-4">Mes formations</h2>
-
-                        <!-- Training 1 -->
-                        <div class="content-card">
-                            <div class="row">
-                                <!-- <div class="col-md-8">
-                                    <h5 class="mb-2">Formation JavaScript Avancé</h5>
-                                    <p class="text-muted mb-2">Maîtrisez les concepts avancés de JavaScript et les
-                                        frameworks modernes</p>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge badge-status status-active me-2">En cours</span>
-                                        <small class="text-muted">Inscrit le 15/06/2025</small>
-                                    </div>
-                                    <div class="progress progress-bar-custom mb-2">
-                                        <div class="progress-bar bg-primary" style="width: 65%"></div>
-                                    </div>
-                                    <small class="text-muted">Progression: 65% (13/20 modules)</small>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-primary btn-action mb-2">Continuer</button>
-                                    <br>
-                                    <small class="text-muted">Durée: 40h</small>
-                                </div> -->
-                                <div id="trainings-page" class="page-content" style="display: none;">
     <h2 class="mb-4">Mes formations</h2>
-    <!-- Les formations seront ajoutées ici dynamiquement par le script -->
+    <!-- Toutes les formations (en cours + terminées) dynamiques -->
+    <div class="row g-4 mb-4" id="all-trainings-list"></div>
+    <h2 class="mb-3">Formations en cours</h2>
+    <div class="row g-4" id="ongoing-trainings-list"></div>
+    <h2 class="mb-3 mt-4">Formations terminées</h2>
+    <div class="row g-4" id="completed-trainings-list"></div>
 </div>
-                            </div>
-                        </div>
-
-                        <!-- Training 2 -->
-                        <div class="content-card">
-                            <div class="row">
-                                <!-- <div class="col-md-8">
-                                    <h5 class="mb-2">Introduction au Machine Learning</h5>
-                                    <p class="text-muted mb-2">Découvrez les bases de l'intelligence artificielle et du
-                                        machine learning</p>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge badge-status status-completed me-2">Terminé</span>
-                                        <small class="text-muted">Terminé le 10/06/2025</small>
-                                    </div>
-                                    <div class="progress progress-bar-custom mb-2">
-                                        <div class="progress-bar bg-success" style="width: 100%"></div>
-                                    </div>
-                                    <small class="text-muted">Progression: 100% (15/15 modules)</small>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-outline-success btn-action mb-2">Certificat</button>
-                                    <br>
-                                    <small class="text-muted">Durée: 25h</small>
-                                </div> -->
-                                <div id="trainings-page" class="page-content" style="display: none;">
-    <h2 class="mb-4">Mes formations</h2>
-    <!-- Les formations seront ajoutées ici dynamiquement par le script -->
-</div>
-                            </div>
-                        </div>
-
-                        <!-- Training 3 -->
-                        <!-- <div class="content-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5 class="mb-2">Design UX/UI Moderne</h5>
-                                    <p class="text-muted mb-2">Apprenez les principes du design d'interface utilisateur moderne</p>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge badge-status status-pending me-2">À commencer</span>
-                                        <small class="text-muted">Inscrit le 20/06/2025</small>
-                                    </div>
-                                    <div class="progress progress-bar-custom mb-2">
-                                        <div class="progress-bar bg-warning" style="width: 0%"></div>
-                                    </div>
-                                    <small class="text-muted">Progression: 0% (0/18 modules)</small>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-warning btn-action mb-2">Commencer</button>
-                                    <br>
-                                    <small class="text-muted">Durée: 35h</small>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-
                     <!-- Webinars Page -->
                     <div id="webinars-page" class="page-content" style="display: none;">
                         <h2 class="mb-4">Mes webinaires</h2>
-
-                        <!-- Upcoming Webinars -->
                         <h4 class="mb-3">Webinaires à venir</h4>
-
-                        <!-- Webinar 1 -->
-                        <div class="content-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5 class="mb-2">Les Tendances du Développement Web 2025</h5>
-                                    <p class="text-muted mb-2">Découvrez les dernières technologies et frameworks qui
-                                        façonnent le web</p>
-                                    <div class="webinar-time mb-2">
-                                        <i class="bi bi-calendar-event me-1"></i>
-                                        <strong>28 Juin 2025 à 14h00</strong>
-                                    </div>
-                                    <div class="webinar-time mb-2">
-                                        <i class="bi bi-clock me-1"></i>
-                                        Durée: 1h30
-                                    </div>
-                                    <span class="badge badge-status status-active">Confirmé</span>
-                                </div>
-                                <!-- <div class="col-md-4 text-end">
-                                    <button class="btn btn-success btn-action mb-2">Rejoindre</button>
-                                    <br>
-                                    <button class="btn btn-outline-secondary btn-action">Ajouter au calendrier</button>
-                                </div> -->
-                            </div>
-                        </div>
-
-                        <!-- Webinar 2 -->
-                        <div class="content-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5 class="mb-2">Optimisation SEO Avancée</h5>
-                                    <p class="text-muted mb-2">Techniques avancées pour améliorer le référencement de
-                                        vos sites web</p>
-                                    <div class="webinar-time mb-2">
-                                        <i class="bi bi-calendar-event me-1"></i>
-                                        <strong>02 Juillet 2025 à 16h00</strong>
-                                    </div>
-                                    <div class="webinar-time mb-2">
-                                        <i class="bi bi-clock me-1"></i>
-                                        Durée: 2h00
-                                    </div>
-                                    <span class="badge badge-status status-active">Confirmé</span>
-                                </div>
-                                <!-- <div class="col-md-4 text-end">
-                                    <button class="btn btn-outline-primary btn-action mb-2">S'inscrire</button>
-                                    <br>
-                                    <small class="text-muted">Places limitées</small>
-                                </div> -->
-                            </div>
-                        </div>
-
-                        <!-- Past Webinars -->
+                        <div id="upcoming-webinars-list"></div>
                         <h4 class="mb-3 mt-4">Webinaires passés</h4>
-
-                        <!-- Past Webinar -->
-                        <div class="content-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5 class="mb-2">Introduction à React.js</h5>
-                                    <p class="text-muted mb-2">Les bases du développement avec React et ses concepts
-                                        fondamentaux</p>
-                                    <div class="webinar-time mb-2">
-                                        <i class="bi bi-calendar-event me-1"></i>
-                                        20 Juin 2025 à 15h00
-                                    </div>
-                                    <span class="badge badge-status status-completed">Terminé</span>
-                                </div>
-                                <!-- <div class="col-md-4 text-end">
-                                    <button class="btn btn-outline-info btn-action mb-2">Revoir</button>
-                                    <br>
-                                    <button class="btn btn-outline-secondary btn-action">Télécharger</button>
-                                </div> -->
-                            </div>
-                        </div>
-
-                        <div class="content-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5 class="mb-2">Introduction à React.js</h5>
-                                    <p class="text-muted mb-2">Les bases du développement avec React et ses concepts
-                                        fondamentaux</p>
-                                    <div class="webinar-time mb-2">
-                                        <i class="bi bi-calendar-event me-1"></i>
-                                        20 Juin 2025 à 15h00
-                                    </div>
-                                    <span class="badge badge-status status-completed">Terminé</span>
-                                </div>
-                                <!-- <div class="col-md-4 text-end">
-                                    <button class="btn btn-outline-info btn-action mb-2">Revoir</button>
-                                    <br>
-                                    <button class="btn btn-outline-secondary btn-action">Télécharger</button>
-                                </div> -->
-                            </div>
-                        </div>
+                        <div id="past-webinars-list"></div>
                     </div>
 
                     <!-- Subscriptions Page -->
                     <div id="subscriptions-page" class="page-content" style="display: none;">
-                        <h2 class="mb-4">Mes abonnements</h2>
-
-                        <!-- Active Subscription -->
+                        <h2 class="mb-4">Articles</h2>
+                        <!-- Tableau des abonnements -->
                         <div class="content-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5 class="mb-2">Plan blog</h5>
-                                    <p class="text-muted mb-3">Accès illimité à tous les articles et webinaires</p>
-                                    <div class="mb-2">
-                                        <strong>Fonctionnalités incluses:</strong>
-                                        <ul class="mt-2">
-                                            <li>Accès à tous les articles</li>
-                                            <li>Participation aux webinaires en direct</li>
-                                            <li>Support prioritaire</li>
-                                        </ul>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="badge badge-status status-active me-2">Actif</span>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <div class="subscription-price mb-2">20000 XOF</div>
-                                    <small class="text-muted d-block mb-3">par mois</small>
-                                    <!-- <button class="btn btn-outline-primary btn-action mb-2">Gérer</button>
-                                    <br>
-                                    <button class="btn btn-outline-danger btn-action">Annuler</button> -->
-                                </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Numéro</th>
+                                            <th>Nom Abonnement</th>
+                                            <th>Type</th>
+                                            <th>Montant</th>
+                                            <th>Date de début</th>
+                                            <th>Date de fin</th>
+                                            <th>Statut</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="subscriptions-table-body">
+                                        <!-- Les données seront chargées dynamiquement ici -->
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-
+                        <!-- Titre Formations | Webinaires au même niveau que Articles -->
+                        <h2 class="mb-4 mt-5">Formations | Webinaires</h2>
                         <div class="content-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5 class="mb-2">Plan blog</h5>
-                                    <p class="text-muted mb-3">Accès illimité à tous les articles et webinaires</p>
-                                    <div class="mb-2">
-                                        <strong>Fonctionnalités incluses:</strong>
-                                        <ul class="mt-2">
-                                            <li>Accès à tous les articles</li>
-                                            <li>Participation aux webinaires en direct</li>
-                                            <li>Support prioritaire</li>
-                                        </ul>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="badge badge-status status-expired me-2">Expiré</span>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <div class="subscription-price mb-2">20000 XOF</div>
-                                    <small class="text-muted d-block mb-3">par mois</small>
-                                    <!-- <button class="btn btn-outline-primary btn-action mb-2">Gérer</button>
-                                    <br>
-                                    <button class="btn btn-outline-danger btn-action">Annuler</button> -->
-                                </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Numéro</th>
+                                            <th>Titre</th>
+                                            <th>Type de paiement</th>
+                                            <th>Tranche</th>
+                                            <th>Échéance</th>
+                                            <th>Montant</th>
+                                            <th>Date de paiement</th>
+                                            <th>Méthode de paiement</th>
+                                            <th>Référence</th>
+                                            <th>Statut</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Formation</td>
+                                            <td>MENSUEL</td>
+                                            <td>1/3</td>
+                                            <td>30/06/2025</td>
+                                            <td>30 000 XOF</td>
+                                            <td>01/07/2025</td>
+                                            <td>Carte bancaire</td>
+                                            <td>31/07/2025</td>
+                                            <td><span class="badge badge-status status-active">Actif</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Webinaire</td>
+                                            <td>ANNUEL</td>
+                                            <td>-</td>
+                                            <td>31/12/2025</td>
+                                            <td>100 000 XOF</td>
+                                            <td>01/01/2025</td>
+                                            <td>Virement</td>
+                                            <td>31/12/2025</td>
+                                            <td><span class="badge badge-status status-pending">En attente</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -689,16 +586,14 @@
                 });
             });
 
-            // --- Ajout pour simuler le clic sur le menu latéral si ?page=... ---
+            // Handle page parameter in URL
             const params = new URLSearchParams(window.location.search);
             const page = params.get('page');
             if (page) {
-                // Trouve l'élément sidebar correspondant et déclenche son clic
                 const targetSidebar = Array.from(sidebarItems).find(item => item.getAttribute('data-page') === page);
                 if (targetSidebar) {
                     targetSidebar.click();
                 } else {
-                    // Si la page n'existe pas, affiche le dashboard par défaut
                     handlePageNavigation('dashboard');
                     sidebarItems.forEach(i => {
                         if (i.getAttribute('data-page') === 'dashboard') i.classList.add('active');
@@ -706,16 +601,12 @@
                     });
                 }
             } else {
-                // Par défaut, affiche le dashboard
                 handlePageNavigation('dashboard');
                 sidebarItems.forEach(i => {
                     if (i.getAttribute('data-page') === 'dashboard') i.classList.add('active');
                     else i.classList.remove('active');
                 });
             }
-
-            // ...le reste du code...
-
 
             addActionButtonHandlers();
         });
@@ -741,20 +632,15 @@
                     break;
                 case 'subscriptions':
                     document.getElementById('subscriptions-page').style.display = 'block';
+                    loadUserAbonnements(); // <-- Utilise la nouvelle fonction
+                    loadPaiementsHistorique();
                     break;
                 case 'logout':
                     if (confirm('Êtes-vous sûr de vouloir vous déconnecter?')) {
-                        localStorage.removeItem('userToken'); // Simulate logout by clearing token
-                        localStorage.removeItem('user_id');
-                        localStorage.removeItem('last_name');
-                        localStorage.removeItem('first_name');
-
-                        location.href = '../fr/'; // Redirect to home page
-
-                        // Here you would typically redirect to login page
-                        // window.location.href = '/login';
+                        localStorage.clear(); // <-- Vide tout le localStorage
+                        document.cookie = "token=; path=/; max-age=0";
+                        location.href = '../fr/';
                     } else {
-                        // Keep current page visible if logout is cancelled
                         const currentActivePage = document.querySelector('.page-content[style*="block"]') || document.getElementById('dashboard-page');
                         currentActivePage.style.display = 'block';
                     }
@@ -765,8 +651,17 @@
         }
 
         function addActionButtonHandlers() {
-            // Training action buttons
             document.addEventListener('click', function (e) {
+                const isSubscriptionPage = document.getElementById('subscriptions-page')?.style.display === 'block';
+                const isActionButton = e.target.classList.contains('btn-action');
+                if (isSubscriptionPage && isActionButton && e.target.textContent.trim() === 'Annuler') {
+                    if (confirm('Êtes-vous sûr de vouloir annuler votre abonnement?')) {
+                        alert('Annulation de l\'abonnement...');
+                    }
+                    e.preventDefault();
+                    return;
+                }
+
                 if (e.target.textContent === 'Continuer') {
                     alert('Redirection vers le module de formation...');
                 } else if (e.target.textContent === 'Certificat') {
@@ -785,186 +680,685 @@
                     alert('Ajout au calendrier...');
                 } else if (e.target.textContent === 'Gérer') {
                     alert('Gestion de l\'abonnement...');
-                } else if (e.target.textContent === 'Annuler') {
-                    if (confirm('Êtes-vous sûr de vouloir annuler votre abonnement?')) {
-                        alert('Annulation de l\'abonnement...');
-                    }
                 } else if (e.target.textContent === 'Choisir') {
                     alert('Sélection du plan d\'abonnement...');
                 }
             });
         }
-    </script>
 
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    // --- Gestion de la photo de profil ---
-    const btnUpload = document.getElementById('btn-upload-photo');
-    const btnDelete = document.getElementById('btn-delete-photo');
-    const inputPhoto = document.getElementById('profile-photo-input');
-    const avatar = document.getElementById('profile-avatar');
+        // --- Gestion de la photo de profil ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnUpload = document.getElementById('btn-upload-photo');
+            const btnDelete = document.getElementById('btn-delete-photo');
+            const inputPhoto = document.getElementById('profile-photo-input');
+            const avatar = document.getElementById('profile-avatar');
 
-    // Affiche la photo sauvegardée si elle existe
-    const savedPhoto = localStorage.getItem('profilePhoto');
-    if (savedPhoto) {
-        avatar.style.backgroundImage = `url('${savedPhoto}')`;
-        avatar.style.backgroundSize = 'cover';
-        avatar.style.backgroundPosition = 'center';
-        avatar.textContent = '';
-        btnUpload.textContent = 'Modifier la photo de profil';
-        btnDelete.classList.remove('d-none');
-    }
+            // Affiche la photo sauvegardée si elle existe
+            const savedPhoto = localStorage.getItem('profilePhoto');
+            if (savedPhoto) {
+                avatar.style.backgroundImage = `url('${savedPhoto}')`;
+                avatar.style.backgroundSize = 'cover';
+                avatar.style.backgroundPosition = 'center';
+                avatar.textContent = '';
+                btnUpload.textContent = 'Modifier la photo de profil';
+                btnDelete.classList.remove('d-none');
+            }
 
-    btnUpload.addEventListener('click', function () {
-        inputPhoto.click();
-    });
+            btnUpload.addEventListener('click', function () {
+                inputPhoto.click();
+            });
 
-    inputPhoto.addEventListener('change', function (e) {
-        const file = e.target.files[0];
-        if (!file) return;
-        if (!file.type.startsWith('image/')) {
-            alert('Veuillez sélectionner une image.');
-            return;
-        }
-        const reader = new FileReader();
-        reader.onload = function (evt) {
-            avatar.style.backgroundImage = `url('${evt.target.result}')`;
-            avatar.style.backgroundSize = 'cover';
-            avatar.style.backgroundPosition = 'center';
-            avatar.textContent = '';
-            localStorage.setItem('profilePhoto', evt.target.result);
-            btnUpload.textContent = 'Modifier la photo de profil';
-            btnDelete.classList.remove('d-none');
-        };
-        reader.readAsDataURL(file);
-    });
+            inputPhoto.addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                if (!file.type.startsWith('image/')) {
+                    alert('Veuillez sélectionner une image.');
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onload = function (evt) {
+                    avatar.style.backgroundImage = `url('${evt.target.result}')`;
+                    avatar.style.backgroundSize = 'cover';
+                    avatar.style.backgroundPosition = 'center';
+                    avatar.textContent = '';
+                    localStorage.setItem('profilePhoto', evt.target.result);
+                    btnUpload.textContent = 'Modifier la photo de profil';
+                    btnDelete.classList.remove('d-none');
+                };
+                reader.readAsDataURL(file);
+            });
 
-    btnDelete.addEventListener('click', function () {
-        if (confirm('Voulez-vous vraiment supprimer votre photo de profil ?')) {
-            localStorage.removeItem('profilePhoto');
-            avatar.style.backgroundImage = '';
-            // Recalculer les initiales
+            btnDelete.addEventListener('click', function () {
+                if (confirm('Voulez-vous vraiment supprimer votre photo de profil ?')) {
+                    localStorage.removeItem('profilePhoto');
+                    avatar.style.backgroundImage = '';
+                    // Recalculer les initiales
+                    const firstName = localStorage.getItem('first_name') || '-';
+                    const lastName = localStorage.getItem('last_name') || '-';
+                    let initials = '';
+                    if (firstName && lastName && firstName !== '-' && lastName !== '-') {
+                        initials = firstName[0].toUpperCase() + lastName[0].toUpperCase();
+                    } else if (firstName && firstName !== '-') {
+                        initials = firstName[0].toUpperCase();
+                    } else {
+                        initials = 'EI';
+                    }
+                    avatar.textContent = initials;
+                    btnUpload.textContent = 'Cliquez ici';
+                    btnDelete.classList.add('d-none');
+                }
+            });
+
+            // --- Dynamisation des infos du profil ---
             const firstName = localStorage.getItem('first_name') || '-';
             const lastName = localStorage.getItem('last_name') || '-';
-            let initials = '';
-            if (firstName && lastName && firstName !== '-' && lastName !== '-') {
-                initials = firstName[0].toUpperCase() + lastName[0].toUpperCase();
-            } else if (firstName && firstName !== '-') {
-                initials = firstName[0].toUpperCase();
-            } else {
-                initials = 'EI';
+            const email = localStorage.getItem('email') || '-';
+            const phone = localStorage.getItem('phone') || '-';
+
+            document.getElementById('profile-firstname').textContent = firstName;
+            document.getElementById('profile-lastname').textContent = lastName;
+            document.getElementById('profile-email').textContent = email;
+            document.getElementById('profile-phone').textContent = phone;
+
+            const userNameHeader = document.querySelector('.user-greeting .user-name');
+            if (userNameHeader) {
+                userNameHeader.textContent = `${firstName} ${lastName}`.trim();
             }
-            avatar.textContent = initials;
-            btnUpload.textContent = 'Cliquez ici';
-            btnDelete.classList.add('d-none');
-        }
-    });
 
-    // --- Dynamisation des infos du profil ---
-    const firstName = localStorage.getItem('first_name') || '-';
-    const lastName = localStorage.getItem('last_name') || '-';
-    const email = localStorage.getItem('email') || '-';
-    const phone = localStorage.getItem('phone') || '-';
-
-    document.getElementById('profile-firstname').textContent = firstName;
-    document.getElementById('profile-lastname').textContent = lastName;
-    document.getElementById('profile-email').textContent = email;
-    document.getElementById('profile-phone').textContent = phone;
-
-    const userNameHeader = document.querySelector('.user-greeting .user-name');
-    if (userNameHeader) {
-        userNameHeader.textContent = `${firstName} ${lastName}`.trim();
-    }
-
-    if (!savedPhoto) {
-        let initials = '';
-        if (firstName && lastName && firstName !== '-' && lastName !== '-') {
-            initials = firstName[0].toUpperCase() + lastName[0].toUpperCase();
-        } else if (firstName && firstName !== '-') {
-            initials = firstName[0].toUpperCase();
-        } else {
-            initials = 'EI';
-        }
-        avatar.textContent = initials;
-    }
-
-    // --- Récupération des statistiques utilisateur ---
-    const userToken = localStorage.getItem('userToken');
-    if (userToken) {
-        fetch('https://imaneapi.auditacademie.com/api/formations_utilisateur/', {
-            headers: {
-                'Authorization': `Token ${userToken}`
+            if (!savedPhoto) {
+                let initials = '';
+                if (firstName && lastName && firstName !== '-' && lastName !== '-') {
+                    initials = firstName[0].toUpperCase() + lastName[0].toUpperCase();
+                } else if (firstName && firstName !== '-') {
+                    initials = firstName[0].toUpperCase();
+                } else {
+                    initials = 'EI';
+                }
+                avatar.textContent = initials;
             }
-        })
-        .then(response => response.json())
-        .then(data => {
-            const trainingsPage = document.getElementById('trainings-page');
-            // Sélectionne l'endroit où afficher les formations (après le titre)
-            // On retire les anciennes formations dynamiques
-            const oldCards = trainingsPage.querySelectorAll('.content-card[data-dynamic="1"]');
-            oldCards.forEach(card => card.remove());
 
-            if (Array.isArray(data.formations) && data.formations.length > 0) {
-                data.formations.forEach(formation => {
-                    // Création de la carte formation
-                    const card = document.createElement('div');
-                    card.className = 'content-card';
-                    card.setAttribute('data-dynamic', '1');
-                    card.innerHTML = `
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5 class="mb-2">${formation.titre || '-'}</h5>
-                                <p class="text-muted mb-2">${formation.description_courte || ''}</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="badge badge-status ${getFormationStatusClass(formation.statut)} me-2">
-                                        ${getFormationStatusLabel(formation.statut)}
-                                    </span>
-                                </div>
-                                <div class="progress progress-bar-custom mb-2">
-                                    <div class="progress-bar bg-primary" style="width: ${formation.progression || 0}%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    // Ajoute la carte après le titre h2
-                    trainingsPage.appendChild(card);
+            // --- Gestion du formulaire de modification de profil ---
+            const btnEditProfile = document.getElementById('btn-edit-profile');
+            const profileInfoView = document.getElementById('profile-info-view');
+            const profileEditForm = document.getElementById('profile-edit-form');
+            const btnCancelEdit = document.getElementById('btn-cancel-edit');
+
+            function fillProfileForm() {
+                document.getElementById('edit-firstname').value = localStorage.getItem('first_name') || '';
+                document.getElementById('edit-lastname').value = localStorage.getItem('last_name') || '';
+                document.getElementById('edit-email').value = localStorage.getItem('email') || '';
+                document.getElementById('edit-phone').value = localStorage.getItem('phone') || '';
+            }
+
+            if (btnEditProfile) {
+                btnEditProfile.addEventListener('click', function () {
+                    fillProfileForm();
+                    profileInfoView.style.display = 'none';
+                    profileEditForm.style.display = 'block';
                 });
-            } else {
-                // Affiche un message si aucune formation
-                const msg = document.createElement('div');
-                msg.className = 'content-card text-center';
-                msg.setAttribute('data-dynamic', '1');
-                msg.textContent = "Aucune formation suivie pour le moment.";
-                trainingsPage.appendChild(msg);
             }
-        })
-        .catch(() => {
-            const trainingsPage = document.getElementById('trainings-page');
-            const msg = document.createElement('div');
-            msg.className = 'content-card text-center';
-            msg.setAttribute('data-dynamic', '1');
-            msg.textContent = "Erreur lors du chargement des formations.";
-            trainingsPage.appendChild(msg);
+
+            if (btnCancelEdit) {
+                btnCancelEdit.addEventListener('click', function () {
+                    profileEditForm.style.display = 'none';
+                    profileInfoView.style.display = 'block';
+                });
+            }
+
+            if (profileEditForm) {
+                profileEditForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const first_name = document.getElementById('edit-firstname').value.trim();
+                    const last_name = document.getElementById('edit-lastname').value.trim();
+                    const email = document.getElementById('edit-email').value.trim();
+                    const phone = document.getElementById('edit-phone').value.trim();
+
+                    const userToken = localStorage.getItem('userToken');
+                    console.log("Tentative de mise à jour du profil avec :", { first_name, last_name, email, phone });
+                    console.log("Token utilisé :", userToken);
+
+                    if (!userToken) {
+                        alert("Vous n'êtes pas connecté.");
+                        console.log("Aucun token trouvé dans le localStorage.");
+                        return;
+                    }
+
+                    fetch('https://imaneapi.auditacademie.com/api/updateprofile/', {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${userToken}`
+                        },
+                        body: JSON.stringify({ first_name, last_name, email, tel: phone })
+                    })
+                    .then(res => {
+                        console.log("Réponse brute de l'API :", res);
+                        if (!res.ok) {
+                            console.log("Statut HTTP non OK :", res.status, res.statusText);
+                        }
+                        return res.json().catch(err => {
+                            console.log("Erreur lors du parsing JSON :", err);
+                            throw new Error("Réponse non JSON");
+                        });
+                    })
+                    .then(data => {
+                        console.log("Réponse JSON de l'API :", data);
+                        if (data.message && data.message.toLowerCase().includes('succès')) {
+                            // Succès
+                            const userData = data.data || {};
+                            localStorage.setItem('first_name', userData.first_name || first_name);
+                            localStorage.setItem('last_name', userData.last_name || last_name);
+                            localStorage.setItem('email', userData.email || email);
+                            localStorage.setItem('phone', userData.tel || phone);
+
+                            document.getElementById('profile-firstname').textContent = userData.first_name || first_name;
+                            document.getElementById('profile-lastname').textContent = userData.last_name || last_name;
+                            document.getElementById('profile-email').textContent = userData.email || email;
+                            document.getElementById('profile-phone').textContent = userData.tel || phone;
+
+                            const userNameHeader = document.querySelector('.user-greeting .user-name');
+                            if (userNameHeader) {
+                                userNameHeader.textContent = `${userData.first_name || first_name} ${userData.last_name || last_name}`.trim();
+                            }
+
+                            const avatar = document.getElementById('profile-avatar');
+                            if (avatar && !localStorage.getItem('profilePhoto')) {
+                                let initials = '';
+                                if ((userData.first_name || first_name) && (userData.last_name || last_name)) {
+                                    initials = (userData.first_name || first_name)[0].toUpperCase() + (userData.last_name || last_name)[0].toUpperCase();
+                                } else if (userData.first_name || first_name) {
+                                    initials = (userData.first_name || first_name)[0].toUpperCase();
+                                } else {
+                                    initials = 'EI';
+                                }
+                                avatar.textContent = initials;
+                            }
+
+                            alert('Profil mis à jour avec succès.');
+                            profileEditForm.style.display = 'none';
+                            profileInfoView.style.display = 'block';
+                        } else {
+                            alert(data.error || data.message || "Erreur lors de la mise à jour du profil.");
+                            console.log("Erreur retournée par l'API :", data.error || data);
+                        }
+                    })
+                    .catch((err) => {
+                        alert("Erreur réseau lors de la mise à jour du profil.");
+                        console.log("Erreur attrapée dans le catch :", err);
+                    });
+                });
+            }
+
+            // --- Gestion du formulaire de changement de mot de passe ---
+            const btnEditPassword = document.getElementById('btn-edit-password');
+            const passwordEditForm = document.getElementById('password-edit-form');
+            const btnCancelPassword = document.getElementById('btn-cancel-password');
+
+            if (btnEditPassword) {
+                btnEditPassword.addEventListener('click', function () {
+                    profileInfoView.style.display = 'none';
+                    profileEditForm.style.display = 'none';
+                    passwordEditForm.style.display = 'block';
+                });
+            }
+
+            if (btnCancelPassword) {
+                btnCancelPassword.addEventListener('click', function () {
+                    passwordEditForm.style.display = 'none';
+                    profileInfoView.style.display = 'block';
+                });
+            }
+
+            if (passwordEditForm) {
+                passwordEditForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const current_password = document.getElementById('current-password').value.trim();
+                    const new_password = document.getElementById('new-password').value.trim();
+                    const confirm_password = document.getElementById('confirm-password').value.trim();
+
+                    if (!current_password || !new_password || !confirm_password) {
+                        alert("Veuillez remplir tous les champs.");
+                        return;
+                    }
+                    if (new_password !== confirm_password) {
+                        alert("Les nouveaux mots de passe ne correspondent pas.");
+                        return;
+                    }
+
+                    const userToken = localStorage.getItem('userToken');
+                    if (!userToken) {
+                        alert("Vous n'êtes pas connecté.");
+                        return;
+                    }
+
+                    fetch('https://imaneapi.auditacademie.com/api/modifier-mot-de-passe/', {
+    method: 'PUT', // <-- Correction ici
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${userToken}`
+    },
+    body: JSON.stringify({
+        ancien_mot_de_passe: current_password,
+        nouveau_mot_de_passe: new_password,
+        confirmation_mot_de_passe: confirm_password
+    })
+})
+                    .then(res => res.json())
+                    .then((data) => {
+                        if (data.success || (data.message && data.message.toLowerCase().includes('succès'))) {
+                            alert('Mot de passe modifié avec succès.');
+                            passwordEditForm.reset();
+                            passwordEditForm.style.display = 'none';
+                            profileInfoView.style.display = 'block';
+                        } else {
+                            alert(data.error || data.message || "Erreur lors du changement de mot de passe.");
+                        }
+                    })
+                    .catch(() => {
+                        alert("Erreur réseau lors du changement de mot de passe.");
+                    });
+                });
+            }
+
+            // --- Récupération des statistiques utilisateur ---
+            const userToken = localStorage.getItem('userToken');
+            if (userToken) {
+                fetch('https://imaneapi.auditacademie.com/api/statistiques_utilisateur/', {
+                    headers: {
+                        'Authorization': `Bearer ${userToken}`
+                    }
+                })
+                .then(res => res.json())
+                .then(stats => {
+                    document.getElementById('trainings-count').textContent = stats.formations_inscrites ?? '0';
+                    document.getElementById('webinars-count').textContent = stats.webinaires_participes ?? '0';
+                    document.getElementById('subscriptions-count').textContent = stats.abonnements_actifs ?? '0';
+                })
+                .catch(() => {
+                    document.getElementById('trainings-count').textContent = '-';
+                    document.getElementById('webinars-count').textContent = '-';
+                    document.getElementById('subscriptions-count').textContent = '-';
+                });
+
+                // --- Récupération dynamique des formations ---
+                // (Suppression de l'affichage dynamique des formations)
+                // fetch('https://imaneapi.auditacademie.com/api/formations_utilisateur/', {
+                //     headers: {
+                //         'Authorization': `Bearer ${userToken}`
+                //     }
+                // })
+                // .then(response => response.json())
+                // .then(data => {
+                //     console.log('Réponse API formations:', data);
+                //     const trainingsPage = document.getElementById('trainings-page');
+                //     // Supprime les anciennes cartes dynamiques
+                //     const oldCards = trainingsPage.querySelectorAll('.content-card[data-dynamic="1"]');
+                //     oldCards.forEach(card => card.remove());
+
+                //     if (Array.isArray(data.formations) && data.formations.length > 0) {
+                //         data.formations.forEach(formation => {
+                //             const card = document.createElement('div');
+                //             card.className = 'content-card';
+                //             card.setAttribute('data-dynamic', '1');
+                //             // Formatage de la date d'inscription
+                //             const dateInscription = formation.date_inscription
+                //                 ? new Date(formation.date_inscription).toLocaleDateString('fr-FR')
+                //                 : '-';
+                //             // Statut et badge
+                //             const statut = formation.terminee ? 'Terminé' : 'En cours';
+                //             const badgeClass = formation.terminee ? 'status-completed' : 'status-active';
+                //             // Niveau
+                //             const niveau = formation.niveau ? formation.niveau.charAt(0) + formation.niveau.slice(1).toLowerCase() : '';
+                //             // Date d'achèvement
+                //             const dateAchevement = formation.date_achevement
+                //                 ? new Date(formation.date_achevement).toLocaleDateString('fr-FR')
+                //                 : null;
+
+                //             card.innerHTML = `
+                //                 <div class="row">
+                //                     <div class="col-md-8">
+                //                         <h5 class="mb-2">${formation.titre || '-'}</h5>
+                //                         <p class="text-muted mb-2">Niveau : ${niveau} | Langue : ${formation.langue || '-'}</p>
+                //                         <div class="d-flex align-items-center mb-2">
+                //                             <span class="badge badge-status ${badgeClass} me-2">${statut}</span>
+                //                             <small class="text-muted">
+                //                                 ${formation.terminee && dateAchevement ? `Terminé le ${dateAchevement}` : `Inscrit le ${dateInscription}`}
+                //                             </small>
+                //                         </div>
+                //                     </div>
+                //                     <div class="col-md-4 text-end">
+                //                         ${formation.terminee
+                //                             ? `<button class="btn btn-outline-success btn-action mb-2">Certificat</button>`
+                //                             : `<button class="btn btn-primary btn-action mb-2">Continuer</button>`
+                //                         }
+                //                     </div>
+                //                 </div>
+                //             `;
+                //             trainingsPage.appendChild(card);
+                //         });
+                //     } else {
+                //         const msg = document.createElement('div');
+                //         msg.className = 'content-card text-center';
+                //         msg.setAttribute('data-dynamic', '1');
+                //         msg.textContent = "Aucune formation suivie pour le moment.";
+                //         trainingsPage.appendChild(msg);
+                //     }
+                // })
+                // .catch(() => {
+                //     const trainingsPage = document.getElementById('trainings-page');
+                //     const msg = document.createElement('div');
+                //     msg.className = 'content-card text-center';
+                //     msg.setAttribute('data-dynamic', '1');
+                //     msg.textContent = "Erreur lors du chargement des formations.";
+                //     trainingsPage.appendChild(msg);
+                // });
+            }
         });
-    }
 
-    // Helpers pour le statut de la formation
-    function getFormationStatusClass(statut) {
-        switch ((statut || '').toLowerCase()) {
-            case 'en cours': return 'status-active';
-            case 'terminé': return 'status-completed';
-            case 'à commencer': return 'status-pending';
-            case 'expiré': return 'status-expired';
-            default: return 'status-active';
+        // Fonction pour charger les abonnements dynamiquement depuis la nouvelle route
+        function loadUserAbonnements() {
+            const userToken = localStorage.getItem('userToken');
+            if (!userToken) return;
+
+            fetch('https://imaneapi.auditacademie.com/api/abonnements_utilisateur/', {
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('subscriptions-table-body');
+                tableBody.innerHTML = '';
+                if (Array.isArray(data.abonnements) && data.abonnements.length > 0) {
+                    data.abonnements.forEach((abonnement, index) => {
+                        const row = document.createElement('tr');
+                        // Formatage des dates
+                        const dateDebut = abonnement.date_debut 
+                            ? new Date(abonnement.date_debut).toLocaleDateString('fr-FR')
+                            : '-';
+                        const dateFin = abonnement.date_fin 
+                            ? new Date(abonnement.date_fin).toLocaleDateString('fr-FR')
+                            : '-';
+                        // Statut avec badge coloré
+                        let statusClass = 'status-active';
+                        if (abonnement.statut && abonnement.statut.toLowerCase() === 'expiré') statusClass = 'status-expired';
+                        else if (abonnement.statut && abonnement.statut.toLowerCase() === 'en attente') statusClass = 'status-pending';
+                        else if (abonnement.statut && abonnement.statut.toLowerCase() === 'actif') statusClass = 'status-active';
+                        // Affichage du type et du montant
+                        row.innerHTML = `
+                            <td>${index + 1}</td>
+                            <td>Article</td>
+                            <td>${abonnement.type || '-'}</td>
+                            <td>${abonnement.montant_paye ? abonnement.montant_paye + ' XOF' : '-'}</td>
+                            <td>${dateDebut}</td>
+                            <td>${dateFin}</td>
+                            <td><span class="badge badge-status ${statusClass}">${abonnement.statut || '-'}</span></td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                } else {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td colspan="7" class="text-center">Aucun abonnement trouvé</td>`;
+                    tableBody.appendChild(row);
+                }
+            })
+            .catch(error => {
+                const tableBody = document.getElementById('subscriptions-table-body');
+                tableBody.innerHTML = `<tr><td colspan="7" class="text-center text-danger">Erreur lors du chargement des abonnements</td></tr>`;
+            });
         }
-    }
-    function getFormationStatusLabel(statut) {
-        if (!statut) return 'En cours';
-        return statut.charAt(0).toUpperCase() + statut.slice(1);
-    }
-});
-</script>
 
+        // Fonction pour générer une carte formation au format formation.html
+        function generateFormationCard(formation) {
+            let imageUrl = "../assets/images/blog/default.jpg";
+            if (formation.image_couverture) {
+                imageUrl = formation.image_couverture.startsWith("http")
+                    ? formation.image_couverture
+                    : "https://imaneapi.auditacademie.com/" + "photos/" + (formation.image_couverture) ?? "";
+            }
+            let contributeur = "";
+            if (formation.utilisateur && (formation.utilisateur.last_name || formation.utilisateur.first_name)) {
+                contributeur = (formation.utilisateur.last_name || "") + " " + (formation.utilisateur.first_name || "");
+            }
+            let description = formation.description_courte || "";
+            let titre = formation.titre || "";
+            let detailUrl = "formationdetail?id=" + formation.id;
+            // Ajout du prix
+            let prix = (typeof formation.prix !== 'undefined' && formation.prix !== null)
+                ? (formation.prix == 0 ? 'Gratuit' : formation.prix + ' XOF')
+                : '-';
+            return `
+                <div class="col-3">
+                    <article class="post type-post panel overflow-hidden vstack border bg-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
+                        <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
+                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageUrl}" alt="${titre}">
+                            <a href="${detailUrl}" class="position-cover"></a>
+                        </figure>
+                        <div class="panel vstack gap-1 p-2">
+                            <h3 class="post-title h5 m-0 ltr:pe-4 rtl:ps-4">${titre}</h3>
+                            <div class="content vstack justify-between gap-narrow">
+                                <div class="fs-6 text-muted truncate-2-lines" style="min-height:2.5em;">${description}</div>
+                            </div>
+                            <div class="fs-5 mb-1 truncate-1-line" style="color:#178d72; font-weight:700; font-size:1.2rem;" title="${contributeur}">
+                                ${contributeur}
+                            </div>
+                            <div class="fs-6 mb-1" style="color:#2a4743; font-weight:600;">Prix : ${prix}</div>
+                            <a href="${detailUrl}" class="uc-link fs-7 fw-bold hstack gap-1 sm:mt-1 xl:mt-2">
+                                Voir la formation <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            `;
+        }
+
+        // Charge dynamiquement les formations utilisateur
+        function loadUserFormations() {
+            const userToken = localStorage.getItem('userToken');
+            if (!userToken) return;
+
+            const allList = document.getElementById('all-trainings-list');
+            const ongoingList = document.getElementById('ongoing-trainings-list');
+            const completedList = document.getElementById('completed-trainings-list');
+
+            allList.innerHTML = '<p>Chargement...</p>';
+            ongoingList.innerHTML = '';
+            completedList.innerHTML = '';
+
+            fetch('https://imaneapi.auditacademie.com/api/formations_utilisateur/', {
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (!data.formations || !Array.isArray(data.formations) || data.formations.length === 0) {
+                    allList.innerHTML = '<div class="col-12 text-center">Aucune formation trouvée.</div>';
+                    ongoingList.innerHTML = '';
+                    completedList.innerHTML = '';
+                    return;
+                }
+                const ongoing = data.formations.filter(f => !f.est_terminee);
+                const completed = data.formations.filter(f => f.est_terminee);
+
+                allList.innerHTML = data.formations.map(generateFormationCard).join('') || '<div class="col-12 text-center">Aucune formation trouvée.</div>';
+                ongoingList.innerHTML = ongoing.length ? ongoing.map(generateFormationCard).join('') : '<div class="col-12 text-center">Aucune formation en cours.</div>';
+                completedList.innerHTML = completed.length ? completed.map(generateFormationCard).join('') : '<div class="col-12 text-center">Aucune formation terminée.</div>';
+            })
+            .catch(() => {
+                allList.innerHTML = '<div class="col-12 text-center text-danger">Erreur lors du chargement des formations.</div>';
+                ongoingList.innerHTML = '';
+                completedList.innerHTML = '';
+            });
+        }
+
+        // Fonction pour générer une carte webinaire
+        function generateWebinarCard(webinar, isPast) {
+            const date = webinar.date ? new Date(webinar.date).toLocaleDateString('fr-FR') : '-';
+            const heureDebut = webinar.heure_debut ? webinar.heure_debut.slice(0,5) : '';
+            const heureFin = webinar.heure_fin ? webinar.heure_fin.slice(0,5) : '';
+            const badgeClass = isPast ? 'status-completed' : 'status-active';
+            const badgeText = isPast ? 'Terminé' : 'Confirmé';
+            let actionBtn = '';
+            if (isPast && webinar.lien_replay) {
+                actionBtn = `<a href="${webinar.lien_replay}" target="_blank" class="btn btn-outline-info btn-action mb-2">Revoir</a>`;
+            } else if (!isPast) {
+                actionBtn = `<button class="btn btn-outline-info btn-action mb-2">Lien</button>`;
+            }
+            // Affichage du prix
+            let prixHtml = '';
+            if (typeof webinar.prix !== 'undefined' && webinar.prix !== null) {
+                prixHtml = `<div class=\"webinar-time mb-2\"><i class=\"bi bi-ticket me-1\"></i>Prix : ${webinar.prix == 0 ? 'Gratuit' : webinar.prix + ' XOF'}</div>`;
+            }
+            return `
+                <div class="content-card mb-3">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5 class="mb-2">${webinar.titre || '-'}</h5>
+                            <div class="webinar-time mb-2">
+                                <i class="bi bi-calendar-event me-1"></i>
+                                <strong>${date}</strong>
+                            </div>
+                            <div class="webinar-time mb-2">
+                                <i class="bi bi-clock me-1"></i>
+                                Heure Début: ${heureDebut}
+                            </div>
+                            <div class="webinar-time mb-2">
+                                <i class="bi bi-clock me-1"></i>
+                                Heure Fin: ${heureFin}
+                            </div>
+                            ${prixHtml}
+                            <span class="badge badge-status ${badgeClass}">${badgeText}</span>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            ${actionBtn}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Charge dynamiquement les webinaires utilisateur
+        function loadUserWebinaires() {
+            const userToken = localStorage.getItem('userToken');
+            if (!userToken) return;
+            const webinarsPage = document.getElementById('webinars-page');
+            if (!webinarsPage) return;
+            // Sélecteurs des sections
+            let upcomingSection = webinarsPage.querySelector('#upcoming-webinars-list');
+            let pastSection = webinarsPage.querySelector('#past-webinars-list');
+            // Si les conteneurs n'existent pas, on les crée
+            if (!upcomingSection) {
+                upcomingSection = document.createElement('div');
+                upcomingSection.id = 'upcoming-webinars-list';
+                webinarsPage.querySelector('h4.mb-3').after(upcomingSection);
+            }
+            if (!pastSection) {
+                pastSection = document.createElement('div');
+                pastSection.id = 'past-webinars-list';
+                const pastTitle = webinarsPage.querySelector('h4.mb-3.mt-4');
+                if (pastTitle) pastTitle.after(pastSection);
+            }
+            upcomingSection.innerHTML = '<p>Chargement...</p>';
+            pastSection.innerHTML = '';
+            fetch('https://imaneapi.auditacademie.com/api/webinaires_utilisateur/', {
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (!data.webinaires || !Array.isArray(data.webinaires) || data.webinaires.length === 0) {
+                    upcomingSection.innerHTML = '<div class="text-center">Aucun webinaire trouvé.</div>';
+                    pastSection.innerHTML = '';
+                    return;
+                }
+                const now = new Date();
+                const upcoming = data.webinaires.filter(w => w.statut === 'à_venir');
+                const past = data.webinaires.filter(w => w.statut !== 'à_venir');
+                upcomingSection.innerHTML = upcoming.length ? upcoming.map(w => generateWebinarCard(w, false)).join('') : '<div class="text-center">Aucun webinaire à venir.</div>';
+                pastSection.innerHTML = past.length ? past.map(w => generateWebinarCard(w, true)).join('') : '<div class="text-center">Aucun webinaire passé.</div>';
+            })
+            .catch(() => {
+                upcomingSection.innerHTML = '<div class="text-center text-danger">Erreur lors du chargement des webinaires.</div>';
+                pastSection.innerHTML = '';
+            });
+        }
+
+        // Appelle la fonction lors de l'ouverture de l'onglet "Mes webinaires"
+        const oldHandlePageNavigationWebinars = handlePageNavigation;
+        handlePageNavigation = function(page) {
+            oldHandlePageNavigationWebinars(page);
+            if (page === 'trainings') {
+                loadUserFormations();
+            }
+            if (page === 'webinars') {
+                loadUserWebinaires();
+            }
+        };
+
+        // Fonction pour charger dynamiquement l’historique des paiements Formations | Webinaires
+        function loadPaiementsHistorique() {
+            const userToken = localStorage.getItem('userToken');
+            if (!userToken) return;
+            const tableBody = document.querySelector('#subscriptions-page .content-card:nth-of-type(2) tbody');
+            if (!tableBody) return;
+            tableBody.innerHTML = '<tr><td colspan="10" class="text-center">Chargement...</td></tr>';
+            fetch('https://imaneapi.auditacademie.com/api/historique-paiements/', {
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (!Array.isArray(data) || data.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="10" class="text-center">Aucun paiement trouvé</td></tr>';
+                    return;
+                }
+                tableBody.innerHTML = data.map((item, idx) => {
+                    const date = item.date_paiement ? new Date(item.date_paiement).toLocaleDateString('fr-FR') : '-';
+                    const montant = item.montant_paye ? (parseFloat(item.montant_paye).toLocaleString('fr-FR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' XOF') : '-';
+                    const tranche = (typeof item.tranche_numero !== 'undefined' && item.tranche_numero !== null) ? item.tranche_numero : '-';
+                    const echeance = (typeof item.echeance !== 'undefined' && item.echeance !== null) ? item.echeance : '-';
+                    let badgeClass = 'status-active';
+                    if (item.statut_paiement && item.statut_paiement.toLowerCase().includes('attente')) badgeClass = 'status-pending';
+                    else if (item.statut_paiement && item.statut_paiement.toLowerCase().includes('expir')) badgeClass = 'status-expired';
+                    else if (item.statut_paiement && item.statut_paiement.toLowerCase().includes('reussi')) badgeClass = 'status-active';
+                    else badgeClass = 'status-completed';
+                    return `<tr>
+                        <td>${idx + 1}</td>
+                        <td>${item.formation_titre || '-'}</td>
+                        <td>${item.type_paiement || '-'}</td>
+                        <td>${tranche}</td>
+                        <td>${echeance}</td>
+                        <td>${montant}</td>
+                        <td>${date}</td>
+                        <td>${item.methode_paiement || '-'}</td>
+                        <td>${item.reference_transaction || '-'}</td>
+                        <td><span class="badge badge-status ${badgeClass}">${item.statut_paiement || '-'}</span></td>
+                    </tr>`;
+                }).join('');
+            })
+            .catch(() => {
+                tableBody.innerHTML = '<tr><td colspan="10" class="text-center text-danger">Erreur lors du chargement des paiements</td></tr>';
+            });
+        }
+
+        // Appel lors de l’ouverture de l’onglet abonnements
+        const oldHandlePageNavigationPaiements = handlePageNavigation;
+        handlePageNavigation = function(page) {
+            oldHandlePageNavigationPaiements(page);
+            if (page === 'subscriptions') {
+                loadUserAbonnements();
+                loadPaiementsHistorique();
+            }
+            if (page === 'trainings') {
+                loadUserFormations();
+            }
+            if (page === 'webinars') {
+                loadUserWebinaires();
+            }
+        };
+    </script>
 </body>
-
 </html>

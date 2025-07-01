@@ -818,8 +818,8 @@ const imgFormationBottom = document.getElementById('formation-image-bottom');
 
 const baseURL = 'https://imaneapi.auditacademie.com/';
 let imageURL = '/placeholder.svg?height=120&width=120';
-if (formation.image_couverture && formation.image_couverture.startsWith('/photos')) {
-    imageURL = baseURL + formation.image_couverture;
+if (formation.image_couverture && formation.image_couverture.startsWith('photos')) {
+    imageURL = baseURL +"photos/" + (formation.image_couverture) ?? "";
 } else if (formation.image_couverture) {
     imageURL = formation.image_couverture;
 }

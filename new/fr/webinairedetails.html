@@ -1027,8 +1027,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (logoutBtn) {
         logoutBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            localStorage.removeItem('userToken');
-            localStorage.removeItem('user_id');
+            document.cookie = "token=; path=/; max-age=0";
             window.location.href = "connexion.html";
         });
     }
@@ -1079,7 +1078,6 @@ document.addEventListener('DOMContentLoaded', function setupLienParticipation() 
             return data;
         } catch (e) {
             alert("Impossible de charger le webinaire.");
-            location.href = 'webinaires.html';
             return null;
         }
     }
@@ -1179,7 +1177,6 @@ loadWebinarData(window.webinarData);
     document.addEventListener('DOMContentLoaded', initializePage);
     
 function setupLienParticipation() {
-    const subscriptionWebinar = JSON.parse(localStorage.getItem('abw'));
     var btn = document.getElementById('btn-lien-participation');
     var message = document.getElementById('message-copie');
     if (!btn) return;
@@ -1190,18 +1187,12 @@ function setupLienParticipation() {
     btn = newBtn;
 
     // Vérifie si le webinaire est payant
-    if (!subscriptionWebinar || !subscriptionWebinar.includes(window.webinarData.id)) {
-        btn.title = "Ce webinaire est payant. Veuillez vous abonner pour obtenir le lien.";
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-        alert("Ce webinaire est payant. Veuillez vous abonner pour obtenir le lien de participation. Cliquez OK pour continuer vers la page de paiement.");
-            // Redirige vers la page de paiement
-            if (!window.webinarData || !window.webinarData.id) {
-                alert("Webinaire introuvable.");
-                return;
-            }
-            // Redirection vers la page de paiement avec l'ID du webinaire
-        location.href = 'payment?type=webinaire&id=' + window.webinarData.id;
+    if (window.webinarData && window.webinarData.type === 'Payant') {
+    // btn.classList.add('disabled'); // <-- retire cette ligne
+    btn.title = "Ce webinaire est payant. Veuillez vous abonner pour obtenir le lien.";
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert("Ce webinaire est payant. Veuillez vous abonner pour obtenir le lien de participation.");
     });
     return;
 }

@@ -542,17 +542,37 @@
             }
         });
 
-        const urlParams = new URLSearchParams(location.search);
-        const redirect = urlParams.get('next');
+          const urlParams = new URLSearchParams(location.search);
+const redirect = urlParams.get('next');
+const formationId = urlParams.get('formation');
+const webinaireId = urlParams.get('webinaire');
+const articleId = urlParams.get('article');
         const inscriptionLink = document.querySelector('.signup-link a');
-        if (redirect) {
-            inscriptionLink.href = `inscription?next=${redirect}`;
-        } else {
-            inscriptionLink.href = 'inscription.html';
-        }
+if (formationId) {
+    inscriptionLink.href = `inscription?formation=${formationId}`;
+} else if (webinaireId) {
+    inscriptionLink.href = `inscription?webinaire=${webinaireId}`;
+} else if (articleId) {
+    inscriptionLink.href = `inscription?article=${articleId}`;
+} else if (redirect) {
+    inscriptionLink.href = `inscription?next=${redirect}`;
+} else {
+    inscriptionLink.href = 'inscription.html';
+}
         // Form validation and API connexion
         const formLogin = document.getElementById('loginForm');
+        function clearAllCookies() {
+    document.cookie.split(";").forEach(function(c) {
+        document.cookie = c
+            .replace(/^ +/, "")
+            .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
+}
         formLogin.addEventListener('submit', async (e) => {
+            // Efface localStorage et cookies AVANT la connexion
+    localStorage.clear();
+    sessionStorage.clear();
+    clearAllCookies();
             e.preventDefault();
 
             let valid = true;
@@ -605,46 +625,126 @@
 
                 // ...dans le bloc if (response.ok) { ... }
                 if (response.ok) {
-                    const result = await response.json();
-                    console.log("Résultat de l'API:", result);
-        
-                    // Vérifie le type d'utilisateur
-                    if (result.user_info && result.user_info.user_type !== "CONTACTE ") {
-                        alert("Seuls les utilisateurs de type CONTACTE peuvent se connecter ici.");
-                        return;
-                    }
+    const result = await response.json();
+    // Vérifie le type d'utilisateur
+    if (result.user_info && result.user_info.user_type !== "CONTACTE ") {
+        alert("Seuls les utilisateurs de type CONTACTE peuvent se connecter ici.");
+        return;
+    }
 
-                    // Stocke le token si besoin
-                    if (result.access_token) {
-                        document.cookie = `token=${result.access_token}; path=/; max-age=${60 * 60 * 24 * 7}`;
-                        localStorage.setItem('userToken', result.access_token);
-                    }
+    // Stocke le token si besoin
+    if (result.access_token) {
+        document.cookie = `token=${result.access_token}; path=/; max-age=${60 * 60 * 24 * 7}`;
+        localStorage.setItem('userToken', result.access_token);
+    }
 
-                    if (result.user_info) {
-                        localStorage.setItem('first_name', result.user_info.first_name || '');
-                        localStorage.setItem('last_name', result.user_info.last_name || '');
-                        localStorage.setItem('user_id', result.user_info.id);
-                        localStorage.setItem('email', result.user_info.email || '');
-                        const aba = result.abonnement_article.length && result.abonnement_article.length > 0 ? {
-                            statut_abonnement: result.abonnement_article[0].statut_abonnement,
-                            date_debut: result.abonnement_article[0].date_debut,
-                            date_fin: result.abonnement_article[0].date_fin,
-                            
-                        } : {};
-                        const abw = result.webinaires?.map(webinaire => webinaire.id) || [];
-                        localStorage.setItem("abonnement_article", JSON.stringify(aba));
-                        localStorage.setItem('phone', result.user_info.tel || '-');
-                        localStorage.setItem("abw", JSON.stringify(abw));
-                    }
+    if (result.user_info) {
+        localStorage.setItem('first_name', result.user_info.first_name || '');
+        localStorage.setItem('last_name', result.user_info.last_name || '');
+        localStorage.setItem('user_id', result.user_info.id);
+        localStorage.setItem('email', result.user_info.email || '');
+        localStorage.setItem('phone', result.user_info.tel || '-');
+    }
 
-                    // Redirection intelligente après connexion
+    // --- Nouvelle logique de redirection intelligente ---
+    if (formationId || webinaireId || articleId) {
+    try {
+        const accessResponse = await fetch('https://imaneapi.auditacademie.com/api/connexion/', {
+    headers: {
+        'Authorization': `Bearer ${result.access_token}`
+    }
+});
+        const accessData = await accessResponse.json();
 
-                    if (redirect) {
-                        location.href = `../fr/${redirect}`;
-                    } else {
-                        location.href = "../fr/";
-                    }
-                } else {
+        // Vérifie l'accès à la formation
+        if (formationId) {
+            const inscrit = (accessData.inscriptions_formation || []).some(item =>
+                item && item.formation && String(item.formation.id) === String(formationId)
+            );
+            if (inscrit) {
+                location.href = `formationdetailcnx?id=${formationId}`;
+                return;
+            } else {
+    // Récupère les infos de la formation pour afficher la modale de prix
+    const formationRes = await fetch(`https://imaneapi.auditacademie.com/api/formations/${formationId}/`);
+    const formationData = await formationRes.json();
+    afficherModalePrix(formationData);
+    return;
+}
+        }
+        // Vérifie l'accès au webinaire
+        if (webinaireId) {
+            const inscrit = (accessData.webinaires || []).some(item =>
+                item && String(item.id) === String(webinaireId)
+            );
+            if (inscrit) {
+                location.href = `webinairedetail?id=${webinaireId}`;
+                return;
+            } else {
+    // Récupère les infos du webinaire pour le paiement
+    const webinaireRes = await fetch(`https://imaneapi.auditacademie.com/api/webinaires/${webinaireId}/`);
+    const webinaireData = await webinaireRes.json();
+    currentWebinaireData = webinaireData;
+    montantWebinairePourApi = parseFloat(webinaireData.prix) || 0;
+    paiementType = 'webinaire';
+    if (typeof openKkiapayWidget === 'function') {
+        openKkiapayWidget({
+            amount: montantWebinairePourApi,
+            position: "center",
+            theme: "#007bff",
+            sandbox: true,
+            key: "2d60f1304a3711f0b843d576c84457a5"
+        });
+    } else {
+        alert("Widget de paiement indisponible.");
+    }
+    return;
+}
+        }
+        // Vérifie l'accès à l'article (abonnement)
+        if (articleId) {
+            const abonnement = accessData.abonnement_article;
+            const actif = Array.isArray(abonnement)
+                ? abonnement.some(abo => abo && abo.statut_abonnement === 'ACTIF')
+                : abonnement && abonnement.statut_abonnement === 'ACTIF';
+            if (actif) {
+                location.href = `blog-details?id=${articleId}`;
+                return;
+            } else {
+    // Récupère les infos de l'article pour le paiement
+    const articleRes = await fetch(`https://imaneapi.auditacademie.com/api/articles/${articleId}/`);
+    const articleData = await articleRes.json();
+    currentArticleData = articleData;
+    montantArticlePourApi = parseFloat(articleData.prix) || 0;
+    paiementType = 'article';
+    if (typeof openKkiapayWidget === 'function') {
+        openKkiapayWidget({
+            amount: montantArticlePourApi,
+            position: "center",
+            theme: "#007bff",
+            sandbox: true,
+            key: "2d60f1304a3711f0b843d576c84457a5"
+        });
+    } else {
+        alert("Widget de paiement indisponible.");
+    }
+    return;
+}
+        }
+    } catch (err) {
+        alert("Erreur lors de la vérification de vos accès.");
+        return;
+    }
+}
+// --- Fin logique accès ---
+
+// Redirection classique si pas de produit ciblé
+if (redirect) {
+    location.href = `../fr/${redirect}`;
+} else {
+    location.href = "../fr/";
+}
+} else {
                     const error = await response.json();
                     alert('Erreur : ' + (error.message || 'Identifiants invalides.'));
                 }
@@ -686,6 +786,210 @@
 
             mountainBg.style.transform = `translate(${translateX}px, ${translateY}px)`;
         });
+
+        // ...existing code...
+let typePrix = '';
+let lastPaiementOption = null;
+let currentFormationData = null;
+let montantPourApi = 0;
+
+// Variables pour webinaire et article
+let currentWebinaireData = null;
+let currentArticleData = null;
+let montantWebinairePourApi = 0;
+let montantArticlePourApi = 0;
+let paiementType = null; // 'formation', 'webinaire', 'article'
+
+// Affiche la modale de choix de prix pour une formation
+function afficherModalePrix(formationData) {
+    currentFormationData = formationData;
+    document.getElementById('prixParticulierBtn').textContent = `Prix Particulier - ${formationData.prix_particulier} FCFA`;
+    document.getElementById('prixGroupeBtn').textContent = `Prix Groupe - ${formationData.prix_entreprise} FCFA`;
+    new bootstrap.Modal(document.getElementById('prixModal')).show();
+}
+
+function prixChoisi(selectedType) {
+    typePrix = selectedType;
+    bootstrap.Modal.getInstance(document.getElementById('prixModal'))?.hide();
+    new bootstrap.Modal(document.getElementById('paiementModal')).show();
+}
+
+function choisirPaiement(mode) {
+    bootstrap.Modal.getInstance(document.getElementById('paiementModal'))?.hide();
+    if (mode === 'tranche') {
+        const btn1 = document.getElementById('btnTranche1');
+        const btn2 = document.getElementById('btnTranche2');
+        const t1 = typePrix === 'particulier' ? currentFormationData.prix_tranche_1_particulier : currentFormationData.prix_tranche_1_entreprise;
+        const t2 = typePrix === 'particulier' ? currentFormationData.prix_tranche_2_particulier : currentFormationData.prix_tranche_2_entreprise;
+        btn1.innerHTML = `1ère Tranche : ${t1} FCFA`;
+        btn2.innerHTML = `2e Tranche : ${t2} FCFA`;
+        btn1.disabled = false;
+        btn2.disabled = true;
+        new bootstrap.Modal(document.getElementById('trancheModal')).show();
+    } else {
+        payer('once');
+    }
+}
+
+function payer(option) {
+    lastPaiementOption = option;
+    let montant = 0;
+    if (!currentFormationData) {
+        alert("Erreur: Données de formation non disponibles.");
+        return;
+    }
+    switch(option) {
+        case 'tranche1':
+            montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_tranche_1_particulier : currentFormationData.prix_tranche_1_entreprise) || 0;
+            break;
+        case 'tranche2':
+            montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_tranche_2_particulier : currentFormationData.prix_tranche_2_entreprise) || 0;
+            break;
+        case 'once':
+            montant = parseFloat(typePrix === 'particulier' ? currentFormationData.prix_particulier : currentFormationData.prix_entreprise) || 0;
+            break;
+        default:
+            alert("Option de paiement inconnue.");
+            return;
+    }
+    montantPourApi = montant;
+    ['trancheModal', 'paiementModal', 'prixModal'].forEach(id => {
+        const modalInstance = bootstrap.Modal.getInstance(document.getElementById(id));
+        if (modalInstance) modalInstance.hide();
+    });
+    if (montant > 0) {
+        if (typeof openKkiapayWidget === 'function') {
+            openKkiapayWidget({
+                amount: montant,
+                position: "center",
+                theme: "#007bff",
+                sandbox: true,
+                key: "2d60f1304a3711f0b843d576c84457a5"
+            });
+        } else {
+            alert("Widget de paiement indisponible.");
+        }
+    } else {
+        alert("Le montant du paiement pour cette option est invalide.");
+    }
+}
+
+// Gestion du retour Kkiapay
+window.addEventListener("message", async function (event) {
+    // if (event.origin !== "https://widget.kkiapay.me") return;
+    const data = event.data;
+    if (!data || !data.name) return;
+    if (data.name === 'PAYMENT_SUCCESS') {
+        const transactionId = data.transactionId || (data.data && data.data.transactionId);
+        if (!transactionId) {
+            alert("Paiement réussi mais ID de transaction manquant.");
+            return;
+        }
+        const userToken = localStorage.getItem('userToken');
+        const params = new URLSearchParams(window.location.search);
+
+        // --- Formation ---
+        const formationIdParam = params.get('formation');
+        if (paiementType === 'formation' && formationIdParam && currentFormationData && montantPourApi > 0) {
+            // ...déjà présent...
+        }
+
+        // --- Webinaire ---
+        const webinaireIdParam = params.get('webinaire');
+        if (paiementType === 'webinaire' && webinaireIdParam && currentWebinaireData && montantWebinairePourApi > 0) {
+            const inscriptionData = {
+                webinaire_id: parseInt(webinaireIdParam),
+                montant_paye: montantWebinairePourApi,
+                reference_transaction: transactionId,
+                methode_paiement: "Mobile Money"
+            };
+            try {
+                const res = await fetch('https://imaneapi.auditacademie.com/api/inscription_webinaires/', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${userToken}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(inscriptionData)
+                });
+                if (res.ok) {
+                    alert("Félicitations ! Votre inscription au webinaire est confirmée !");
+                    window.location.href = `webinairedetail?id=${webinaireIdParam}`;
+                } else {
+                    const errorBody = await res.json();
+                    alert(`L'inscription au webinaire a échoué après le paiement. Erreur : ${errorBody.error || 'Erreur inconnue'}. Contactez le support.`);
+                }
+            } catch (err) {
+                alert(`Erreur réseau lors de l'inscription. Votre paiement a été reçu. Contactez le support avec votre ID de transaction : ${transactionId}`);
+            }
+            return;
+        }
+
+        // --- Article ---
+        const articleIdParam = params.get('article');
+        if (paiementType === 'article' && articleIdParam && currentArticleData && montantArticlePourApi > 0) {
+            const abonnementData = {
+                article_id: parseInt(articleIdParam),
+                montant_paye: montantArticlePourApi,
+                reference_transaction: transactionId,
+                methode_paiement: "Mobile Money"
+            };
+            try {
+                const res = await fetch('https://imaneapi.auditacademie.com/api/abonnement_articles/', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${userToken}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(abonnementData)
+                });
+                if (res.ok) {
+                    alert("Félicitations ! Votre abonnement à l'article est actif !");
+                    window.location.href = `blog-details?id=${articleIdParam}`;
+                } else {
+                    const errorBody = await res.json();
+                    alert(`L'abonnement a échoué après le paiement. Erreur : ${errorBody.error || 'Erreur inconnue'}. Contactez le support.`);
+                }
+            } catch (err) {
+                alert(`Erreur réseau lors de l'abonnement. Votre paiement a été reçu. Contactez le support avec votre ID de transaction : ${transactionId}`);
+            }
+            return;
+        }
+    
+        
+        // Prépare la requête d'inscription
+        const inscriptionData = {
+            formation_id: parseInt(formationIdParam),
+            montant_paye: montantPourApi,
+            reference_transaction: transactionId,
+            methode_paiement: "Mobile Money",
+            type_inscription: typePrix === 'groupe' ? 'GROUPER' : 'PARTICULIER'
+        };
+        try {
+            const res = await fetch('https://imaneapi.auditacademie.com/api/inscription_formations/', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${userToken}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(inscriptionData)
+            });
+            if (res.ok) {
+                alert("Félicitations ! Votre inscription à la formation est confirmée !");
+                window.location.href = `formationdetailcnx?id=${formationIdParam}`;
+            } else {
+                const errorBody = await res.json();
+                alert(`L'inscription a échoué après le paiement. Erreur : ${errorBody.error || 'Erreur inconnue'}. Contactez le support.`);
+            }
+        } catch (err) {
+            alert(`Erreur réseau lors de l'inscription. Votre paiement a été reçu. Contactez le support avec votre ID de transaction : ${transactionId}`);
+        }
+    } else if (data.name === "KKIAPAY_CLOSE_WIDGET") {
+        // Rien à faire
+    } else if (data.name === "KKIAPAY_FAILED_PAYMENT") {
+        alert("Le paiement a échoué. Veuillez réessayer.");
+    }
+});
     </script>
 
     <script>
@@ -705,6 +1009,47 @@
     <div id="footer"></div>
     <script src="../assets/js/footer.js"></script>
     <!-- Footer end -->
+     
+    
+<script src="https://cdn.kkiapay.me/k.js"></script>
+
+<!-- Modale choix du prix -->
+<div class="modal fade" id="prixModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h5 class="modal-title mb-3">Choisissez votre tarif</h5>
+      <button class="btn btn-primary w-100 mb-2" id="prixParticulierBtn" onclick="prixChoisi('particulier')">Prix Particulier</button>
+      <button class="btn btn-secondary w-100" id="prixGroupeBtn" onclick="prixChoisi('groupe')">Prix Groupe</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modale choix du mode de paiement -->
+<div class="modal fade" id="paiementModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h5 class="modal-title mb-3">Choisissez le mode de paiement</h5>
+      <button class="btn btn-success w-100 mb-2" onclick="choisirPaiement('once')">Paiement en une fois</button>
+      <button class="btn btn-outline-success w-100" onclick="choisirPaiement('tranche')">Paiement en deux tranches</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modale paiement par tranche -->
+<div class="modal fade" id="trancheModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h5 class="modal-title mb-3">Paiement par tranche</h5>
+      <button class="btn btn-warning w-100 mb-2" id="btnTranche1" onclick="payer('tranche1')">1ère Tranche</button>
+      <button class="btn btn-outline-warning w-100" id="btnTranche2" onclick="payer('tranche2')" disabled>2e Tranche</button>
+    </div>
+  </div>
+</div>
+<!-- Kkiapay Widget Info (Kkiapay itself will overlay) -->
+<div id="kykapay-widget-info" style="display:none; text-align:center;">
+  <p id="detailsPaiement" class="my-3"></p>
+  <!-- The "Simuler Paiement" button is removed as Kkiapay handles the UI -->
+</div>
 </body>
 
 </html>

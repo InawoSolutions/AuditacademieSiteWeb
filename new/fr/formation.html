@@ -87,33 +87,142 @@
     <link rel="stylesheet" href="../assets/css/custom.css">
 
     <style>
-        .truncate-2-lines {
-            display: -webkit-box;
-            
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            min-height: 2.8em;
-            /* pour garder la hauteur même si une seule ligne */
-            max-height: 3.2em;
+        /* Styles pour l'affichage des formations */
+        .formations-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
         }
 
-        /* Limite la description à 2 lignes */
-        .truncate-2-desc {
-            display: -webkit-box;
-            
-            -webkit-box-orient: vertical;
+        .formation-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
             overflow: hidden;
-            text-overflow: ellipsis;
-            min-height: 2.6em;
-            max-height: 3em;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        /* Limite le nom du contributeur à 1 ligne */
-        .truncate-1-line {
+        .formation-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .formation-image-container {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .formation-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .formation-card:hover .formation-image {
+            transform: scale(1.05);
+        }
+
+        .formation-content {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .formation-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            /* min-height: 5.6em;
+            line-height: 1.4em; */
+        }
+
+        .formation-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            /* min-height: 2.8em;
+            line-height: 1.4em; */
+        }
+
+        .formation-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2a4743;
+            margin-bottom: 5px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        .formation-author {
+            font-size: 0.9rem;
+            color: #178d72;
+            font-weight: 600;
+            margin-bottom: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .formation-link {
+            margin-top: auto;
+            color: #014a92;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .formation-link i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+
+        .formation-link:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .formations-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .formations-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .formations-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .formation-image-container {
+                height: 220px;
+            }
+        }
+
+        /* Styles existants conservés */
+        #formation-category-list a.active {
+            background: #2a4743;
+            color: #fff !important;
         }
 
         .main-features-nav>li {
@@ -199,27 +308,93 @@
             color: white;
         }
 
-        .blog {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+        /* Styles responsive existants */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1rem !important;
+                line-height: 1.2 !important;
+            }
 
-        .blog {
-            flex: 1 1 calc(25% - 10px);
-            box-sizing: border-box;
-        }
-
-        @media screen and (max-width: 768px) {
-            .blog {
-                flex: 1 1 calc(50% - 10px);
+            p {
+                font-size: 0.85rem !important;
             }
         }
-    </style>
-    <style>
-        #formation-category-list a.active {
-            background: #2a4743;
-            color: #fff !important;
+
+        @media (max-width: 768px) {
+            .uc-navbar-right {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+
+            .uc-navbar-right a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .uc-navbar-right .btn {
+                width: 90%;
+            }
+
+            .fr {
+                margin-top: 10%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .btn-responsive {
+                width: 100%;
+                padding: 10px 20px;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .btn-responsive {
+                width: auto;
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+
+        .footer-separation {
+            border: none;
+            border-top: 1px solid black;
+            width: 100%;
+            left: 1%;
+            margin: 50px 0;
+            position: relative;
+            top: 80px;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        @media (min-width: 575px) {
+            .custom-icons {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 574px) {
+            .custom-icons {
+                display: flex !important;
+            }
+        }
+
+        @media (max-width: 514px) {
+            .panel {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -231,19 +406,6 @@
     gtag('js', new Date());
     gtag('config', 'G-Q2MW7TVQEX');
 </script>
-
-<!-- <script>
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-    return null;
-}
-const token = getCookie('token');
-if (!token) {
-    window.location.href = "connexion.html";
-}
-</script> -->
 
 <body
     class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
@@ -267,13 +429,6 @@ if (!token) {
         data-uc-alert data-anime="opacity: [0, 1]; easing: easeInOutcubic; duration: 500; delay: 0;"
         style="background-color: #2a4743;">
         <a href="#" class="uc-alert-close top-0 end-0" style="margin: 14px" data-uc-close></a>
-        <!-- <p class="fs-7">
-        Audit Académie, Cotonou N°RCCM RB/COT/18 B 20854<br class="d-block lg:d-none">
-        <a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504/"
-           class="uc-link text-white dark:text-primary border-bottom fs-7" target="_blank" rel="nofollow">
-           ,Programmeexclusifcia@gmail.com, Imane.consulting@gmail.com
-        </a>
-    </p> -->
     </div>
 
     <!-- Header start -->
@@ -309,7 +464,7 @@ if (!token) {
                                 <!-- Les catégories seront injectées ici -->
                             </ul>
                             <!-- Liste dynamique des formations -->
-                            <div id="formations-list" class="row g-4"></div>
+                            <div id="formations-list" class="formations-container"></div>
                             <!-- Fin des formations dynamiques -->
                         </div>
                     </div>
@@ -361,325 +516,105 @@ if (!token) {
                 setDarkMode(0);
             }
         </script>
-        <script>
-            // Récupérer les liens via leur texte (Sales and prospecting, Billing and management, Inawo global)
-            const links = document.querySelectorAll("#specific-panel a");
-            // Récupérer tous les prix visibles par défaut (h5 sans display: none)
-            const defaultPrices = document.querySelectorAll('h5:not([style*="display: none"])');
-            // Récupérer tous les prix cachés (h5 avec display: none)
-            const hiddenPrices = document.querySelectorAll('h5[style*="display: none"]');
-            // Fonction pour afficher le contenu par défaut
-            function afficherContenuParDefaut() {
-                defaultPrices.forEach(price => price.style.display = "block");
-                hiddenPrices.forEach(price => price.style.display = "none");
-            }
-            // Fonction pour afficher les prix cachés
-            function afficherPrixCache() {
-                defaultPrices.forEach(price => price.style.display = "none");
-                hiddenPrices.forEach(price => price.style.display = "block");
-            }
-            // Ajouter des gestionnaires d'événements aux liens
-            links.forEach((link, index) => {
-                if (index === 0 || index === 1) {
-                    // Pour les deux premiers liens : afficher le contenu par défaut
-                    link.addEventListener("click", afficherContenuParDefaut);
-                } else if (index === 2) {
-                    // Pour le troisième lien : afficher les prix cachés
-                    link.addEventListener("click", afficherPrixCache);
-                }
-            });
-        </script>
-        <script>
-            const link = document.querySelectorAll("#liens a");
-            // Sélectionne les boutons
-            const monthlyButton = document.getElementById('monthly');
-            const yearlyButton = document.getElementById('yearly');
-            // Sélectionne toutes les parties à afficher/cacher
-            const defaultElements = document.querySelectorAll('.default-price');
-            const hiddenElements = document.querySelectorAll('.hidden-price');
-            // Fonction pour activer l'affichage "Monthly"
-            monthlyButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                monthlyButton.classList.add('active');
-                yearlyButton.classList.remove('active');
-                // Afficher les éléments par défaut et cacher les autres
-                defaultElements.forEach(el => el.style.display = 'block');
-                hiddenElements.forEach(el => el.style.display = 'none');
-            });
-            // Fonction pour activer l'affichage "Yearly"
-            yearlyButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                yearlyButton.classList.add('active');
-                monthlyButton.classList.remove('active');
-                // Afficher les éléments "hidden" et cacher les "default"
-                hiddenElements.forEach(el => el.style.display = 'block');
-                defaultElements.forEach(el => el.style.display = 'none');
-            });
-        </script>
 
-        <!-- ====== AJOUT API TOKEN ICI ====== -->
         <script>
-            // Utilisation du token pour requête API protégée
-            function getCookie(name) {
-                const value = `; ${document.cookie}`;
-                const parts = value.split(`; ${name}=`);
-                if (parts.length === 2) return parts.pop().split(';').shift();
-                return null;
-            }
-            fetch('https://imaneapi.auditacademie.com/api/une-route-protegee/', {
-                method: 'GET',
-                headers: {
-                    'Authorization': 'Bearer ' + token
-                }
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // Traite les données ici
-                    console.log(data);
-                });
-        </script>
-        <!-- ====== FIN AJOUT API TOKEN ====== -->
+            document.addEventListener('DOMContentLoaded', function () {
+                const formationsContainer = document.getElementById('formations-list');
+                const categoryList = document.getElementById('formation-category-list');
+                const baseURL = 'https://imaneapi.auditacademie.com/';
+                let allFormations = [];
+                let allSecteurs = [];
 
-        <!-- ====== SCRIPT POUR AFFICHER LES FORMATIONS DE L'API ====== -->
-        <script>
-            async function fetchAndDisplayFormations() {
-                const container = document.getElementById('formations-list');
-                container.innerHTML = '<p>Chargement des formations...</p>';
-                try {
-                    const response = await fetch('https://imaneapi.auditacademie.com/api/formations/');
-                    const formations = await response.json();
-                    if (!Array.isArray(formations) || formations.length === 0) {
-                        container.innerHTML = "<p>Aucune formation trouvée.</p>";
+                // 1. Charger toutes les formations une seule fois
+                fetch('https://imaneapi.auditacademie.com/api/formations/')
+                    .then(response => response.json())
+                    .then(formations => {
+                        allFormations = formations;
+
+                        // Extraire les secteurs uniques depuis les formations
+                        const secteursMap = {};
+                        formations.forEach(f => {
+                            if (f.secteur && f.secteur.nom) {
+                                secteursMap[f.secteur.nom] = f.secteur;
+                            }
+                        });
+                        allSecteurs = Object.values(secteursMap);
+
+                        // Générer la barre de secteurs
+                        let html = `<li><a href="#" data-secteur="" class="active">Tout</a></li>`;
+                        allSecteurs.forEach(secteur => {
+                            html += `<li><a href="#" data-secteur="${secteur.nom}">${secteur.nom}</a></li>`;
+                        });
+                        categoryList.innerHTML = html;
+
+                        // Afficher toutes les formations au chargement
+                        renderFormations("");
+                    })
+                    .catch(error => {
+                        formationsContainer.innerHTML = "<p>Erreur lors du chargement des formations.</p>";
+                        categoryList.innerHTML = "<li>Erreur chargement secteurs</li>";
+                    });
+
+                // 2. Fonction pour afficher les formations selon le secteur sélectionné
+                function renderFormations(secteurNom) {
+                    let filtered = allFormations;
+                    if (secteurNom && secteurNom !== "") {
+                        filtered = allFormations.filter(formation => formation.secteur && formation.secteur.nom === secteurNom);
+                    }
+                    if (!filtered.length) {
+                        formationsContainer.innerHTML = "<p>Aucune formation trouvée pour cette catégorie.</p>";
                         return;
                     }
+
                     let html = '';
-                    formations.forEach(formation => {
+                    filtered.forEach(formation => {
+                        const imageURL = baseURL + "photos/" + (formation.image_couverture || "");
+
                         html += `
-                        <div class="col-3">
-                            <article class="post type-post panel overflow-hidden vstack border bg-white dark:bg-gray-900 dark:text-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
-                                <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
-                                    <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${formation.image_couverture || '../assets/images/blog/default.jpg'}" alt="${formation.titre || 'Formation'}">
+                            <div class="formation-card">
+                                <div class="formation-image-container">
+                                    <img class="formation-image" src="${imageURL}" alt="${formation.titre || 'Formation'}">
                                     <a href="formationdetail?id=${formation.id}" class="position-cover"></a>
-                                </figure>
-                                <div class="panel vstack gap-1 p-2">
-                                    <h3 class="post-title h5 m-0 ltr:pe-4 rtl:ps-4"><span>${formation.titre || ''}</span></h3>
-                                    <div class="content vstack justify-between gap-narrow">
-                                        <p class="post-excrept fs-6 opacity-70 truncate-3-lines">${formation.description_courte || ''}</p>
-                                    </div>
-                                    <a href="formationdetail?id=${formation.id}" class="uc-link dark:text-tertiary fs-7 xl:fs-6 fw-bold hstack gap-1 sm:mt-1 xl:mt-2">
-                                        <span>Découvrir la formation</span>
-                                        <i class="position-relative icon unicon-arrow-up-right fw-bold rtl:-rotate-90 translate-y-px"></i>
-                                    </a>
                                 </div>
-                            </article>
-                        </div>
-                        `;
-                    });
-                    container.innerHTML = html;
-                } catch (error) {
-                    container.innerHTML = "<p>Erreur lors du chargement des formations.</p>";
-                    console.error(error);
-                }
-            }
-            document.addEventListener('DOMContentLoaded', fetchAndDisplayFormations);
-        </script>
-        <!-- ====== FIN SCRIPT API FORMATIONS ====== -->
-
-    </div>
-
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const formationsContainer = document.getElementById('formations-list');
-    const categoryList = document.getElementById('formation-category-list');
-    const baseURL = 'https://imaneapi.auditacademie.com/';
-    let allFormations = [];
-    let allSecteurs = [];
-
-    // 1. Charger toutes les formations une seule fois
-    fetch('https://imaneapi.auditacademie.com/api/formations/')
-        .then(response => response.json())
-        .then(formations => {
-            allFormations = formations;
-
-            // Extraire les secteurs uniques depuis les formations
-            const secteursMap = {};
-            formations.forEach(f => {
-                if (f.secteur && f.secteur.nom) {
-                    secteursMap[f.secteur.nom] = f.secteur;
-                }
-            });
-            allSecteurs = Object.values(secteursMap);
-
-            // Générer la barre de secteurs
-            let html = `<li><a href="#" data-secteur="" class="active">Tous</a></li>`;
-            allSecteurs.forEach(secteur => {
-                html += `<li><a href="#" data-secteur="${secteur.nom}">${secteur.nom}</a></li>`;
-            });
-            categoryList.innerHTML = html;
-
-            // Afficher toutes les formations au chargement
-            renderFormations("");
-        })
-        .catch(error => {
-            formationsContainer.innerHTML = "<p>Erreur lors du chargement des formations.</p>";
-            categoryList.innerHTML = "<li>Erreur chargement secteurs</li>";
-        });
-
-    // 2. Fonction pour afficher les formations selon le secteur sélectionné
-    function renderFormations(secteurNom) {
-        let filtered = allFormations;
-        if (secteurNom && secteurNom !== "") {
-            filtered = allFormations.filter(formation => formation.secteur && formation.secteur.nom === secteurNom);
-        }
-        if (!filtered.length) {
-            formationsContainer.innerHTML = "<p>Aucune formation trouvée.</p>";
-            return;
-        }
-        formationsContainer.innerHTML = filtered.map(formation => {
-            let imageURL = '../assets/images/blog/default.jpg';
-            if (formation.image_couverture && formation.image_couverture.startsWith('/photos')) {
-                imageURL = baseURL + formation.image_couverture;
-            } else if (formation.image_couverture) {
-                imageURL = formation.image_couverture;
-            }
-            return `
-                <div class="col-3">
-                    <article class="post type-post panel overflow-hidden vstack border bg-white dark:bg-gray-900 dark:text-white hover:border-dark hover:contrast-shadow duration-150 hover:-translate-y-1 rounded-1-5">
-                        <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
-                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="${imageURL}" alt="${formation.titre || 'Formation'}">
-                            <a href="formationdetail?id=${formation.id}" class="position-cover"></a>
-                        </figure>
-                        <div class="panel vstack gap-1 p-2">
-                            <h3 class="post-title h5 m-0 ltr:pe-4 rtl:ps-4">
-                                <span class="truncate-2-lines" title="${formation.titre || ''}">${formation.titre || ''}</span>
-                            </h3>
-                            <div class="content vstack justify-between gap-narrow">
-                                <p class="post-excrept fs-6 opacity-70 truncate-2-desc" title="${formation.description_courte || ''}">
+                                <div class="formation-content">
+                                    <h3 class="formation-title" title="${formation.titre || ''}">
+                                        ${formation.titre || ''}
+                                    </h3>
+                                    <p class="post-excrept fs-6 opacity-70">
                                     ${formation.description_courte || ''}
                                 </p>
+                                    <div class="formation-price">
+                                        ${formation.prix_particulier ? formation.prix_particulier + ' €' : 'Prix non disponible'}
+                                    </div>
+                                    <div class="formation-author" title="${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}">
+                                        ${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}
+                                    </div>
+                                    <a href="formationdetail?id=${formation.id}" class="formation-link">
+                                        Découvrir la formation
+                                        <i class="icon unicon-arrow-up-right"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="fs-4 mb-1" style="color:#2a4743; font-weight:900; font-size:2rem;">
-                                ${formation.prix_particulier ? formation.prix_particulier + ' €' : ''}
-                            </div>
-                            <div class="fs-5 mb-1 truncate-1-line" style="color:#178d72; font-weight:700; font-size:1.2rem;" title="${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}">
-                                ${(formation.nom_contributeur || '') + ' ' + (formation.prenom_contributeur || '')}
-                            </div>
-                            <a href="formationdetail?id=${formation.id}" class="uc-link dark:text-tertiary fs-7 xl:fs-6 fw-bold hstack gap-1 sm:mt-1 xl:mt-2">
-                                <span>Découvrir la formation</span>
-                                <i class="position-relative icon unicon-arrow-up-right fw-bold rtl:-rotate-90 translate-y-px"></i>
-                            </a>
-                        </div>
-                    </article>
-                </div>
-            `;
-        }).join('');
-    }
+                        `;
+                    });
+                    
+                    formationsContainer.innerHTML = html;
+                }
 
-    // 3. Gestion du clic sur les secteurs (délégué car la liste est dynamique)
-    categoryList.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') {
-            e.preventDefault();
-            // Retire la classe active de tous les liens
-            categoryList.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-            // Ajoute la classe active au lien cliqué
-            e.target.classList.add('active');
-            const secteurNom = e.target.getAttribute('data-secteur');
-            renderFormations(secteurNom);
-        }
-    });
-});
-</script>
-
+                // 3. Gestion du clic sur les secteurs (délégué car la liste est dynamique)
+                categoryList.addEventListener('click', function (e) {
+                    if (e.target.tagName === 'A') {
+                        e.preventDefault();
+                        // Retire la classe active de tous les liens
+                        categoryList.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+                        // Ajoute la classe active au lien cliqué
+                        e.target.classList.add('active');
+                        const secteurNom = e.target.getAttribute('data-secteur');
+                        renderFormations(secteurNom);
+                    }
+                });
+            });
+        </script>
+    </div>
 </body>
-
 </html>
-
-<style>
-    @media (max-width: 640px) {
-        h1 {
-            font-size: 1rem !important;
-            line-height: 1.2 !important;
-        }
-
-        p {
-            font-size: 0.85rem !important;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .uc-navbar-right {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .uc-navbar-right a {
-            width: 100%;
-            text-align: center;
-        }
-
-        .uc-navbar-right .btn {
-            width: 90%;
-        }
-
-        .fr {
-            margin-top: 10%;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .btn-responsive {
-            width: 100%;
-            padding: 10px 20px;
-            font-size: 14px;
-            white-space: nowrap;
-        }
-    }
-
-    @media (min-width: 769px) {
-        .btn-responsive {
-            width: auto;
-            padding: 12px 30px;
-            font-size: 16px;
-        }
-    }
-
-    .footer-separation {
-        border: none;
-        border-top: 1px solid black;
-        width: 100%;
-        left: 1%;
-        margin: 50px 0;
-        position: relative;
-        top: 80px;
-    }
-
-    .background-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
-
-    @media (min-width: 575px) {
-        .custom-icons {
-            display: none !important;
-        }
-    }
-
-    @media (max-width: 574px) {
-        .custom-icons {
-            display: flex !important;
-        }
-    }
-
-    @media (max-width: 514px) {
-        .panel {
-            margin-top: 20px;
-        }
-    }
-</style>

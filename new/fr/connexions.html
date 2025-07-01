@@ -602,12 +602,11 @@
                     body: JSON.stringify(data)
                 };
                 const response = await fetch(url, options);
+                console.log("Réponse de l'API:", response);
 
                 // ...dans le bloc if (response.ok) { ... }
                 if (response.ok) {
                     const result = await response.json();
-                    console.log("Résultat de l'API:", result);
-        
                     // Vérifie le type d'utilisateur
                     if (result.user_info && result.user_info.user_type !== "CONTACTE ") {
                         alert("Seuls les utilisateurs de type CONTACTE peuvent se connecter ici.");
@@ -631,10 +630,9 @@
                             date_fin: result.abonnement_article[0].date_fin,
                             
                         } : {};
-                        const abw = result.webinaires?.map(webinaire => webinaire.id) || [];
                         localStorage.setItem("abonnement_article", JSON.stringify(aba));
                         localStorage.setItem('phone', result.user_info.tel || '-');
-                        localStorage.setItem("abw", JSON.stringify(abw));
+                        // localStorage.setItem('abonnement_article', result.abonnement_article.statut_abonnement);
                     }
 
                     // Redirection intelligente après connexion

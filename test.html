@@ -29,3 +29,74 @@
 </body>
 
 </html>
+
+document.getElementById('subscriptionBtn').onclick = function (e) {
+                            e.preventDefault();
+
+                            const prix = 1000;
+                            const userId = localStorage.getItem('user_id');
+                            const userToken = localStorage.getItem('userToken');
+
+                            if (!userId) {
+                                alert("Veuillez vous connecter pour vous abonner.");
+                                location.href = "connexion.html";
+                                return;
+                            }
+
+                            // Écoute une seule fois la réponse du widget
+                            const handleKkiapayMessage = async function (event) {
+                                const data = event.data;
+                                if (data && data.name === 'PAYMENT_SUCCESS') {
+                                    const transactionId = data.data?.transactionId;
+                                    if (!transactionId) {
+                                        alert("Transaction échouée ou ID manquant.");
+                                        return;
+                                    }
+
+                                    const abonnement = {
+                                        utilisateur: parseInt(userId, 10),
+                                        article: parseInt(articleId, 10),
+                                        montant_paye: prix,
+                                        methode_paiement: "Mobile Money",
+                                        reference_transaction: transactionId
+                                    };
+
+                                    try {
+                                        const response = await fetch('https://imaneapi.auditacademie.com/api/abonnement_articles/', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                                'Authorization': `Bearer ${userToken}`
+                                            },
+                                            body: JSON.stringify(abonnement)
+                                        });
+
+                                        const resText = await response.text();
+                                        try {
+                                            const res = JSON.parse(resText);
+                                            if (response.ok) {
+                                                localStorage.setItem('abonnement_article', 'ACTIF');
+                                                location.href = `blog-details.html?id=${articleId}`;
+                                            } else {
+                                                alert("Erreur API : " + (res.message || resText));
+                                            }
+                                        } catch (jsonErr) {
+                                            alert("Erreur de format de réponse du serveur.");
+                                        }
+                                    } catch (err) {
+                                        alert("Erreur réseau pendant la validation.");
+                                    }
+                                    removeEventListener("message", handleKkiapayMessage);
+                                }
+                            };
+
+                            addEventListener("message", handleKkiapayMessage);
+
+                            openKkiapayWidget({
+                                amount: prix,
+                                position: "right",
+                                theme: "green",
+                                sandbox: "true",
+                                key: "2d60f1304a3711f0b843d576c84457a5"
+                            });
+                        };

@@ -879,7 +879,8 @@
                                     <p class="fw-bold fs-6 m-0">Merci d’avoir lu cet article</p>
                                     <p class="fs-6 lg:fs-5">
                                         En complément vous êtes libre <strong>de vous inscrire à ma newsletter</strong>
-                                        et de recevoir <strong>gratuitement</strong> mon livre <strong class="newsletter-book-title">« RAI – 5 clés pour construire l’équipe d’audit de vos rêves »</strong> dans lequel je
+                                        et de recevoir <strong>gratuitement</strong> mon livre <strong>« RAI – 5 clés
+                                            pour construire l’équipe d’audit de vos rêves »</strong> dans lequel je
                                         partage avec vous des outils pratiques pour :
                                     </p>
                                     <ul class="fs-6 lg:fs-5 mb-2" style="margin-top:-0.5rem;">
@@ -975,133 +976,95 @@
     <script src="https://cdn.kkiapay.me/k.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', async function () {
-    // --- Chargement de l'article (déjà présent dans ton code) ---
-    const params = new URLSearchParams(location.search);
-    const articleId = params.get('id');
-    if (!articleId) {
-        const title = document.getElementById('article-title');
-        if (title) title.textContent = "Article introuvable.";
-        return;
-    }
+            // Vérifie si l'utilisateur est connecté (présence du token)
+            // const userToken = localStorage.getItem('userToken');
+            // const userId = localStorage.getItem('user_id');
 
-    try {
-        const response = await fetch(`https://imaneapi.auditacademie.com/api/articles/${articleId}/`);
-        if (!response.ok) throw new Error("Erreur lors du chargement de l'article.");
-        const article = await response.json();
+            // Si pas connecté, redirige vers la page de connexion AVANT de charger l'article
+            // if (!userToken || !userId) {
+            // On garde l'id de l'article pour revenir après connexion
+            // const params = new URLSearchParams(location.search);
+            // const articleId = params.get('id');
+            // On passe l'id dans l'URL de redirection pour revenir après connexion
+            //     location.href = `connexion?next=blog-details?id=${articleId}`;
+            //     return;
+            // }
+            const params = new URLSearchParams(location.search);
+            const articleId = params.get('id');
+            if (!articleId) {
+                const title = document.getElementById('article-title');
+                if (title) title.textContent = "Article introuvable.";
+                return;
+            }
 
-        document.getElementById('article-title').textContent = article.titre;
-        document.getElementById('article-meta').innerHTML = `
-            <span>Par ${article.prenom_auteur || ''} ${article.nom_auteur || ''} (${article.fonction_auteur || ''})</span>
-            <span> | ${new Date(article.created_at).toLocaleDateString()}</span>
-        `;
-        document.getElementById('article-image').innerHTML = `
-            <img src="${article.image ? (article.image.startsWith('http') ? article.image : 'https://imaneapi.auditacademie.com/' + article.image) : '../assets/images/blog/default.jpg'}" alt="${article.titre}" style="max-width:100%;border-radius:8px;">
-        `;
-        // Affichage du contenu selon le type d'article
-        if (article.type_article === 'payant') {
-            const storedAbonnement = localStorage.getItem('abonnement_article');
-            const abonnement = JSON.parse(storedAbonnement);
+            try {
+                const response = await fetch(`https://imaneapi.auditacademie.com/api/articles/${articleId}/`);
+                if (!response.ok) throw new Error("Erreur lors du chargement de l'article.");
+                const article = await response.json();
 
-            if (abonnement && abonnement.statut_abonnement === 'ACTIF') {
-                document.getElementById('article-content').innerHTML = article.contenu;
-            } else {
-                let preview = article.contenu || '';
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = preview;
-                let plainText = tempDiv.textContent || tempDiv.innerText || "";
-                let truncated = plainText.substring(0, 1000) + (plainText.length > 1000 ? "..." : "");
+                document.getElementById('article-title').textContent = article.titre;
+                document.getElementById('article-meta').innerHTML = `
+                <span>Par ${article.prenom_auteur || ''} ${article.nom_auteur || ''} (${article.fonction_auteur || ''})</span>
+                <span> | ${new Date(article.created_at).toLocaleDateString()}</span>
+            `;
+                document.getElementById('article-image').innerHTML = `
+                <img src="${article.image ? (article.image.startsWith('http') ? article.image : 'https://imaneapi.auditacademie.com/' + article.image) : '../assets/images/blog/default.jpg'}" alt="${article.titre}" style="max-width:100%;border-radius:8px;">
+            `;
 
-                document.getElementById('article-content').innerHTML = `
-                    <div>${truncated}</div>
-                    <div class="container">
-                        <div class="subscription-card mx-auto" style="margin-left: -32px;">
-                            <div class="row align-items-center">
-                                <div class="col-md-8">
-                                    <div class="login-link mb-2" style="margin-top:0;">
-                                        Avant de continuer <a href="connexion.html" id="loginLink">Connectez-vous</a>
+                // Affichage du contenu selon le type d'article
+                if (article.type_article === 'payant') {
+                    if (localStorage.getItem('abonnement_article') == "actif") {
+                        document.getElementById('article-content').innerHTML = article.contenu;
+                    } else {
+                        let preview = article.contenu || '';
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = preview;
+                        let plainText = tempDiv.textContent || tempDiv.innerText || "";
+                        let truncated = plainText.substring(0, 1000) + (plainText.length > 1000 ? "..." : "");
+
+                        document.getElementById('article-content').innerHTML = `
+                        <div>${truncated}</div>
+                        <div class="container">
+                            <div class="subscription-card mx-auto" style="margin-left: -32px;">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <div class="login-link mb-2" style="margin-top:0;">
+                                            Avant de continuer <a href="connexion.html" id="loginLink">Connectez-vous</a>
+                                        </div>
+                                        <div class="subscription-title">Bien s'informer, mieux décider</div>
+                                        <p class="subscription-subtitle">
+                                            Abonnez-vous pour lire la suite et accéder à tous nos articles
+                                        </p>
+                                        <a href="payment?type=article&id=${articleId}" class="btn-subscription" id="subscriptionBtn">
+                                            Faire un abonnement
+                                        </a>
                                     </div>
-                                    <div class="subscription-title">Bien s'informer, mieux décider</div>
-                                    <p class="subscription-subtitle">
-                                        Abonnez-vous pour lire la suite et accéder à tous nos articles
-                                    </p>
-                                    <a href="payment?type=article&id=${articleId}" class="btn-subscription" id="subscriptionBtn">
-                                        Faire un abonnement
-                                    </a>
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <img src="../assets/images/pillustration.png" alt="Illustration bureau avec ordinateur portable" class="illustration">
+                                    <div class="col-md-4 text-center">
+                                        <img src="../assets/images/pillustration.png" alt="Illustration bureau avec ordinateur portable" class="illustration">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                `;
+                    `;
 
-                // Gestion du lien de connexion
-                document.getElementById('loginLink').onclick = function (e) {
-                    e.preventDefault();
-                    location.href = "connexion.html";
-                };
-            }
-        } else {
-            // Article gratuit : tout afficher
-            document.getElementById('article-content').innerHTML = article.contenu;
-        }
-    } catch (error) {
-        const title = document.getElementById('article-title');
-        const content = document.getElementById('article-content');
-        if (title) title.textContent = "Erreur lors du chargement de l'article.";
-        if (content) content.textContent = error.message;
-    }
-
-    // --- Rendre le nom du livre dynamique dans la newsletter ---
-    try {
-        const resp = await fetch('https://imaneapi.auditacademie.com/api/newsletters/');
-        if (resp.ok) {
-            const data = await resp.json();
-            // data est un tableau, on prend le premier élément
-            const nomLivre = (Array.isArray(data) && data.length > 0 && data[0].nom_fichier) ? data[0].nom_fichier : "le livre";
-            document.querySelectorAll('.newsletter-book-title').forEach(el => {
-                el.textContent = `« ${nomLivre} »`;
-            });
-        }
-    } catch (e) {
-        // En cas d'erreur, ne rien faire (le nom par défaut reste affiché)
-    }
-});
-    </script>
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('newsletter-form');
-    if (form) {
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const prenom = form.elements['prenom'].value.trim();
-            const email = form.elements['email'].value.trim();
-
-            // Optionnel : désactiver le bouton pour éviter les doubles clics
-            const btn = form.querySelector('button[type="submit"]');
-            if (btn) btn.disabled = true;
-
-            try {
-                const resp = await fetch('https://imaneapi.auditacademie.com/api/abonnement-newsletter/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ nom: prenom, email: email })
-                });
-                if (resp.ok) {
-                    alert("Merci pour votre inscription à la newsletter !");
-                    form.reset();
+                        // Gestion du lien de connexion
+                        document.getElementById('loginLink').onclick = function (e) {
+                            e.preventDefault();
+                            location.href = "connexion.html";
+                        };
+                    }
                 } else {
-                    alert("Erreur lors de l'inscription. Veuillez réessayer.");
+                    // Article gratuit : tout afficher
+                    document.getElementById('article-content').innerHTML = article.contenu;
                 }
-            } catch (err) {
-                alert("Erreur réseau. Veuillez réessayer.");
+            } catch (error) {
+                const title = document.getElementById('article-title');
+                const content = document.getElementById('article-content');
+                if (title) title.textContent = "Erreur lors du chargement de l'article.";
+                if (content) content.textContent = error.message;
             }
-            if (btn) btn.disabled = false;
         });
-    }
-});
-</script>
-    
+    </script>
 </body>
+
 </html>

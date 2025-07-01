@@ -542,10 +542,10 @@
             }
         });
 
-        const urlParams = new URLSearchParams(location.search);
+          const urlParams = new URLSearchParams(location.search);
         const redirect = urlParams.get('next');
         const inscriptionLink = document.querySelector('.signup-link a');
-        if (redirect) {
+        if(redirect) {
             inscriptionLink.href = `inscription?next=${redirect}`;
         } else {
             inscriptionLink.href = 'inscription.html';
@@ -602,49 +602,42 @@
                     body: JSON.stringify(data)
                 };
                 const response = await fetch(url, options);
+                console.log("Réponse de l'API:", response);
 
                 // ...dans le bloc if (response.ok) { ... }
                 if (response.ok) {
-                    const result = await response.json();
-                    console.log("Résultat de l'API:", result);
-        
-                    // Vérifie le type d'utilisateur
-                    if (result.user_info && result.user_info.user_type !== "CONTACTE ") {
-                        alert("Seuls les utilisateurs de type CONTACTE peuvent se connecter ici.");
-                        return;
-                    }
+    const result = await response.json();
+    // Vérifie le type d'utilisateur
+    if (result.user_info && result.user_info.user_type !== "CONTACTE ") {
+        alert("Seuls les utilisateurs de type CONTACTE peuvent se connecter ici.");
+        return;
+    }
 
-                    // Stocke le token si besoin
-                    if (result.access_token) {
-                        document.cookie = `token=${result.access_token}; path=/; max-age=${60 * 60 * 24 * 7}`;
-                        localStorage.setItem('userToken', result.access_token);
-                    }
+    // Stocke le token si besoin
+    if (result.access_token) {
+        document.cookie = `token=${result.access_token}; path=/; max-age=${60 * 60 * 24 * 7}`;
+        localStorage.setItem('userToken', result.access_token);
+    }
 
-                    if (result.user_info) {
-                        localStorage.setItem('first_name', result.user_info.first_name || '');
-                        localStorage.setItem('last_name', result.user_info.last_name || '');
-                        localStorage.setItem('user_id', result.user_info.id);
-                        localStorage.setItem('email', result.user_info.email || '');
-                        const aba = result.abonnement_article.length && result.abonnement_article.length > 0 ? {
-                            statut_abonnement: result.abonnement_article[0].statut_abonnement,
-                            date_debut: result.abonnement_article[0].date_debut,
-                            date_fin: result.abonnement_article[0].date_fin,
-                            
-                        } : {};
-                        const abw = result.webinaires?.map(webinaire => webinaire.id) || [];
-                        localStorage.setItem("abonnement_article", JSON.stringify(aba));
-                        localStorage.setItem('phone', result.user_info.tel || '-');
-                        localStorage.setItem("abw", JSON.stringify(abw));
-                    }
+    if (result.user_info) {
+        localStorage.setItem('first_name', result.user_info.first_name || '');
+        localStorage.setItem('last_name', result.user_info.last_name || '');
+        localStorage.setItem('user_id', result.user_info.id);
+        localStorage.setItem('email', result.user_info.email || '');
+        const aba = result.abonnement_article.length && result.abonnement_article.length > 0 ? "actif": "inactif";
+        localStorage.setItem("abonnement_article",  aba);
+localStorage.setItem('phone', result.user_info.tel || '-');
+        // localStorage.setItem('abonnement_article', result.abonnement_article.statut_abonnement);
+    }
 
-                    // Redirection intelligente après connexion
+    // Redirection intelligente après connexion
 
-                    if (redirect) {
-                        location.href = `../fr/${redirect}`;
-                    } else {
-                        location.href = "../fr/";
-                    }
-                } else {
+    if (redirect) {
+        location.href = `../fr/${redirect}`;
+    } else {
+        location.href = "../fr/";
+    }
+} else {
                     const error = await response.json();
                     alert('Erreur : ' + (error.message || 'Identifiants invalides.'));
                 }

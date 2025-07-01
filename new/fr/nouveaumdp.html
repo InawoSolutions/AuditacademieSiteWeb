@@ -324,28 +324,25 @@
             submitBtn.textContent = 'Changement en cours...';
 
             try {
-                const response = await fetch(`https://imaneapi.auditacademie.com/api/modification_mot_de_passe/?token=${encodeURIComponent(token)}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ password: newPassword })
-                });
+    const response = await fetch('https://imaneapi.auditacademie.com/api/modification_mot_de_passe/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token, password: newPassword })
+    });
+    const data = await response.json();
 
-                const data = await response.json();
-
-                if (response.ok) {
-                    alert('Votre mot de passe a été changé avec succès !');
-                    document.getElementById('passwordForm').reset();
-                } else {
-                    showError('newPasswordError', data.detail || "Erreur lors du changement de mot de passe.");
-                }
-            } catch (error) {
-                showError('newPasswordError', "Erreur réseau. Veuillez réessayer.");
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Changer le mot de passe';
-            }
+    if (response.ok) {
+        alert('Votre mot de passe a été changé avec succès !');
+        document.getElementById('passwordForm').reset();
+    } else {
+        showError('newPasswordError', data.detail || "Erreur lors du changement de mot de passe.");
+    }
+} catch (error) {
+    showError('newPasswordError', "Erreur réseau. Veuillez réessayer.");
+} finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Changer le mot de passe';
+}
         });
     </script>
 </body>

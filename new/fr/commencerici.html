@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/theme/theme-three.min.purge.css">
     <link rel="stylesheet" href="../assets/css/custom.css">
     <link rel="stylesheet" href="../assets/css/theme/main.css">
-<link rel="stylesheet" href="../assets/css/header_style.css">
+    <link rel="stylesheet" href="../assets/css/header_style.css">
     <script src="../assets/js/app-head-bs.js"></script>
     <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
     <meta name="theme-color" content="#178d72">
@@ -32,43 +33,43 @@
             color: white;
             text-align: center;
             position: relative;
-             margin-top: 70px;
+            margin-top: 70px;
         }
-        
+
         .hero-text {
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        
+
         .wavy-line {
             width: 100px;
             height: 20px;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0 10 Q25 0 50 10 T100 10" stroke="white" stroke-width="3" fill="none"/></svg>') no-repeat center;
             margin: 0 auto;
         }
-        
+
         .content-section {
             padding: 80px 0;
             background-color: #f8f9fa;
         }
-        
+
         .content-image {
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .article-list {
             padding: 60px 0;
         }
-        
+
         .article-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px;
-            padding: 15px 0;
+            margin-bottom: 10px;
+            padding: 10px 0;
         }
-        
+
         .article-number {
             background-color: #ff6b35;
             color: white;
@@ -83,54 +84,57 @@
             font-weight: bold;
             font-size: 14px;
         }
-        
+
         .article-text {
             flex: 1;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.4;
         }
-        
+
         .cta-section {
             background-color: #f8f9fa;
             padding: 40px 0;
         }
-        
+
         .btn-custom {
             background-color: #2a4743;
             color: white;
             border: none;
-            padding: 12px 30px;
+            padding: 8px 20px;
             border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
-        
+
         .btn-custom:hover {
             background-color: #2a4743;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(76, 110, 245, 0.3);
         }
-        
+
         .emoji {
             font-size: 1.2em;
         }
-        
+
         @media (max-width: 768px) {
             .hero-text {
                 font-size: 2rem;
             }
-            
+
             .content-section {
                 padding: 40px 0;
             }
-            
+
             .article-list {
                 padding: 40px 0;
             }
         }
     </style>
 </head>
-<body class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
+
+<body
+    class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
 
     <!--  Bottom Actions Sticky -->
     <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
@@ -153,7 +157,7 @@
     <!-- Header end -->
 
     <!-- === Ton contenu principal ici === -->
-   <!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
@@ -168,8 +172,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="mb-4">Si vous êtes débutant en audit, que vous ayez déjà une formation initiale ou pas, Bienvenue!</h2>
-                    <p class="lead">Pour commencer, je vous invite à lire ces articles qui vous fourniront les notions de base dont vous avez besoin pour progresser pas à pas, sans mettre la charrue avant nos chers amis les bœufs! <span class="emoji">😊</span></p>
+                    <h2 class="mb-4">Si vous êtes débutant en audit, que vous ayez déjà une formation initiale ou pas,
+                        Bienvenue!</h2>
+                    <p class="lead">Pour commencer, je vous invite à lire ces articles qui vous fourniront les notions
+                        de base dont vous avez besoin pour progresser pas à pas, sans mettre la charrue avant nos chers
+                        amis les bœufs! <span class="emoji">😊</span></p>
                 </div>
                 <div class="col-lg-6">
                     <img src="../assets/images/commencerici.png">
@@ -183,40 +190,52 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="article-item">
+
+                    <div class="article-item" style="cursor:pointer;"
+                        onclick="window.location.href='blog-details?id=48'">
                         <div class="article-number">0</div>
                         <div class="article-text">
-                            <strong>Article 0:</strong> Je vous y explique ce qu'est l'audit, les différents types d'audit, les intervenants d'une mission, les principales normes applicables, etc.
+                            <strong>Article 0:</strong> Je vous y explique ce qu'est l'audit, les différents types
+                            d'audit, les intervenants d'une mission, les principales normes applicables, etc.
                         </div>
                     </div>
-                    
-                    <div class="article-item">
+
+                    <div class="article-item" style="cursor:pointer;"
+                        onclick="window.location.href='blog-details?id=47'">
                         <div class="article-number">1</div>
                         <div class="article-text">
-                            <strong>Article 1:</strong> Vous y découvrirez les qualités fondamentales des auditeurs professionnels qui réussissent et s'épanouissent dans leur métier
+                            <strong>Article 1:</strong> Vous y découvrirez les qualités fondamentales des auditeurs
+                            professionnels qui réussissent et s'épanouissent dans leur métier
                         </div>
                     </div>
-                    
-                    <div class="article-item">
+
+                    <div class="article-item" style="cursor:pointer;"
+                        onclick="window.location.href='blog-details?id=45'">
                         <div class="article-number">2</div>
                         <div class="article-text">
-                            <strong>Article 2:</strong> Je partage avec vous dans cet article, les différentes étapes d'une mission d'audit comptable et financier
+                            <strong>Article 2:</strong> Je partage avec vous dans cet article, les différentes étapes
+                            d'une mission d'audit comptable et financier
                         </div>
                     </div>
-                    
-                    <div class="article-item">
+
+                    <div class="article-item" style="cursor:pointer;"
+                        onclick="window.location.href='blog-details?id=49'">
                         <div class="article-number">3</div>
                         <div class="article-text">
-                            <strong>Article 3:</strong> Cet article est le premier d'une série de 3 dans laquelle je partage avec vous, 10 notions clés à comprendre pour débuter en audit
+                            <strong>Article 3:</strong> Cet article est le premier d'une série de 3 dans laquelle je
+                            partage avec vous, 10 notions clés à comprendre pour débuter en audit
                         </div>
                     </div>
-                    
-                    <div class="article-item">
+
+                    <div class="article-item" style="cursor:pointer;"
+                        onclick="window.location.href='blog-details?id=50'">
                         <div class="article-number">4</div>
                         <div class="article-text">
-                            <strong>Article 4:</strong> Second article de la série sur les 10 notions importantes pour débuter
+                            <strong>Article 4:</strong> Second article de la série sur les 10 notions importantes pour
+                            débuter
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -227,10 +246,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="mb-3">Vous pouvez également télécharger gratuitement mon livre "RAI – 5 clés pour construire l'équipe d'audit de vos rêves", qui vous fournira une perspective nouvelle sur votre rôle au sein d'une équipe d'audit <span class="emoji">😉</span> :</p>
-                    
-                    <p class="mb-4">Ensuite, allez voir le plan du site pour dénicher d'autres articles qui vous intéressent, ou consultez simplement les derniers articles publiés sur le blog. Bonne lecture ! <span class="emoji">😊</span></p>
-                    
+                    <p class="mb-3">Vous pouvez également télécharger gratuitement mon livre "RAI – 5 clés pour
+                        construire l'équipe d'audit de vos rêves", qui vous fournira une perspective nouvelle sur votre
+                        rôle au sein d'une équipe d'audit <span class="emoji">😉</span> :</p>
+
+                    <p class="mb-4">Ensuite, allez voir le plan du site pour dénicher d'autres articles qui vous
+                        intéressent, ou consultez simplement les derniers articles publiés sur le blog. Bonne lecture !
+                        <span class="emoji">😊</span></p>
+
                     <button class="btn btn-custom" onclick="handleDownload()">Cliquez ici</button>
                 </div>
             </div>
@@ -264,11 +287,11 @@
         // Add fade-in animation on scroll
         function fadeInOnScroll() {
             const elements = document.querySelectorAll('.article-item');
-            
+
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
+
                 if (elementTop < window.innerHeight - elementVisible) {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
@@ -277,14 +300,14 @@
         }
 
         // Initialize animations
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Set initial state for animations
             document.querySelectorAll('.article-item').forEach(element => {
                 element.style.opacity = '0';
                 element.style.transform = 'translateY(20px)';
                 element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             });
-            
+
             // Trigger initial check
             fadeInOnScroll();
         });
@@ -294,12 +317,12 @@
 
         // Add hover effects to article items
         document.querySelectorAll('.article-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
+            item.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateX(10px)';
                 this.style.transition = 'transform 0.3s ease';
             });
-            
-            item.addEventListener('mouseleave', function() {
+
+            item.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateX(0)';
             });
         });
@@ -350,18 +373,22 @@
             background-color: white;
             color: black;
         }
+
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #121212;
                 color: white;
             }
         }
+
         .icon-hover {
             transition: stroke 0.3s ease;
         }
+
         .features-item:hover .icon-hover {
             stroke: #0460bc;
         }
     </style>
 </body>
+
 </html>

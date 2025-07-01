@@ -316,7 +316,7 @@ const headerHTML = `
             <div class="panel" style="margin-top: 5rem;">
                 <!-- Menu mobile identique à desktop -->
 <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-    <li><a href="#">A propos</a></li>
+    <li><a href="apropos.html">À propos</a></li>
     <li><a href="apropos.html">Débutant, Commencer ici...</a></li>
     <li><a href="formation.html">Formations</a></li>
     <li><a href="webinaires.html">Webinaires</a></li>
@@ -494,7 +494,7 @@ const headerHTML = `
                             <div class="uc-navbar-left">
                                 <div class="uc-logo">\n <a href="../fr/">\n <img class="d-block dark:d-none" src="../assets/images/logoauditacademie.png" alt="Inawo light" data-uc-svg style="width: 90px">\n </a>\n <a href="../fr/">\n <img class="d-none dark:d-block" src="../assets/images/logoauditacademie1.png" alt="Inawo dark" data-uc-svg style="width: 90px">\n </a>\n</div>
                                 <ul class="uc-navbar-nav gap-3 d-none lg:d-flex ltr:ms-2 rtl:me-2">
-                                    <li><a href="apropos.html">A Propos</a></li>
+                                    <li><a href="apropos.html">À Propos</a></li>
                                     <li>
                                         
                                         <a href="commencerici.html">Débutant, Commencer ici...</a>
@@ -851,15 +851,13 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             const logoutBtn = document.getElementById('logoutBtnHeader');
             if (logoutBtn) {
-                logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem('userToken'); // <-- AJOUT ICI
-    localStorage.removeItem('first_name');
-    localStorage.removeItem('last_name');
-    document.cookie = "token=; path=/; max-age=0";
-    window.location.href = "connexion.html";
-});
-            }
+    logoutBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.clear(); // <-- Vide tout le localStorage
+        document.cookie = "token=; path=/; max-age=0";
+        window.location.href = "connexion.html";
+    });
+}
         }, 100);
     }
 });
